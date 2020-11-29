@@ -1,7 +1,6 @@
 import Header from "./Header";
 import Navigation from "./Navigation";
 
-
 const App = () => {
   return (
     <div className="App">
