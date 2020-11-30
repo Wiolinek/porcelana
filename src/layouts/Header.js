@@ -1,17 +1,17 @@
 import React from 'react';
-import picture from '../images/header_2.jpg';
-import '../styles/Header.css'
+
+import '../styles/Header.css';
 
 const Header = () => {
-    const words = ['style', 'life', 'joy']
 
     return (
     <>
-        <img src={picture} alt="table" className="bckg"></img>
-        <p><span className="design">Our design,</span>
-        <span className="your">Your </span>
-        <span className="words">{words}</span>
-        </p>
+        <div className="bckg"></div>
+        <div className="tagline">
+            <p><span className="design">Our design,</span></p>
+            <p className="your"><span>Your </span><span className="word style">style</span><span className="word life">life</span><span className="word joy">joy</span></p>
+        </div>
+        <button className="arrow"><i class="fas fa-angle-double-down"></i></button>
     </>
     )
 }   

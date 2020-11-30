@@ -1,0 +1,12 @@
+.cursor {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    height: 42px;
+    width: 42px;
+  }
+
+  img {
+    height: 100%;
+    width: auto;
+  }

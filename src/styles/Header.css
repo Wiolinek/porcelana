@@ -1,27 +1,65 @@
 .bckg {
-    height: 100vh;
-    width: 100%;
-    position: absolute;
+   background-image: url(../images/header_2.jpg);
+   height: 100%;
+   width: 100%;
+   background-size: cover;
+   transform: translate(0, -40px);
+   padding-bottom: 35px;
+ }
+
+ .tagline {
+   position: absolute;
+   top: 25vh;
+   left: 7vw;
  }
 
  span {
-    font-size: 100px;
-    display: flex;
-    position: relative;
-    top: 20vh;
-    left: 10vw;
-    
- }
-
- .design {
-    
+    font-size: 120px;
  }
 
  .your {
-    
-
+   padding-top: 5vh;
+   padding-left: 12vw;
  }
 
- .words {
+ .word {
+   font-size: 127px;
+    position: absolute;
+    left: 26vw;
     font-style: italic;
  }
+
+ .style {
+   opacity: 1;
+   color: red;
+ }
+
+.life {
+   opacity: 0;
+   color: gold;
+}
+
+.joy {
+   opacity: 0;
+   color: purple;
+}
+
+.fas {
+   font-size: 40px;
+}
+
+.arrow {
+   height: 100px;
+   width: 70px;
+   border: black 2px solid;
+   background-color: white;
+   border-radius: 40%;
+   position: relative;
+   bottom: 90px;
+   left: calc(50% - 35px);
+}
+
+.arrow:hover {
+   cursor: pointer;
+   background-color: rgb(200, 200, 200);
+}
