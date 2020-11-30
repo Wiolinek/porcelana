@@ -1,4 +1,20 @@
-div {
-    height: 100%;
-    width: 100%;
-  }
+section {
+  height: 270vh;
+  background-color: rgb(200, 200, 200);
+}
+
+.section_bckg {
+  background-image: url(../images/header_3.jpg);
+  height: 80vh;
+  background-size: cover;
+  background-position: 0 18%;
+  padding-bottom: 35px;
+}
+
+.about {
+  height: 100vh;
+}
+
+.products {
+  height: 100vh;
+}

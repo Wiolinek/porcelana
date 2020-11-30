@@ -5,9 +5,12 @@ import '../styles/Footer.css';
 const Footer = () => {
 
     return (
-        <div>
-           <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> 
-        </div>
+        <footer>
+            <div className="contact">
+            <p>Kontakt formularz</p>
+            </div>
+            <div className="contribution">Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> 
+        </footer>
     )
 }
 

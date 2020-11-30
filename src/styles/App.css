@@ -9,7 +9,5 @@
   }
 
   .app {
-    height: 94vh;
-    display: block;
+    width: 100%;
   }
-

@@ -24,7 +24,7 @@ button p {
     border-right: black 2px solid;
 }
 
-div button:last-child p {
+nav button:last-child p {
     border-right: none;
 }
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import MouseTracker from "../components/MouseTracker";
 
 import Header from "./Header";
 import Section from "./Section";
@@ -13,8 +12,7 @@ const App = () => {
 
   return (
     <div className="app">
-      <MouseTracker />
-      <Navigation />
+       <Navigation />
       <Header />
       <Section />
       <Footer />
