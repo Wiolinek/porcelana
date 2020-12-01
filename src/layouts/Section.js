@@ -2,6 +2,7 @@ import React from 'react';
 
 import '../styles/Section.css';
 
+
 const Section = () => {
 
     return (
@@ -11,6 +12,9 @@ const Section = () => {
             </p></div>
             <div className="products"><p>
              PRODUCTS
+            </p></div>
+            <div className="recommendations"><p>
+             RECOMMENDATIONS
             </p></div>
             <div className="section_bckg" alt="white plate on a table"> 
             </div>

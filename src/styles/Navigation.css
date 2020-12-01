@@ -1,23 +1,23 @@
 .nav {
-    display: inline-block;
+    display: inline-flex;
     position: fixed;
+    width: 100%;
     top: 15px;
     right: 0;
-    width: 100vw;
     z-index: 1;
+    background-color: #efefef;
     height: 60px;
 }
 
 .nav_btn {
     line-height: 30px;
     padding: 10px 0 10px 0;
-    background-color: white;
     color: black;
-    font-size: 22px;
+    font-size: 20px;
     border: none;
     font-family: Verdana, sans-serif;
     cursor: pointer;
-    width: 25%;
+    width: 20%;
 }
 
 button p {
@@ -29,5 +29,27 @@ nav button:last-child p {
 }
 
 .nav_btn:hover {
-    background-color: rgb(200, 200, 200);
+    background-color: #d0d0dc;
 }
+
+.logo {
+    background-color: #efefef;
+    font-size: 33px;
+    font-style: italic;
+    padding-left: 8px;
+}
+
+.ikon {
+    height: 100%;
+}
+
+.name {
+    width: 170px;
+    padding-left: 10px;
+}
+
+div p.name {
+    display: flex;
+    padding-top: 21px;
+}
+

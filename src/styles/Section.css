@@ -1,13 +1,13 @@
 section {
-  height: 270vh;
-  background-color: rgb(200, 200, 200);
+  height: 370vh;
+  background-color: #d0d0dc;
 }
 
 .section_bckg {
-  background-image: url(../images/header_3.jpg);
+  background-image: url(../images/header_4.jpg);
   height: 80vh;
   background-size: cover;
-  background-position: 0 18%;
+  background-position: 0 43%;
   padding-bottom: 35px;
 }
 
@@ -16,5 +16,9 @@ section {
 }
 
 .products {
+  height: 100vh;
+}
+
+.recommendations {
   height: 100vh;
 }

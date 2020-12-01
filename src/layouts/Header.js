@@ -3,14 +3,16 @@ import React from 'react';
 import '../styles/Header.css';
 
 const Header = () => {
+    
+   
 
     return (
     <>
         <header>
         <div className="bckg"></div>
         <div className="tagline">
-            <p><span className="design">Our design,</span></p>
-            <p className="your"><span>Your </span><span className="word style">style</span><span className="word life">life</span><span className="word joy">joy</span></p>
+            <p>Our <span className="design">design,</span></p>
+            <div className="word"><p className="your word"><span>Your </span><span className="word style">style</span><span className="word life">life</span><span className="word joy">joy</span></p></div>
         </div>
         <button className="arrow"><i class="fas fa-angle-double-down"></i></button>
         </header>

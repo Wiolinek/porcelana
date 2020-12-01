@@ -1,36 +1,37 @@
 header {
    height: 100vh;
-   background-color: rgb(200, 200, 200);
+   background-color: #d0d0dc;
 }
 
-
 .bckg {
-   background-image: url(../images/header_2.jpg);
+   background-image: url(../images/header_3.jpg);
    height: 92vh;
    background-position: 0 20%;
    background-size: cover;
  }
 
  .tagline {
+   display: block;
    position: absolute;
-   top: 25vh;
-   left: 7vw;
+   top: 37vh;
+   left: 20vw;
+   width: 60vw;
+   font-size: 120px;
  }
 
- span {
-    font-size: 120px;
+ .design {
+   font-style: italic;
  }
 
  .your {
-   padding-top: 5vh;
-   padding-left: 12vw;
+   display: block;
+   position: absolute;
+   top: 17vh;
+   left: 5vw;
  }
 
  .word {
-   font-size: 127px;
-    position: absolute;
-    left: 26vw;
-    font-style: italic;
+   display: inline-block;
  }
 
  .style {
@@ -39,12 +40,12 @@ header {
  }
 
 .life {
-   opacity: 0;
+   opacity: 1;
    color: gold;
 }
 
 .joy {
-   opacity: 0;
+   opacity: 1;
    color: purple;
 }
 
@@ -65,5 +66,5 @@ header {
 
 .arrow:hover {
    cursor: pointer;
-   background-color: rgb(200, 200, 200);
+   background-color: #d0d0dc;
 }
