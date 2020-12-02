@@ -1,6 +1,13 @@
 section {
   height: 370vh;
   background-color: #d0d0dc;
+  font-family: 'Cinzel', serif;
+}
+h1 {
+  padding-top: 10vh;
+  font-size: 33px;
+  font-weight: 700;
+  text-align: center;
 }
 
 .section_bckg {
@@ -13,6 +20,18 @@ section {
 
 .about {
   height: 100vh;
+  width: 80%;
+  margin: 0 auto;
+  font-size: 21px;
+  line-height: 1.7;
+}
+
+div.about p {
+  padding-top: 3vh;
+}
+
+.about p span {
+  font-weight: 700;
 }
 
 .products {
