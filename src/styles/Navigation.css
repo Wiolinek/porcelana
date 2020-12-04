@@ -1,57 +1,84 @@
 .nav {
-    display: inline-flex;
     position: fixed;
-    width: 100%;
-    top: 15px;
+    width: 80vw;
+    top: 4vh;
     right: 0;
     z-index: 1;
-    background-color: #efefef;
-    height: 60px;
 }
 
-.nav_btn {
-    line-height: 30px;
-    padding: 10px 0 10px 0;
+ul {
+    list-style: none;
+    display: flex;
+    float: right;
+    margin-right: 2vw;
+}
+
+li a {
+    padding: 0 20px;
     color: black;
     font-size: 25px;
-    border: none;
-    font-family: Verdana, sans-serif;
+    text-decoration: none;
     cursor: pointer;
-    width: 20%;
-}
-
-button p {
     border-right: black 2px solid;
     font-family: 'Cinzel', serif;
 }
 
-nav button:last-child p {
+li:last-child a {
     border-right: none;
 }
 
-.nav_btn:hover {
+li a:hover {
     background-color: #d0d0dc;
 }
 
 .logo {
-    background-color: #efefef;
-    padding-left: 8px;
-}
-
-.ikon {
-    height: 100%;
+    position: fixed;
+    top: 4vh;
+    left: 3vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    width: 200px;
+    border: 2px black solid;
+    border-radius: 50%;
 }
 
 .name {
     font-family: 'Texturina', serif;
-    font-size: 35px;
-    width: 170px;
-    padding-left: 9px;
-
+    font-size: 38px;
+    transform: translate(0, -4px);
 }
 
-div p.name {
+aside {
+    position: fixed;
+    top: 20vh;
+    right: 3vh;
+}
+.contact_bar {
     display: flex;
-    padding-top: 3px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 60px;
+    border: 2px black solid;
+    border-radius: 50%;
+    margin: 2vh 0;
 }
 
+.post {
+    height: 90px;
+    width: 90px;
+}
+
+.msg {
+    margin-top: 25vh;
+}
+
+.contact_bar:hover {
+    background-color: black;
+    color: white;
+    border: 2px black solid;
+    border-radius: 50%;
+}

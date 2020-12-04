@@ -2,19 +2,27 @@ import React from 'react';
 
 import '../styles/Navigation.css';
 
-import logo from '../images/plate.png';
-
 const Navigation = () => {
 
     return (
     <nav className="nav">
-        <img alt="logo" className="logo ikon" src={logo}/><div><p className="logo name">ICM Inc.</p></div>
-        <button className="nav_btn"><p>About Us</p></button>
-        <button className="nav_btn"><p>Products</p></button>
-        <button className="nav_btn"><p>Recommendations</p></button>
-        <button className="nav_btn"><p>Careers</p></button>
-        <button className="nav_btn"><p>E-Shop</p></button>
-        <button className="nav_btn"><p>Contact</p></button>
+        <div className="logo">
+            <p className="name">ICM Inc.</p>
+        </div>
+        <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Recommendations</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">E-Shop</a></li>
+        </ul>
+        <aside>
+            <div className="contact_bar">FB</div>
+            <div className="contact_bar">Insta</div>
+            <div className="contact_bar">Twitter</div>
+            <div className="contact_bar post msg">Msg</div>
+            <div className="contact_bar post">E-mail</div>
+        </aside>
     </nav>
     )
 }   
