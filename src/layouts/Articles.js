@@ -17,11 +17,11 @@ const About = () => {
             </div>
             <div className="products"><p>
                 <h1>Products</h1>
-                </p></div>
+                </p>
+            </div>
             <div className="recommendations"><p>
                 <h1>Recommendations</h1>
-                </p></div>
-            <div className="section_bckg" alt="white plate on a table"> 
+                </p>
             </div>
             </section>
         </>

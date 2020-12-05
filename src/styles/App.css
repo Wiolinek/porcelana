@@ -8,5 +8,5 @@
   .app {
     background-image: url(../images/back_1.jpg);
     background-size: cover;
-    width: 100vw;
+    /* width: 100vw; */
   }

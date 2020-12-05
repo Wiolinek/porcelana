@@ -8,7 +8,7 @@
    top: 30vh;
    left: 18vw;
    width: 60vw;
-   font-size: 130px;
+   font-size: 120px;
    font-family: 'Raleway Dots', cursive;
    text-transform: uppercase;
  }
@@ -20,7 +20,7 @@
 
 .arrow {
    position: absolute;
-   bottom: 5vh;
+   bottom: 3vh;
    right: calc(50vw - 35px);
    height: 100px;
    width: 70px;

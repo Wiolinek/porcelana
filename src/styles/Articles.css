@@ -7,13 +7,7 @@ h1 {
   font-size: 33px;
   font-weight: 700;
   text-align: center;
-}
-
-.section_bckg {
-  height: 80vh;
-  background-size: cover;
-  background-position: 0 43%;
-  padding-bottom: 35px;
+  font-family: 'Cinzel', serif;
 }
 
 .about {
