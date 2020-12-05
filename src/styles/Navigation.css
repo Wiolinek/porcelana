@@ -54,17 +54,20 @@ aside {
     position: fixed;
     top: 20vh;
     right: 3vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 .contact_bar {
     display: flex;
-    position: relative;
     align-items: center;
     justify-content: center;
     height: 60px;
     width: 60px;
-    border: 2px black solid;
-    border-radius: 50%;
-    margin: 2vh 0;
+    margin: 5px 0;
+}
+.fab, .fas {
+    font-size: 35px;
 }
 
 .post {
@@ -73,12 +76,9 @@ aside {
 }
 
 .msg {
-    margin-top: 25vh;
+    margin-top: 30vh;
 }
 
 .contact_bar:hover {
-    background-color: black;
     color: white;
-    border: 2px black solid;
-    border-radius: 50%;
 }

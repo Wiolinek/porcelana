@@ -17,11 +17,11 @@ const Navigation = () => {
             <li><a href="#">E-Shop</a></li>
         </ul>
         <aside>
-            <div className="contact_bar">FB</div>
-            <div className="contact_bar">Insta</div>
-            <div className="contact_bar">Twitter</div>
-            <div className="contact_bar post msg">Msg</div>
-            <div className="contact_bar post">E-mail</div>
+            <div className="contact_bar"><i class="fab fa-facebook"></i></div>
+            <div className="contact_bar"><i class="fab fa-instagram"></i></div>
+            <div className="contact_bar"><i class="fab fa-twitter-square"></i></div>
+            <div className="contact_bar post msg"><i class="fab fa-facebook-messenger"></i></div>
+            <div className="contact_bar post"><i class="fas fa-envelope"></i></div>
         </aside>
     </nav>
     )

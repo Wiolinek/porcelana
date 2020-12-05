@@ -6,44 +6,17 @@
    display: block;
    position: absolute;
    top: 30vh;
-   left: 17vw;
+   left: 18vw;
    width: 60vw;
-   font-size: 100px;
+   font-size: 130px;
+   font-family: 'Raleway Dots', cursive;
+   text-transform: uppercase;
  }
 
- .design {
-   font-style: italic;
+ .tagline p:last-child {
+    padding-top: 3vh;
+    padding-left: 5vw;
  }
-
- .your {
-   display: block;
-   position: absolute;
-   top: 17vh;
-   left: 5vw;
- }
-
- .word {
-   display: inline-block;
- }
-
- .style {
-   opacity: 1;
-   color: red;
- }
-
-.life {
-   opacity: 1;
-   color: gold;
-}
-
-.joy {
-   opacity: 1;
-   color: purple;
-}
-
-.fas {
-   font-size: 40px;
-}
 
 .arrow {
    position: absolute;
@@ -52,12 +25,5 @@
    height: 100px;
    width: 70px;
    border: none;
-   /* border: black 2px solid;
-   border-radius: 40%; */
    background-color: rgba(255,255,255,0);
 }
-
-/* .arrow:hover {
-   cursor: pointer;
-   background-color: #d0d0dc;
-} */
