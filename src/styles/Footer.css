@@ -1,7 +1,19 @@
-footer {
-    height: 50vh;
+.contact_form {
+    border: black 2px solid;
+    width: 80%;
+    height: 60vh;
+    margin: 0 auto 5vh auto;
 }
 
-.contact {
-    height: 95%;
+label:last-child input {
+    height: 20vh;
+    width: 20vw;
 }
+
+.contact_form p {
+    padding-top: 10vh;
+    font-size: 33px;
+    font-weight: 700;
+    text-align: center;
+    font-family: 'Cinzel', serif;
+  }
