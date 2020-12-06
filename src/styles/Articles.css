@@ -33,4 +33,7 @@ div.about p {
 
 .recommendations {
   height: 100vh;
+  font-size: 30px;
+  width: 90%;
+  margin: 0 auto;
 }
