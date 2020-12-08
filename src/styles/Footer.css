@@ -1,19 +1,95 @@
 .contact_form {
+    font-family: 'Cinzel', serif;
     border: black 2px solid;
-    width: 80%;
+    width: 70%;
     height: 60vh;
     margin: 0 auto 5vh auto;
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
-label:last-child input {
-    height: 20vh;
-    width: 20vw;
-}
-
-.contact_form p {
-    padding-top: 10vh;
+.contact_title {
+    margin-top: 5vh;
+    margin-bottom: 4vh;
     font-size: 33px;
     font-weight: 700;
     text-align: center;
-    font-family: 'Cinzel', serif;
   }
+
+.address {
+    font-size: 28px;
+    line-height: 38px;
+    font-weight: normal;
+    text-align: center;
+    width: 50%;
+    height: 72%;
+}
+
+.address p {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.address p:first-child {
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+}
+
+.address p:nth-last-child(2) {
+    margin-top: 2vh;
+}
+
+.form {
+    float: right;
+    width: 50%;
+    height: 72%;
+}
+
+.form form {
+    display: flex;
+    flex-direction: column;
+}
+
+textarea, input {
+    background-color: rgb(100, 100, 100, 0.3);
+    border: black 2px solid;
+}
+
+textarea {
+    width: 80%;
+    height: 13vh;
+}
+
+input {
+    width: 50%;
+    height: 3vh;
+}
+
+label {
+    margin-top: 1vh;
+}
+
+button {
+    height: 43px;
+    width: 120px;
+    font-family: 'Cinzel', serif;
+    font-size: 23px;
+    background-color: transparent;
+    border: black 2px solid;
+    margin-top: 3vh;
+}
+
+button:hover {
+    background-color: #d0d0dc;
+}
+
+div form {
+    height: 100%;
+}
+
+.contribution {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.contact_form div {
+    display: inline-block;
+}

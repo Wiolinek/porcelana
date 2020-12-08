@@ -6,11 +6,12 @@
    display: block;
    position: absolute;
    top: 30vh;
-   left: 18vw;
+   left: 16vw;
    width: 60vw;
-   font-size: 120px;
+   font-size: 130px;
    font-family: 'Raleway Dots', cursive;
    text-transform: uppercase;
+   letter-spacing: .3vw;
  }
 
  .tagline p:last-child {
