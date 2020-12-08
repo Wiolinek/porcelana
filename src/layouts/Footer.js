@@ -17,18 +17,16 @@ const Footer = () => {
             </div>
             <div className="form">
                 <form>
-                    <label>Name:<br />
+                    <label>Name:</label>
                     <input type="text" name="user_name" required></input>
-                    </label>
-                    <label>Surname:<br />
+                    <label>Surname:</label>
                     <input type="text" name="user_surname"required></input>
-                    </label>
-                    <label>E-mail:<br />
+                    <label>E-mail:</label>
                     <input type="email" name="user_email"required></input>
-                    </label>
-                    <label>Message:<br />
+                    <label>Message:</label>
                     <textarea type="text" name="user_message" required></textarea>
-                    </label>
+                    <label>Add file:</label>
+                    <input type="file" name="user_file"></input>
                     <button type="submit">Send</button>
                 </form>
             </div>
