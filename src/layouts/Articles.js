@@ -20,14 +20,15 @@ const About = () => {
                 <h1>Products</h1>
                 </p>
             </div>
-            <div className="recommendations"><p>
+            <div className="recommendations">
                 <h1>Recommendations</h1>
-                <p>"Excellent customer service, professional approach to cooperation, patience and flexibility."<span>Reetz, Paris</span></p>
-                <p>"People with extensive experience and ability to adapt to customer needs. Commitment, reliability and punctuality..."<span>Interconteenentale, Prague</span></p>
-                <p>"ICM has been a valuable business partner for us for many years. We appreciate their professional work and excellent consulting service"<span>Palaza, Warsaw</span></p>
-                <p></p>
-                <p></p>
-                </p>
+                <div className="opinions">
+                    <div><p>"Excellent customer service, professional approach to cooperation, patience and flexibility."<br/><span>Reetz, Paris</span></p></div>
+                    <div><p>"People with extensive experience and ability to adapt to customer needs. Commitment, reliability and punctuality..."<br/><span>Interconteenentale, Prague</span></p></div>
+                    <div><p>"ICM has been a valuable business partner for us for many years. We appreciate their professional work and excellent consulting service"<br/><span>Palaza, Warsaw</span></p></div>
+                    <div><p></p></div>
+                    <div><p></p></div>
+                </div>
             </div>
             </section>
         </>
