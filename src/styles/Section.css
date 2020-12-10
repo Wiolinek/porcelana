@@ -12,7 +12,15 @@
    font-family: 'Raleway Dots', cursive;
    text-transform: uppercase;
    letter-spacing: .3vw;
+   line-height: 180px;
  }
+
+ .tagline span {
+   font-family: 'Unica One', cursive;
+   font-size: 155px;
+   text-transform: lowercase;
+   letter-spacing: .9vw;
+}
 
  .tagline p:last-child {
     padding-top: 3vh;
@@ -27,4 +35,7 @@
    width: 70px;
    border: none;
    background-color: rgba(255,255,255,0);
+   align-content: center;
+   outline: 0;
 }
+

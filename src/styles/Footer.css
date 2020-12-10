@@ -68,7 +68,7 @@ label {
     margin-top: 1vh;
 }
 
-button {
+input:last-child {
     height: 43px;
     width: 120px;
     font-family: 'Cinzel', serif;
@@ -78,7 +78,7 @@ button {
     margin-top: 4vh;
 }
 
-button:hover {
+input:last-child:hover {
     background-color: #d0d0dc;
 }
 
@@ -95,5 +95,6 @@ div form {
 }
 
 input:nth-last-child(2) {
-    width: 40%;
+    border: none;
+    background-color: transparent;
 }

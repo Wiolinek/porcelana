@@ -23,9 +23,9 @@ const About = () => {
             <div className="recommendations">
                 <h1>Recommendations</h1>
                 <div className="opinions">
-                    <div><p>"Excellent customer service, professional approach to cooperation, patience and flexibility."<br/><span>Reetz, Paris</span></p></div>
-                    <div><p>"People with extensive experience and ability to adapt to customer needs. Commitment, reliability and punctuality..."<br/><span>Interconteenentale, Prague</span></p></div>
-                    <div><p>"ICM has been a valuable business partner for us for many years. We appreciate their professional work and excellent consulting service"<br/><span>Palaza, Warsaw</span></p></div>
+                    <div><p>"Excellent customer service, professional approach to cooperation, patience and flexibility."</p><p>-Reetz, Paris-</p></div>
+                    <div><p>"People with extensive experience and ability to adapt to customer needs. Commitment, reliability and punctuality..."</p><p>-Interconteenentale, Prague-</p></div>
+                    <div><p>"ICM has been a valuable business partner for us for many years. We appreciate their professional work and excellent consulting service"</p><p>-Palaza, Warsaw-</p></div>
                     <div><p></p></div>
                     <div><p></p></div>
                 </div>
