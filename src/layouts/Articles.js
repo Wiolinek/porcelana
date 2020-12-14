@@ -16,18 +16,62 @@ const About = () => {
                 <p>Our succesfull, long-term <span>experience</span> in cooperation with hotels, restaurants and hospitals guarantees that we are able to provide plates tailored to all needs. So far, we can be proud of cooperation with clients from all over the Europe: Italy, Lithuania, Norway, Denmark, Germany, Switzerland, Ukraine, Portugal, France, Belgium, Greece, Romania and many more.</p>
                 <p>This year, we launched an online store to reach also our retail customers.</p>
             </div>
-            <div className="products"><p>
+            <div className="offer">
                 <h1>Products</h1>
-                </p>
+                <div className="products">
+                    <div className="mugs">Mugs</div>
+                    <div className="cups">Cups</div>
+                    <div className="pots">Coffee Pots</div>
+                    <div className="plates">Plates</div>
+                    <div className="bowls">Bowls</div>
+                    <div className="suger-bowls">Sugar Bowls</div>
+                </div>
             </div>
             <div className="recommendations">
                 <h1>Recommendations</h1>
                 <div className="opinions">
-                    <div><p>"Excellent customer service, professional approach to cooperation, patience and flexibility."</p><p>-Reetz, Paris-</p></div>
+                    <div><p>"Excellent customer service, innovative and professional approach to cooperation, patience and flexibility. We cannot imagine a better partner in this difficult and demanding bussiness as hotel industry is."</p><p>-Reetz, Paris-</p></div>
                     <div><p>"People with extensive experience and ability to adapt to customer needs. Commitment, reliability and punctuality..."</p><p>-Interconteenentale, Prague-</p></div>
-                    <div><p>"ICM has been a valuable business partner for us for many years. We appreciate their professional work and excellent consulting service"</p><p>-Palaza, Warsaw-</p></div>
-                    <div><p></p></div>
-                    <div><p></p></div>
+                    <div><p>"ICM has been a valuable business partner for us for many years. We appreciate their professional work and excellent consulting service."</p><p>-Palaza, Warsaw-</p></div>
+                    <div><p>"The ICM brand has been supporting us in the development of our business for years. A wide range of products and their high quality go hand in hand with the image of our company."</p><p>-Radosson Blue, Prague-</p></div>
+                    <div><p>"If you are looking for a business partner you can fully rely on, International Ceramics is your best choice. Their professionalism and attention to the smallest details make us constantly return for their products."</p><p>-Holton, Frankfurt-</p></div>
+                </div>
+            </div>
+            <div className="careers">
+                <h1>Careers</h1>
+                <div className="offers">
+                    <div><p>We are a constantly developing, stable and reliable company based on tradition and respect. Do you want to become part of our success? Check out our current job openings below and let us know about your experience and potential.</p></div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th className="job-offer">Job offer</th>
+                                <th className="location">Location</th>
+                                <th className="date">Added</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="#">Customer Service Specialist with English</a></td>
+                                <td>Kraków</td>
+                                <td>12-12-2020</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">Customer Service Specialist with German</a></td>
+                                <td>Kraków</td>
+                                <td>18-12-2020</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">Junior Web Developer</a></td>
+                                <td>remote</td>
+                                <td>28-12-2020</td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">Office Administrator</a></td>
+                                <td>Radom</td>
+                                <td>05-01-2021</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
             </section>

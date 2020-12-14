@@ -1,5 +1,4 @@
 section {
-  height: 370vh;
   font-family: 'Cinzel', serif;
 }
 
@@ -11,7 +10,7 @@ h1 {
 }
 
 .about {
-  height: 100vh;
+  min-height: 100vh;
   width: 80%;
   margin: 0 auto;
   font-size: 21px;
@@ -20,7 +19,7 @@ h1 {
 }
 
 div.about p {
-  padding-top: 3vh;
+  margin-top: 3vh;
 }
 
 .about p span {
@@ -28,14 +27,11 @@ div.about p {
 }
 
 .products {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .recommendations {
-  /* background-image: url("../images/plate_5.jpg"); */
-  /* background-size: cover; */
-  /* background-position: center; */
-  height: 100vh;
+  min-height: 100vh;
   font-size: 21px;
   width: 90%;
   margin: 0 auto;
@@ -46,13 +42,14 @@ div.about p {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 3vh;
   
 }
 
 div.opinions div {
   width: 25%;
   height: 20%;
-  margin: 5vh 2vw;
+  margin: 3vh 2vw;
   padding: 7px;
   line-height: 1.7;
   border: black 2px solid;
@@ -66,4 +63,94 @@ div.opinions div {
   font-weight: 700;
   margin-top: 1vh;
   float: right;
+}
+
+.careers {
+  width: 80%;
+  min-height: 100vh;
+  font-size: 21px;
+  line-height: 1.7;
+  word-spacing: 1.5px;
+  margin: 0 auto;
+}
+
+.offers {
+  padding-top: 3vh;
+}
+
+.offers div p:first-child {
+  margin-top: 3vh;
+}
+
+table, th, td {
+  width: 90%;
+  table-layout: fixed;
+  margin: 5vh auto 0 auto;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 7px;
+  text-align: center;
+}
+
+tr td a {
+  text-decoration: none;
+}
+
+.date, .location {
+  width: 20%;
+}
+
+.job-offer {
+  width: 60%;
+}
+
+.offer {
+  min-height: 100vh;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.products {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+}
+
+.products div {
+  border: 2px solid black;
+  width: 22%;
+  height: 50vh;
+  margin: 3vh 2vw 1vh 2vw;
+  background-position: cover;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.mugs {
+  background-image: url(../images/mug_1.jpg);
+}
+
+.cups {
+  background-image: url(../images/cup_1.jpg);
+}
+
+.pots {
+  background-image: url(../images/teapot_2.jpg);
+}
+
+.plates {
+  background-image: url(../images/plate_12.jpg);
+}
+
+.bowls {
+  background-image: url();
+}
+
+.sugar-bowls {
+  background-image: url();
 }

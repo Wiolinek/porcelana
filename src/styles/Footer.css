@@ -2,9 +2,8 @@
     font-family: 'Cinzel', serif;
     border: black 2px solid;
     width: 70%;
-    height: 70vh;
-    margin: 0 auto 5vh auto;
-    background-color: rgba(0, 0, 0, 0.1);
+    min-height: 67vh;
+    margin: 20vh auto 5vh auto;
 }
 
 .contact_title {
@@ -82,12 +81,9 @@ input:last-child:hover {
     background-color: #d0d0dc;
 }
 
-div form {
-    height: 100%;
-}
-
 .contribution {
     font-family: 'Times New Roman', Times, serif;
+    height: 3vh;
 }
 
 .contact_form div {
