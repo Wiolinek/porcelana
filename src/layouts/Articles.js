@@ -19,12 +19,12 @@ const About = () => {
             <div className="offer">
                 <h1>Products</h1>
                 <div className="products">
-                    <div className="mugs">Mugs</div>
-                    <div className="cups">Cups</div>
-                    <div className="pots">Coffee Pots</div>
-                    <div className="plates">Plates</div>
-                    <div className="bowls">Bowls</div>
-                    <div className="suger-bowls">Sugar Bowls</div>
+                    <div className="dish mugs"><p>Mugs</p><div className="more-btn"><a href="#">More</a></div></div>
+                    <div className="dish cups"><p>Cups</p><div className="more-btn"><a href="#">More</a></div></div>
+                    <div className="dish pots"><p>Coffee Pots</p><div className="more-btn"><a href="#">More</a></div></div>
+                    <div className="dish plates"><p>Plates</p><div className="more-btn"><a href="#">More</a></div></div>
+                    <div className="dish bowls"><p>Bowls</p><div className="more-btn"><a href="#">More</a></div></div>
+                    <div className="dish vases"><p>Vases</p><div className="more-btn"><a href="#">More</a></div></div>
                 </div>
             </div>
             <div className="recommendations">

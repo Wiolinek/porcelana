@@ -119,20 +119,35 @@ tr td a {
   flex-wrap: wrap;
   justify-content: center;
   align-content: flex-start;
+  
 }
 
-.products div {
-  border: 2px solid black;
-  width: 22%;
-  height: 50vh;
+.products .dish {
+  font-size: 40px;
+  text-shadow: 3px 3px 6px black;
+  color: #d0d0dc;
+  padding: 2%;
+  width: 20%;
+  height: 40vh;
   margin: 3vh 2vw 1vh 2vw;
-  background-position: cover;
-  background-size: 100%;
+  background-position: center center;
+  background-size: cover;
   background-repeat: no-repeat;
+  box-shadow: 2px 6px 12px 2px rgba(0, 0, 0, 0.5);
+  position: relative;
+  filter: grayscale(100%);
+}
+
+.products div:hover {
+  background-size: 120% auto;
+  background-color: #d0d0dc;
+  cursor: pointer;
+  filter: grayscale(0%);
 }
 
 .mugs {
   background-image: url(../images/mug_1.jpg);
+
 }
 
 .cups {
@@ -144,13 +159,35 @@ tr td a {
 }
 
 .plates {
-  background-image: url(../images/plate_12.jpg);
+  background-image: url(../images/plate_14.jpg);
 }
 
 .bowls {
-  background-image: url();
+  background-image: url(../images/bowl_1.jpg);
 }
 
-.sugar-bowls {
-  background-image: url();
+.vases {
+  background-image: url(../images/vase_4.jpg);
+}
+
+.more-btn {
+  border: 3px solid #d0d0dc;
+  text-shadow: 2px 2px 3px black;
+  font-size: 20px;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 2vw;
+  bottom: 2vw;
+  background-color: black;
+}
+
+.more-btn a {
+  text-decoration: none;
+  color: #d0d0dc;
 }
