@@ -28,8 +28,9 @@ li:last-child a {
 }
 
 li a:hover {
-    background-color: #d0d0dc;
-}
+    color: #d0d0dc;
+    text-shadow: 2px 2px 3px black;
+}  
 
 .logo {
     position: fixed;
@@ -73,5 +74,5 @@ aside div {
 }
 
 aside div:hover {
-    color: white;
+    color: #d0d0dc;
 }

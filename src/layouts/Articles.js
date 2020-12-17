@@ -73,6 +73,7 @@ const About = () => {
                         </tbody>
                     </table>
                 </div>
+                <div className="join"><a href="#">Join us!</a></div>
             </div>
             </section>
         </>

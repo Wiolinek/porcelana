@@ -7,6 +7,15 @@ const Footer = () => {
 
     return (
         <>
+        <div className="newsletter">
+            <p>Newsletter</p>
+            <p>Sign in and stay in touch!</p>
+            <form>
+                    <label htmlFor="user_email">E-mail:</label>
+                    <input type="email" id="user_email" name="user_email" required></input>
+                    <input type="submit" value="Send"></input>
+            </form>
+        </div>
         <div className="contact_form">
             <p className="contact_title">Contact Us!</p>
             <div className="address">

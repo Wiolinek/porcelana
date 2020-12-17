@@ -3,7 +3,7 @@
     border: black 2px solid;
     width: 70%;
     min-height: 67vh;
-    margin: 20vh auto 5vh auto;
+    margin: 4vh auto 3vh auto;
 }
 
 .contact_title {
@@ -63,7 +63,7 @@ input {
     height: 25px;
 }
 
-label {
+.form label {
     margin-top: 1vh;
 }
 
@@ -72,6 +72,9 @@ input:last-child {
     width: 120px;
     font-family: 'Cinzel', serif;
     font-size: 23px;
+}
+
+.form [type=submit] {
     background-color: transparent;
     border: black 2px solid;
     margin-top: 4vh;
@@ -93,4 +96,44 @@ input:last-child:hover {
 input:nth-last-child(2) {
     border: none;
     background-color: transparent;
+}
+
+.newsletter form {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3vh;
+}
+
+.newsletter p:first-child {
+    font-size: 35px;
+    padding: 2vh;
+}
+
+.newsletter {
+    background-color: black;
+    color: #d0d0dc;
+    font-family: 'Cinzel', serif;
+    font-size: 23px;
+    min-height: 24vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.newsletter input {
+    border: #d0d0dc 2px solid;
+    color: #d0d0dc;
+    background-color: black;
+}
+
+.newsletter [type=email] {
+    width: 25%;
+    margin: 0 3vw 0 1vw;
+}
+
+.newsletter [type=submit]:hover {
+    background-color: #d0d0dc;
+    color: black;
 }

@@ -10,7 +10,7 @@ h1 {
 }
 
 .about {
-  min-height: 100vh;
+  min-height: 110vh;
   width: 80%;
   margin: 0 auto;
   font-size: 21px;
@@ -27,11 +27,11 @@ div.about p {
 }
 
 .products {
-  min-height: 100vh;
+  min-height: 110vh;
 }
 
 .recommendations {
-  min-height: 100vh;
+  min-height: 110vh;
   font-size: 21px;
   width: 90%;
   margin: 0 auto;
@@ -67,11 +67,12 @@ div.opinions div {
 
 .careers {
   width: 80%;
-  min-height: 100vh;
+  min-height: 110vh;
   font-size: 21px;
   line-height: 1.7;
   word-spacing: 1.5px;
   margin: 0 auto;
+  position: relative;
 }
 
 .offers {
@@ -140,7 +141,6 @@ tr td a {
 
 .products div:hover {
   background-size: 120% auto;
-  background-color: #d0d0dc;
   cursor: pointer;
   filter: grayscale(0%);
 }
@@ -170,24 +170,44 @@ tr td a {
   background-image: url(../images/vase_4.jpg);
 }
 
-.more-btn {
+.more-btn, .join {
   border: 3px solid #d0d0dc;
   text-shadow: 2px 2px 3px black;
   font-size: 20px;
   border-radius: 50%;
-  width: 80px;
-  height: 80px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  right: 2vw;
-  bottom: 2vw;
   background-color: black;
 }
 
-.more-btn a {
+.more-btn {
+  right: 2vw;
+  bottom: 2vw;
+  width: 80px;
+  height: 80px;
+}
+
+.join {
+  font-size: 22px;
+  width: 115px;
+  height: 115px;
+  right: 12vw;
+  bottom: 10vw;
+  padding: 5px;
+}
+
+.more-btn a, .join a {
   text-decoration: none;
   color: #d0d0dc;
+}
+
+.more-btn:hover a, .join:hover a {
+  color: black; 
+}
+
+.more-btn:hover, .join:hover {
+  background-color: #d0d0dc;
 }
