@@ -1,0 +1,28 @@
+.shop {
+    min-height: 200vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.shop-title {
+    padding-bottom: 3vh;
+}
+
+.filter {
+    width: 90% ;
+    height: 20vh;
+    border: 2px solid black;
+}
+
+.shop-products {
+    width: 55% ;
+    height: 170vh;
+    border: 2px solid black;
+}
+
+.cart {
+    width: 25% ;
+    height: 70vh;
+    border: 2px solid black;
+}

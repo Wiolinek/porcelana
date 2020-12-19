@@ -4,6 +4,7 @@ import Navigation from "./Navigation";
 import Section from "./Section";
 import About from "./Articles";
 import Footer from "./Footer";
+import Shop from "./Shop";
 
 import '../styles/App.css';
 
@@ -35,6 +36,10 @@ const App = () => {
           <footer>
             <Footer />
           </footer>
+          {/* cała sekcja sklepu do zmiany miejsca */}
+          <section>
+            <Shop />
+          </section>
         </div>
       </>
     );
