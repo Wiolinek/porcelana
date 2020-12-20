@@ -33,19 +33,22 @@ li a:hover {
 }  
 
 .logo {
-    position: fixed;
-    top: 4vh;
-    left: 3vh;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 200px;
     width: 200px;
-    border: 2px black solid;
     border-radius: 50%;
 }
 
-.name {
+.menu-logo {
+    position: fixed;
+    top: 4vh;
+    left: 3vh;
+    border: 2px black solid;
+}
+
+.logo-name {
     font-family: 'Texturina', serif;
     font-size: 38px;
     transform: translate(0, -4px);

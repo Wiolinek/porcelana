@@ -8,7 +8,7 @@ const Footer = () => {
     return (
         <>
         <div className="newsletter">
-            <p>Newsletter</p>
+            <div><i class="far fa-newspaper"></i><p>Newsletter</p></div>
             <p>Sign in and stay in touch!</p>
             <form>
                     <label htmlFor="user_email">E-mail:</label>

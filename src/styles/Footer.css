@@ -106,11 +106,6 @@ input:nth-last-child(2) {
     margin-top: 3vh;
 }
 
-.newsletter p:first-child {
-    font-size: 35px;
-    padding: 2vh;
-}
-
 .newsletter {
     background-color: black;
     color: #d0d0dc;
@@ -136,4 +131,16 @@ input:nth-last-child(2) {
 .newsletter [type=submit]:hover {
     background-color: #d0d0dc;
     color: black;
+}
+
+.newsletter div {
+    display: flex;
+    align-items: center;
+    font-size: 35px;
+    padding: 2vh;
+}
+
+.fa-newspaper {
+    font-size: 34px;
+    margin-right: 1.5vw;
 }

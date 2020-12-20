@@ -6,8 +6,8 @@ const Navigation = () => {
 
     return (
     <nav className="nav">
-        <div className="logo">
-            <p className="name">ICM Inc.</p>
+        <div className="logo menu-logo">
+            <p className="logo-name">ICM Inc.</p>
         </div>
         <ul className="navigation-bar">
             <li><a href="#">About Us</a></li>

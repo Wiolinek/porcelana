@@ -1,37 +1,125 @@
 .shop {
-    min-height: 210vh;
+    min-height: 220vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
-.shop-title {
-    padding-bottom: 3vh;
-}
-
-.filter {
-    width: 90%;
-    height: 20vh;
-    border: 2px solid black;
+.shop-header {
+    width: 100%;
+    height: 40vh;
+    min-height: 200px;
+    background-image: url(../images/plate_5_back.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
 }
 
 .shop-products {
-    width: 60% ;
+    width: 60%;
     height: 170vh;
     border: 2px solid black;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-around;
     list-style: none;
 }
 
 .cart {
-    width: 20% ;
+    width: 20%;
     height: 70vh;
     border: 2px solid black;
 }
 
 .product img {
-    width: 50px;
-    height: 100px;
+    width: 20%;
+}
+
+.product div {
+
+}
+
+.product li {
+    
+}
+
+.shop-logo {
+    position: absolute;
+    top: 50%;
+    left: 3vh;
+    transform: translate(0, -100px);
+    border: 2px solid #d0d0dc;
+}
+
+.shop-logo .logo-name {
+    color: #d0d0dc;
+}
+
+.advantages, .shop-menu {
+    font-size: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 5vh; 
+    background-color: black;
+    opacity: 0.6;
+}
+
+.advantages div {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    color: #d0d0dc;
+}
+.shop-menu {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.shop-menu li {
+    color: #d0d0dc;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.fa-shipping-fast, .fa-undo-alt, .fa-thumbs-up, .fa-medal, .fa-search {
+    font-size: 20px;
+    width: 25px;
+    color: #d0d0dc;
+    line-height: 30px;
+    margin-right: 6px;
+}
+
+.search {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 18vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #d0d0dc;
+    text-shadow: 3px 3px 6px black;
+    font-size: 20px;
+}
+
+.search input {
+    background-color: rgba(100, 100, 100, 0.3);
+    border: #d0d0dc 2px solid;
+    color: #d0d0dc;
+    width: 20vw;
+    height: 30px;
+    margin-left: 15px;
+}
+
+.fa-search {
+    margin-left: 6px;
 }
