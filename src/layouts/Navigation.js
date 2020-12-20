@@ -9,7 +9,7 @@ const Navigation = () => {
         <div className="logo">
             <p className="name">ICM Inc.</p>
         </div>
-        <ul>
+        <ul className="navigation-bar">
             <li><a href="#">About Us</a></li>
             <li><a href="#">Products</a></li>
             <li><a href="#">Recommendations</a></li>

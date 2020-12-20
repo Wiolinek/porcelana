@@ -1,5 +1,5 @@
 .shop {
-    min-height: 200vh;
+    min-height: 210vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -10,19 +10,28 @@
 }
 
 .filter {
-    width: 90% ;
+    width: 90%;
     height: 20vh;
     border: 2px solid black;
 }
 
 .shop-products {
-    width: 55% ;
+    width: 60% ;
     height: 170vh;
     border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style: none;
 }
 
 .cart {
-    width: 25% ;
+    width: 20% ;
     height: 70vh;
     border: 2px solid black;
+}
+
+.product img {
+    width: 50px;
+    height: 100px;
 }

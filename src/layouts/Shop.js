@@ -10,7 +10,8 @@ const productsList = [
         category: "Cups",
         size: "8cm",
         price: 3.99,
-        image: '../image/cup_1_small.jpg',
+        image: ["../images/cup_1_small.jpg"],
+        alt_text: "cup",
     },
     {   
         id: 1,
@@ -18,7 +19,8 @@ const productsList = [
         category: "Cups",
         size: "9cm",
         price: 3.99,
-        image: '../image/cup_1_small.jpg',
+        image: '../images/cup_1_small.jpg',
+        alt_text: "cup",
     },
     {   
         id: 2,
@@ -26,7 +28,8 @@ const productsList = [
         category: "Cups",
         size: "9cm",
         price: 3.99,
-        image: '../image/cup_1_small.jpg',
+        image: '../images/cup_1_small.jpg',
+        alt_text: "cup",
     },
     {   
         id: 3,
@@ -34,7 +37,8 @@ const productsList = [
         category: "Cups",
         size: "9cm",
         price: 3.99,
-        image: '../image/cup_1_small.jpg',
+        image: '../images/cup_1_small.jpg',
+        alt_text: "cup",
     },
     {
         id: 4,
@@ -42,7 +46,8 @@ const productsList = [
         category: "Cups",
         size: "9cm",
         price: 3.99,
-        image: '../image/cup_1_small.jpg',
+        image: '../images/cup_1_small.jpg',
+        alt_text: "cup",
     },
     {
         id: 5,
@@ -50,7 +55,8 @@ const productsList = [
         category: "Cups",
         size: "9cm",
         price: 3.99,
-        image: '../image/cup_1_small.jpg',
+        image: '/cup_1_small.jpg',
+        alt_text: "cup",
     },
     {
         id: 6,
@@ -58,7 +64,8 @@ const productsList = [
         category: "Cups",
         size: "9cm",
         price: 3.99,
-        image: '../image/cup_1_small.jpg',
+        image: '../images/cup_1_small',
+        alt_text: "cup",
     },
     {
         id: 7,
@@ -66,7 +73,8 @@ const productsList = [
         category: "Cups",
         size: "9cm",
         price: 3.99,
-        image: '../image/cup_1_small.jpg',
+        image: "cup_1_small.jpg",
+        alt_text: "cup",
     },
     {
         id: 8,
@@ -74,7 +82,8 @@ const productsList = [
         category: "Cups",
         size: "9cm",
         price: 3.99,
-        image: '../image/cup_1_small.jpg',
+        image: "../images/cup_1_small.jpg",
+        alt_text: "cup",
     },
     {
         id: 9,
@@ -82,18 +91,20 @@ const productsList = [
         category: "Cups",
         size: "9cm",
         price: 3.99,
-        image: '../image/cup_1_small.jpg',
+        image: "mug_1_small.jpg",
+        alt_text: "cup",
     },
 ]
 
 const Shop = () => {
 
     let productItem = productsList.map(product => (
-        <li key={product.id}>
+        <li key={product.id} className="product">
             <p>{product.name}</p>
             <p>{product.size}</p>
             <p>{product.price}</p>
-            <img src={product.image} alt="product"></img>
+            <img src={product.image} alt={product.alt_text}></img>
+            <button class="add-to-cart">Add to cart</button>
         </li>
         )
     )
@@ -101,10 +112,11 @@ const Shop = () => {
     return (
             <div>
                 <h1 className="shop-title">Shop</h1>
-                <div className="shop"></div>
-                <div className="filter"></div>
-                <ul className="products">{productItem}</ul>
-                <div className="cart"></div>
+                <div className="shop">
+                    <div className="filter"></div>
+                        <ul className="shop-products">{productItem}</ul>
+                    <div className="cart"></div>
+                </div>
             </div>
     )
 

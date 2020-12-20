@@ -6,7 +6,7 @@
     z-index: 1;
 }
 
-ul {
+.navigation-bar {
     list-style: none;
     display: flex;
     float: right;
