@@ -19,24 +19,27 @@
 
 .shop-products {
     width: 60%;
-    height: 140vh;
+    min-height: 245vh;
     position: relative;
     display: inline-block;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     list-style: none;
     border: 2px solid black;
     margin-left: 6vw;
+    margin-top: 3vh;
+    
 }
 
 .shop-products li {
     width: 25%;
-    height: 45vh;
+    height: 80vh;
     border: 2px solid black;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    background-color: #d0d0dc;
 }
 
 .cart {
@@ -44,35 +47,29 @@
     height: 70vh;
     border: 2px solid black;
     margin-right: 6vw;
+    margin-top: 3vh;
 }
 
 .product img {
-    width: 20%;
+    width: 100%;
 }
 
-.product div {
+.product div, .choose-quantity {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
 .product div p {
     display: flex;
-    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
+    margin: .5vh auto;
 }
 
-.product li {
-    margin: 0;
-    width: 30%;
-    display: block;
-}
-
-.product p {
-    width: 30%;
-    margin: 0;  
+.product div p:first-child, .product div p:nth-child(3) {
+    margin-top: 3vh;
 }
 
 .shop-logo {
@@ -120,6 +117,10 @@
     justify-content: space-evenly;
 }
 
+.shop-menu li:first-child {
+    font-size: 26px;
+}
+
 .fa-shipping-fast, .fa-undo-alt, .fa-thumbs-up, .fa-medal, .fa-search {
     font-size: 20px;
     width: 25px;
@@ -153,4 +154,33 @@
 
 .fa-search {
     margin-left: 6px;
+}
+
+.add-to-cart {
+    background-color: transparent;
+    border: #d0d0dc 2px solid;
+    width: 100%;
+    height: 44px;
+    font-family: 'Cinzel', serif;
+    font-size: 18px;
+    margin: 2vh auto;
+    background-color: black;
+    color: #d0d0dc;
+}
+
+.add-to-cart:hover {
+    background-color: #d0d0dc;
+    color: black;
+    text-shadow: 2px 2px 3px black;
+    border: black 2px solid;
+}
+
+.choose-quantity label {
+    margin: 3vh auto 1vh;
+}
+
+.choose-quantity select {
+    background-color: #d0d0dc;
+    color: black;
+    border: black 2px solid;
 }
