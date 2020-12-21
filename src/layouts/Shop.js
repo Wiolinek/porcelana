@@ -11,7 +11,8 @@ import image6 from '../images/cup_1_small.jpg';
 import image7 from '../images/cup_1_small.jpg';
 import image8 from '../images/cup_1_small.jpg';
 import image9 from '../images/cup_1_small.jpg';
-
+import image10 from '../images/cup_1_small.jpg';
+import image11 from '../images/cup_1_small.jpg';
 
 const productsList = [
     {   
@@ -102,6 +103,24 @@ const productsList = [
         size: "9cm",
         price: 3.99,
         image: image9,
+        alt_text: "cup",
+    },
+    {
+        id: 10,
+        name: "Cup",
+        category: "Cups",
+        size: "9cm",
+        price: 3.99,
+        image: image10,
+        alt_text: "cup",
+    },
+    {
+        id: 11,
+        name: "Cup",
+        category: "Cups",
+        size: "9cm",
+        price: 3.99,
+        image: image11,
         alt_text: "cup",
     },
 ]
