@@ -13,7 +13,6 @@ import image9 from '../images/small_shop/cup_10_small.jpg';
 import image10 from '../images/small_shop/cup_11_small.jpg';
 import image11 from '../images/small_shop/cup_12_small.jpg';
 import image12 from '../images/small_shop/cup_13_small.jpg';
-import image13 from '../images/small_shop/cup_14_small.jpg';
 import image14 from '../images/small_shop/cup_15_small.jpg';
 import image15 from '../images/small_shop/cup_16_small.jpg';
 import image16 from '../images/small_shop/cup_17_small.jpg';
@@ -32,21 +31,17 @@ import image28 from '../images/small_shop/mug_9_small.jpg';
 import image29 from '../images/small_shop/mug_10_small.jpg';
 import image30 from '../images/small_shop/plate_1_small.jpg';
 import image31 from '../images/small_shop/plate_2_small.jpg';
-import image32 from '../images/small_shop/plate_3_small.jpg';
 import image33 from '../images/small_shop/plate_4_small.jpg';
 import image34 from '../images/small_shop/plate_5_small.jpg';
 import image35 from '../images/small_shop/plate_6_small.jpg';
 import image36 from '../images/small_shop/plate_7_small.jpg';
 import image37 from '../images/small_shop/plate_8_small.jpg';
 import image38 from '../images/small_shop/plate_9_small.jpg';
-import image39 from '../images/small_shop/plate_10_small.jpg';
 import image40 from '../images/small_shop/plate_11_small.jpg';
 import image41 from '../images/small_shop/teapot_1_small.jpg';
 import image42 from '../images/small_shop/teapot_2_small.jpg';
 import image43 from '../images/small_shop/teapot_3_small.jpg';
 import image44 from '../images/small_shop/teapot_4_small.jpg';
-import image45 from '../images/small_shop/teapot_5_small.jpg';
-import image46 from '../images/small_shop/teapot_6_small.jpg';
 import image47 from '../images/small_shop/teapot_7_small.jpg';
 import image48 from '../images/small_shop/teapot_8_small.jpg';
 import image49 from '../images/small_shop/vase_1_small.jpg';
@@ -56,7 +51,6 @@ import image52 from '../images/small_shop/vase_4_small.jpg';
 import image53 from '../images/small_shop/vase_5_small.jpg';
 import image54 from '../images/small_shop/vase_6_small.jpg';
 import image55 from '../images/small_shop/vase_7_small.jpg';
-import image56 from '../images/small_shop/vase_8_small.jpg';
 
 const productsList = [
     {   
@@ -165,15 +159,6 @@ const productsList = [
         size: "9cm",
         price: 3.99,
         image: image12,
-        alt_text: "cup",
-    },
-    {
-        id: 13,
-        name: "Cup",
-        category: "Cups",
-        size: "9cm",
-        price: 3.99,
-        image: image13,
         alt_text: "cup",
     },
     {
@@ -339,15 +324,6 @@ const productsList = [
         alt_text: "mug",
     },
     {
-        id: 32,
-        name: "Mug",
-        category: "Mugs",
-        size: "9cm",
-        price: 3.99,
-        image: image32,
-        alt_text: "mug",
-    },
-    {
         id: 33,
         name: "Mug",
         category: "Mugs",
@@ -402,15 +378,6 @@ const productsList = [
         alt_text: "mug",
     },
     {
-        id: 39,
-        name: "Mug",
-        category: "Mugs",
-        size: "9cm",
-        price: 3.99,
-        image: image39,
-        alt_text: "mug",
-    },
-    {
         id: 40,
         name: "Mug",
         category: "Mugs",
@@ -453,24 +420,6 @@ const productsList = [
         size: "9cm",
         price: 3.99,
         image: image44,
-        alt_text: "mug",
-    },
-    {
-        id: 45,
-        name: "Mug",
-        category: "Mugs",
-        size: "9cm",
-        price: 3.99,
-        image: image45,
-        alt_text: "mug",
-    },
-    {
-        id: 46,
-        name: "Mug",
-        category: "Mugs",
-        size: "9cm",
-        price: 3.99,
-        image: image46,
         alt_text: "mug",
     },
     {
@@ -554,16 +503,6 @@ const productsList = [
         image: image55,
         alt_text: "mug",
     },
-    {
-        id: 56,
-        name: "Mug",
-        category: "Mugs",
-        size: "9cm",
-        price: 3.99,
-        image: image56,
-        alt_text: "mug",
-    },
-
 ]
 
 const Shop = () => {
