@@ -3,9 +3,8 @@ import React from 'react';
 import '../styles/Shop.css';
 import image0 from '../images/small_shop/cup_1_small.jpg';
 import image1 from '../images/small_shop/cup_2_small.jpg';
-import image3 from '../images/small_shop/cup_4_small.jpg';
-import image4 from '../images/small_shop/cup_5_small.jpg';
-import image5 from '../images/small_shop/cup_6_small.jpg';
+import image3 from '../images/small_shop/cup_6_small.jpg';
+import image5 from '../images/small_shop/cup_4_small.jpg';
 import image6 from '../images/small_shop/cup_7_small.jpg';
 import image7 from '../images/small_shop/cup_8_small.jpg';
 import image8 from '../images/small_shop/cup_9_small.jpg';
@@ -16,7 +15,6 @@ import image12 from '../images/small_shop/cup_13_small.jpg';
 import image14 from '../images/small_shop/cup_15_small.jpg';
 import image15 from '../images/small_shop/cup_16_small.jpg';
 import image16 from '../images/small_shop/cup_17_small.jpg';
-import image17 from '../images/small_shop/cup_18_small.jpg';
 import image18 from '../images/small_shop/cup_19_small.jpg';
 import image19 from '../images/small_shop/cup_20_small.jpg';
 import image20 from '../images/small_shop/mug_1_small.jpg';
@@ -31,14 +29,11 @@ import image28 from '../images/small_shop/mug_9_small.jpg';
 import image29 from '../images/small_shop/mug_10_small.jpg';
 import image30 from '../images/small_shop/plate_1_small.jpg';
 import image31 from '../images/small_shop/plate_2_small.jpg';
-import image33 from '../images/small_shop/plate_4_small.jpg';
 import image34 from '../images/small_shop/plate_5_small.jpg';
 import image35 from '../images/small_shop/plate_6_small.jpg';
-import image36 from '../images/small_shop/plate_7_small.jpg';
 import image37 from '../images/small_shop/plate_8_small.jpg';
 import image38 from '../images/small_shop/plate_9_small.jpg';
 import image40 from '../images/small_shop/plate_11_small.jpg';
-import image41 from '../images/small_shop/teapot_1_small.jpg';
 import image42 from '../images/small_shop/teapot_2_small.jpg';
 import image43 from '../images/small_shop/teapot_3_small.jpg';
 import image44 from '../images/small_shop/teapot_4_small.jpg';
@@ -49,13 +44,12 @@ import image50 from '../images/small_shop/vase_2_small.jpg';
 import image51 from '../images/small_shop/vase_3_small.jpg';
 import image52 from '../images/small_shop/vase_4_small.jpg';
 import image53 from '../images/small_shop/vase_5_small.jpg';
-import image54 from '../images/small_shop/vase_6_small.jpg';
 import image55 from '../images/small_shop/vase_7_small.jpg';
 
 const productsList = [
     {   
         id: 0,
-        name: "Cup",
+        name: "Cup I love You",
         category: "Cups",
         size: "8cm",
         price: 3.99,
@@ -64,7 +58,7 @@ const productsList = [
     },
     {   
         id: 1,
-        name: "Cup",
+        name: "Cup English Afternoon",
         category: "Cups",
         size: "9cm",
         price: 3.99,
@@ -73,7 +67,7 @@ const productsList = [
     },
     {   
         id: 3,
-        name: "Cup",
+        name: "Cup Golden Taste",
         category: "Cups",
         size: "9cm",
         price: 3.99,
@@ -81,17 +75,8 @@ const productsList = [
         alt_text: "cup",
     },
     {
-        id: 4,
-        name: "Cup",
-        category: "Cups",
-        size: "9cm",
-        price: 3.99,
-        image: image4,
-        alt_text: "cup",
-    },
-    {
         id: 5,
-        name: "Cup",
+        name: "Cup White Passion",
         category: "Cups",
         size: "9cm",
         price: 3.99,
@@ -109,7 +94,7 @@ const productsList = [
     },
     {
         id: 7,
-        name: "Cup",
+        name: "Cup Precious Moments",
         category: "Cups",
         size: "9cm",
         price: 3.99,
@@ -127,7 +112,7 @@ const productsList = [
     },
     {
         id: 9,
-        name: "Cup",
+        name: "Cup Classic Elegance",
         category: "Cups",
         size: "9cm",
         price: 3.99,
@@ -145,7 +130,7 @@ const productsList = [
     },
     {
         id: 11,
-        name: "Cup",
+        name: "Cup Fishy White",
         category: "Cups",
         size: "9cm",
         price: 3.99,
@@ -189,15 +174,6 @@ const productsList = [
         alt_text: "cup",
     },
     {
-        id: 17,
-        name: "Cup",
-        category: "Cups",
-        size: "9cm",
-        price: 3.99,
-        image: image17,
-        alt_text: "cup",
-    },
-    {
         id: 18,
         name: "Cup",
         category: "Cups",
@@ -217,7 +193,7 @@ const productsList = [
     },
     {
         id: 20,
-        name: "Mug",
+        name: "Mug The Little Things",
         category: "Mugs",
         size: "9cm",
         price: 3.99,
@@ -226,7 +202,7 @@ const productsList = [
     },
     {
         id: 21,
-        name: "Mug",
+        name: "Mug My Happy Place",
         category: "Mugs",
         size: "9cm",
         price: 3.99,
@@ -244,7 +220,7 @@ const productsList = [
     },
     {
         id: 23,
-        name: "Mug",
+        name: "Mug Christmas Tree",
         category: "Mugs",
         size: "9cm",
         price: 3.99,
@@ -262,7 +238,7 @@ const productsList = [
     },
     {
         id: 25,
-        name: "Mug",
+        name: "Mug Winter Time",
         category: "Mugs",
         size: "9cm",
         price: 3.99,
@@ -280,7 +256,7 @@ const productsList = [
     },
     {
         id: 27,
-        name: "Mug",
+        name: "Mug Big Size",
         category: "Mugs",
         size: "9cm",
         price: 3.99,
@@ -307,201 +283,165 @@ const productsList = [
     },
     {
         id: 30,
-        name: "Mug",
-        category: "Mugs",
+        name: "Plate",
+        category: "Plates",
         size: "9cm",
         price: 3.99,
         image: image30,
-        alt_text: "mug",
+        alt_text: "plate",
     },
     {
         id: 31,
-        name: "Mug",
-        category: "Mugs",
+        name: "Plate",
+        category: "Plates",
         size: "9cm",
         price: 3.99,
         image: image31,
-        alt_text: "mug",
-    },
-    {
-        id: 33,
-        name: "Mug",
-        category: "Mugs",
-        size: "9cm",
-        price: 3.99,
-        image: image33,
-        alt_text: "mug",
+        alt_text: "plate",
     },
     {
         id: 34,
-        name: "Mug",
-        category: "Mugs",
+        name: "Plate",
+        category: "Plates",
         size: "9cm",
         price: 3.99,
         image: image34,
-        alt_text: "mug",
+        alt_text: "plate",
     },
     {
         id: 35,
-        name: "Mug",
-        category: "Mugs",
+        name: "Plate",
+        category: "Plates",
         size: "9cm",
         price: 3.99,
         image: image35,
-        alt_text: "mug",
-    },
-    {
-        id: 36,
-        name: "Mug",
-        category: "Mugs",
-        size: "9cm",
-        price: 3.99,
-        image: image36,
-        alt_text: "mug",
+        alt_text: "plate",
     },
     {
         id: 37,
-        name: "Mug",
-        category: "Mugs",
+        name: "Plate",
+        category: "Plates",
         size: "9cm",
         price: 3.99,
         image: image37,
-        alt_text: "mug",
+        alt_text: "plate",
     },
     {
         id: 38,
-        name: "Mug",
-        category: "Mugs",
+        name: "Plate",
+        category: "Plates",
         size: "9cm",
         price: 3.99,
         image: image38,
-        alt_text: "mug",
+        alt_text: "plate",
     },
     {
         id: 40,
-        name: "Mug",
-        category: "Mugs",
+        name: "Plate",
+        category: "Plates",
         size: "9cm",
         price: 3.99,
         image: image40,
-        alt_text: "mug",
-    },
-    {
-        id: 41,
-        name: "Mug",
-        category: "Mugs",
-        size: "9cm",
-        price: 3.99,
-        image: image41,
-        alt_text: "mug",
+        alt_text: "plate",
     },
     {
         id: 42,
-        name: "Mug",
-        category: "Mugs",
+        name: "Coffee Pot",
+        category: "Coffee Pots",
         size: "9cm",
         price: 3.99,
         image: image42,
-        alt_text: "mug",
+        alt_text: "Coffee Pot",
     },
     {
         id: 43,
-        name: "Mug",
-        category: "Mugs",
+        name: "Coffee Pot",
+        category: "Coffee Pots",
         size: "9cm",
         price: 3.99,
         image: image43,
-        alt_text: "mug",
+        alt_text: "Coffee Pot",
     },
     {
         id: 44,
-        name: "Mug",
-        category: "Mugs",
+        name: "Coffee Pot",
+        category: "Coffee Pots",
         size: "9cm",
         price: 3.99,
         image: image44,
-        alt_text: "mug",
+        alt_text: "Coffee Pot",
     },
     {
         id: 47,
-        name: "Mug",
-        category: "Mugs",
+        name: "Coffee Pot",
+        category: "Coffee Pots",
         size: "9cm",
         price: 3.99,
         image: image47,
-        alt_text: "mug",
+        alt_text: "Coffee Pot",
     },
     {
         id: 48,
-        name: "Mug",
-        category: "Mugs",
+        name: "Coffee Pot",
+        category: "Coffee Pots",
         size: "9cm",
         price: 3.99,
         image: image48,
-        alt_text: "mug",
+        alt_text: "Coffee Pot",
     },
     {
         id: 49,
-        name: "Mug",
-        category: "Mugs",
+        name: "Vase",
+        category: "Vases",
         size: "9cm",
         price: 3.99,
         image: image49,
-        alt_text: "mug",
+        alt_text: "vase",
     },
     {
         id: 50,
-        name: "Mug",
-        category: "Mugs",
+        name: "Vase",
+        category: "Vases",
         size: "9cm",
         price: 3.99,
         image: image50,
-        alt_text: "mug",
+        alt_text: "vase",
     },
     {
         id: 51,
-        name: "Mug",
-        category: "Mugs",
+        name: "Vase",
+        category: "Vases",
         size: "9cm",
         price: 3.99,
         image: image51,
-        alt_text: "mug",
+        alt_text: "vase",
     },
     {
         id: 52,
-        name: "Mug",
-        category: "Mugs",
+        name: "Vase",
+        category: "Vases",
         size: "9cm",
         price: 3.99,
         image: image52,
-        alt_text: "mug",
+        alt_text: "vase",
     },
     {
         id: 53,
-        name: "Mug",
-        category: "Mugs",
+        name: "Vase",
+        category: "Vases",
         size: "9cm",
         price: 3.99,
         image: image53,
-        alt_text: "mug",
-    },
-    {
-        id: 54,
-        name: "Mug",
-        category: "Mugs",
-        size: "9cm",
-        price: 3.99,
-        image: image54,
-        alt_text: "mug",
+        alt_text: "vase",
     },
     {
         id: 55,
-        name: "Mug",
-        category: "Mugs",
+        name: "Vase",
+        category: "Vases",
         size: "9cm",
         price: 3.99,
         image: image55,
-        alt_text: "mug",
+        alt_text: "vase",
     },
 ]
 
@@ -567,7 +507,14 @@ const Shop = () => {
                     </ul>
                 </header>
                 <ul className="shop-products">{productItem}</ul>
-                <div className="cart"></div>
+                <div className="cart">
+                <i class="fas fa-shopping-cart"></i>
+                <div className="in_cart">
+                    <div className="in_cart_products"></div>
+                    <p>Total amount:</p>
+                </div>
+                <button className="send_order">Send order</button>
+                </div>
             </div>
         </div>
     )
