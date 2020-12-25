@@ -71,14 +71,18 @@
 }
 
 .product div p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: .5vh auto;
+    margin: .8vh auto;
 }
 
-.product div p:first-child, .product div p:nth-child(3) {
+.product div p:first-child {
     margin-top: 3vh;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.product div p:nth-child(3) {
+    margin-top: 3vh;
+    font-size: 18px;
 }
 
 .shop-logo {
