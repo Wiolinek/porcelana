@@ -71,7 +71,8 @@
 }
 
 .product div p {
-    margin: .8vh auto;
+    margin: .8vh 5px;
+    text-align: center;
 }
 
 .product div p:first-child {

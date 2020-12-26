@@ -2,8 +2,79 @@ import React from 'react';
 
 import '../styles/Articles.css';
 
+let jobOffersData = [
+    {   
+        id: 1,
+        name: "Customer Service Specialist with English",
+        location: "Kraków",
+        date: "12-12-2020",
+        clicked: false,
+    },
+    {   
+        id: 2,
+        name: "Customer Service Specialist with German",
+        location: "Kraków",
+        date: "18-12-2020",
+        clicked: false,
+    },
+    {   
+        id: 3,
+        name: "Front-end Developer",
+        location: "remote",
+        date: "12-12-2020",
+        clicked: false,
+    },
+    {   
+        id: 4,
+        name: "Office Administrator",
+        location: "Radom",
+        date: "05-01-2021",
+        clicked: false,
+    },
+]
+
+let opinionsData = [
+    {   
+        id: 1,
+        text: "\"Excellent customer service, innovative and professional approach to cooperation, patience and flexibility. We cannot imagine a better partner in this difficult and demanding bussiness as hotel industry is.\"",
+        author: "-Reetz, Paris-",
+    },
+    {   
+        id: 2,
+        text: "\"People with extensive experience and ability to adapt to customer needs. Commitment, reliability and punctuality...\"",
+        author: "-Interconteenentale, Prague-",
+    },
+    {   
+        id: 3,
+        text: "\"ICM has been a valuable business partner for us for many years. We appreciate their professional work and excellent consulting service.\"",
+        author: "-Palaza, Warsaw-",
+    },
+    {   
+        id: 4,
+        text: "\"The ICM brand has been supporting us in the development of our business for years. A wide range of products and their high quality go hand in hand with the image of our company.\"",
+        author: "-Radosson Blue, Prague-",
+    },
+    {   
+        id: 5,
+        text: "\"If you are looking for a business partner you can fully rely on, International Ceramics is your best choice. Their professionalism and attention to the smallest details make us constantly return for their products.\"",
+        author: "-Holton, Frankfurt-",
+    },
+]
 
 const About = () => {
+
+    let jobOffers = jobOffersData.map(offer => (
+        <tr>
+            <td key={offer.id}><a href="#" /*tutaj metoda onClick która wyświetla ofertę pracy i zmienia clicked na true*/>{offer.name}</a></td>
+            <td key={offer.id}>{offer.location}</td>
+            <td key={offer.id}>{offer.date}</td>
+        </tr>
+        )
+    )
+
+    let opinions = opinionsData.map(opinion =>
+        <div key={opinion.id}><p>{opinion.text}</p><p>{opinion.author}</p></div>
+    )
 
     return (
         <>
@@ -30,11 +101,7 @@ const About = () => {
             <div className="recommendations">
                 <h1>Recommendations</h1>
                 <div className="opinions">
-                    <div><p>"Excellent customer service, innovative and professional approach to cooperation, patience and flexibility. We cannot imagine a better partner in this difficult and demanding bussiness as hotel industry is."</p><p>-Reetz, Paris-</p></div>
-                    <div><p>"People with extensive experience and ability to adapt to customer needs. Commitment, reliability and punctuality..."</p><p>-Interconteenentale, Prague-</p></div>
-                    <div><p>"ICM has been a valuable business partner for us for many years. We appreciate their professional work and excellent consulting service."</p><p>-Palaza, Warsaw-</p></div>
-                    <div><p>"The ICM brand has been supporting us in the development of our business for years. A wide range of products and their high quality go hand in hand with the image of our company."</p><p>-Radosson Blue, Prague-</p></div>
-                    <div><p>"If you are looking for a business partner you can fully rely on, International Ceramics is your best choice. Their professionalism and attention to the smallest details make us constantly return for their products."</p><p>-Holton, Frankfurt-</p></div>
+                    {opinions}
                 </div>
             </div>
             <div className="careers">
@@ -50,26 +117,7 @@ const About = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td><a href="#">Customer Service Specialist with English</a></td>
-                                <td>Kraków</td>
-                                <td>12-12-2020</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">Customer Service Specialist with German</a></td>
-                                <td>Kraków</td>
-                                <td>18-12-2020</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">Junior Web Developer</a></td>
-                                <td>remote</td>
-                                <td>28-12-2020</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">Office Administrator</a></td>
-                                <td>Radom</td>
-                                <td>05-01-2021</td>
-                            </tr>
+                            {jobOffers}
                         </tbody>
                     </table>
                 </div>

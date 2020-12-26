@@ -67,7 +67,7 @@
     margin-top: 1vh;
 }
 
-.form [type=submit] {
+.form [type=submit]  {
     background-color: transparent;
     border: black 2px solid;
     margin-top: 4vh;
@@ -115,14 +115,23 @@
 }
 
 .newsletter input {
-    border: #d0d0dc 2px solid;
     color: #d0d0dc;
-    background-color: black;
 }
 
 .newsletter [type=email] {
     width: 25%;
     margin: 0 3vw 0 1vw;
+    border: #d0d0dc 2px solid;
+    background-color: black;
+}
+
+.newsletter [type=submit] {
+    background-color: transparent;
+    border: 2px solid #d0d0dc;
+    height: 43px;
+    width: 120px;
+    font-family: 'Cinzel', serif;
+    font-size: 23px;
 }
 
 .newsletter [type=submit]:hover {

@@ -43,7 +43,7 @@ import image52 from '../images/small_shop/vase_4_small.jpg';
 import image53 from '../images/small_shop/vase_5_small.jpg';
 import image55 from '../images/small_shop/vase_7_small.jpg';
 
-const productsList = [
+const productsData = [
     {   
         id: 0,
         name: "Cup \"I love You\"",
@@ -406,31 +406,30 @@ const productsList = [
     },
 ]
 
-const Shop = () => {
 
-    let productItem = productsList.map(product => (
+const Shop = () => {
+    
+    let options = [0];
+    for (let i = 0; i <= 12; i++) {
+        options.push(<option key={i} value={i}>{i}</option>);
+    }
+
+    let shopMenuOptions = ["Show All", "Mugs", "Cups", "Tea Pots", "Plates", "Bowls", "Vases"];
+    let shopMenu = shopMenuOptions.map(item =>
+        <li key={item}><p>{item}</p></li>
+    )
+
+    let productItem = productsData.map(product => (
         <li key={product.id} className="product">
             <div>
                 <p>{product.name}</p>
                 <p>{product.size}</p>
-                <p>{product.price}</p>
+                <p>{product.price} EUR</p>
                 <img src={product.image} alt={product.alt_text}></img>
                 <form className="choose-quantity">
-                    <label for="quantity">Choose quantity:</label>
+                    <label forHTML="quantity">Choose quantity:</label>
                     <select id="quantity" name="quantity">
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
+                        {options}
                     </select>
                     <input type="button" className="add-to-cart" value="Add to cart"></input>
                 </form>
@@ -458,13 +457,7 @@ const Shop = () => {
                         <p className="logo-name">ICM Inc.</p>
                     </div>
                     <ul className="shop-menu">
-                        <li><p>Show All</p></li>
-                        <li><p>Mugs</p></li>
-                        <li><p>Cups</p></li>
-                        <li><p>Tea Pots</p></li>
-                        <li><p>Plates</p></li>
-                        <li><p>Bowls</p></li>
-                        <li><p>Vases</p></li>
+                        {shopMenu}
                     </ul>
                 </header>
                 <ul className="shop-products">{productItem}</ul>
@@ -472,7 +465,7 @@ const Shop = () => {
                 <i class="fas fa-shopping-cart"></i>
                 <div className="in_cart">
                     <div className="in_cart_products"></div>
-                    <p>Total amount:</p>
+                    <p>Total amount: EUR</p>
                 </div>
                 <button className="send_order">Send order</button>
                 </div>
