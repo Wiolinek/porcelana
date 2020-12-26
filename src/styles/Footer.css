@@ -75,6 +75,7 @@
     width: 120px;
     font-family: 'Cinzel', serif;
     font-size: 23px;
+    outline: none;
 }
 
 .form [type=submit]:hover {
@@ -132,6 +133,7 @@
     width: 120px;
     font-family: 'Cinzel', serif;
     font-size: 23px;
+    outline: none;
 }
 
 .newsletter [type=submit]:hover {

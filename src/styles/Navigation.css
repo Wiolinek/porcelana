@@ -1,16 +1,12 @@
-.nav {
-    position: fixed;
-    width: 70vw;
-    top: 4vh;
-    right: 0;
-    z-index: 1;
-}
-
 .navigation-bar {
+    width: 70%;
     list-style: none;
     display: flex;
-    float: right;
+    flex-direction: row;
+    justify-content: flex-end;
     margin-right: 1vw;
+    padding-top: 3vh;
+    float: right;
 }
 
 li a {
