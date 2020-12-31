@@ -9,3 +9,7 @@
     background-image: url(../images/back_1_att.jpg);
     background-attachment: fixed;
   }
+
+  article {
+    font-family: 'Cinzel', serif;
+  }

@@ -13,7 +13,7 @@ const Navigation = () => {
             <li><a href="#">About Us</a></li>
             <li><a href="#">Products</a></li>
             <li><a href="#">Recommendations</a></li>
-            <li><a href="#">Careers</a></li>
+            <li><a href="#">Career</a></li>
             <li><a href="#">E-Shop</a></li>
         </ul>
         <aside>
