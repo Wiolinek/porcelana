@@ -22,7 +22,7 @@ const Navigation = () => {
             <li><Link to="contact" smooth={true}>Contact</Link></li>
             <li><Link to="shop" target="_blank">E-Shop</Link></li>
         </ul>
-        <aside>
+        <aside className="aside">
             <li><i class="fab fa-facebook"></i></li>
             <li><i class="fab fa-instagram"></i></li>
             <li><i class="fab fa-twitter-square"></i></li>

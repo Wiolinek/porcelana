@@ -23,7 +23,7 @@ const Modal = ({ state, offer, closeModalHandler }) => {
             display: state ? 'block' : 'none',
             // transform: state ? 'translateY(0vh)' : 'translateY(-100vh)',
             }}>
-            <h1>{offerDisplay}{offer}</h1>
+            <h1>Numer indexu w tabeli to: {offerDisplay} a pozycja na liście ofert to: {offer}</h1>
             {/* <p><span>Location: </span><span>{offerDisplay}</span></p> */}
             {/* <p><span>Department: </span>{jobOffersData[{offerDisplay}].id}</p> */}
             {/* <p><span>Employment Type: </span><span>{offer.['employment type']}</span></p> */}
