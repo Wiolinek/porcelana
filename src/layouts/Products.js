@@ -2,10 +2,10 @@ import React from 'react';
 
 import '../styles/Articles.css';
 
-const Career = () => {
+const Products = () => {
 
     return (
-            <div className="offer">
+            <div className="offer" id="products">
                 <h1>Products</h1>
                 <div className="products">
                     <div className="dish mugs"><p>Mugs</p><div className="more-btn"><a href="#">More</a></div></div>
@@ -19,4 +19,4 @@ const Career = () => {
     )
 }
 
-export default Career;
+export default Products;

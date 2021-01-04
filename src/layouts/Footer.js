@@ -16,7 +16,7 @@ const Footer = () => {
                     <input type="submit" value="Send"></input>
             </form>
         </div>
-        <div className="contact_form">
+        <div className="contact_form" id="contact">
             <p className="contact_title">Contact Us!</p>
             <div className="address">
                 <p>International Ceramics Manufacturing Inc.</p>

@@ -6,7 +6,7 @@ import '../styles/Articles.css';
 const About = () => {
 
     return (
-         <div className="about">
+         <div className="about" id="about">
             <h1>About Us</h1>
             <p><span>International Ceramics Manufacturing Inc. </span>has been present on market for over 20 years. We specialize in the production of products for the HORECA industry. All the products we offer are manufactured in our factory in Poland.</p>
             <p>Our greatest <span>ambition</span> and goal is to meet the highest expectations and requirements of our client. We invest in the latest, most advanced technologies and machinery to be the best and most reliable ceramics producer on the market.</p>

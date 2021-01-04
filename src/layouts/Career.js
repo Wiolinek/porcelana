@@ -1,22 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-scroll'
 
 import { jobOffersData } from '../../src/data_career.js';
+// import {Link} from 'react-router-dom';
+// import { Modal } from 'react-responsive-modal';
+import Modal from './Modal';
 
 import '../styles/Articles.css';
 
+// import 'react-responsive-modal/styles.css';
 
 const Career = () => {
     
-    const handleOfferDisplay = (props) => {
-        return (
-        alert(`${props.name}`)
-        /*tutaj musi się zmieniać .offer-details display: block na none*/
-        )
+    const [state, setState] = useState(false);
+    const [offer, setOffer] = useState();
+
+    const closeModalHandler = () => setState(false);
+
+    const openModalHandler = (offer) => {
+        setState(true);
+        setOffer(offer.id);
+        alert(`${offer.id}`)
     }
 
-    const jobOffers = jobOffersData.map(offer => (
+    let jobOffers = jobOffersData.map(offer => (
         <tr>
-            <td key={offer.id} name={offer.name}><button onClick={handleOfferDisplay} name={offer.name}>{offer.name}</button></td>
+            <td key={offer.id} name={offer.name}><button onClick={() => openModalHandler(offer)}>{offer.name}</button></td>
             <td key={offer.id}>{offer.location}</td>
             <td key={offer.id}>{offer.date}</td>
         </tr>
@@ -40,23 +49,11 @@ const Career = () => {
                             {jobOffers}
                         </tbody>
                     </table>
-                    <OfferDetails parameter={}/>  
                 </div>
-                <div className="join"><a href="#">Join us!</a></div>
+                <div className="join"><Link to="contact" smooth={true}>Join us!</Link></div>
+                { state ? <div className="back" onClick={closeModalHandler}></div> : null }
+                <Modal state={state} closeModalHandler={closeModalHandler} offer={offer}/>
             </div>
-    )
-}
-
-const OfferDetails = (props) => {
-
-    return (
-        <div className="offer-details">
-            <p>{props.parameter}</p>
-            <p>{props.parameter}</p>
-            <p>{props.parameter}</p>
-            <p>{props.parameter}</p>
-            <p>{props.parameter}</p>
-        </div>
     )
 }
 

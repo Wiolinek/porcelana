@@ -1,8 +1,8 @@
 import React from 'react';
 
-import '../styles/Section.css';
+import '../styles/Home.css';
 
-const Section = () => {
+const Home = () => {
 
     return (
     <>
@@ -18,4 +18,4 @@ const Section = () => {
 }   
 
 
-export default Section;
+export default Home;

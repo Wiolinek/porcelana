@@ -9,7 +9,7 @@
     float: right;
 }
 
-li a {
+li {
     padding: 0 20px;
     color: black;
     font-size: 25px;
@@ -23,7 +23,7 @@ li:last-child a {
     border-right: none;
 }
 
-li a:hover {
+li:hover {
     color: #d0d0dc;
     text-shadow: 2px 2px 3px black;
 }  
@@ -58,13 +58,14 @@ aside {
     flex-direction: column;
     align-items: flex-end;
 }
-aside div {
+aside li {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 60px;
     width: 60px;
     margin: 6px 0;
+    border-right: none;
 }
 .fab, .fas {
     font-size: 35px;

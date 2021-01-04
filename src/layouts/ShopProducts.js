@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/Shop.css';
 
 import image0 from '../images/small_shop/cup_1_small.jpg';
 import image1 from '../images/small_shop/cup_2_small.jpg';

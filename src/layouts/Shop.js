@@ -6,13 +6,11 @@ import ShopCart from "./ShopCart";
 import '../styles/Shop.css';
 
 
-const Shop = () => {
-
-
+function Shop() {
 
     return (
         <div>
-            <div className="shop">
+            <div className="shop" id="shop">
                 <header className="shop-header">
                     <div className="advantages">
                         <div><i class="fas fa-shipping-fast"></i><p>Free shipping</p></div>
@@ -34,7 +32,7 @@ const Shop = () => {
                 <ShopCart />
             </div>
         </div>
-    )
+    );
 
 }
 

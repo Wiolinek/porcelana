@@ -1,7 +1,8 @@
 import React from 'react';
+import {BrowserRouter as Router} from 'react-router-dom';
 
 import Navigation from "./Navigation";
-import Section from "./Section";
+import Home from "./Home";
 import About from "./About";
 import Products from "./Products";
 import Recommendations from "./Recommendations";
@@ -15,6 +16,7 @@ import '../styles/App.css';
 const App = () => {
 
     return (
+      <Router>
       <>
         <div className="app">
           <header>
@@ -22,7 +24,7 @@ const App = () => {
               <Navigation />
             </nav>
             <div>
-              <Section />
+              <Home />
             </div>
           </header>
           <main>
@@ -48,6 +50,7 @@ const App = () => {
           </section>
         </div>
       </>
+      </Router>
     );
 }
 
