@@ -134,7 +134,6 @@ tr td a {
   flex-wrap: wrap;
   justify-content: center;
   align-content: flex-start;
-  
 }
 
 .products .dish {
@@ -221,11 +220,11 @@ tr td a {
   color: black; 
 }
 
-.more-btn:hover, .join:hover, .close-btn:hover{
+.more-btn:hover, .join:hover, .close-btn:hover, .send-cv-btn:hover {
   background-color: #d0d0dc;
 }
 
-.close-btn:hover {
+.close-btn:hover, .send-cv-btn:hover {
   border: 3px solid black;
 }
 
@@ -248,8 +247,31 @@ tr td a {
   /* transition: all 1.3s ease; */
 }
 
-.close-btn {
+.back {
+  background-color: black;
+  opacity: .5;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.open-offer-modal-btn {
+    background-color: transparent;
+    border: none;
+    font-family: 'Cinzel', serif;
+    font-size: 21px;
+    outline: none;
+}
+
+.open-offer-modal-btn:hover, .send-cv-btn:hover {
+    cursor: pointer;
+}
+
+.send-cv-btn {
   border: 3px solid #d0d0dc;
+  color: #d0d0dc;
   text-shadow: 2px 2px 3px black;
   font-size: 20px;
   border-radius: 50%;
@@ -267,12 +289,23 @@ tr td a {
   outline: none;
 }
 
-.back {
+.close-btn {
+  font-family: 'Cinzel', serif;
+  border: 3px solid #d0d0dc;
+  color: #d0d0dc;
+  text-shadow: 2px 2px 3px black;
+  font-size: 20px;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 10%;
+  right: 10%;
   background-color: black;
-  opacity: .5;
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  left: 0;
-  top: 0;
+  font-size: 22px;
+  width: 115px;
+  height: 115px;
+  outline: none;
 }
