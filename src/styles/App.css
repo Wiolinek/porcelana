@@ -8,6 +8,7 @@
   .app {
     background-image: url(../images/back_1_att.jpg);
     background-attachment: fixed;
+    background-size: 100vw;
   }
 
   article {

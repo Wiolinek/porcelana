@@ -1,12 +1,10 @@
 .navigation-bar {
-    width: 70%;
     list-style: none;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     margin-right: 1vw;
     padding-top: 3vh;
-    float: right;
 }
 
 .nav li {
@@ -17,6 +15,7 @@
     cursor: pointer;
     border-right: black 2px solid;
     font-family: 'Cinzel', serif;
+    flex-shrink: 0;
 }
 
 .nav li:last-child {

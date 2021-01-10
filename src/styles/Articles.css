@@ -39,6 +39,7 @@ div.about p {
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 3vh;
+  
 }
 
 div.opinions div {
@@ -48,6 +49,7 @@ div.opinions div {
   padding: 7px;
   line-height: 1.7;
   border: black 2px solid;
+  background-color:rgba(100, 100, 100, 0.2);
 }
 
 .opinions div p {
@@ -236,27 +238,6 @@ tr td a {
     margin-right: 6px;
 }
 
-.modal-wrapper {
-  display: none;
-  position: fixed;
-  top: 5vh;
-  left: 10vw;
-  background-color: #d0d0dc;
-  height: 90vh;
-  width: 80vw;
-  /* transition: all 1.3s ease; */
-}
-
-.back {
-  background-color: black;
-  opacity: .5;
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  left: 0;
-  top: 0;
-}
-
 .open-offer-modal-btn {
     background-color: transparent;
     border: none;
@@ -269,43 +250,3 @@ tr td a {
     cursor: pointer;
 }
 
-.send-cv-btn {
-  border: 3px solid #d0d0dc;
-  color: #d0d0dc;
-  text-shadow: 2px 2px 3px black;
-  font-size: 20px;
-  border-radius: 50%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  bottom: 10%;
-  right: 10%;
-  background-color: black;
-  font-size: 22px;
-  width: 115px;
-  height: 115px;
-  outline: none;
-}
-
-.close-btn {
-  font-family: 'Cinzel', serif;
-  border: 3px solid #d0d0dc;
-  color: #d0d0dc;
-  text-shadow: 2px 2px 3px black;
-  font-size: 20px;
-  border-radius: 50%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 10%;
-  right: 10%;
-  background-color: black;
-  font-size: 22px;
-  width: 115px;
-  height: 115px;
-  outline: none;
-}

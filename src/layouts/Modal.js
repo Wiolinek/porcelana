@@ -5,7 +5,8 @@ import { Link } from 'react-scroll'
 // import {Link} from 'react-router-dom';
 // import { Modal } from 'react-responsive-modal';
 
-import '../styles/Articles.css';
+// import '../styles/Articles.css';
+import '../styles/Modal.css';
 // import 'react-responsive-modal/styles.css';
 
 
@@ -23,7 +24,9 @@ const Modal = ({ state, offer, closeModalHandler }) => {
                 display: state ? 'block' : 'none',
                 // transform: state ? 'translateY(0vh)' : 'translateY(-100vh)',
             }}>
-                <h1>{name}</h1>
+                <button className="close-btn" onClick={closeModalHandler}>Close</button>
+                <div>
+                <h2>{name}</h2>
                 <p><span>Location: </span><span>{location}</span></p>
                 <p><span>Department: </span>{department}</p>
                 <p><span>Employment Type: </span><span>{employmentType}</span></p>
@@ -31,9 +34,8 @@ const Modal = ({ state, offer, closeModalHandler }) => {
                 <p><span>Position Requirements: </span><span>{positionRequirements}</span></p>
                 <p><span>Personal Requirements: </span><span>{personalRequirements}</span></p>
                 <p><span>What We Offer: </span><span>{whatWeOffer}</span></p>
-
-            <button className="close-btn" onClick={closeModalHandler}>Close</button>
-            <div className="send-cv-btn"><Link to="contact" smooth={true} onClick={closeModalHandler}>Send CV</Link></div>
+                </div>
+                <div className="send-cv-btn"><Link to="contact" smooth={true} onClick={closeModalHandler}>Send CV</Link></div>
             </div>
     )
 }
