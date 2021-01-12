@@ -39,7 +39,6 @@ div.about p {
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 3vh;
-  
 }
 
 div.opinions div {
@@ -250,3 +249,12 @@ tr td a {
     cursor: pointer;
 }
 
+.back {
+  background-color: black;
+  opacity: .6;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
