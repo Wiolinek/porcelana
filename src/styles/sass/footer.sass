@@ -1,0 +1,104 @@
+.newsletter
+    background-color: black
+    color: #d0d0dc
+    font-family: 'Cinzel', serif
+    font-size: 23px
+    min-height: 24vh
+    display: flex
+    flex-direction: column
+    align-items: center
+    & div
+        display: flex
+        align-items: center
+        font-size: 35px
+        padding: 2vh
+        .fa-newspaper
+            font-size: 34px
+            margin-right: 1.5vw
+    & form
+        width: 70%
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-top: 3vh
+    & input
+        color: #d0d0dc
+    & [type='email']
+        width: 25%
+        margin: 0 3vw 0 1vw
+        border: #d0d0dc 2px solid
+        background-color: black
+    & [type='submit']
+        background-color: transparent
+        border: 2px solid #d0d0dc
+        height: 43px
+        width: 120px
+        font-family: 'Cinzel', serif
+        font-size: 23px
+        outline: none
+    & [type='submit']:hover
+        background-color: #d0d0dc
+        color: black
+.contact_form
+    font-family: 'Cinzel', serif
+    border: black 2px solid
+    width: 70%
+    min-height: 67vh
+    margin: 4vh auto 3vh auto
+    .contact_title
+        margin-top: 5vh
+        margin-bottom: 4vh
+        font-size: 33px
+        font-weight: 700
+        text-align: center
+    .address
+        font-size: 28px
+        line-height: 38px
+        font-weight: normal
+        text-align: center
+        width: 50%
+        height: 72%
+        display: inline-block
+        & p
+            width: 80%
+            margin: 0 auto
+        & p:first-child
+            margin-bottom: 2vh
+            margin-top: 2vh
+        & p:nth-last-child(2)
+            margin-top: 2vh
+.form
+    float: right
+    width: 50%
+    height: 72%
+    & form
+        display: flex
+        flex-direction: column
+    & textarea
+        background-color: rgba(100, 100, 100, 0.2)
+        border: black 2px solid
+        width: 80%
+        height: 13vh
+    & input, .form input:not([type='file'])
+        background-color: rgba(100, 100, 100, 0.2)
+        border: black 2px solid
+        width: 50%
+        height: 25px
+.form label
+    margin-top: 1vh
+.form [type='submit']
+    background-color: transparent
+    border: black 2px solid
+    margin-top: 4vh
+    height: 43px
+    width: 120px
+    font-family: 'Cinzel', serif
+    font-size: 23px
+    outline: none
+.form [type='submit']:hover
+    background-color: #d0d0dc
+.contribution
+    font-family: 'Times New Roman', Times, serif
+    height: 3vh
+.contact_form div
+    display: inline-block

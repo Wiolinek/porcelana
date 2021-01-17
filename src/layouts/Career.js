@@ -6,7 +6,7 @@ import { jobOffersData } from '../../src/data_career.js';
 // import { Modal } from 'react-responsive-modal';
 import Modal from './Modal';
 
-import '../styles/Articles.css';
+import '../styles/sass/articles.sass';
 
 // import 'react-responsive-modal/styles.css';
 

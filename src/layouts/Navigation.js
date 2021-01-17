@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, animateScroll as scroll } from 'react-scroll'
 
-import '../styles/Navigation.css';
+import '../styles/sass/navigation.sass';
 
 const Navigation = () => {
 

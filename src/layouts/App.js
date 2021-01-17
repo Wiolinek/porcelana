@@ -10,7 +10,7 @@ import Career from "./Career";
 import Footer from "./Footer";
 // import Shop from "./Shop";
 
-import '../styles/App.css';
+import '../styles/sass/app.sass';
 
 
 const App = () => {

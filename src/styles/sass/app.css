@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* .app {
+  background-image: url(../../images/back_1_att.jpg);
+  background-attachment: fixed;
+  background-size: 100vw;
+}
+
+* .app article {
+  font-family: 'Cinzel', serif;
+}
+/*# sourceMappingURL=app.css.map */
