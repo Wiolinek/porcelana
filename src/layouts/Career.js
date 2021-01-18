@@ -6,7 +6,7 @@ import { jobOffersData } from '../../src/data_career.js';
 // import { Modal } from 'react-responsive-modal';
 import Modal from './Modal';
 
-import '../styles/sass/articles.sass';
+import '../styles/sass/career.sass';
 
 // import 'react-responsive-modal/styles.css';
 
@@ -39,7 +39,7 @@ const Career = () => {
                     <table>
                         <thead>
                             <tr>
-                                <th className="job-offer">Job offer</th>
+                                <th>Job offer</th>
                                 <th className="location">Location</th>
                                 <th className="date">Added</th>
                             </tr>

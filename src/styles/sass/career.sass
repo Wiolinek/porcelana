@@ -1,0 +1,51 @@
+@import 'variables.sass'
+@import 'mixins.sass'
+
+.career
+    width: 80%
+    min-height: 110vh
+    font-size: 21px
+    line-height: 1.7
+    word-spacing: 1.5px
+    margin: 0 auto
+    position: relative
+    & .offers
+        padding-top: 3vh
+    & div p:first-child
+        margin-top: 3vh
+    & table, th, td
+        width: 90%
+        table-layout: fixed
+        margin: 5vh auto 0 auto
+        border: 1px solid black
+        border-collapse: collapse
+        & th, td
+            padding: 7px
+            text-align: center
+    & .open-offer-modal-btn
+        background-color: transparent
+        border: none
+        font-family: 'Cinzel', serif
+        font-size: 21px
+        outline: none
+    & .open-offer-modal-btn:hover
+        cursor: pointer
+    & .date, & .location
+        width: 25%
+    & .join
+        @include round-button
+        margin: 0 auto
+        position: absolute
+        font-size: 22px
+        width: 115px
+        height: 115px
+        right: 12vw
+        bottom: 10vw
+        padding: 5px
+        & a
+            text-decoration: none
+            color: $white-color
+        &:hover a
+            color: black
+        &:hover
+            background-color: $white-color

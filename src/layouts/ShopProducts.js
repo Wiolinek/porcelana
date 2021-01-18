@@ -1,5 +1,7 @@
 import React from 'react';
-import '../styles/Shop.css';
+
+import '../styles/sass/shop-products.sass';
+
 import { productsData  } from '../../src/data_products.js';
 
 

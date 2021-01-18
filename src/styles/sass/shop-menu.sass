@@ -1,0 +1,77 @@
+@import 'variables.sass'
+@import 'mixins.sass'
+    
+.shop-header
+    position: relative
+    height: 40vh
+    min-height: 200px
+    width: 100%
+    background-image: url(../../images/plate_5_back.png)
+    background-position: center
+    background-size: cover
+    & .advantages, & .shop-menu
+        display: flex
+        align-items: center
+        height: 5vh
+        background-color: black
+        font-size: 20px
+        opacity: 0.6
+        & div
+            display: flex
+            justify-content: center
+            width: 25%
+            color: $white-color
+            & i
+                width: 25px
+                font-size: 20px
+                line-height: 30px
+                color: $white-color
+                margin-right: 6px
+    & .search
+        display: flex
+        justify-content: center
+        align-items: center
+        position: absolute
+        top: 50%
+        right: 18vw
+        transform: translate(0, -50%)
+        font-size: 20px
+        color: $white-color
+        text-shadow: 3px 3px 6px black
+        & input 
+            background-color: rgba(100, 100, 100, 0.3)
+            border: $white-border-thin
+            color: $white-color
+            width: 20vw
+            height: 30px
+            margin-left: 15px
+            margin-right: 6px    
+    & .logo
+        @include logo-style
+    & .shop-logo
+        position: relative
+        top: 4vh
+        left: 3vh
+        border: $white-border-thin
+        & .logo-name
+            @include logo-name-style
+            color: $white-color
+    & .shop-menu
+        display: flex
+        justify-content: space-evenly
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+        list-style: none
+        & li
+            display: flex
+            justify-content: space-evenly
+            color: $white-color
+            cursor: pointer
+            &:first-child
+                font-size: 26px
+
+
+
+

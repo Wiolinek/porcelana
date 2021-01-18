@@ -1,5 +1,6 @@
 import React from 'react';
-import '../styles/Shop.css';
+
+import '../styles/sass/shop-cart.sass';
 
 
 const ShopCart = () => {

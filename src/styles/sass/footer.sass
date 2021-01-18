@@ -1,6 +1,8 @@
+@import 'variables.sass'
+
 .newsletter
     background-color: black
-    color: #d0d0dc
+    color: $white-color
     font-family: 'Cinzel', serif
     font-size: 23px
     min-height: 24vh
@@ -12,7 +14,7 @@
         align-items: center
         font-size: 35px
         padding: 2vh
-        .fa-newspaper
+        & .fa-newspaper
             font-size: 34px
             margin-right: 1.5vw
     & form
@@ -22,83 +24,80 @@
         justify-content: center
         margin-top: 3vh
     & input
-        color: #d0d0dc
+        color: $white-color
     & [type='email']
         width: 25%
+        height: 25px
         margin: 0 3vw 0 1vw
-        border: #d0d0dc 2px solid
+        border: $white-border-thin
         background-color: black
     & [type='submit']
         background-color: transparent
-        border: 2px solid #d0d0dc
+        border: $white-border-thin
         height: 43px
         width: 120px
         font-family: 'Cinzel', serif
         font-size: 23px
         outline: none
     & [type='submit']:hover
-        background-color: #d0d0dc
+        background-color: $white-color
         color: black
 .contact_form
     font-family: 'Cinzel', serif
-    border: black 2px solid
+    border: $black-border-thin
     width: 70%
     min-height: 67vh
     margin: 4vh auto 3vh auto
-    .contact_title
-        margin-top: 5vh
+    & h1
         margin-bottom: 4vh
         font-size: 33px
         font-weight: 700
         text-align: center
-    .address
+    & div
+        display: inline-block
+    & .address
         font-size: 28px
         line-height: 38px
         font-weight: normal
         text-align: center
         width: 50%
         height: 72%
-        display: inline-block
         & p
             width: 80%
             margin: 0 auto
-        & p:first-child
-            margin-bottom: 2vh
             margin-top: 2vh
-        & p:nth-last-child(2)
-            margin-top: 2vh
-.form
-    float: right
-    width: 50%
-    height: 72%
-    & form
-        display: flex
-        flex-direction: column
-    & textarea
-        background-color: rgba(100, 100, 100, 0.2)
-        border: black 2px solid
-        width: 80%
-        height: 13vh
-    & input, .form input:not([type='file'])
-        background-color: rgba(100, 100, 100, 0.2)
-        border: black 2px solid
+    & .form
+        float: right
         width: 50%
-        height: 25px
-.form label
-    margin-top: 1vh
-.form [type='submit']
-    background-color: transparent
-    border: black 2px solid
-    margin-top: 4vh
-    height: 43px
-    width: 120px
-    font-family: 'Cinzel', serif
-    font-size: 23px
-    outline: none
-.form [type='submit']:hover
-    background-color: #d0d0dc
+        height: 72%
+        & form
+            display: flex
+            flex-direction: column
+        & textarea, & input:not([type='file'])
+            background-color: rgba(100, 100, 100, 0.2)
+            border: $black-border-thin
+        & textarea
+            width: 80%
+            height: 13vh
+        & input
+            width: 50%
+            height: 25px
+        & label
+            margin-top: 1vh
+        & [type='submit']
+            background-color: black
+            border: $black-border-thin
+            margin-top: 4vh
+            height: 43px
+            width: 120px
+            font-family: 'Cinzel', serif
+            font-size: 23px
+            outline: none
+        & [type='submit']:hover
+            background-color: $white-color
+        & input:nth-last-child(2)
+            border: none
+            background-color: transparent
 .contribution
     font-family: 'Times New Roman', Times, serif
     height: 3vh
-.contact_form div
-    display: inline-block

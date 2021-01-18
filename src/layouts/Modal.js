@@ -2,6 +2,7 @@ import React from 'react';
 import { jobOffersData } from '../../src/data_career.js';
 import { Link } from 'react-scroll';
 
+import '../styles/sass/modal.sass';
 // import {Link} from 'react-router-dom';
 
 

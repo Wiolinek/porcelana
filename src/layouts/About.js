@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../styles/sass/articles.sass';
+import '../styles/sass/about.sass';
 
 
 const About = () => {

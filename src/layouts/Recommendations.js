@@ -2,7 +2,7 @@ import React from 'react';
 
 import { opinionsData } from '../../src/data_recom.js';
 
-import '../styles/sass/articles.sass';
+import '../styles/sass/recommendations.sass';
 
 
 const Recommendations = () => {

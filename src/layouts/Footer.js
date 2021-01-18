@@ -17,7 +17,7 @@ const Footer = () => {
             </form>
         </div>
         <div className="contact_form" id="contact">
-            <p className="contact_title">Contact Us!</p>
+            <h1 className="contact_title">Contact Us!</h1>
             <div className="address">
                 <p>International Ceramics Manufacturing Inc.</p>
                 <p>ul. Międzynarodowa 26,<br />26-612 Radom, Polska</p>

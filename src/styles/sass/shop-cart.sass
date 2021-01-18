@@ -1,0 +1,41 @@
+@import 'variables.sass'
+    
+.cart
+    width: 25%
+    height: 54vh
+    border: 4px solid black
+    background-color: $white-color
+    margin-right: 6vw
+    margin-top: 3vh
+    position: fixed
+    bottom: 3vh
+    right: 1vw
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
+    & .fa-shopping-cart
+        margin-top: 2vh
+        font-size: 60px
+    & .in_cart
+        border: $black-border-thin
+        height: 65%
+        width: 80%
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: space-around
+        & .in_cart_products
+            border: $black-border-thin
+            height: 87%
+            width: 97%
+        & p
+            font-size: 20px
+    & .send_order
+        width: 80%
+        margin: 1.5vh auto
+        &:hover 
+            background-color: $white-color
+            color: black
+            text-shadow: 2px 2px 3px black
+            border: $black-border-thin
