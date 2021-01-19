@@ -1,12 +1,31 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 
 import '../styles/sass/about.sass';
+
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 
 const About = () => {
 
+    const aboutWrapper = useRef(null);
+
+    useEffect(() => {
+  
+        gsap.fromTo(aboutWrapper.current.children, {y: '+=100', autoAlpha: 0}, {y: 0, autoAlpha: 1, stagger: 0.3, duration: 2,
+          scrollTrigger: {
+            trigger: aboutWrapper.current,
+            start: 'top 65%',
+            markers: true,
+          }
+        })
+    }, [])
+
+
     return (
-         <div className="about" id="about">
+         <div className="about" id="about" ref={aboutWrapper}>
             <h1>About Us</h1>
             <p><span>International Ceramics Manufacturing Inc. </span>has been present on market for over 20 years. We specialize in the production of products for the HORECA industry. All the products we offer are manufactured in our factory in Poland.</p>
             <p>Our greatest <span>ambition</span> and goal is to meet the highest expectations and requirements of our client. We invest in the latest, most advanced technologies and machinery to be the best and most reliable ceramics producer on the market.</p>

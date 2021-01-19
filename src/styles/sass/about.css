@@ -1,0 +1,17 @@
+.about {
+  min-height: 110vh;
+  width: 80%;
+  margin: 0 auto;
+  font-size: 21px;
+  line-height: 1.7;
+  word-spacing: 2.5px;
+}
+
+.about.about p {
+  margin-top: 3vh;
+}
+
+.about.about p span {
+  font-weight: 700;
+}
+/*# sourceMappingURL=about.css.map */

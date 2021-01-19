@@ -1,12 +1,31 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 
 import '../styles/sass/footer.sass';
+
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 
 const Footer = () => {
 
+    const footerWrapper = useRef(null);
+
+    useEffect(() => {
+  
+        gsap.fromTo(footerWrapper.current.children, {y: '+=100', autoAlpha: 0}, {y: 0, autoAlpha: 1, stagger: .5, duration: 2,
+          scrollTrigger: {
+            trigger: footerWrapper.current,
+            start: 'top 65%',
+            markers: true,
+          }
+        })
+    }, [])
+
+
     return (
-        <>
+        <div ref={footerWrapper}>
         <div className="newsletter">
             <div><i class="far fa-newspaper"></i><p>Newsletter</p></div>
             <p>Sign in and stay in touch!</p>
@@ -41,7 +60,7 @@ const Footer = () => {
             </div>
         </div>
         <div className="contribution">Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>   
-        </>
+        </div>
     )
 }
 
