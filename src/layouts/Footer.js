@@ -1,31 +1,36 @@
-import React, { useEffect, useRef } from 'react';
+import React /*, { useEffect, useRef }*/ from 'react';
 
 import '../styles/sass/footer.sass';
 
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import { gsap } from "gsap";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
 
 const Footer = () => {
 
-    const footerWrapper = useRef(null);
+    // const footerWrapper = useRef(null);
 
-    useEffect(() => {
+    // useEffect(() => {
   
-        gsap.fromTo(footerWrapper.current.children, {y: '+=100', autoAlpha: 0}, {y: 0, autoAlpha: 1, stagger: .5, duration: 2,
-          scrollTrigger: {
-            trigger: footerWrapper.current,
-            start: 'top 65%',
-            markers: true,
-          }
-        })
-    }, [])
+    //     gsap.fromTo(footerWrapper.current.children, {y: '+=100', autoAlpha: 0}, {y: 0, autoAlpha: 1, stagger: .5, duration: 2,
+    //       scrollTrigger: {
+    //         trigger: footerWrapper.current,
+    //         start:'top 85%',
+    //         end:'bottom bottom',
+    //         scrub: 0,
+    //         //events: onEnter onLeave onEnterBack onLeaveBack
+    //         toggleActions:'play restart reverse none',
+    //         //options: play plause resume reset restart complete reverse none
+    //         // markers:true,
+    //       }
+    //     })
+    // }, [])
 
 
     return (
-        <div ref={footerWrapper}>
+        <div /*ref={footerWrapper}*/>
         <div className="newsletter">
             <div><i class="far fa-newspaper"></i><p>Newsletter</p></div>
             <p>Sign in and stay in touch!</p>

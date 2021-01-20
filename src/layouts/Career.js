@@ -18,7 +18,9 @@ const Career = () => {
     
     const [state, setState] = useState(false);
     const [offer, setOffer] = useState();
+
     const careerWrapper = useRef(null);
+    const jointBtnAnimation = useRef(null);
 
     const closeModalHandler = () => setState(false);
 
@@ -38,13 +40,28 @@ const Career = () => {
 
     useEffect(() => {
   
-        gsap.fromTo(careerWrapper.current.children, {y: '+=100', autoAlpha: 0}, {y: 0, autoAlpha: 1, stagger: .5, duration: 2,
+        gsap.fromTo(careerWrapper.current.children, {y: '+=150', autoAlpha: 0}, {y: 0, autoAlpha: 1, stagger: .5, duration: 2,
           scrollTrigger: {
             trigger: careerWrapper.current,
-            start: 'top 65%',
-            markers: true,
-          }
-        })
+            start:'top 85%',
+            end:'bottom bottom',
+            scrub: 0,
+            //events: onEnter onLeave onEnterBack onLeaveBack
+            toggleActions:'play restart complete reverse',
+            //options: play plause resume reset restart complete reverse none
+            // markers:true,
+          }})
+        gsap.from(jointBtnAnimation.current, {scale: 0, duration: 2, ease: 'power1.inOut',
+            scrollTrigger: {
+                trigger: jointBtnAnimation.current,
+                start:'100% bottom',
+                end:'top 90%',
+                scrub: 0,
+                //events: onEnter onLeave onEnterBack onLeaveBack
+                toggleActions:'play restart complete reverse',
+                //options: play plause resume reset restart complete reverse none
+                markers:true,
+              }})
     }, [])
 
     return (
@@ -65,7 +82,7 @@ const Career = () => {
                         </tbody>
                     </table>
                 </div>
-                <div className="join"><Link to="contact" smooth={true}>Join us!</Link></div>
+                <div className="join" ref={jointBtnAnimation}><Link to="contact" smooth={true}>Join us!</Link></div>
                 { state ? <div className="back" onClick={closeModalHandler}></div> : null }
                 <Modal state={state} closeModalHandler={closeModalHandler} offer={offer}/>
             </div>

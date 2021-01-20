@@ -17,8 +17,13 @@ const Products = () => {
         gsap.fromTo(productsWrapper.current.children, {y: '+=100', autoAlpha: 0}, {y: 0, autoAlpha: 1, stagger: .5, duration: 2,
           scrollTrigger: {
             trigger: productsWrapper.current,
-            start: 'top 65%',
-            markers: true,
+            start:'top 85%',
+            end:'bottom bottom',
+            scrub: 0,
+            //events: onEnter onLeave onEnterBack onLeaveBack
+            toggleActions:'play restart complete reverse',
+            //options: play plause resume reset restart complete reverse none
+            // markers:true,
           }
         })
     }, [])
