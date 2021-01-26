@@ -2,31 +2,39 @@ import React from 'react';
 
 import '../styles/sass/shop-products.sass';
 
-import { productsData  } from '../../src/data_products.js';
 
+const ShopProducts = (props) => {
 
-const ShopProducts = () => {
+    let productsList = props.productsData;
+    let searchText = props.searchText.toLowerCase();
+    let optionSelected = props.optionSelected;
 
-    let productItem = productsData.map(product => (
-        <li key={product.id} className="product">
-            <div className="description">
-                <p>{product.name}</p>
-                <p>{product.size}</p>
-                <p>{product.price} EUR</p>
-                <img src={product.image} alt={product.alt_text}></img>
-            </div>
-            <div className="choose-quantity">
-                <p>Choose quantity:</p>
-                <label forHTML="quantity"><input type="number" id="quantity" className="pcs" placeholder="0" min="0" max="24" /*value={e.target.value}*/></input></label>
-                <input type="button" className="add-to-cart" value="Add to cart" /*onClick={addToCartHandler}*/></input>
-            </div>
-        </li>
-        )
+    const Product = ( {product} ) => (
+        <li className="product">
+                    <div className="description">
+                        <p>{product.name}</p>
+                        <p>{product.size}</p>
+                        <p>{product.price} EUR</p>
+                        <img src={product.image} alt={product.alt_text}></img>
+                    </div>
+                    <div className="choose-quantity">
+                        <p>Choose quantity:</p>
+                        <label forHTML="quantity"><input type="number" id="quantity" className="pcs" placeholder="0" min="0" max="24" /*value={e.target.value}*/></input></label>
+                        <input type="button" className="add-to-cart" value="Add to cart" /*onClick={addToCartHandler}*/></input>
+                    </div>
+                </li>
     )
 
+  
+    productsList= productsList.filter((product) => product.category.toLowerCase().includes(searchText) || product.name.toLowerCase().includes(searchText));
+
+    productsList = productsList.filter((product) => product.category === optionSelected);
+    
+    productsList = productsList.map(product => <Product key={product.id} product={product}/> )
+ 
     return (
         <ul className="shop-products">
-            {productItem}    
+            {productsList}
         </ul>
     )
 

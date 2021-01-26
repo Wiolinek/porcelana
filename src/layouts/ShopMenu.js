@@ -3,12 +3,12 @@ import React from 'react';
 import '../styles/sass/shop-menu.sass';
 
 
-const ShopMenu = () => {
+const ShopMenu = (props) => {
 
-    let shopMenuOptions = ["Show All", "Mugs", "Cups", "Tea Pots", "Plates", "Bowls", "Vases"];
-    let shopMenu = shopMenuOptions.map(item =>
-        <li key={item}><p>{item}</p></li>
-    )
+    const shopMenuOptions = ["Show All", "Mugs", "Cups", "Tea Pots", "Plates", "Bowls", "Vases"];
+    const shopMenu = shopMenuOptions.map(item =>
+        <button key={item} onClick={props.productsFilterHandler} value={item}>{item}</button>)
+
 
     return (
         <header className="shop-header">
@@ -20,13 +20,13 @@ const ShopMenu = () => {
             </div>
             <div className="search">
                 <label htmlFor="search">what are you looking for..?</label>
-                <input type="text" id="search" name="search"></input>
+                <input type="text" id="search" name="search" onChange={props.searchProductHandler} value={props.searchText}></input>
                 <i class="fas fa-search"></i>
             </div>
             <div className="logo shop-logo">
                  <p className="logo-name">ICM Inc.</p>
             </div>
-            <ul className="shop-menu">
+            <ul className="shop-menu" value={props.searchText}>
                 {shopMenu}
             </ul>
         </header>

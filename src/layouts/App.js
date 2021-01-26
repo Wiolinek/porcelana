@@ -8,7 +8,7 @@ import Products from "./Products";
 import Recommendations from "./Recommendations";
 import Career from "./Career";
 import Footer from "./Footer";
-// import Shop from "./Shop";
+import Shop from "./Shop";
 
 import '../styles/sass/app.sass';
 
@@ -46,7 +46,7 @@ const App = () => {
           </footer>
           {/* cała sekcja sklepu do zmiany miejsca */}
           <section>
-            {/* <Shop /> */}
+            <Shop />
           </section>
         </div>
       </>
