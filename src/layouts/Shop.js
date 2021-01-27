@@ -11,36 +11,28 @@ const Shop = () => {
 
     let [searchText, setSearchText] = useState("");
     let [optionSelected, setOptionSelected] = useState("All");
-    let cartProductsList = [];
+    let [cartProductsList, setCartProductsList] = useState([]);
 
     const searchProductHandler = (e) => {
         setSearchText(e.target.value);
         setOptionSelected("All");
-    }
+    };
 
     const productsFilterHandler = (e) => {
         setOptionSelected(e.target.value);
         console.log(e.target.value);
-    }
+    };
 
-    const addToCartHandler = (e) => {
-        cartProductsList.push({
-            id: e.target.id,
-            name: e.target.name,
-            price: e.target.price,
-            quantity: 1,
-        })
-        // setCartState(.push({
-        //     id: productsData.id,
-        //     name: productsData.name,
-        //     price: productsData.price,
-        //     quantity: 0,
-        // }))
-        console.log(e.target.id);
-        console.log(e.target.name);
-        console.log(e.target.price);
-        console.log(cartProductsList);
-
+    const addToCartHandler = (e, product) => {
+        setCartProductsList([...cartProductsList, product]
+        )
+        console.log(e.target.id)
+        // console.log(e.target.name);
+        // console.log(e.target.price);
+        // console.log(e.target.category);
+        // console.log(e.target.size);
+        // console.log(e.target.alt_text);
+        // console.log(cartProductsList);
     }
 
     return (
@@ -48,7 +40,7 @@ const Shop = () => {
             <div className="shop" id="shop">
                 <ShopMenu searchProductHandler={searchProductHandler} searchText={searchText} productsFilterHandler={productsFilterHandler}/>
                 <ShopProducts productsData={productsData} searchText={searchText} optionSelected={optionSelected} addToCartHandler={addToCartHandler}/>
-                <ShopCart cartProductsList={cartProductsList}/>
+                <ShopCart cartProductsList={cartProductsList} productsData={productsData} addToCartHandler={addToCartHandler}/>
             </div>
         </div>
     );

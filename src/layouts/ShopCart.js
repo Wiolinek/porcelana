@@ -7,7 +7,7 @@ const ShopCart = (props) => {
 
     let cartProductsList = props.cartProductsList;
 
-    let listToDisplay = cartProductsList.map(product => <li><p>{product.name}</p><p> pcs</p><p>{product.price} EUR</p></li>);
+    let listToDisplay = cartProductsList.map(product => <li><p>{props.name}</p><p> pcs</p><p>{props.price} EUR</p></li>);
     console.log(listToDisplay);
    
     return (
