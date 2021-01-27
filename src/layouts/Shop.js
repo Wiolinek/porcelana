@@ -10,11 +10,12 @@ import { productsData  } from '../../src/data_products.js';
 const Shop = () => {
 
     let [searchText, setSearchText] = useState("");
-    let [optionSelected, setOptionSelected] = useState("Show All")
+    let [optionSelected, setOptionSelected] = useState("All");
+    let cartProductsList = [];
 
     const searchProductHandler = (e) => {
         setSearchText(e.target.value);
-        setOptionSelected("Cups");
+        setOptionSelected("All");
     }
 
     const productsFilterHandler = (e) => {
@@ -22,13 +23,32 @@ const Shop = () => {
         console.log(e.target.value);
     }
 
+    const addToCartHandler = (e) => {
+        cartProductsList.push({
+            id: e.target.id,
+            name: e.target.name,
+            price: e.target.price,
+            quantity: 1,
+        })
+        // setCartState(.push({
+        //     id: productsData.id,
+        //     name: productsData.name,
+        //     price: productsData.price,
+        //     quantity: 0,
+        // }))
+        console.log(e.target.id);
+        console.log(e.target.name);
+        console.log(e.target.price);
+        console.log(cartProductsList);
+
+    }
 
     return (
         <div>
             <div className="shop" id="shop">
                 <ShopMenu searchProductHandler={searchProductHandler} searchText={searchText} productsFilterHandler={productsFilterHandler}/>
-                <ShopProducts productsData={productsData} searchText={searchText} optionSelected={optionSelected}/>
-                <ShopCart />
+                <ShopProducts productsData={productsData} searchText={searchText} optionSelected={optionSelected} addToCartHandler={addToCartHandler}/>
+                <ShopCart cartProductsList={cartProductsList}/>
             </div>
         </div>
     );

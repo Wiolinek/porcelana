@@ -44,7 +44,7 @@ export const productsData = [
     {   
         id: 0,
         name: "Cup \"I love You\"",
-        category: "Cups",
+        category: "[Cups, All]",
         size: "8 cm",
         price: 3.99,
         image: image0,
@@ -53,7 +53,7 @@ export const productsData = [
     {   
         id: 1,
         name: "Cup \"English Afternoon\"",
-        category: "Cups",
+        category: "[Cups, All]",
         size: "9 cm",
         price: 3.99,
         image: image1,
@@ -62,7 +62,7 @@ export const productsData = [
     {   
         id: 2,
         name: "Bowl \"Vintage Style\"",
-        category: "Bowls",
+        category: "[Bowls, All]",
         size: "9 cm",
         price: 3.99,
         image: image2,
@@ -71,7 +71,7 @@ export const productsData = [
     {   
         id: 3,
         name: "Cup \"Golden Taste\"",
-        category: "Cups",
+        category: "[Cups, All]",
         size: "9 cm",
         price: 3.99,
         image: image3,
@@ -80,7 +80,7 @@ export const productsData = [
     {
         id: 4,
         name: "Bowl \"Happy Breakfast\"",
-        category: "Bowls",
+        category: "[Bowls, All]",
         size: "9 cm",
         price: 3.99,
         image: image4,
@@ -89,7 +89,7 @@ export const productsData = [
     {
         id: 5,
         name: "Cup \"White Passion\"",
-        category: "Cups",
+        category: "[Cups, All]",
         size: "9 cm",
         price: 3.99,
         image: image5,
@@ -98,7 +98,7 @@ export const productsData = [
     {
         id: 6,
         name: "Cup \"Hot Chocolate\"",
-        category: "Cups",
+        category: "[Cups, All]",
         size: "9 cm",
         price: 3.99,
         image: image6,
@@ -107,7 +107,7 @@ export const productsData = [
     {
         id: 7,
         name: "Cup \"Precious Moments\"",
-        category: "Cups",
+        category: "[Cups, All]",
         size: "9 cm",
         price: 3.99,
         image: image7,
@@ -116,7 +116,7 @@ export const productsData = [
     {
         id: 8,
         name: "Cup \"Café Au Lait\"",
-        category: "Cups",
+        category: "[Cups, All]",
         size: "9 cm",
         price: 3.99,
         image: image8,
@@ -125,7 +125,7 @@ export const productsData = [
     {
         id: 9,
         name: "Cup \"Classic Elegance\"",
-        category: "Cups",
+        category: "[Cups, All]",
         size: "9 cm",
         price: 3.99,
         image: image9,
@@ -134,7 +134,7 @@ export const productsData = [
     {
         id: 10,
         name: "Cup \"Pure White\"",
-        category: "Cups",
+        category: "[Cups, All]",
         size: "9 cm",
         price: 3.99,
         image: image10,
@@ -143,7 +143,7 @@ export const productsData = [
     {
         id: 11,
         name: "Cup \"Fishy White\"",
-        category: "Cups",
+        category: "[Cups, All]",
         size: "9 cm",
         price: 3.99,
         image: image11,
@@ -152,7 +152,7 @@ export const productsData = [
     {
         id: 12,
         name: "Cup \"Deep Night\"",
-        category: "Cups",
+        category: "[Cups, All]",
         size: "9 cm",
         price: 3.99,
         image: image12,
@@ -161,7 +161,7 @@ export const productsData = [
     {
         id: 13,
         name: "Bowl \"Brown Rice\"",
-        category: "Bowls",
+        category: "[Bowls, All]",
         size: "9 cm",
         price: 3.99,
         image: image13,
@@ -170,7 +170,7 @@ export const productsData = [
     {
         id: 15,
         name: "Cup \"Sunset\"",
-        category: "Cups",
+        category: "[Cups, All]",
         size: "9 cm",
         price: 3.99,
         image: image15,
@@ -179,7 +179,7 @@ export const productsData = [
     {
         id: 18,
         name: "Cup \"Extravaganza\"",
-        category: "Cups",
+        category: "[Cups, All]",
         size: "9 cm",
         price: 3.99,
         image: image18,
@@ -188,7 +188,7 @@ export const productsData = [
     {
         id: 20,
         name: "Mug \"The Little Things\"",
-        category: "Mugs",
+        category: "[Mugs, All]",
         size: "9 cm",
         price: 3.99,
         image: image20,
@@ -197,7 +197,7 @@ export const productsData = [
     {
         id: 21,
         name: "Mug \"My Happy Place\"",
-        category: "Mugs",
+        category: "[Mugs, All]",
         size: "9 cm",
         price: 3.99,
         image: image21,
@@ -206,7 +206,7 @@ export const productsData = [
     {
         id: 22,
         name: "Mug \"Copper Trooper\"",
-        category: "Mugs",
+        category: "[Mugs, All]",
         size: "9cm",
         price: 3.99,
         image: image22,
@@ -215,7 +215,7 @@ export const productsData = [
     {
         id: 23,
         name: "Mug \"Christmas Tree\"",
-        category: "Mugs",
+        category: "[Mugs, All]",
         size: "9 cm",
         price: 3.99,
         image: image23,
@@ -224,7 +224,7 @@ export const productsData = [
     {
         id: 24,
         name: "Mug \"Pistachio\"",
-        category: "Mugs",
+        category: "[Mugs, All]",
         size: "9 cm",
         price: 3.99,
         image: image24,
@@ -233,7 +233,7 @@ export const productsData = [
     {
         id: 25,
         name: "Mug \"Winter Time\"",
-        category: "Mugs",
+        category: "[Mugs, All]",
         size: "9 cm",
         price: 3.99,
         image: image25,
@@ -242,7 +242,7 @@ export const productsData = [
     {
         id: 27,
         name: "Mug \"Big Size\"",
-        category: "Mugs",
+        category: "[Mugs, All]",
         size: "9 cm",
         price: 3.99,
         image: image27,
@@ -251,7 +251,7 @@ export const productsData = [
     {
         id: 28,
         name: "Mug \"Shades Of Gray\"",
-        category: "Mugs",
+        category: "[Mugs, All]",
         size: "9 cm",
         price: 3.99,
         image: image28,
@@ -260,7 +260,7 @@ export const productsData = [
     {
         id: 29,
         name: "Mug \"Taste Of Freedom\"",
-        category: "Mugs",
+        category: "[Mugs, All]",
         size: "9 cm",
         price: 3.99,
         image: image29,
@@ -269,7 +269,7 @@ export const productsData = [
     {
         id: 30,
         name: "Plate \"Yin\"",
-        category: "Plates",
+        category: "[Plates, All]",
         size: "9 cm",
         price: 3.99,
         image: image30,
@@ -278,7 +278,7 @@ export const productsData = [
     {
         id: 31,
         name: "Plate \"Yang\"",
-        category: "Plates",
+        category: "[Plates, All]",
         size: "9 cm",
         price: 3.99,
         image: image31,
@@ -287,7 +287,7 @@ export const productsData = [
     {
         id: 34,
         name: "Plate \"Black Metal\"",
-        category: "Plates",
+        category: "[Plates, All]",
         size: "9 cm",
         price: 3.99,
         image: image34,
@@ -296,7 +296,7 @@ export const productsData = [
     {
         id: 37,
         name: "Plate \"Taintless\"",
-        category: "Plates",
+        category: "[Plates, All]",
         size: "9 cm",
         price: 3.99,
         image: image37,
@@ -305,7 +305,7 @@ export const productsData = [
     {
         id: 38,
         name: "Plate \"Black Bamboo\"",
-        category: "Plates",
+        category: "[Plates, All]",
         size: "9 cm",
         price: 3.99,
         image: image38,
@@ -314,7 +314,7 @@ export const productsData = [
     {
         id: 42,
         name: "Tea Pot \"Flower Power\"",
-        category: "Tea Pots",
+        category: "[Tea Pots, All]",
         size: "9 cm",
         price: 3.99,
         image: image42,
@@ -323,7 +323,7 @@ export const productsData = [
     {
         id: 43,
         name: "Tea Pot \"Spring Time\"",
-        category: "Tea Pots",
+        category: "[Tea Pots, All]",
         size: "9 cm",
         price: 3.99,
         image: image43,
@@ -332,7 +332,7 @@ export const productsData = [
     {
         id: 44,
         name: "Tea Pot \"Dark Ink\"",
-        category: "Tea Pots",
+        category: "[Tea Pots, All]",
         size: "9 cm",
         price: 3.99,
         image: image44,
@@ -341,7 +341,7 @@ export const productsData = [
     {
         id: 47,
         name: "Tea Pot \"China Memories\"",
-        category: "Tea Pots",
+        category: "[Tea Pots, All]",
         size: "9 cm",
         price: 3.99,
         image: image47,
@@ -350,7 +350,7 @@ export const productsData = [
     {
         id: 49,
         name: "Vase \"Crystal Power\"",
-        category: "Vases",
+        category: "[Vases, All]",
         size: "9 cm",
         price: 3.99,
         image: image49,
@@ -359,7 +359,7 @@ export const productsData = [
     {
         id: 50,
         name: "Vase \"Green Energy\"",
-        category: "Vases",
+        category: "[Vases, All]",
         size: "9 cm",
         price: 3.99,
         image: image50,
@@ -368,7 +368,7 @@ export const productsData = [
     {
         id: 51,
         name: "Vase \"Pink Charm\"",
-        category: "Vases",
+        category: "[Vases, All]",
         size: "9 cm",
         price: 3.99,
         image: image51,
@@ -377,7 +377,7 @@ export const productsData = [
     {
         id: 52,
         name: "Vase \"Beige Felicity\"",
-        category: "Vases",
+        category: "[Vases, All]",
         size: "9 cm",
         price: 3.99,
         image: image52,
@@ -386,7 +386,7 @@ export const productsData = [
     {
         id: 53,
         name: "Vase \"White Bliss\"",
-        category: "Vases",
+        category: "[Vases, All]",
         size: "9 cm",
         price: 3.99,
         image: image53,
@@ -395,7 +395,7 @@ export const productsData = [
     {
         id: 55,
         name: "Vase \"Bamboo Boom\"",
-        category: "Vases",
+        category: "[Vases, All]",
         size: "9 cm",
         price: 3.99,
         image: image55,

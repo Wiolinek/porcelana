@@ -5,7 +5,7 @@ import '../styles/sass/shop-menu.sass';
 
 const ShopMenu = (props) => {
 
-    const shopMenuOptions = ["Show All", "Mugs", "Cups", "Tea Pots", "Plates", "Bowls", "Vases"];
+    const shopMenuOptions = ["All", "Mugs", "Cups", "Tea Pots", "Plates", "Bowls", "Vases"];
     const shopMenu = shopMenuOptions.map(item =>
         <button key={item} onClick={props.productsFilterHandler} value={item}>{item}</button>)
 
