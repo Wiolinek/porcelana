@@ -32,7 +32,7 @@ const Footer = () => {
     return (
         <div /*ref={footerWrapper}*/>
         <div className="newsletter">
-            <div><i class="far fa-newspaper"></i><p>Newsletter</p></div>
+            <div><i className="far fa-newspaper"></i><p>Newsletter</p></div>
             <p>Sign in and stay in touch!</p>
             <form>
                     <label htmlFor="user_email">E-mail:</label>

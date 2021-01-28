@@ -30,10 +30,10 @@ const Career = () => {
     }
 
     let jobOffers = jobOffersData.map(offer => (
-        <tr>
-            <td key={offer.id} name={offer.name}><button className="open-offer-modal-btn" onClick={() => openModalHandler(offer)}>{offer.name}</button></td>
-            <td key={offer.location}>{offer.location}</td>
-            <td key={offer.date}>{offer.date}</td>
+        <tr key={offer.id}>
+            <td><button className="open-offer-modal-btn" onClick={() => openModalHandler(offer)}>{offer.name}</button></td>
+            <td>{offer.location}</td>
+            <td>{offer.date}</td>
         </tr>
         )
     )

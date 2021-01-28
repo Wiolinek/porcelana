@@ -5,9 +5,11 @@ import ShopCart from "./ShopCart";
 
 import '../styles/sass/shop.sass';
 
-import { productsData  } from '../../src/data_products.js';
+import productsData from '../../src/data_products.js';
 
 const Shop = () => {
+
+    let { item } = productsData; //ta destrukturyzacja działa ?
 
     let [searchText, setSearchText] = useState("");
     let [optionSelected, setOptionSelected] = useState("All");
@@ -23,14 +25,16 @@ const Shop = () => {
         console.log(e.target.value);
     };
 
-    const addToCartHandler = (e, product) => {
-        setCartProductsList([...cartProductsList, product]
-        )
-        console.log(e.target.id)
-        // console.log(e.target.name);
-        // console.log(e.target.price);
+    const addToCartHandler = (e) => { //może zamiast wrzucania do stanu obiektów wrzucić same id i potem wyszukać resztę danych w innej funkcji ?
+        let id = e.target.id;
+        setCartProductsList([...cartProductsList, {id, quantity: 1}]); //problem w tym że tutaj ten product jest undefined.. quantity się bezproblemowo dodaje do stanu
+         //to się z eventu wyciąga
+        // console.log(cartProductsList);
+        // console.log(product);
+        // console.log(e.target.name); //to się z eventu wyciąga
+        // console.log(e.target.price); //to jest w evencie undefined
         // console.log(e.target.category);
-        // console.log(e.target.size);
+        // console.log(e.target.size); //to jest w evencie undefined
         // console.log(e.target.alt_text);
         // console.log(cartProductsList);
     }
@@ -39,8 +43,8 @@ const Shop = () => {
         <div>
             <div className="shop" id="shop">
                 <ShopMenu searchProductHandler={searchProductHandler} searchText={searchText} productsFilterHandler={productsFilterHandler}/>
-                <ShopProducts productsData={productsData} searchText={searchText} optionSelected={optionSelected} addToCartHandler={addToCartHandler}/>
-                <ShopCart cartProductsList={cartProductsList} productsData={productsData} addToCartHandler={addToCartHandler}/>
+                <ShopProducts productsData={productsData} searchText={searchText} optionSelected={optionSelected} item={item} addToCartHandler={addToCartHandler}/>
+                <ShopCart cartProductsList={cartProductsList} productsData={productsData}/>
             </div>
         </div>
     );

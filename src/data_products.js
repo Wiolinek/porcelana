@@ -40,7 +40,7 @@ import image53 from '../src/images/small_shop/vase_5_small.jpg';
 import image55 from '../src/images/small_shop/vase_7_small.jpg';
 
 
-export const productsData = [
+const productsData = [
     {   
         id: 0,
         name: "Cup \"I love You\"",
@@ -401,4 +401,6 @@ export const productsData = [
         image: image55,
         alt_text: "vase",
     },
-];
+]
+
+export default productsData;

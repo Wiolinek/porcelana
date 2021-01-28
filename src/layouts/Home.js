@@ -32,7 +32,7 @@ const Home = () => {
             <p>Our design</p>
             <p>Your <span>style</span></p>
         </div>
-        <Link to="about" smooth={true}><i class="fas fa-angle-double-down" onClick={scrollToBottom} ref={arrowBtn}></i></Link>
+        <Link to="about" smooth={true}><i className="fas fa-angle-double-down" onClick={scrollToBottom} ref={arrowBtn}></i></Link>
     </section>
     )
 }   

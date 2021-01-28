@@ -49,11 +49,11 @@ const Navigation = () => {
             <li><Link to="shop" target="_blank">E-Shop</Link></li>
         </ul>
         <aside className="aside" ref={asideWrapper}>
-            <li><i class="fab fa-facebook"></i></li>
-            <li><i class="fab fa-instagram"></i></li>
-            <li><i class="fab fa-twitter-square"></i></li>
-            <li><i class="fab fa-facebook-messenger"></i></li>
-            <li onClick={scrollToBottom}><i class="fas fa-envelope"></i></li>
+            <li><i className="fab fa-facebook"></i></li>
+            <li><i className="fab fa-instagram"></i></li>
+            <li><i className="fab fa-twitter-square"></i></li>
+            <li><i className="fab fa-facebook-messenger"></i></li>
+            <li onClick={scrollToBottom}><i className="fas fa-envelope"></i></li>
         </aside>
     </nav>
     )
