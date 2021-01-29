@@ -14,7 +14,8 @@ const Shop = () => {
     let [searchText, setSearchText] = useState("");
     let [optionSelected, setOptionSelected] = useState("All");
     let [cartProductsList, setCartProductsList] = useState([]);
-
+    let [waitingRoom, setWaitingRoom] = useState([]); //I use that to gather products with quantity chosen but not added to cart yet
+ 
     const searchProductHandler = (e) => {
         setSearchText(e.target.value);
         setOptionSelected("All");
@@ -25,25 +26,39 @@ const Shop = () => {
         console.log(e.target.value);
     };
 
-    const addToCartHandler = (e) => { //może zamiast wrzucania do stanu obiektów wrzucić same id i potem wyszukać resztę danych w innej funkcji ?
+    const addToWaitingRoomHandler = (e, item) => {
         let id = e.target.id;
-        setCartProductsList([...cartProductsList, {id, quantity: 1}]); //problem w tym że tutaj ten product jest undefined.. quantity się bezproblemowo dodaje do stanu
-         //to się z eventu wyciąga
-        // console.log(cartProductsList);
-        // console.log(product);
-        // console.log(e.target.name); //to się z eventu wyciąga
-        // console.log(e.target.price); //to jest w evencie undefined
-        // console.log(e.target.category);
-        // console.log(e.target.size); //to jest w evencie undefined
-        // console.log(e.target.alt_text);
-        // console.log(cartProductsList);
+        let quantity = e.target.value;
+        let inCartProduct = waitingRoom.find(item => item.id === e.target.id); //check if product is in waiting room already
+
+        if(inCartProduct) { // if product is in waiting room increase quantity only
+            setWaitingRoom(waitingRoom.map(item => item.id === id ? {...inCartProduct, quantity: e.target.value} : item))
+        } else { //if product is not in waiting room - add it and update waiting room
+            setWaitingRoom([...waitingRoom, {id, quantity}]);
+            console.log(waitingRoom);
+        }
     }
+
+    const addToCartHandler = (e, item) => {
+        let addedToCartItem = waitingRoom.find(item => item.id === e.target.id); //looking for product in waiting room and fetching quantity
+        if(addedToCartItem) { //if product is in waiting room add to cart
+            setCartProductsList([...cartProductsList, addedToCartItem]);
+            setWaitingRoom(waitingRoom.filter(item => item.id !== e.target.id ? waitingRoom : null)); //delete added to cart product from waiting room
+            //DODAĆ ZEROWANIE INPUTA PO WRZUCENIU PRODUKTU DO KOSZYKA
+        } else {
+            //do nothing if product is not in waiting room - it means qantity is not been chosen so equals 0
+        }  
+    }
+
+    console.log(cartProductsList);
+    // console.log(cartProductsList.id);
+    // console.log(cartProductsList.quantity);  
 
     return (
         <div>
             <div className="shop" id="shop">
                 <ShopMenu searchProductHandler={searchProductHandler} searchText={searchText} productsFilterHandler={productsFilterHandler}/>
-                <ShopProducts productsData={productsData} searchText={searchText} optionSelected={optionSelected} item={item} addToCartHandler={addToCartHandler}/>
+                <ShopProducts productsData={productsData} searchText={searchText} optionSelected={optionSelected} addToCartHandler={addToCartHandler} addToWaitingRoomHandler={addToWaitingRoomHandler}/>
                 <ShopCart cartProductsList={cartProductsList} productsData={productsData}/>
             </div>
         </div>

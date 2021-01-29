@@ -3,19 +3,23 @@ import React from 'react';
 import '../styles/sass/shop-cart.sass';
 
 
-const ShopCart = (props) => {
+const ShopCart = ( { cartProductsList, productsData }) => {
 
-    let { cartProductsList, productsData } = props;
     let id = cartProductsList.id;
     let quantity = cartProductsList.quantity;
+    
 
-    let listToDisplay = cartProductsList.map(product => ( // tutaj napisać funkcję która porównuje id i wyciąa resztę danych
-        <li key={id}><p>{product.name}</p><p>{product.quantity} pcs</p><p>{product.price} EUR</p></li>));
+    let listToDisplay = cartProductsList.map(product => (
+        <li key={id}><p>{productsData.name}</p><p>{quantity} pcs</p><p>{productsData.price} EUR</p></li>));
+
+    // let listToDisplay = cartProductsList.forEach(product => product.id ===id ?
+    //     <li key={id}><p>{productsData.name}</p><p>{quantity} pcs</p><p>{productsData.price} EUR</p></li> : null)
+
 
 
        // MOŻE TAK ? 
 
-    /* cartProductsList.forEach(item => {
+    /* cartProductsList.forEach(product => {
          if(id === productsData.id) {
              <li key={productsData.id}><p>{productsData.name}</p><p>{quantity} pcs</p><p>{productsData.price} EUR</p></li>));
          } 

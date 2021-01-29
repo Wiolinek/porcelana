@@ -26,7 +26,7 @@ const ShopMenu = (props) => {
             <div className="logo shop-logo">
                  <p className="logo-name">ICM Inc.</p>
             </div>
-            <ul className="shop-menu" value={props.searchText}>
+            <ul className="shop-menu">
                 {shopMenu}
             </ul>
         </header>
