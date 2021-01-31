@@ -5,9 +5,11 @@ import ShopCart from "./ShopCart";
 
 import '../styles/sass/shop.sass';
 
-import productsData from '../../src/data_products.js';
+import productsData from '../data_products';
 
 const Shop = () => {
+
+    console.log(productsData);
 
     let [searchText, setSearchText] = useState("");
     let [optionSelected, setOptionSelected] = useState("All");
@@ -26,23 +28,30 @@ const Shop = () => {
     };
 
     const addToWaitingRoomHandler = (e, item) => {
+        let id = e.target.id;
         let quantity = e.target.value;
-        let isInWaitingRoom = waitingRoom.find(item => item.id === e.target.id ? {item} : null); //check if product is in waiting room already
+        let price = e.target.price;
+        let name = e.target.name;
+        console.log(id);
+        console.log(quantity);
+        console.log(price);
+        console.log(name);
 
-        if(isInWaitingRoom && quantity === '0'){ // if product is in waiting room and its quantity is = 0 - keep there only products with quantity > 0
-            setWaitingRoom(waitingRoom.filter(item => quantity !== '0')); //działa ale jeśli są inne produkcty w koszyku to usuwa wszystkie
-        } else if(isInWaitingRoom) { // if product is in waiting room - change quantity only
-            setWaitingRoom(waitingRoom.map(item => item.id === e.target.id ? {...item, quantity} : item));
-        } else if(!isInWaitingRoom){ //if product is not in waiting room - add it and update waiting room
-            setWaitingRoom([...waitingRoom, {...item, id: e.target.id, quantity}]);         
-        }  
+        let isInWaitingRoom = waitingRoom.find(item => item.id === id); //check if product is in waiting room already
+ 
+        if (isInWaitingRoom) { // if product is in waiting room - update only quantity
+            setWaitingRoom(waitingRoom.map(item => item.id === id ? {...item, id: id, quantity, price, name} : item));
+        } else {  //if product is not in waiting room - add it and update waiting room
+            setWaitingRoom([...waitingRoom, {...item, id: id, quantity, price, name}]);         
+        }
     }
 
+    // DODAĆ FUNKCJĘ WYRZUCANIA Z KOSZYKA JEŚLI ILOŚĆ = 0
+
     const addToCartHandler = (e, item) => {
-        let isInWaitingRoom = waitingRoom.find(item => item.id === e.target.id ? {item} : false); //looking for product in waiting room and fetching quantity
+        let isInWaitingRoom = waitingRoom.find(item => item.id === e.target.id); //looking for product in waiting room and fetching quantity
         console.log(isInWaitingRoom); //zwraca obiekt lub undefined
         
-
         if(isInWaitingRoom) { //if product is in waiting room add to cart
             console.log(isInWaitingRoom);
             let isInCart = cartProductsList.find(item => item.id === e.target.id);
@@ -50,9 +59,11 @@ const Shop = () => {
 
             setCartProductsList([...cartProductsList, isInWaitingRoom]);
             setWaitingRoom(waitingRoom.filter(item => item.id !== e.target.id ? waitingRoom : null)); //delete added to cart product from waiting room
+
             //DODAĆ ZEROWANIE INPUTA PO WRZUCENIU PRODUKTU DO KOSZYKA
 
             // DODAWANIE OBU STANÓW - ZROBIĆ
+
             if(isInCart){ // if product is already in cart add quantity from cart and quantity from waiting room
                 setCartProductsList(cartProductsList.map(item => item.id === id ? {...isInCart, quantity: cartProductsList.quantity + waitingRoom.quantity} : null));
                 console.log(cartProductsList.quantity);
@@ -72,7 +83,7 @@ const Shop = () => {
             <div className="shop" id="shop">
                 <ShopMenu searchProductHandler={searchProductHandler} searchText={searchText} productsFilterHandler={productsFilterHandler}/>
                 <ShopProducts productsData={productsData} searchText={searchText} optionSelected={optionSelected} addToCartHandler={addToCartHandler} addToWaitingRoomHandler={addToWaitingRoomHandler}/>
-                <ShopCart cartProductsList={cartProductsList} productsData={productsData}/>
+                <ShopCart addToCartHandler={addToCartHandler} addToWaitingRoomHandler={addToWaitingRoomHandler} cartProductsList={cartProductsList} productsData={productsData}/>
             </div>
         </div>
     );

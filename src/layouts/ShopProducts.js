@@ -14,7 +14,7 @@ const ShopProducts = (props) => {
     productsList = productsList.filter(product => product.category.includes(optionSelected));
     
     productsList = productsList.map(product => (
-        <li className="product" key={product.id} product={product}>
+        <li className="product" key={product.id}>
             <div className="description">
                 <p>{product.name}</p>
                 <p>{product.size}</p>
@@ -23,7 +23,7 @@ const ShopProducts = (props) => {
             </div>
             <div className="choose-quantity">
                 <p>Choose quantity:</p>
-                <label forhtml="quantity"><input type="number" id={product.id} className="pcs" placeholder="0" min="0" max="24" onChange={addToWaitingRoomHandler}></input></label>
+                <label forhtml="quantity"><input type="number" className="pcs" placeholder="0" min="0" max="24" id={product.id} name={product.name} price={product.price} onChange={addToWaitingRoomHandler}></input></label>
                 <input type="button" className="add-to-cart" value="Add to cart" id={product.id} name={product.name} price={product.price} onClick={addToCartHandler}></input>
             </div>
         </li>

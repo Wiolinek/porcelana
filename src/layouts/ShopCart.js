@@ -3,25 +3,11 @@ import React from 'react';
 import '../styles/sass/shop-cart.sass';
 
 
-const ShopCart = ( { cartProductsList, productsData }) => {
+const ShopCart = ({ cartProductsList }) => {
 
     let listToDisplay = cartProductsList.map(product => (
-        <li key={product.id}><p>{productsData.name}</p><p>{product.quantity} pcs</p><p>{productsData.price} EUR</p></li>));
+        <li key={product.id}><p>{product.name}</p><p>{product.quantity} pcs</p><p>{product.price} EUR</p></li>));
 
-    // let listToDisplay = cartProductsList.forEach(product => product.id ===id ?
-    //     <li key={id}><p>{productsData.name}</p><p>{quantity} pcs</p><p>{productsData.price} EUR</p></li> : null)
-
-
-
-       // MOŻE TAK ? 
-
-    /* cartProductsList.forEach(product => {
-         if(id === productsData.id) {
-             <li key={productsData.id}><p>{productsData.name}</p><p>{quantity} pcs</p><p>{productsData.price} EUR</p></li>));
-         } 
-        }) */
-
-    console.log(cartProductsList);
     console.log(listToDisplay);
    
     return (
