@@ -5,12 +5,8 @@ import '../styles/sass/shop-cart.sass';
 
 const ShopCart = ( { cartProductsList, productsData }) => {
 
-    let id = cartProductsList.id;
-    let quantity = cartProductsList.quantity;
-    
-
     let listToDisplay = cartProductsList.map(product => (
-        <li key={id}><p>{productsData.name}</p><p>{quantity} pcs</p><p>{productsData.price} EUR</p></li>));
+        <li key={product.id}><p>{productsData.name}</p><p>{product.quantity} pcs</p><p>{productsData.price} EUR</p></li>));
 
     // let listToDisplay = cartProductsList.forEach(product => product.id ===id ?
     //     <li key={id}><p>{productsData.name}</p><p>{quantity} pcs</p><p>{productsData.price} EUR</p></li> : null)
