@@ -14,11 +14,13 @@
     flex-direction: column
     align-items: center
     justify-content: space-between
+    > p
+        padding-top: 10px
+        font-weight: 700
+        font-size: 20px
+        color: red
     & .fa-shopping-cart
-        margin-top: 2vh
-        font-size: 60px
-        & p
-            font-size: 20px
+        font-size: 57px
     & .in_cart
         border: $black-border-thin
         height: 65%
@@ -31,8 +33,18 @@
             border: $black-border-thin
             height: 87%
             width: 97%
+            & div p
+                padding-top: 10px
+                text-align: center
+            & li
+                display: flex
+                justify-content: space-between
+                list-style: none
+                & p
+                    font-size: 14px
+                    padding: 5px
         & p
-            font-size: 20px
+            font-size: 19px
     & .send_order
         width: 80%
         margin: 1.5vh auto

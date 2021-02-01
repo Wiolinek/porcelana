@@ -5,16 +5,18 @@ import '../styles/sass/shop-products.sass';
 
 const ShopProducts = (props) => {
 
-    let productsList = props.productsData;
     let searchText = props.searchText.toLowerCase();
-    let { optionSelected, addToCartHandler, addToWaitingRoomHandler } = props;
+    let { optionSelected, addToCartHandler, addToWaitingRoomHandler, productsData } = props;
   
-    productsList = productsList.filter(product => product.category.toLowerCase().includes(searchText) || product.name.toLowerCase().includes(searchText));
+    // look for a product based on text input
+    let productsList = productsData.filter(product => product.category.toLowerCase().includes(searchText) || product.name.toLowerCase().includes(searchText));
 
+    // look for a product based on menu option selected by user
     productsList = productsList.filter(product => product.category.includes(optionSelected));
     
+    // list of product generated to display based on text or option selected by user
     productsList = productsList.map(product => (
-        <li className="product" key={product.id}>
+        <li className="product" key={product.id} product={product}>
             <div className="description">
                 <p>{product.name}</p>
                 <p>{product.size}</p>
