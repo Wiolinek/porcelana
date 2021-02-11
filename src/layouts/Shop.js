@@ -3,13 +3,13 @@ import ShopProducts from "./ShopProducts";
 import ShopMenu from "./ShopMenu";
 import ShopCart from "./ShopCart";
 
+
+
 import '../styles/sass/shop.sass';
 
 import productsData from '../data_products';
 
 const Shop = () => {
-
-    console.log(productsData);
 
     let [searchText, setSearchText] = useState("");
     let [optionSelected, setOptionSelected] = useState("All");
@@ -32,7 +32,7 @@ const Shop = () => {
         let price = productsData[e.target.id].price;
         let quantity = e.target.value;
 
-        let isInWaitingRoom = waitingRoom.find(item => item.id === e.target.id); //check if product is in waiting room already
+        let isInWaitingRoom = waitingRoom.find(item => item.id === e.target.id); //check if product is in waiting room already by click on Add To Cart button
  
         if (isInWaitingRoom) { // if product is in waiting room - update only quantity
             setWaitingRoom(waitingRoom.map(item => item.id === e.target.id && {...item, id, name, price, quantity}));
@@ -41,30 +41,27 @@ const Shop = () => {
         }
     }
 
-    // DODAĆ FUNKCJĘ WYRZUCANIA Z KOSZYKA JEŚLI ILOŚĆ = 0
+    // DODAĆ FUNKCJĘ WYRZUCANIA Z POCZEKALNI JEŚLI ILOŚĆ = 0
 
-    const addToCartHandler = (e, item) => {
+    const addToCartHandler = (e) => {
         let isInWaitingRoom = waitingRoom.find(item => item.id === e.target.id); //looking for product in waiting room and fetching quantity
-        console.log(isInWaitingRoom); //zwraca obiekt lub undefined
         
         if(isInWaitingRoom) { //if product is in waiting room add to cart
-            console.log(isInWaitingRoom);
             let isInCart = cartProductsList.find(item => item.id === e.target.id);
-            let id = waitingRoom.id; // fetching product ID from waiting room
 
             setCartProductsList([...cartProductsList, isInWaitingRoom]);
             setWaitingRoom(waitingRoom.filter(item => item.id !== e.target.id && waitingRoom)); //delete added to cart product from waiting room
 
             // DODAĆ ZEROWANIE INPUTA PO WRZUCENIU PRODUKTU DO KOSZYKA
 
-            // DODAWANIE OBU STANÓW - ZROBIĆ
-
             if(isInCart){ // if product is already in cart add quantity from cart and quantity from waiting room
-                setCartProductsList(cartProductsList.map(item => item.id === id && {...isInCart, quantity: cartProductsList.quantity + waitingRoom.quantity}));
+                let isInCartQuantity = isInCart.quantity * 1 + isInWaitingRoom.quantity * 1; // sum of inCart quantity and waitingRoom quantity changed into type = number
+                // find item which has to be updated and update quantity, if item has different id - do not do anything with that
+                setCartProductsList(cartProductsList.map(item => item.id === isInCart.id ? {...isInCart, quantity: isInCartQuantity} : item));
             }
         } else {
             //do nothing if product is not in waiting room - it means quantity is not been chosen so it equals 0
-        }  
+        }
     }
 
     return (
@@ -72,7 +69,7 @@ const Shop = () => {
             <div className="shop" id="shop">
                 <ShopMenu searchProductHandler={searchProductHandler} searchText={searchText} productsFilterHandler={productsFilterHandler}/>
                 <ShopProducts productsData={productsData} searchText={searchText} optionSelected={optionSelected} addToCartHandler={addToCartHandler} addToWaitingRoomHandler={addToWaitingRoomHandler}/>
-                <ShopCart cartProductsList={cartProductsList} productsData={productsData}/>
+                <ShopCart cartProductsList={cartProductsList} setCartProductsList={setCartProductsList} productsData={productsData}/>
             </div>
         </div>
     );
