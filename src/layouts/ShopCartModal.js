@@ -39,25 +39,32 @@ const ShopCartModal = ( {cartModalState, closeCartModalHandler, cartProductsList
                 <h2>Your order</h2>
                 <div className="products-list">{order}</div>
                 <div>Total amount: {totalAmount}</div>
-                <label htmlFor="user_delivery">Delivery option<br/>
-                <input type="email" id="user_delivery" name="user_email" required></input></label>
+                <p>Delivery option:</p>
+                <form>
+                    <input type="radio" id="kurier" name="delivery_option" value="kurier"></input>
+                    <label htmlFor="kurier">Kurier</label>
+                    <input type="radio" id="poczta" name="delivery_option" value="poczta"></input>
+                    <label htmlFor="poczta">Poczta</label>
+                    <input type="radio" id="odbior_osobisty" name="delivery_option" value="odbior_osobisty"></input>
+                    <label htmlFor="odbior_osobisty">Odbiór osobisty</label>
+                </form>
                 <div>To pay: {totalAmount}</div>
             </div>
             <h2>Your address</h2>
             <div className="order_form">
                 <form>
                     <label htmlFor="user_name">Name:<br/>
-                    <input type="text" id="user_name" name="user_name" required></input></label>
+                        <input type="text" id="user_name" name="user_name" required></input></label>
                     <label htmlFor="user_surname">Surname:<br/>
-                    <input type="text" id="user_surname" name="user_surname" required></input></label>
+                        <input type="text" id="user_surname" name="user_surname" required></input></label>
                     <label htmlFor="user_email">E-mail:<br/>
-                    <input type="email" id="user_email" name="user_email" required></input></label>
+                        <input type="email" id="user_email" name="user_email" required></input></label>
                     <label htmlFor="user_street_name">Street name and number<br/>
-                    <input type="text" id="user_street_name" name="user_email" required></input></label>
+                        <input type="text" id="user_street_name" name="user_email" required></input></label>
                     <label htmlFor="user_zipcode">Zip code<br/>
-                    <input type="number" id="user_zipcode" name="user_email" required></input></label>
+                        <input type="number" id="user_zipcode" name="user_email" required></input></label>
                     <label htmlFor="user_city">City<br/>
-                    <input type="text" id="user_city" name="user_email" required></input></label>
+                        <input type="text" id="user_city" name="user_email" required></input></label>
 
                 </form>
             </div>

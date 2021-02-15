@@ -60,7 +60,7 @@ const Career = () => {
                 //events: onEnter onLeave onEnterBack onLeaveBack
                 toggleActions:'play restart complete reverse',
                 //options: play plause resume reset restart complete reverse none
-                markers:true,
+                // markers:true,
               }})
     }, [])
 
