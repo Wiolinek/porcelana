@@ -2,8 +2,6 @@
 @import 'mixins.sass'
     
 nav
-    overflow: hidden
-     
     & .logo
         @include logo-style
     & .menu-logo
@@ -14,7 +12,7 @@ nav
         & .logo-name
             @include logo-name-style
     & .nav-menu
-        display: block
+        display: flex
         z-index: 100
         height: 100%
         width: 100%
@@ -22,41 +20,50 @@ nav
         left: 0
         top: 0
         backdrop-filter: $blur-effect
-        & .logo
-            height: 20vw
-            width: 20vw
-            transform: translateY(50%)
-            margin: 0 10vw
-            & .logo-name
-                font-size: 60px
-        & .navigation-menu
-            list-style: none
-            position: fixed
-            right: 0
-            top: 0
-            z-index: 101
+        & .menu-logo-container
+            display: flex
+            align-items: center
+            justify-content: center
+            height: 100%
+            width: 60%
+            & .logo
+                position: static
+                height: 20vw
+                width: 20vw
+                top: 0
+                left: 0
+                & .logo-name
+                    font-size: 60px
+        & .navigation-menu-container
             height: 100%
             width: 40%
-            background-color: black
-            & li
-                padding: 25px 20px
-                color: $white-color
-                font-size: 25px
-                text-decoration: none
-                font-family: 'Cinzel', serif
-                text-align: center
-                &:hover
-                    cursor: pointer
-                    text-decoration: underline
-            & li:first-child
-                text-align: right
-                font-size: 35px
-                margin: 1vh 3vh 5vh   
+            & .navigation-menu
+                list-style: none
+                position: fixed
+                right: 0
+                top: 0
+                z-index: 101
+                height: 100%
+                width: 40%
+                background-color: black
+                & li
+                    padding: 25px 20px
+                    color: $white-color
+                    font-size: 25px
+                    text-decoration: none
+                    font-family: 'Cinzel', serif
+                    text-align: center
+                    &:hover
+                        cursor: pointer
+                        text-decoration: underline
+                & li:first-child
+                    text-align: right
+                    font-size: 35px
+                    margin: 7vh 3vh 4vh   
     & .navigation-bar
         list-style: none
         display: flex
         justify-content: flex-end
-        margin-right: 1vw
         padding-top: 3vh
         & li
             padding: 0 20px
@@ -68,6 +75,7 @@ nav
             font-family: 'Cinzel', serif
             &:last-child
                 border-right: none
+                margin-right: 1vw
             &:hover
                 color: $white-color
                 cursor: pointer

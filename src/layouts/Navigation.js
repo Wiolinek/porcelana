@@ -20,12 +20,12 @@ const Navigation = () => {
     let Menu = () => {
         return (
             <>
-                <li><Link to="about" smooth={true}>About Us</Link></li>
-                <li><Link to="products" smooth={true}>Products</Link></li>
-                <li><Link to="recommendations" smooth={true}>Recommendations</Link></li>
-                <li><Link to="career" smooth={true}>Career</Link></li>
-                <li><Link to="contact" smooth={true}>Contact</Link></li>
-                <li><Link to="shop" target="_blank">E-Shop</Link></li>
+                <li><Link to="about"onClick={closeMenuHandler} smooth={true}>About Us</Link></li>
+                <li><Link to="products" onClick={closeMenuHandler} smooth={true}>Products</Link></li>
+                <li><Link to="recommendations" onClick={closeMenuHandler} smooth={true}>Recommendations</Link></li>
+                <li><Link to="career" onClick={closeMenuHandler} smooth={true}>Career</Link></li>
+                <li><Link to="contact" onClick={closeMenuHandler} smooth={true}>Contact</Link></li>
+                <li><Link to="shop" onClick={closeMenuHandler} target="_blank">E-Shop</Link></li>
             </>
         )
     }
@@ -74,22 +74,24 @@ const Navigation = () => {
 
 
     return (
-    <nav>
-        <div className="logo menu-logo" ref={logoAnimation}>
-            <p className="logo-name">ICM Inc.</p>
-        </div>
-            { navMenuState ?
+    <nav id="navigation">
+            <div className="logo menu-logo" ref={logoAnimation}>
+                <p className="logo-name">ICM Inc.</p>
+            </div>
+        { navMenuState ?
             <nav className="nav-menu">
-                <div>
+                <div className="menu-logo-container">
                     <div className="logo menu-logo" ref={logoAnimation}>
                         <p className="logo-name">ICM Inc.</p>
                     </div>
                 </div>
-                <ul className="navigation-menu">
-                    <li><i className="fas fa-times" onClick={closeMenuHandler}></i></li>
-                    <li><Link to="home" smooth={true}>Home</Link></li>
-                    <Menu/>
-                </ul>
+                <div className="navigation-menu-container">
+                    <ul className="navigation-menu">
+                        <li><i className="fas fa-times" onClick={closeMenuHandler}></i></li>
+                        <li><Link to="navigation" onClick={closeMenuHandler} smooth={true}>Home</Link></li>
+                        <Menu/>
+                    </ul>
+                </div>
             </nav> : null }
         <nav>
             <ul className="navigation-bar" ref={navigationBarAnimation}>
@@ -99,10 +101,10 @@ const Navigation = () => {
         <aside>
             <div onClick={showMenuHandler} ref={showMenuIcon}><i className="fas fa-bars"></i></div>
             <ul ref={asideWrapper}>
-                <li><i className="fab fa-facebook"></i></li>
-                <li><i className="fab fa-instagram"></i></li>
-                <li><i className="fab fa-twitter-square"></i></li>
-                <li><i className="fab fa-facebook-messenger"></i></li>
+                <li><a href="https://www.facebook.com" rel="noreferrer" target="_blank"><i className="fab fa-facebook"></i></a></li>
+                <li><a href="https://www.instagram.com" rel="noreferrer" target="_blank"><i className="fab fa-instagram"></i></a></li>
+                <li><a href="https://twitter.com" rel="noreferrer" target="_blank"><i className="fab fa-twitter-square"></i></a></li>
+                <li><a href="https://www.messenger.com" rel="noreferrer" target="_blank"><i className="fab fa-facebook-messenger"></i></a></li>
                 <li onClick={scrollToBottom}><i className="fas fa-envelope"></i></li>
             </ul>
         </aside>

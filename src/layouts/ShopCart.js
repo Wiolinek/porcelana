@@ -36,7 +36,7 @@ const ShopCart = ({ cartProductsList, setCartProductsList, productsData }) => {
                         <div>{!listToDisplay.length && <p>Nothing's here.. :(</p>}</div>
                         {listToDisplay}
                     </div>
-                    <p>Total amount: {totalAmount} EUR</p>
+                    <p>Total amount: {totalAmount.toFixed(2)} EUR</p>
                 </div>
                 <button className="send_order" onClick={openCartModalHandler}>Go to Cart</button>
                 { cartModalState ? <div className="back" onClick={closeCartModalHandler}></div> : null }

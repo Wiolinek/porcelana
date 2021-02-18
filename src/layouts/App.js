@@ -11,6 +11,7 @@ import Footer from "./Footer";
 import Shop from "./Shop";
 
 import '../styles/sass/app.sass';
+// import ShopOldVersion from './ShopOldVersion';
 
 
 const App = () => {

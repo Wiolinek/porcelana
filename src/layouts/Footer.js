@@ -31,7 +31,7 @@ const Footer = () => {
 
     return (
         <div /*ref={footerWrapper}*/>
-        <div className="newsletter">
+        <div className="newsletter" id="contact">
             <div><i className="far fa-newspaper"></i><p>Newsletter</p></div>
             <p>Sign in and stay in touch!</p>
             <form>
@@ -40,7 +40,7 @@ const Footer = () => {
                     <input type="submit" value="Send"></input>
             </form>
         </div>
-        <div className="contact_form" id="contact">
+        <div className="contact_form">
             <h1 className="contact_title">Contact Us!</h1>
             <div className="address">
                 <p>International Ceramics Manufacturing Inc.</p>

@@ -10,7 +10,7 @@ const ShopCartModal = ( {cartModalState, closeCartModalHandler, cartProductsList
     }
 
     const decreaseQuantity = (e) => { //check witch product has been clicked and change quantity - 1 in order and in cart
-        setCartProductsList(cartProductsList.map(item => item.id === e.target.id ? {...item, quantity: item.quantity * 1 - 1} : item));
+        setCartProductsList(cartProductsList.map(item => item.id === e.target.id ? {...item, quantity: item.quantity * 1 - 1} : item).filter(item => item.quantity !== 0));
     }
 
     const deleteProduct = (e) => { //check witch product has been clicked and delete it from order and cart
@@ -38,7 +38,7 @@ const ShopCartModal = ( {cartModalState, closeCartModalHandler, cartProductsList
             <div>
                 <h2>Your order</h2>
                 <div className="products-list">{order}</div>
-                <div>Total amount: {totalAmount}</div>
+                <div>Total amount: {totalAmount.toFixed(2)}</div>
                 <p>Delivery option:</p>
                 <form>
                     <input type="radio" id="kurier" name="delivery_option" value="kurier"></input>
@@ -48,7 +48,7 @@ const ShopCartModal = ( {cartModalState, closeCartModalHandler, cartProductsList
                     <input type="radio" id="odbior_osobisty" name="delivery_option" value="odbior_osobisty"></input>
                     <label htmlFor="odbior_osobisty">Odbiór osobisty</label>
                 </form>
-                <div>To pay: {totalAmount}</div>
+                <div>To pay: {totalAmount.toFixed(2)}</div>
             </div>
             <h2>Your address</h2>
             <div className="order_form">
