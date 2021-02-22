@@ -3,11 +3,34 @@
     padding: 0
     box-sizing: border-box
     .app
-        background-image: url(../../images/back_1_att.jpg)
-        background-attachment: fixed
-        background-size: 100vw
-        article
-            font-family: 'Cinzel', serif
+        overflow: hidden
+        font-family: 'Cinzel', serif
+        header
+            min-height: 100vh
+            display: flex
+            flex-direction: column
+            background-color: grey
+            background-image: url(../../images/back_10.jpg)
+            // background-blend-mode: screen
+            background-repeat: no-repeat
+            background-size: cover
+            background-position: center center
+            section
+                min-height: 93vh
+                display: flex
+                flex-direction: row-reverse
+        article.offer
+            // background-color: black
+        article.recommendations
+            background-color: grey
+            background-image: url(../../images/back_17.jpg)
+            background-blend-mode: screen
+            background-repeat: no-repeat
+            background-size: cover
+            background-position: center center
+        footer
+            background-image: url(../../images/back_11.jpg)
+            background-size: 100%
         h1
             padding-top: 5vh
             font-size: 33px

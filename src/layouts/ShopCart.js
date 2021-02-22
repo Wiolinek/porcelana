@@ -20,7 +20,7 @@ const ShopCart = ({ cartProductsList, setCartProductsList, productsData }) => {
     }, [cartProductsList]);
 
     const openCartModalHandler = () => {
-        setCartModalState(true);;
+        setCartModalState(true);
     }
 
     const closeCartModalHandler = () => {

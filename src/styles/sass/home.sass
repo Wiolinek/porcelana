@@ -1,19 +1,19 @@
+@import 'variables.sass'
+@import 'mixins.sass'
+
 .home
-    height: 100vh
+    display: flex
+    width: 100%
+    justify-content: center
+    align-items: center
     & div
-        display: block
-        position: absolute
-        top: 30vh
-        left: 16vw
+        display: flex
         width: 60vw
         font-size: 130px
         font-family: 'Raleway Dots', cursive
         text-transform: uppercase
         letter-spacing: .3vw
         line-height: 180px
-    & p:last-child
-        padding-top: 3vh
-        padding-left: 5vw
         & span
             font-family: 'Unica One', cursive
             font-size: 155px
@@ -31,3 +31,21 @@
         text-align: center
         &:hover
             cursor: pointer
+aside
+    position: fixed
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    min-height: 93vh
+    & li, .fa-bars
+        font-size: 35px
+        display: flex
+        align-items: center
+        justify-content: center
+        height: 60px
+        width: 60px
+        margin: .8em
+        &:hover
+            color: $white-color
+            cursor: pointer
+            text-shadow: 2px 2px 3px black

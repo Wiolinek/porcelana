@@ -29,7 +29,7 @@ const Products = () => {
     }, [])
 
     return (
-            <div className="offer" id="products" ref={productsWrapper}>
+            <div id="products" ref={productsWrapper}>
                 <h1>Products</h1>
                 <div className="products">
                     <div className="dish mugs"><p>Mugs</p><div className="more-btn"><a href="#">More</a></div></div>

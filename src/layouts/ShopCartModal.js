@@ -6,7 +6,16 @@ import '../styles/sass/shop-cart-modal.sass';
 const ShopCartModal = ( {cartModalState, closeCartModalHandler, cartProductsList, setCartProductsList, totalAmount} ) => {
 
     const increaseQuantity = (e) => { //check witch product has been clicked and change quantity + 1 in order and in cart
-        setCartProductsList(cartProductsList.map(item => item.id === e.target.id ? {...item, quantity: item.quantity * 1 + 1} : item));
+        // console.log(e.currentTarget.previousSibling.firstChild);
+        
+        // if (e.currentTarget.previousSibling.firstChild === '24') {
+            // setCartProductsList(cartProductsList.map(item => item.id === e.target.id & e.t? {...item, quantity: item.quantity * 1 + 1} : item));
+
+            // setCartProductsList(cartProductsList.map(item => item.id === e.target.id && item));
+            // console.log("działa ale chujowo");
+        // } else {
+            setCartProductsList(cartProductsList.map(item => item.id === e.target.id ? {...item, quantity: item.quantity * 1 + 1} : item));
+        // }
     }
 
     const decreaseQuantity = (e) => { //check witch product has been clicked and change quantity - 1 in order and in cart
@@ -15,7 +24,6 @@ const ShopCartModal = ( {cartModalState, closeCartModalHandler, cartProductsList
 
     const deleteProduct = (e) => { //check witch product has been clicked and delete it from order and cart
         setCartProductsList(cartProductsList.filter(item => item.id !== e.target.id && cartProductsList));
-        console.log(e.target.id);
     }
 
     let order = cartProductsList.map(product => 
@@ -53,18 +61,18 @@ const ShopCartModal = ( {cartModalState, closeCartModalHandler, cartProductsList
             <h2>Your address</h2>
             <div className="order_form">
                 <form>
-                    <label htmlFor="user_name">Name:<br/>
-                        <input type="text" id="user_name" name="user_name" required></input></label>
-                    <label htmlFor="user_surname">Surname:<br/>
-                        <input type="text" id="user_surname" name="user_surname" required></input></label>
-                    <label htmlFor="user_email">E-mail:<br/>
-                        <input type="email" id="user_email" name="user_email" required></input></label>
-                    <label htmlFor="user_street_name">Street name and number<br/>
-                        <input type="text" id="user_street_name" name="user_email" required></input></label>
-                    <label htmlFor="user_zipcode">Zip code<br/>
-                        <input type="number" id="user_zipcode" name="user_email" required></input></label>
-                    <label htmlFor="user_city">City<br/>
-                        <input type="text" id="user_city" name="user_email" required></input></label>
+                    <label htmlFor="user_name">Name:<br/></label>
+                    <input type="text" id="user_name" name="user_name" required></input>
+                    <label htmlFor="user_surname">Surname:<br/></label>
+                    <input type="text" id="user_surname" name="user_surname" required></input>
+                    <label htmlFor="user_email">E-mail:<br/></label>
+                    <input type="email" id="user_email" name="user_email" required></input>
+                    <label htmlFor="user_street_name">Street name and number:<br/></label>
+                    <input type="text" id="user_street_name" name="user_email" required></input>
+                    <label htmlFor="user_zipcode">Zip code:<br/></label>
+                    <input type="number" id="user_zipcode" name="user_email" required></input>
+                    <label htmlFor="user_city">City:<br/></label>
+                    <input type="text" id="user_city" name="user_email" required></input>
 
                 </form>
             </div>

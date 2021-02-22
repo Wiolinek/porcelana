@@ -5,8 +5,6 @@ import { Link } from 'react-scroll';
 import '../styles/sass/modal.sass';
 // import {Link} from 'react-router-dom';
 
-
-
 const Modal = ({ state, offer, closeModalHandler }) => {
     
     //find which object in array was clicked and return it

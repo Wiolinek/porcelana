@@ -8,7 +8,7 @@ import Products from "./Products";
 import Recommendations from "./Recommendations";
 import Career from "./Career";
 import Footer from "./Footer";
-import Shop from "./Shop";
+// import Shop from "./Shop";
 
 import '../styles/sass/app.sass';
 // import ShopOldVersion from './ShopOldVersion';
@@ -24,18 +24,18 @@ const App = () => {
             <nav>
               <Navigation />
             </nav>
-            <div>
+            <section>
               <Home />
-            </div>
+            </section>
           </header>
           <main>
             <article>
               <About />
             </article>
-            <article>
+            <article className="offer">
               <Products />
             </article>
-            <article>
+            <article className="recommendations">
               <Recommendations />
             </article>
             <article>
@@ -47,7 +47,7 @@ const App = () => {
           </footer>
           {/* cała sekcja sklepu do zmiany miejsca */}
           <section>
-            <Shop />
+            {/* <Shop /> */}
           </section>
         </div>
       </>

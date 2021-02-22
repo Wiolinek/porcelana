@@ -1,27 +1,26 @@
 @import 'variables.sass'
     
 .recommendations
-    min-height: 110vh
-    font-size: 19px
-    width: 80%
-    margin: 0 auto
+    min-height: 100vh
     & .opinions
         display: flex
         flex-wrap: wrap
-        justify-content: center
-        margin-top: 3vh
+        font-size: 19px
+        width: 80%
+        margin: 0 auto
         & div
-            display: flex
-            flex-wrap: wrap
-            align-content: space-between
-            width: 25%
+            width: 80%
             margin: 3vh 2vw
             padding: 12px
             line-height: 1.7
-            border: $black-border-thin
+            border-bottom: 1px solid black
             backdrop-filter: $blur-effect
             & p
                 font-family: 'JetBrains Mono', monospace
+        & div:nth-child(odd)
+            margin-left: 20%
+        & div:nth-child(even)
+            margin-right: 20%
     & p:last-child
         margin-top: 10px
         font-weight: 700

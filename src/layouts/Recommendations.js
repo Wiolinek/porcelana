@@ -35,12 +35,12 @@ const Recommendations = () => {
     )
 
     return (
-            <div className="recommendations">
+            <>
                 <h1>Recommendations</h1>
                 <div className="opinions"  ref={opinionsWrapper}>
                     {opinions}
                 </div>
-            </div>
+            </>
     )
 }
 
