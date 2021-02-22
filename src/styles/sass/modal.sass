@@ -20,32 +20,24 @@
     & div p
         padding-top: 1.3vh
     & .close-btn
-        @include round-button
-        font-family: 'Cinzel', serif
+        @include button
         color: $white-color
         font-size: 17px
         margin: 3vh 3vh 1vh auto
         width: 70px
         height: 70px
-        outline: none
         &:hover
-            border: $black-border-thick
+            @include hover-button
             background-color: $white-color
-            color: black
-            cursor: pointer
     & .send-cv-btn
-        @include round-button
+        @include button
         color: $white-color
-        text-shadow: 2px 2px 3px black
         font-size: 22px
         margin: 3vh 3vh 3vh auto
         width: 115px
         height: 115px
-        outline: none
         &:hover
-            border: $black-border-thick
-            background-color: $white-color
-            color: black
+            @include hover-button
 .back
     backdrop-filter: $blur-effect
     height: 100%

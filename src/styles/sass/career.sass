@@ -12,13 +12,11 @@
     line-height: 1.7
     word-spacing: 1.5px
     margin: 0 auto
-    // position: relative
     & .offers
         padding-top: 3vh
     & div p:first-child
         margin-top: 3vh
     & table, th, td
-        // backdrop-filter: $blur-effect
         width: 90%
         table-layout: fixed
         margin: 5vh auto 0 auto
@@ -38,7 +36,7 @@
     & .date, & .location
         width: 25%
     & .join
-        @include round-button
+        @include button
         margin: 50px 90px auto auto
         font-size: 22px
         width: 115px
@@ -52,4 +50,4 @@
         &:hover a
             color: black
         &:hover
-            @include hover-round-button
+            @include hover-button

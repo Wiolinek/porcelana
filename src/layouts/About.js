@@ -17,7 +17,7 @@ const About = () => {
         gsap.fromTo(aboutWrapper.current.children, {y: '+=150', autoAlpha: 0}, {y: 0, autoAlpha: 1, stagger: 0.1,
           scrollTrigger: {
             trigger:aboutWrapper.current,
-            start:'top 85%',
+            start:'top 65%',
             end:'bottom bottom',
             scrub: true,
             // pin: true,

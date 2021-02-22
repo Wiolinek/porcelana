@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Link, animateScroll as scroll } from 'react-scroll'
+import { Link} from 'react-scroll'
 
 import MenuModal from './MenuModal';
 
@@ -18,10 +18,6 @@ const Home = () => {
     const homeWrapper = useRef(null);
     const arrowBtn = useRef(null);
     const [navMenuState, setNavMenuState] = useState(false);
-
-    const scrollToBottom = () => {
-        scroll.scrollToBottom();
-    };
 
     const showMenuHandler = () => {
         setNavMenuState(true)
@@ -61,20 +57,20 @@ const Home = () => {
     return (
         <>
             <MenuModal navMenuState={navMenuState} closeMenuHandler={closeMenuHandler}/>
-            <div className='home'>
+            <div className="main-page">
                 <div ref={homeWrapper}>
                     <p>Our design <br/>Your <span>style</span></p>
                 </div>
-                <Link to="about" smooth={true}><i className="fas fa-angle-double-down" onClick={scrollToBottom} ref={arrowBtn}></i></Link>
+                <Link to="about" smooth={true}><i className="fas fa-angle-double-down" ref={arrowBtn}></i></Link>
             </div>
             <aside>
-                <div navMenuState={navMenuState} onClick={showMenuHandler} ref={showMenuIcon}><i className="fas fa-bars"></i></div>
+                <button className="show-menu" navMenuState={navMenuState} onClick={showMenuHandler} ref={showMenuIcon}><i className="fas fa-bars"></i></button>
                 <ul ref={asideWrapper}>
                     <li><a href="https://www.facebook.com" rel="noreferrer" target="_blank"><i className="fab fa-facebook"></i></a></li>
                     <li><a href="https://www.instagram.com" rel="noreferrer" target="_blank"><i className="fab fa-instagram"></i></a></li>
                     <li><a href="https://twitter.com" rel="noreferrer" target="_blank"><i className="fab fa-twitter-square"></i></a></li>
                     <li><a href="https://www.messenger.com" rel="noreferrer" target="_blank"><i className="fab fa-facebook-messenger"></i></a></li>
-                    <li onClick={scrollToBottom}><i className="fas fa-envelope"></i></li>
+                    <li><Link to="contact" smooth={true}><i className="fas fa-envelope"></i></Link></li>
                 </ul>
             </aside>
         </>

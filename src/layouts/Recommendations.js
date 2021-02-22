@@ -16,12 +16,13 @@ const Recommendations = () => {
 
     useEffect(() => {
   
-        gsap.fromTo(opinionsWrapper.current.children, {y: '+=170', autoAlpha: 0}, {y: 0, autoAlpha: 1, stagger: .5, duration: 2,
+        gsap.fromTo(opinionsWrapper.current.children, {y: '+=170', autoAlpha: 0}, {y: 0, autoAlpha: 1, stagger: .7, duration: 2,
           scrollTrigger: {
             trigger: opinionsWrapper.current,
-            start:'top 85%',
+            start:'top 65%',
             end:'bottom bottom',
             scrub: 0,
+            // pin: true,
             //events: onEnter onLeave onEnterBack onLeaveBack
             toggleActions:'play restart complete reverse',
             //options: play plause resume reset restart complete reverse none
@@ -37,7 +38,7 @@ const Recommendations = () => {
     return (
             <>
                 <h1>Recommendations</h1>
-                <div className="opinions"  ref={opinionsWrapper}>
+                <div className="opinions" ref={opinionsWrapper}>
                     {opinions}
                 </div>
             </>

@@ -54,7 +54,7 @@ const Shop = () => {
     return (
         <div>
             <div className="shop" id="shop">
-                <ShopMenu searchProductHandler={searchProductHandler} searchText={searchText} productsFilterHandler={productsFilterHandler}/>
+                <ShopMenu searchProductHandler={searchProductHandler} productsFilterHandler={productsFilterHandler}/>
                 <ShopProducts productsData={productsData} searchText={searchText} optionSelected={optionSelected} addToCartHandler={addToCartHandler} warning={warning}/>
                 <ShopCart cartProductsList={cartProductsList} setCartProductsList={setCartProductsList} productsData={productsData}/>
             </div>

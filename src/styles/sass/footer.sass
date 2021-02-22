@@ -1,9 +1,9 @@
 @import 'variables.sass'
+@import 'mixins.sass'
 
 .newsletter
     background-color: black
     color: $white-color
-    font-family: 'Cinzel', serif
     font-size: 23px
     min-height: 24vh
     display: flex
@@ -25,6 +25,8 @@
         margin-top: 3vh
     & input
         color: $white-color
+        border-radius: 6px
+        outline: none
     & [type='email']
         width: 25%
         height: 25px
@@ -40,65 +42,68 @@
         font-size: 23px
         outline: none
     & [type='submit']:hover
+        cursor: pointer
         background-color: $white-color
         color: black
-.contact_form
-    font-family: 'Cinzel', serif
-    border: $black-border-thin
-    width: 70%
-    min-height: 67vh
-    margin: 4vh auto 3vh auto
-    & h1
-        margin-bottom: 4vh
-        font-size: 33px
-        font-weight: 700
-        text-align: center
-    & div
-        display: inline-block
-    & .address
-        font-size: 28px
-        line-height: 38px
-        font-weight: normal
-        text-align: center
-        width: 50%
-        height: 72%
-        & p
-            width: 80%
-            margin: 0 auto
-            margin-top: 2vh
-    & .form
-        float: right
-        width: 50%
-        height: 72%
-        & form
+        transition: all .6s
+.contact_section
+    display: flex
+    flex-direction: column
+    align-items: center
+    .contact_form
+        display: flex
+        align-items: center
+        border: $black-border-thin
+        width: 80%
+        min-height: 64vh
+        // margin: 4vh auto 3vh auto
+        & .address
             display: flex
+            align-items: center
             flex-direction: column
-        & textarea, & input:not([type='file'])
-            background-color: transparent
-            backdrop-filter: $blur-effect
-            border: $black-border-thin
-        & textarea
-            width: 80%
-            height: 13vh
-        & input
-            width: 50%
-            height: 25px
-        & label
-            margin-top: 1vh
-        & [type='submit']
-            background-color: black
-            border: $black-border-thin
-            margin-top: 4vh
-            height: 43px
-            width: 120px
-            font-family: 'Cinzel', serif
-            font-size: 23px
-            outline: none
-        & [type='submit']:hover
-            background-color: $white-color
-        & input:nth-last-child(2)
-            border: none
-            background-color: transparent
+            font-size: 28px
+            text-align: center
+            flex-basis: 50%
+            & p
+                width: 80%
+                margin-top: 2vh
+        & .form
+            flex-basis: 50%
+            padding: 1vh 1vw
+            & form
+                display: flex
+                flex-direction: column
+            & textarea, & input:not([type='file'])
+                background-color: transparent
+                backdrop-filter: $blur-effect
+                border: $black-border-thin
+                border-radius: 6px
+                outline: none
+            & textarea
+                width: 80%
+                height: 13vh
+            & input
+                width: 50%
+                height: 25px
+            & label
+                margin-top: 1vh
+            & [type='submit']
+                border: $black-border-thin
+                margin-top: 4vh
+                height: 43px
+                width: 120px
+                font-family: 'Cinzel', serif
+                font-size: 23px
+                outline: none
+            & [type='submit']:hover
+                background-color: black
+                border: $black-border-thin
+                color: $white-color
+                cursor: pointer
+                transition: all .6s
+            & input:nth-last-child(2)
+                border: none
+                background-color: transparent
 .contribution
     font-family: 'Times New Roman', Times, serif
     height: 3vh

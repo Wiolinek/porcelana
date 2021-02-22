@@ -24,7 +24,7 @@ const App = () => {
             <nav>
               <Navigation />
             </nav>
-            <section>
+            <section className="home">
               <Home />
             </section>
           </header>
