@@ -29,6 +29,7 @@
             border: none
             font-size: 50px
             text-align: center
+
             &:hover
                 @include hover-font-awesome
     aside
@@ -38,10 +39,11 @@
         justify-content: space-between
         min-height: 93vh
         & .show-menu
-            border: none
             background-color: transparent
+            border: none
+            outline: none
             & .fas
-                @include font-awesome        
+                @include font-awesome
                 &:hover
                     @include hover-font-awesome
         & ul
@@ -49,6 +51,6 @@
             & a
                 text-decoration: none
                 & .fab, .fas
-                    @include font-awesome        
+                    @include font-awesome
                     &:hover
                         @include hover-font-awesome
