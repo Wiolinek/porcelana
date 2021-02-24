@@ -34,18 +34,14 @@
         border: $white-border-thin
         background-color: black
     & [type='submit']
-        background-color: transparent
-        border: $white-border-thin
+        @include button
         height: 43px
         width: 120px
-        font-family: 'Cinzel', serif
         font-size: 23px
-        outline: none
+        border-radius: 6px
     & [type='submit']:hover
-        cursor: pointer
-        background-color: $white-color
-        color: black
-        transition: all .6s
+        @include hover-button
+        border: $white-border-thin
 .contact_section
     display: flex
     flex-direction: column
@@ -88,19 +84,18 @@
             & label
                 margin-top: 1vh
             & [type='submit']
+                @include button
+                color: black
                 border: $black-border-thin
                 margin-top: 4vh
                 height: 43px
                 width: 120px
-                font-family: 'Cinzel', serif
                 font-size: 23px
-                outline: none
             & [type='submit']:hover
                 background-color: black
                 border: $black-border-thin
                 color: $white-color
                 cursor: pointer
-                transition: all .6s
             & input:nth-last-child(2)
                 border: none
                 background-color: transparent

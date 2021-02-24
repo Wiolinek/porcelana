@@ -1,6 +1,10 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-scroll'
 
+import {
+    NavLink
+  } from "react-router-dom";
+
 import '../styles/sass/navigation.sass';
 
 import { gsap } from "gsap";
@@ -31,19 +35,19 @@ const Navigation = () => {
 
     return (
     <nav id="navigation">
-            <div className="logo menu-logo" ref={logoAnimation}>
-                <p className="logo-name">ICM Inc.</p>
-            </div>
-        <nav>
             <ul className="navigation-bar" ref={navigationBarAnimation}>
                 <li><Link to="about" smooth={true}>About Us</Link></li>
                 <li><Link to="products" smooth={true}>Products</Link></li>
                 <li><Link to="recommendations" smooth={true}>Recommendations</Link></li>
                 <li><Link to="career" smooth={true}>Career</Link></li>
                 <li><Link to="contact" smooth={true}>Contact</Link></li>
-                <li><Link to="shop" target="_blank">E-Shop</Link></li>
+                <li><NavLink to="/shop" target="_blank">E-Shop</NavLink></li>
             </ul>
-        </nav>
+            <div className="logo">
+                <div className="logo-border" ref={logoAnimation}>
+                    <p className="logo-name">ICM Inc.</p>
+                </div>
+            </div>
     </nav>
     )
 }   

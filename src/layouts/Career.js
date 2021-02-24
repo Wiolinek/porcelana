@@ -2,8 +2,7 @@ import React, { useEffect, useRef, useState} from 'react';
 import { Link } from 'react-scroll'
 
 import { jobOffersData } from '../../src/data_career.js';
-// import {Link} from 'react-router-dom';
-// import { Modal } from 'react-responsive-modal';
+
 import Modal from './Modal';
 
 import '../styles/sass/career.sass';
@@ -43,7 +42,7 @@ const Career = () => {
         gsap.fromTo(careerWrapper.current.children, {y: '+=150', autoAlpha: 0}, {y: 0, autoAlpha: 1, stagger: .5, duration: 2,
           scrollTrigger: {
             trigger: careerWrapper.current,
-            start:'top 85%',
+            start:'top 60%',
             end:'bottom bottom',
             scrub: 0,
             //events: onEnter onLeave onEnterBack onLeaveBack

@@ -17,12 +17,12 @@ const ShopProducts = (props) => {
     // list of product generated to display based on text or option selected by user
     productsList = productsList.map(product => (
         <li className="product" key={product.id} product={product}>
-            <div className="description">
+            <div className="product-description">
                 <p>{product.name}</p>
                 <p>{product.size}</p>
-                <p>{product.price} EUR</p>
-                <img src={product.image} alt={product.alt_text}></img>
+                <p>{product.price} EUR</p>    
             </div>
+            <div className="product-photo"><img src={product.image} alt={product.alt_text}></img></div>
             <div className="choose-quantity">
                 <p>Choose quantity:</p>
                 <label forhtml="quantity"><input type="number" className="pcs" placeholder="0" min="0" max="24" id={product.id} name={product.name} price={product.price}></input></label>
@@ -34,7 +34,7 @@ const ShopProducts = (props) => {
  
 
     return (
-        <ul className="shop-products">
+        <ul className="products-list">
             {productsList}
         </ul>
     )

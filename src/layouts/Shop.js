@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+
+import { Switch, Route } from "react-router-dom";
+
 import ShopProducts from "./ShopProducts";
 import ShopMenu from "./ShopMenu";
 import ShopCart from "./ShopCart";
@@ -8,6 +11,8 @@ import '../styles/sass/shop.sass';
 import productsData from '../data_products';
 
 const Shop = () => {
+
+    // const productsData = JSON.parse(productsDatabase);
 
     let [searchText, setSearchText] = useState("");
     let [optionSelected, setOptionSelected] = useState("All");
@@ -52,13 +57,19 @@ const Shop = () => {
     }
 
     return (
-        <div>
-            <div className="shop" id="shop">
-                <ShopMenu searchProductHandler={searchProductHandler} productsFilterHandler={productsFilterHandler}/>
-                <ShopProducts productsData={productsData} searchText={searchText} optionSelected={optionSelected} addToCartHandler={addToCartHandler} warning={warning}/>
-                <ShopCart cartProductsList={cartProductsList} setCartProductsList={setCartProductsList} productsData={productsData}/>
-            </div>
-        </div>
+        <Switch>
+            <Route path="/shop" target="_blank" className="shop" id="shop">
+                <header className="shop-header">
+                    <ShopMenu searchProductHandler={searchProductHandler} productsFilterHandler={productsFilterHandler}/>
+                </header>
+                <main className="shop-products">
+                    <ShopProducts productsData={productsData} searchText={searchText} optionSelected={optionSelected} addToCartHandler={addToCartHandler} warning={warning}/>
+                </main>
+                <aside className="cart">
+                    <ShopCart cartProductsList={cartProductsList} setCartProductsList={setCartProductsList} productsData={productsData}/>
+                </aside>
+            </Route>
+        </Switch>
     );
 
 }

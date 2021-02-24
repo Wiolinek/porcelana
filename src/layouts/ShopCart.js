@@ -28,7 +28,7 @@ const ShopCart = ({ cartProductsList, setCartProductsList, productsData }) => {
     }
 
     return (
-        <div className="cart">
+        <>
             <p>{cartProductsList.length && cartProductsList.length}</p>
                 <i className="fas fa-shopping-cart"></i>
                 <div className="in_cart">
@@ -38,10 +38,10 @@ const ShopCart = ({ cartProductsList, setCartProductsList, productsData }) => {
                     </div>
                     <p>Total amount: {totalAmount.toFixed(2)} EUR</p>
                 </div>
-                <button className="send_order" onClick={openCartModalHandler}>Go to Cart</button>
+                <button className="go-to-cart" onClick={openCartModalHandler}>Go to Cart</button>
                 { cartModalState ? <div className="back" onClick={closeCartModalHandler}></div> : null }
                 <ShopCartModal cartProductsList={cartProductsList} setCartProductsList={setCartProductsList} cartModalState={cartModalState} closeCartModalHandler={closeCartModalHandler} totalAmount={totalAmount}/>
-        </div>
+        </>
     )
 }
 

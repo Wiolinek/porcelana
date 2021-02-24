@@ -1,36 +1,34 @@
 @import 'variables.sass'
 @import 'mixins.sass'
-    
-nav
-    & .logo
-        @include logo-style
-    & .menu-logo
-        position: fixed
-        top: 4vh
-        left: 3vh
-        border: $black-border-thin
+
+.navigation-bar
+    list-style: none
+    display: flex
+    justify-content: flex-end
+    padding-top: 2vh
+    & li
+        padding: 0 20px
+        color: black
+        font-size: 25px
+        text-align: center
+        text-decoration: none
+        border-right: $black-border-thin
+        &:last-child
+            border-right: none
+            margin-right: 1vw
+        &:hover
+            color: $white-color
+            cursor: pointer
+            text-shadow: 2px 2px 3px black
+        & i
+            height: 60px
+            width: 60px
+.logo
+    position: fixed
+    margin: 0 2.5%
+    display: flex
+    align-self: center
+    & .logo-border
+        @include border-logo-style
         & .logo-name
             @include logo-name-style
-    & .navigation-bar
-        list-style: none
-        display: flex
-        justify-content: flex-end
-        padding-top: 3vh
-        & li
-            padding: 0 20px
-            color: black
-            font-size: 25px
-            text-align: center
-            text-decoration: none
-            border-right: $black-border-thin
-            &:last-child
-                border-right: none
-                margin-right: 1vw
-            &:hover
-                color: $white-color
-                cursor: pointer
-                text-shadow: 2px 2px 3px black
-            & i
-                height: 60px
-                width: 60px   
-    

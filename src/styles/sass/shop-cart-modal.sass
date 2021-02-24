@@ -14,15 +14,13 @@
     overflow: auto
     font-size: 19px
     & .close-btn
-        @include round-button
-        color: $white-color
+        @include button
         font-size: 17px
         margin: 3vh 3vh 1vh auto
         width: 70px
         height: 70px
-        outline: none
         &:hover
-            @include hover-round-button
+            @include hover-button
     & h2
         margin: 0
         padding: 1em
@@ -34,7 +32,6 @@
         & li
             list-style: none
             display: flex
-            flex-direction: row
             & p:first-child
                 width: 50%
                 text-align: left
@@ -44,17 +41,13 @@
                 // border: 2px solid black
                 text-align: center
         & .change-quantity
-            @include round-button
-            border: $white-border-thin
-            color: $white-color
+            @include button
             font-size: 30px
             margin: .3vh
             width: 35px
             height: 35px
-            outline: none
             &:hover
-                @include hover-round-button
-                border: $black-border-thin
+                @include hover-button
         & .delete
             color: black
             font-size: 27px
@@ -67,18 +60,14 @@
     & form
         display: flex
         flex-direction: column
-
     & .send-order
-        @include round-button
-        color: $white-color
-        text-shadow: 2px 2px 3px black
+        @include button
         font-size: 22px
         margin: 3vh 3vh 3vh auto
         width: 115px
         height: 115px
-        outline: none
         &:hover
-            @include hover-round-button
+            @include hover-button
 .back
     backdrop-filter: $blur-effect
     height: 100%

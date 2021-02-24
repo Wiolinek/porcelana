@@ -1,36 +1,12 @@
-import React /*, { useEffect, useRef }*/ from 'react';
+import React from 'react';
 
 import '../styles/sass/footer.sass';
-
-// import { gsap } from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-// gsap.registerPlugin(ScrollTrigger);
 
 
 const Footer = () => {
 
-    // const footerWrapper = useRef(null);
-
-    // useEffect(() => {
-  
-    //     gsap.fromTo(footerWrapper.current.children, {y: '+=100', autoAlpha: 0}, {y: 0, autoAlpha: 1, stagger: .5, duration: 2,
-    //       scrollTrigger: {
-    //         trigger: footerWrapper.current,
-    //         start:'top 85%',
-    //         end:'bottom bottom',
-    //         scrub: 0,
-    //         //events: onEnter onLeave onEnterBack onLeaveBack
-    //         toggleActions:'play restart reverse none',
-    //         //options: play plause resume reset restart complete reverse none
-    //         // markers:true,
-    //       }
-    //     })
-    // }, [])
-
-
     return (
-        <div /*ref={footerWrapper}*/>
+        <div>
         <div className="newsletter" id="contact">
             <div><i className="far fa-newspaper"></i><p>Newsletter</p></div>
             <p>Sign in and stay in touch!</p>

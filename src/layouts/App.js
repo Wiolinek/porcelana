@@ -1,6 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router} from 'react-router-dom';
-
+import { BrowserRouter as Router } from "react-router-dom";
 import Navigation from "./Navigation";
 import Home from "./Home";
 import About from "./About";
@@ -8,19 +7,17 @@ import Products from "./Products";
 import Recommendations from "./Recommendations";
 import Career from "./Career";
 import Footer from "./Footer";
-// import Shop from "./Shop";
+import Shop from "./Shop";
 
 import '../styles/sass/app.sass';
-// import ShopOldVersion from './ShopOldVersion';
 
 
 const App = () => {
 
     return (
-      <Router>
       <>
         <div className="app">
-          <header>
+          <header className="header">
             <nav>
               <Navigation />
             </nav>
@@ -46,12 +43,11 @@ const App = () => {
             <Footer />
           </footer>
           {/* cała sekcja sklepu do zmiany miejsca */}
-          <section>
-            {/* <Shop /> */}
-          </section>
+          <Router>
+            <Shop />
+          </Router>
         </div>
       </>
-      </Router>
     );
 }
 

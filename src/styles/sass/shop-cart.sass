@@ -1,4 +1,5 @@
 @import 'variables.sass'
+@import 'mixins.sass'
     
 .cart
     width: 25%
@@ -45,11 +46,13 @@
                     padding: 5px
         & p
             font-size: 19px
-    & .send_order
-        width: 80%
-        margin: 1.5vh auto
-        &:hover 
-            background-color: $white-color
-            color: black
-            text-shadow: 2px 2px 3px black
-            border: $black-border-thin
+    & .go-to-cart
+        @include button
+        border: $black-border-thin
+        width: 60%
+        height: 44px
+        font-size: 18px
+        margin: 2vh auto
+        border-radius: 6px
+        &:hover
+            @include hover-button
