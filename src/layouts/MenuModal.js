@@ -6,11 +6,11 @@ import '../styles/sass/menu-modal.sass';
 const MenuModal = ( {navMenuState, closeMenuHandler}) => {
     
     return (
-        <>
+        <>,
         { navMenuState ?
             <nav className="nav-menu">
                 <div className="menu-logo-container">
-                    <div className="logo menu-logo">
+                    <div className="logo-border">
                         <p className="logo-name">ICM Inc.</p>
                     </div>
                 </div>

@@ -1,13 +1,20 @@
 import React from 'react';
 
+import { NavLink } from "react-router-dom";
+
 import '../styles/sass/shop-menu.sass';
 
 
 const ShopMenu = (props) => {
 
     const shopMenuOptions = ["All", "Mugs", "Cups", "Tea Pots", "Plates", "Bowls", "Vases"];
+
+    let { optionSelected, filterProductHandler } = props;
+
+    // let active = optionSelected
+
     const shopMenu = shopMenuOptions.map(item =>
-        <li><button className="shop-menu-btn" key={item} onClick={props.productsFilterHandler} value={item}>{item}</button></li>)
+        <li className={optionSelected === item ? "active" : "not-active"}><button className="shop-menu-btn" key={item} onClick={filterProductHandler} value={item}>{item}</button></li>)
 
 
     return (
@@ -20,7 +27,9 @@ const ShopMenu = (props) => {
             </div>
             <div className="search-and-logo">
                 <div className="logo-border">
-                    <p className="logo-name">ICM Inc.</p>
+                    <NavLink to="/" exact target="_blank">
+                        <p className="logo-name">ICM Inc.</p>
+                    </NavLink>
                 </div>
                 <div className="search">
                     <label htmlFor="search">what are you looking for..?</label>

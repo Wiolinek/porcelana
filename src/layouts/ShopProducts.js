@@ -18,8 +18,7 @@ const ShopProducts = (props) => {
     productsList = productsList.map(product => (
         <li className="product" key={product.id} product={product}>
             <div className="product-description">
-                <p>{product.name}</p>
-                <p>{product.size}</p>
+                <div><p>{product.name}</p></div>
                 <p>{product.price} EUR</p>    
             </div>
             <div className="product-photo"><img src={product.image} alt={product.alt_text}></img></div>

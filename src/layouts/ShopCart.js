@@ -33,7 +33,7 @@ const ShopCart = ({ cartProductsList, setCartProductsList, productsData }) => {
                 <i className="fas fa-shopping-cart"></i>
                 <div className="in_cart">
                     <div className="in_cart_products">
-                        <div>{!listToDisplay.length && <p>Nothing's here.. :(</p>}</div>
+                        <ul>{!listToDisplay.length && <p>There's nothing here yet..</p>}</ul>
                         {listToDisplay}
                     </div>
                     <p>Total amount: {totalAmount.toFixed(2)} EUR</p>

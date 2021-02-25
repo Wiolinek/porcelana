@@ -23,23 +23,26 @@
             @include hover-button
     & h2
         margin: 0
-        padding: 1em
+        margin-bottom: 1.2em
         text-align: center
-    & div .products-list
+    & .order-list
+        background-color: pink
         display: flex
         flex-direction: column
         justify-content: center
         & li
-            list-style: none
             display: flex
             & p:first-child
-                width: 50%
-                text-align: left
+                width: 55%
+                // text-align: left
             & p
-                padding: .4em
-                width: 10%
+                // padding: .4em
+                // width: 10%
                 // border: 2px solid black
-                text-align: center
+                // text-align: center
+            & div
+                display: flex
+                // width: 45%
         & .change-quantity
             @include button
             font-size: 30px

@@ -1,0 +1,44 @@
+@import 'variables.sass'
+@import 'mixins.sass'
+    
+.newsletter
+    background-color: black
+    color: $white-color
+    font-size: 23px
+    min-height: 24vh
+    display: flex
+    flex-direction: column
+    align-items: center
+    & div
+        display: flex
+        align-items: center
+        font-size: 35px
+        padding: 2vh
+        & .fa-newspaper
+            font-size: 34px
+            margin-right: 1.5vw
+    & form
+        width: 70%
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-top: 3vh
+    & input
+        color: $white-color
+        border-radius: 6px
+        outline: none
+    & [type='email']
+        width: 25%
+        height: 25px
+        margin: 0 3vw 0 1vw
+        border: $white-border-thin
+        background-color: black
+    & [type='submit']
+        @include button
+        height: 43px
+        width: 120px
+        font-size: 23px
+        border-radius: 6px
+    & [type='submit']:hover
+        @include hover-button
+        border: $white-border-thin

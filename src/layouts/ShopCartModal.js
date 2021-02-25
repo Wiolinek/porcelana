@@ -29,12 +29,14 @@ const ShopCartModal = ( {cartModalState, closeCartModalHandler, cartProductsList
     let order = cartProductsList.map(product => 
         <li key={product.id} product={product}>
             <p>{product.name}</p>
-            <button id={product.id} onClick={decreaseQuantity} className="change-quantity">-</button>
-            <p>{product.quantity}</p>
-            <button id={product.id} onClick={increaseQuantity} className="change-quantity">+</button>
-            <p>{product.price}</p>
-            <p>{(product.price * product.quantity).toFixed(2)}</p>
-            <button className="delete"><i id={product.id} onClick={deleteProduct} className="fas fa-trash-alt"></i></button>
+            <div>
+                <button id={product.id} onClick={decreaseQuantity} className="change-quantity">-</button>
+                <p>{product.quantity}</p>
+                <button id={product.id} onClick={increaseQuantity} className="change-quantity">+</button>
+                <p>{product.price}</p>
+                <p>{(product.price * product.quantity).toFixed(2)}</p>
+                <button className="delete"><i id={product.id} onClick={deleteProduct} className="fas fa-trash-alt"></i></button>
+            </div>
         </li>);
    
     return (
@@ -45,10 +47,10 @@ const ShopCartModal = ( {cartModalState, closeCartModalHandler, cartProductsList
             <button className="close-btn" onClick={closeCartModalHandler}>Close</button>
             <div>
                 <h2>Your order</h2>
-                <div className="products-list">{order}</div>
+                <ul className="order-list">{order}</ul>
                 <div>Total amount: {totalAmount.toFixed(2)}</div>
                 <p>Delivery option:</p>
-                <form>
+                <form className="delivery-options">
                     <input type="radio" id="kurier" name="delivery_option" value="kurier"></input>
                     <label htmlFor="kurier">Kurier</label>
                     <input type="radio" id="poczta" name="delivery_option" value="poczta"></input>

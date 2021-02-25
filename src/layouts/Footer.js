@@ -6,7 +6,7 @@ import '../styles/sass/footer.sass';
 const Footer = () => {
 
     return (
-        <div>
+        <>
         <div className="newsletter" id="contact">
             <div><i className="far fa-newspaper"></i><p>Newsletter</p></div>
             <p>Sign in and stay in touch!</p>
@@ -43,7 +43,7 @@ const Footer = () => {
             </div>
         </div>
         <div className="contribution">Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>   
-        </div>
+        </>
     )
 }
 

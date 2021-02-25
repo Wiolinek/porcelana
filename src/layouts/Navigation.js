@@ -1,9 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-scroll'
-
-import {
-    NavLink
-  } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import '../styles/sass/navigation.sass';
 
@@ -23,7 +20,7 @@ const Navigation = () => {
         const tl = gsap.timeline()
 
         tl
-            .from(logoAnimation.current, {scale: 0, delay: 2.3})
+            .from(logoAnimation.current, {scale: 0, delay: 2})
             .from(navigationBarAnimation.current.children, {scale: 0,
                 stagger: {
                     from: 'start',
@@ -34,7 +31,7 @@ const Navigation = () => {
 
 
     return (
-    <nav id="navigation">
+        <nav>
             <ul className="navigation-bar" ref={navigationBarAnimation}>
                 <li><Link to="about" smooth={true}>About Us</Link></li>
                 <li><Link to="products" smooth={true}>Products</Link></li>
@@ -43,12 +40,14 @@ const Navigation = () => {
                 <li><Link to="contact" smooth={true}>Contact</Link></li>
                 <li><NavLink to="/shop" target="_blank">E-Shop</NavLink></li>
             </ul>
-            <div className="logo">
-                <div className="logo-border" ref={logoAnimation}>
-                    <p className="logo-name">ICM Inc.</p>
+            <div className="logo" ref={logoAnimation}>
+                <div className="logo-border">
+                    <Link to="main" smooth={true}>
+                        <p className="logo-name">ICM Inc.</p>
+                    </Link>
                 </div>
             </div>
-    </nav>
+        </nav>
     )
 }   
 
