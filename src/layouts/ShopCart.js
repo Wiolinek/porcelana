@@ -7,10 +7,10 @@ import '../styles/sass/shop-cart.sass';
 
 const ShopCart = ({ cartProductsList, setCartProductsList, productsData }) => {
 
-    let [totalAmount, setTotalAmount] = useState(0);
+    const [totalAmount, setTotalAmount] = useState(0);
     const [cartModalState, setCartModalState] = useState(false);
 
-    let listToDisplay = cartProductsList.map(product => 
+    const listToDisplay = cartProductsList.map(product => 
         <li key={product.id}><p>{product.name}</p><p>{product.quantity} x</p><p>{product.price}</p><p>{(product.price * product.quantity).toFixed(2)}</p></li>);
     // totalAmount ma przechowywać wartości dla poszczególnych pozycji w koszyku oraz te wartości sumować za pomocą funkcji reduce
 

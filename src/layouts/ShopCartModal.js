@@ -26,7 +26,7 @@ const ShopCartModal = ( {cartModalState, closeCartModalHandler, cartProductsList
         setCartProductsList(cartProductsList.filter(item => item.id !== e.target.id && cartProductsList));
     }
 
-    let order = cartProductsList.map(product => 
+    const order = cartProductsList.map(product => 
         <li key={product.id} product={product}>
             <p>{product.name}</p>
             <div>

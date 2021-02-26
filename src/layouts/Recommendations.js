@@ -31,7 +31,7 @@ const Recommendations = () => {
         })
     }, [])
 
-    let opinions = opinionsData.map(opinion =>
+    const opinions = opinionsData.map(opinion =>
         <div key={opinion.id}><p>{opinion.text}</p><p>{opinion.author}</p></div>
     )
 

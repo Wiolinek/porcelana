@@ -5,8 +5,8 @@ import '../styles/sass/shop-products.sass';
 
 const ShopProducts = (props) => {
 
-    let searchText = props.searchText.toLowerCase();
-    let { optionSelected, addToCartHandler, productsData, warning } = props;
+    const searchText = props.searchText.toLowerCase();
+    const { optionSelected, addToCartHandler, productsData, warning } = props;
   
     // look for a product based on text input
     let productsList = productsData.filter(product => product.category.toLowerCase().includes(searchText) || product.name.toLowerCase().includes(searchText));

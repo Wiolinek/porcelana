@@ -9,7 +9,7 @@ const ShopMenu = (props) => {
 
     const shopMenuOptions = ["All", "Mugs", "Cups", "Tea Pots", "Plates", "Bowls", "Vases"];
 
-    let { optionSelected, filterProductHandler } = props;
+    const { optionSelected, filterProductHandler } = props;
 
     // let active = optionSelected
 

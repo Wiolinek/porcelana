@@ -12,13 +12,12 @@ import productsData from '../data_products';
 const Shop = () => {
 
     // const productsData = JSON.parse(productsDatabase);
+    const [searchText, setSearchText] = useState("");
+    const [optionSelected, setOptionSelected] = useState("All");
 
-    let [searchText, setSearchText] = useState("");
-    let [optionSelected, setOptionSelected] = useState("All");
+    const [cartProductsList, setCartProductsList] = useState([]);
 
-    let [cartProductsList, setCartProductsList] = useState([]);
-
-    let [warning, setWarning] = useState(false);
+    const [warning, setWarning] = useState(false);
  
     const searchProductHandler = (e) => {
         setSearchText(e.target.value);
