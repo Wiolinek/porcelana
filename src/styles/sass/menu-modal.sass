@@ -17,12 +17,14 @@
         height: 100%
         width: 60%
         & .logo-border
+            @include border-logo-style 
             position: static
-            height: 20vw
-            width: 20vw
+            height: 18vw
+            width: 18vw
             top: 0
             left: 0
             & .logo-name
+                @include logo-name-style
                 font-size: 60px
     & .navigation-menu-container
         height: 100%

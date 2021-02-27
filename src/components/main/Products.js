@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { NavLink } from "react-router-dom";
 
-import '../styles/sass/products.sass';
+import '../../styles/sass/products.sass';
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -21,6 +21,7 @@ const Products = () => {
             start:'top 85%',
             end:'bottom bottom',
             scrub: 0,
+            // pin: true,
             //events: onEnter onLeave onEnterBack onLeaveBack
             toggleActions:'play restart complete reverse',
             //options: play plause resume reset restart complete reverse none

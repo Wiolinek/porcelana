@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-scroll'
 
-import '../styles/sass/menu-modal.sass';
+import '../../styles/sass/menu-modal.sass';
 
 const MenuModal = ( {navMenuState, closeMenuHandler}) => {
     

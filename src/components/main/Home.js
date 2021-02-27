@@ -3,7 +3,7 @@ import { Link } from 'react-scroll'
 
 import MenuModal from './MenuModal';
 
-import '../styles/sass/home.sass';
+import '../../styles/sass/home.sass';
 // import styled from 'styled-components';
 
 import { gsap } from "gsap";

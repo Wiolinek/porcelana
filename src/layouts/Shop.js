@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
-import ShopProducts from "./ShopProducts";
-import ShopMenu from "./ShopMenu";
-import ShopCart from "./ShopCart";
-import ShopFooter from "./ShopFooter";
+import ShopProducts from "../components/shop/ShopProducts";
+import ShopMenu from "../components/shop/ShopMenu";
+import ShopCart from "../components/shop/ShopCart";
+import ShopFooter from "../components/shop/ShopFooter";
 
 import '../styles/sass/shop.sass';
 

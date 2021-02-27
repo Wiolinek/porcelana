@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 
-import { opinionsData } from '../../src/data_recom.js';
+import { opinionsData } from '../../../src/data_recom.js';
 
-import '../styles/sass/recommendations.sass';
+import '../../styles/sass/recommendations.sass';
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";

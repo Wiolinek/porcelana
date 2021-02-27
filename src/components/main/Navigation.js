@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-scroll'
 import { NavLink } from "react-router-dom";
 
-import '../styles/sass/navigation.sass';
+import '../../styles/sass/navigation.sass';
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";

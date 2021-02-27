@@ -1,11 +1,11 @@
 import React from 'react';
-import Navigation from "./Navigation";
-import Home from "./Home";
-import About from "./About";
-import Products from "./Products";
-import Recommendations from "./Recommendations";
-import Career from "./Career";
-import Footer from "./Footer";
+import Navigation from "../components/main/Navigation";
+import Home from "../components/main/Home";
+import About from "../components/main/About";
+import Products from "../components/main/Products";
+import Recommendations from "../components/main/Recommendations";
+import Career from "../components/main/Career";
+import Footer from "../components/main/Footer";
 
 import '../styles/sass/main.sass';
 

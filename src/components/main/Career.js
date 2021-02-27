@@ -1,11 +1,11 @@
 import React, { useEffect, useRef, useState} from 'react';
 import { Link } from 'react-scroll'
 
-import { jobOffersData } from '../../src/data_career.js';
+import { jobOffersData } from '../../data_career.js';
 
-import Modal from './Modal';
+import CareerModal from './CareerModal';
 
-import '../styles/sass/career.sass';
+import '../../styles/sass/career.sass';
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -83,7 +83,7 @@ const Career = () => {
                 </div>
                 <div className="join" ref={jointBtnAnimation}><Link to="contact" smooth={true}>Join us!</Link></div>
                 { state ? <div className="back" onClick={closeModalHandler}></div> : null }
-                <Modal state={state} closeModalHandler={closeModalHandler} offer={offer}/>
+                <CareerModal state={state} closeModalHandler={closeModalHandler} offer={offer}/>
             </div>
     )
 }

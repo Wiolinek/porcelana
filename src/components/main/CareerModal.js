@@ -1,11 +1,11 @@
 import React from 'react';
-import { jobOffersData } from '../../src/data_career.js';
+import { jobOffersData } from '../../data_career.js';
 import { Link } from 'react-scroll';
 
-import '../styles/sass/modal.sass';
+import '../../styles/sass/career-modal.sass';
 // import {Link} from 'react-router-dom';
 
-const Modal = ({ state, offer, closeModalHandler }) => {
+const CareerModal = ({ state, offer, closeModalHandler }) => {
     
     //find which object in array was clicked and return it
     let index = jobOffersData.find(({ id }) => id === offer);
@@ -35,4 +35,4 @@ const Modal = ({ state, offer, closeModalHandler }) => {
     )
 }
 
-export default Modal;
+export default CareerModal;
