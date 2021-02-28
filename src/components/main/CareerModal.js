@@ -2,7 +2,7 @@ import React from 'react';
 import { jobOffersData } from '../../data_career.js';
 import { Link } from 'react-scroll';
 
-import '../../styles/sass/career-modal.sass';
+import '../../styles/sass/main/career-modal.sass';
 // import {Link} from 'react-router-dom';
 
 const CareerModal = ({ state, offer, closeModalHandler }) => {

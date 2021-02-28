@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../../styles/sass/shop-cart-modal.sass';
+import '../../styles/sass/shop/shop-cart-modal.sass';
 
 
 const ShopCartModal = ( {cartModalState, closeCartModalHandler, cartProductsList, setCartProductsList, totalAmount} ) => {

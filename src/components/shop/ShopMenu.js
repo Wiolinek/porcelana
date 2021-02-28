@@ -2,7 +2,7 @@ import React from 'react';
 
 import { NavLink } from "react-router-dom";
 
-import '../../styles/sass/shop-menu.sass';
+import '../../styles/sass/shop/shop-menu.sass';
 
 
 const ShopMenu = (props) => {

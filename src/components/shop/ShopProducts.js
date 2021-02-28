@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../../styles/sass/shop-products.sass';
+import '../../styles/sass/shop/shop-products.sass';
 
 
 const ShopProducts = (props) => {

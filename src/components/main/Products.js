@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { NavLink } from "react-router-dom";
 
-import '../../styles/sass/products.sass';
+import '../../styles/sass/main/products.sass';
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -15,10 +15,10 @@ const Products = () => {
 
     useEffect(() => {
   
-        gsap.fromTo(productsWrapper.current.children, {y: '+=100', autoAlpha: 0}, {y: 0, autoAlpha: 1, stagger: .5, duration: 2,
+        gsap.fromTo(productsWrapper.current.children, {y: '+=100', autoAlpha: 0}, {y: 0, autoAlpha: 1, stagger: 2,
           scrollTrigger: {
             trigger: productsWrapper.current,
-            start:'top 85%',
+            start:'top 65%',
             end:'bottom bottom',
             scrub: 0,
             // pin: true,
@@ -31,15 +31,33 @@ const Products = () => {
     }, [])
 
     return (
-            <div ref={productsWrapper}>
+            <div>
                 <h1>Products</h1>
-                <div className="products">
-                    <div className="dish mugs"><p>Mugs</p><div className="more-btn"><NavLink to="/shop" target="_blank">More</NavLink></div></div>
-                    <div className="dish cups"><p>Cups</p><div className="more-btn"><NavLink to="/shop" target="_blank">More</NavLink></div></div>
-                    <div className="dish pots"><p>Coffee Pots</p><div className="more-btn"><NavLink to="/shop" target="_blank">More</NavLink></div></div>
-                    <div className="dish plates"><p>Plates</p><div className="more-btn"><NavLink to="/shop" target="_blank">More</NavLink></div></div>
-                    <div className="dish bowls"><p>Bowls</p><div className="more-btn"><NavLink to="/shop" target="_blank">More</NavLink></div></div>
-                    <div className="dish vases"><p>Vases</p><div className="more-btn"><NavLink to="/shop" target="_blank">More</NavLink></div></div>
+                <div className="products" ref={productsWrapper}>
+                    <div>
+                      <div className="product-photo mugs"><p>Mugs</p><div className="more-btn"><NavLink to="/shop" target="_blank">More</NavLink></div></div>
+                      <div className="product-info"><p>dcewvgavc Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nobis dolorum nulla ad mollitia temporibus repudiandae eaque ducimus laboriosam itaque impedit nam quas quisquam in maiores necessitatibus numquam eum corporis molestias, quasi veritatis. Corporis praesentium voluptatem accusantium enim laborum aperiam, debitis aut facere ut labore! Totam possimus nemo esse hic?</p></div>
+                    </div>
+                    <div>
+                      <div className="product-photo cups"><p>Cups</p><div className="more-btn"><NavLink to="/shop" target="_blank">More</NavLink></div></div>
+                      <div className="product-info"><p>dcewvgavc Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nobis dolorum nulla ad mollitia temporibus repudiandae eaque ducimus laboriosam itaque impedit nam quas quisquam in maiores necessitatibus numquam eum corporis molestias, quasi veritatis. Corporis praesentium voluptatem accusantium enim laborum aperiam, debitis aut facere ut labore! Totam possimus nemo esse hic?</p></div>
+                    </div>
+                    <div>
+                      <div className="product-photo pots"><p>Coffee Pots</p><div className="more-btn"><NavLink to="/shop" target="_blank">More</NavLink></div></div>
+                      <div className="product-info"><p>dcewvgavc Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nobis dolorum nulla ad mollitia temporibus repudiandae eaque ducimus laboriosam itaque impedit nam quas quisquam in maiores necessitatibus numquam eum corporis molestias, quasi veritatis. Corporis praesentium voluptatem accusantium enim laborum aperiam, debitis aut facere ut labore! Totam possimus nemo esse hic?</p></div>
+                    </div>
+                    <div>
+                      <div className="product-photo plates"><p>Plates</p><div className="more-btn"><NavLink to="/shop" target="_blank">More</NavLink></div></div>
+                      <div className="product-info"><p>dcewvgavc Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nobis dolorum nulla ad mollitia temporibus repudiandae eaque ducimus laboriosam itaque impedit nam quas quisquam in maiores necessitatibus numquam eum corporis molestias, quasi veritatis. Corporis praesentium voluptatem accusantium enim laborum aperiam, debitis aut facere ut labore! Totam possimus nemo esse hic?</p></div>
+                    </div>
+                    <div>
+                      <div className="product-photo bowls"><p>Bowls</p><div className="more-btn"><NavLink to="/shop" target="_blank">More</NavLink></div></div>
+                      <div className="product-info"><p>dcewvgavc Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nobis dolorum nulla ad mollitia temporibus repudiandae eaque ducimus laboriosam itaque impedit nam quas quisquam in maiores necessitatibus numquam eum corporis molestias, quasi veritatis. Corporis praesentium voluptatem accusantium enim laborum aperiam, debitis aut facere ut labore! Totam possimus nemo esse hic?</p></div>
+                    </div>
+                    <div>
+                      <div className="product-photo vases"><p>Vases</p><div className="more-btn"><NavLink to="/shop" target="_blank">More</NavLink></div></div>
+                      <div className="product-info"><p>dcewvgavc Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nobis dolorum nulla ad mollitia temporibus repudiandae eaque ducimus laboriosam itaque impedit nam quas quisquam in maiores necessitatibus numquam eum corporis molestias, quasi veritatis. Corporis praesentium voluptatem accusantium enim laborum aperiam, debitis aut facere ut labore! Totam possimus nemo esse hic?</p></div>
+                    </div>
                 </div>
             </div>
     )

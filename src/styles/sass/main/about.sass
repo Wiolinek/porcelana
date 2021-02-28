@@ -1,0 +1,42 @@
+@import '../variables.sass'
+@import '../mixins.sass'
+
+.about
+    .about-text
+        min-height: 95vh
+        width: 75%
+        margin: 0 auto
+        font-size: 21px
+        line-height: 1.7
+        word-spacing: 2.5px
+        & p
+            margin-top: 3vh
+            & span
+                font-weight: 700
+    .numbers
+        min-height: 30vh
+        width: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-wrap: wrap
+        text-align: center
+        background-color: black
+        margin: 0 auto
+        letter-spacing: .07em
+        & div
+            color: $white-color
+            height: 20%
+            display: flex
+            flex-direction: column
+            width: 18%
+            & i
+                font-size: 4em 
+            & p
+                font-size: 1.2em
+                &:nth-child(2)
+                    padding: 1.5em 0 .8em 0
+                    color: red
+                    font-weight: 700
+                &:last-child
+                    font-size: 1.3em

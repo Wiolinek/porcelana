@@ -5,7 +5,7 @@ import { jobOffersData } from '../../data_career.js';
 
 import CareerModal from './CareerModal';
 
-import '../../styles/sass/career.sass';
+import '../../styles/sass/main/career.sass';
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";

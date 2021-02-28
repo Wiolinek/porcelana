@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../../styles/sass/shop-footer.sass';
+import '../../styles/sass/shop/shop-footer.sass';
 
 
 const ShopFooter = () => {

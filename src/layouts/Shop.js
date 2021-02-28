@@ -1,17 +1,32 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import ShopProducts from "../components/shop/ShopProducts";
 import ShopMenu from "../components/shop/ShopMenu";
 import ShopCart from "../components/shop/ShopCart";
 import ShopFooter from "../components/shop/ShopFooter";
 
-import '../styles/sass/shop.sass';
+import '../styles/sass/shop/shop.sass';
 
-import productsData from '../data_products';
+import axios from "axios";
+
+// import productsData from '../data_products';
 
 const Shop = () => {
 
-    // const productsData = JSON.parse(productsDatabase);
+    const [productsData, setProductsData] = useState([]);
+
+    useEffect(() => {
+
+        axios.get(`http://localhost:3030/products`)
+            .then(response => {
+            console.log(response)
+            const products = response.data;
+            setProductsData(products);
+            console.log(products)
+            })
+      }, []);
+
+
     const [searchText, setSearchText] = useState("");
     const [optionSelected, setOptionSelected] = useState("All");
 
@@ -23,8 +38,6 @@ const Shop = () => {
         setSearchText(e.target.value);
         setOptionSelected("All");
     };
-
-    console.log(optionSelected);
 
 const filterProductHandler = (e) => {
         setOptionSelected(e.target.value);

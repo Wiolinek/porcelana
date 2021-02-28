@@ -3,7 +3,7 @@ import { Link } from 'react-scroll'
 
 import MenuModal from './MenuModal';
 
-import '../../styles/sass/home.sass';
+import '../../styles/sass/main/home.sass';
 // import styled from 'styled-components';
 
 import { gsap } from "gsap";
@@ -32,9 +32,9 @@ const Home = () => {
         const tl = gsap.timeline()
 
         tl
-            .fromTo(homeWrapper.current.children, {autoAlpha: 0}, {autoAlpha: 1, stagger: .9, duration: 1.6, delay: .6})
-            .from(asideWrapper.current.children, {rotation: 60, x: 100, stagger: .3})
-            .from(arrowBtn.current, {autoAlpha: 0, y: '+100', duration: 2, delay: .8})
+            .fromTo(homeWrapper.current.children, {autoAlpha: 0}, {autoAlpha: 1, duration: 3, delay: .6})
+            .from(asideWrapper.current.children, {rotation: 60, x: 100, stagger: .3, delay: 2})
+            .from(arrowBtn.current, {autoAlpha: 0, y: '+100', duration: 2, delay: .7})
             .fromTo(arrowBtn.current, {y: '0'}, {y: '+20', ease: 'power1.inOut', repeat: Infinity, yoyo: true})
 
             .from(showMenuIcon.current.children, {rotation: 60, x: 100,

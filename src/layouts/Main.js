@@ -7,7 +7,7 @@ import Recommendations from "../components/main/Recommendations";
 import Career from "../components/main/Career";
 import Footer from "../components/main/Footer";
 
-import '../styles/sass/main.sass';
+import '../styles/sass/main/main.sass';
 
 
 const Main = () => {

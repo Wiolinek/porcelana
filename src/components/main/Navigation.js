@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-scroll'
 import { NavLink } from "react-router-dom";
 
-import '../../styles/sass/navigation.sass';
+import '../../styles/sass/main/navigation.sass';
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -21,11 +21,12 @@ const Navigation = () => {
 
         tl
             .from(logoAnimation.current, {scale: 0, delay: 2})
-            .from(navigationBarAnimation.current.children, {scale: 0,
+            .from(navigationBarAnimation.current.children, {y: "-100", autoAlpha: 0,
                 stagger: {
-                    from: 'start',
-                    axis: 'x',
-                    amount: 1
+                    from: "start",
+                    axis: "x",
+                    each: .32,
+                    ease: "none",
                 }})
     }, [])
 
@@ -41,11 +42,11 @@ const Navigation = () => {
                 <li><NavLink to="/shop" target="_blank">E-Shop</NavLink></li>
             </ul>
             <div className="logo" ref={logoAnimation}>
-                <div className="logo-border">
-                    <Link to="main" smooth={true}>
-                        <p className="logo-name">ICM Inc.</p>
-                    </Link>
-                </div>
+                <Link to="main" className="logo-border">
+                    <div smooth={true}>
+                        <p className="logo-name">ICM Inc.</p> 
+                    </div>
+                </Link>
             </div>
         </nav>
     )

@@ -1,0 +1,47 @@
+@import '../variables.sass'
+@import '../mixins.sass'
+
+.modal-wrapper
+    margin: 0 auto
+    display: none
+    position: fixed
+    top: 3vh
+    left: 10vw
+    background-color: $white-color
+    height: 94vh
+    width: 80vw
+    padding: 0 2vw
+    overflow: auto
+    font-size: 19px
+      /* transition: all 1.3s ease; */
+    & span:first-child
+        font-weight: 700
+        font-size: 19px
+    & div p
+        padding-top: 1.3vh
+    & .close-btn
+        @include button
+        color: $white-color
+        font-size: 17px
+        margin: 3vh 3vh 1vh auto
+        width: 70px
+        height: 70px
+        &:hover
+            @include hover-button
+            background-color: $white-color
+    & .send-cv-btn
+        @include button
+        color: $white-color
+        font-size: 22px
+        margin: 3vh 3vh 3vh auto
+        width: 115px
+        height: 115px
+        &:hover
+            @include hover-button
+.back
+    backdrop-filter: $blur-effect
+    height: 100%
+    width: 100%
+    position: fixed
+    left: 0
+    top: 0

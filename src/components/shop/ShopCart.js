@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import ShopCartModal from './ShopCartModal';
 
-import '../../styles/sass/shop-cart.sass';
+import '../../styles/sass/shop/shop-cart.sass';
 
 
 const ShopCart = ({ cartProductsList, setCartProductsList, productsData }) => {
