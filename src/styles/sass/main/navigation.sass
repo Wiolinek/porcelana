@@ -7,37 +7,34 @@ nav
         display: flex
         justify-content: flex-end
         padding-top: 2vh
-        & li, a
-            padding: 0 20px
-            color: black
+        & li
+            margin: 0 15px
             font-size: 25px
             text-align: center
-            border-right: $black-border-thin
             text-decoration: none
+            border-bottom: 2px solid transparent
             transition: all .6s
             &:last-child
                 border-right: none
             &:hover
-                color: $white-color
+                border-bottom: 2px solid black
                 cursor: pointer
-            & i
-                height: 60px
-                width: 60px
+            & a
+                padding: 0 20px
+                color: black
+                text-decoration: none
     .logo
         position: fixed
-        margin: 0 2.5%
+        margin: 0 2%
         display: flex
         align-self: center
         z-index: 20
-        mix-blend-mode: difference
         & .logo-border
-            mix-blend-mode: difference
             @include border-logo-style
             &:hover
                 cursor: pointer
                 background-color: $white-color
                 color: black
                 border: $black-border-thin
-                // backdrop-filter: $blur-effect
             & .logo-name
                 @include logo-name-style

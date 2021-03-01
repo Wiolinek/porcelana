@@ -13,6 +13,7 @@
     padding: 0 2vw
     overflow: auto
     font-size: 19px
+    z-index: 30
       /* transition: all 1.3s ease; */
     & span:first-child
         font-weight: 700
@@ -39,9 +40,11 @@
         &:hover
             @include hover-button
 .back
+    // background-color: rgba(2, 2, 2, .7)
     backdrop-filter: $blur-effect
     height: 100%
     width: 100%
     position: fixed
     left: 0
     top: 0
+    z-index: 30

@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-scroll'
+import { Link } from 'react-scroll';
+import { NavLink } from "react-router-dom";
 
 import '../../styles/sass/main/menu-modal.sass';
 
@@ -23,7 +24,7 @@ const MenuModal = ( {navMenuState, closeMenuHandler}) => {
                         <li><Link to="recommendations" onClick={closeMenuHandler} smooth={true}>Recommendations</Link></li>
                         <li><Link to="career" onClick={closeMenuHandler} smooth={true}>Career</Link></li>
                         <li><Link to="contact" onClick={closeMenuHandler} smooth={true}>Contact</Link></li>
-                        <li><Link to="shop" onClick={closeMenuHandler} target="_blank">E-Shop</Link></li>
+                        <li><NavLink to="/shop" target="_blank" onClick={closeMenuHandler}>E-Shop</NavLink></li>
                     </ul>
                 </div>
             </nav> : null } 

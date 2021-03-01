@@ -46,7 +46,7 @@ const Home = () => {
                   // pin: true,
                   // pinSpacing: false,
                   //events: onEnter onLeave onEnterBack onLeaveBack
-                  toggleActions:'play restart reverse pause',
+                  toggleActions:'play complete reverse complete',
                   //options: play plause resume reset restart complete reverse none
                 //   markers:true,
                 }

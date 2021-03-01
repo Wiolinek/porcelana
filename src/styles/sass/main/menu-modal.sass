@@ -17,7 +17,7 @@
         height: 100%
         width: 60%
         & .logo-border
-            @include border-logo-style 
+            @include border-logo-style
             position: static
             height: 18vw
             width: 18vw
@@ -29,25 +29,28 @@
     & .navigation-menu-container
         height: 100%
         width: 40%
+        background-color: black
+        margin: 0 auto
         & .navigation-menu
+            display: flex
+            flex-direction: column
+            justify-content: space-around
+            align-items: center
             list-style: none
-            position: fixed
-            right: 0
-            top: 0
-            z-index: 101
+            padding: 4em 3em 15em
             height: 100%
-            width: 40%
-            background-color: black
             & li
-                padding: 25px 20px
                 color: $white-color
                 font-size: 25px
-                text-decoration: none
-                text-align: center
+                border-bottom: 2px solid transparent
                 &:hover
                     cursor: pointer
-                    text-decoration: underline
+                &:not(:first-child):hover
+                    border-bottom: 2px solid $white-color
+                & a
+                    padding: 0 20px
+                    color: $white-color
+                    text-decoration: none
             & li:first-child
-                text-align: right
-                font-size: 35px
-                margin: 7vh 3vh 4vh   
+                align-self: flex-end
+                font-size: 38px

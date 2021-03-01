@@ -1,21 +1,26 @@
 @import '../variables.sass'
     
 .recommendations
-    min-height: 100vh
+    min-height: 150vh
+    & h1
+        width: 75%
+        margin: 0 auto
+        border-top: 1px solid black
     & .opinions
         display: flex
-        flex-wrap: wrap
-        font-size: 19px
-        width: 80%
+        flex-direction: column
+        font-size: 1.2em
+        height: 100%
+        width: 75%
         margin: 0 auto
         & div
             display: flex
             flex-direction: column
-            width: 80%
-            margin: 3vh 2vw
-            padding: 12px
+            padding: 1.5em
+            margin: 3vh 1vw
             line-height: 1.7
             border-bottom: 1px solid black
+            border-radius: 6px
             backdrop-filter: $blur-effect
             & p
                 font-family: 'JetBrains Mono', monospace
@@ -27,3 +32,4 @@
         align-self: flex-end
         margin-top: 10px
         font-weight: 700
+        color: red

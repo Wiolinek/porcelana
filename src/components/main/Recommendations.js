@@ -19,7 +19,7 @@ const Recommendations = () => {
         gsap.fromTo(opinionsWrapper.current.children, {y: '+=170', scale: 1.4, autoAlpha: 0}, {y: 0, scale: 1, autoAlpha: 1, stagger: .7, duration: 2, ease: "power1.inOut",
           scrollTrigger: {
             trigger: opinionsWrapper.current,
-            start:'top 60%',
+            start:'top 75%',
             end:'bottom bottom',
             scrub: 0,
             // pin: true,
