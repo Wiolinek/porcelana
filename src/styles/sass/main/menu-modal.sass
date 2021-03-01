@@ -43,6 +43,7 @@
                 color: $white-color
                 font-size: 25px
                 border-bottom: 2px solid transparent
+                transition: all .6s
                 &:hover
                     cursor: pointer
                 &:not(:first-child):hover
@@ -51,6 +52,8 @@
                     padding: 0 20px
                     color: $white-color
                     text-decoration: none
-            & li:first-child
-                align-self: flex-end
-                font-size: 38px
+                &:first-child
+                    align-self: flex-end
+                    font-size: 38px
+                    &:hover
+                        color: red
