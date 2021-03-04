@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import {animateScroll as scroll } from 'react-scroll'
+
 import Navigation from "../components/main/Navigation";
 import Home from "../components/main/Home";
 import About from "../components/main/About";
@@ -11,6 +13,10 @@ import '../styles/sass/main/main.sass';
 
 
 const Main = () => {
+
+  useEffect(() => {
+      scroll.scrollToTop();
+  });
 
     return (
       <>

@@ -32,25 +32,25 @@ const Home = () => {
         const tl = gsap.timeline()
 
         tl
-            .fromTo(homeWrapper.current.children, {autoAlpha: 0}, {autoAlpha: 1, duration: 3, delay: .6})
-            .from(asideWrapper.current.children, {rotation: 60, x: 100, stagger: .3, delay: 2})
-            .from(arrowBtn.current, {autoAlpha: 0, y: '+100', duration: 2, delay: .7})
-            .fromTo(arrowBtn.current, {y: '0'}, {y: '+20', ease: 'power1.inOut', repeat: Infinity, yoyo: true})
-
             .from(showMenuIcon.current.children, {rotation: 60, x: 100,
                 scrollTrigger: {
-                  trigger:showMenuIcon.current,
-                  start:'90% 10%',
+                trigger:showMenuIcon.current,
+                start:'90% 10%',
                 //   end:'50% 90%',
-                  scrub: true,
-                  // pin: true,
-                  // pinSpacing: false,
-                  //events: onEnter onLeave onEnterBack onLeaveBack
-                  toggleActions:'play complete reverse complete',
-                  //options: play plause resume reset restart complete reverse none
+                scrub: true,
+                // pin: true,
+                // pinSpacing: false,
+                //events: onEnter onLeave onEnterBack onLeaveBack
+                toggleActions:'play complete complete complete',
+                //options: play plause resume reset restart complete reverse none
                 //   markers:true,
                 }
-              })    
+            })
+            .fromTo(homeWrapper.current.children, {autoAlpha: 0}, {autoAlpha: 1, duration: 3, delay: .7})
+            .from(asideWrapper.current.children, {rotation: 60, x: 100, stagger: .3, delay: .7})
+            .from(arrowBtn.current, {autoAlpha: 0, y: '+100', duration: 2, delay: .2})
+            .fromTo(arrowBtn.current, {y: '0'}, {y: '+20', ease: 'power1.inOut', repeat: Infinity, yoyo: true})
+      
     }, [])
 
 

@@ -6,28 +6,24 @@
     margin: 0
     padding: 0
     box-sizing: border-box
-    .main
+    & .main
         overflow: hidden
         font-family: 'Cinzel', serif
         background-color: $white-color
-        .header
+        & .header
             min-height: 100vh
             display: flex
             flex-direction: column
             background: url('../../../images/back_11.jpg') no-repeat center center
             background-size: cover
-            .home
+            & .home
                 min-height: 93vh
                 display: flex
                 flex-direction: row-reverse
-        .recommendations    
-            // background: url('../../../images/back_17_bw.jpg') no-repeat center center
-            background-attachment: fixed
-            background-size: cover
-        footer
+        & footer
             background-image: url('../../../images/back_11.jpg')
             background-size: 100%
-        h1
+        & h1
             padding-top: 10vh
             padding-bottom: 5vh
             font-size: 33px

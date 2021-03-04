@@ -14,10 +14,10 @@ const About = () => {
 
     useEffect(() => {
   
-        gsap.fromTo(aboutWrapper.current.children, {y: '+=150', autoAlpha: 0}, {y: 0, autoAlpha: 1, stagger: .1,
+        gsap.fromTo(aboutWrapper.current.children, {y: '+=150', autoAlpha: 0}, {y: 0, autoAlpha: 1, stagger: .6, duration: 2,
           scrollTrigger: {
             trigger:aboutWrapper.current,
-            start:'top 70%',
+            start:'top 65%',
             end:'bottom bottom',
             scrub: true,
             // pin: true,
