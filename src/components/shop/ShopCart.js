@@ -5,7 +5,7 @@ import ShopCartModal from './ShopCartModal';
 import '../../styles/sass/shop/shop-cart.sass';
 
 
-const ShopCart = ({ cartProductsList, setCartProductsList, productsData }) => {
+const ShopCart = ({ cartProductsList, setCartProductsList}) => {
 
     const [totalAmount, setTotalAmount] = useState(0);
     const [cartModalState, setCartModalState] = useState(false);

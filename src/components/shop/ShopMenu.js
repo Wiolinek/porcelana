@@ -9,7 +9,7 @@ const ShopMenu = (props) => {
 
     const shopMenuOptions = ["All", "Mugs", "Cups", "Tea Pots", "Plates", "Bowls", "Vases"];
 
-    const { optionSelected, filterProductHandler } = props;
+    const { optionSelected, filterProductHandler, searchProductHandler, searchText } = props;
 
     // let active = optionSelected
 
@@ -33,7 +33,7 @@ const ShopMenu = (props) => {
                 </div>
                 <div className="search">
                     <label htmlFor="search">what are you looking for..?</label>
-                    <input type="text" id="search" name="search" onChange={props.searchProductHandler} value={props.searchText}></input>
+                    <input type="text" id="search" name="search" onChange={searchProductHandler} value={searchText}></input>
                     <i className="fas fa-search"></i>
                 </div>
             </div>

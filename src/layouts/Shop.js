@@ -19,10 +19,8 @@ const Shop = () => {
 
         axios.get(`http://localhost:3030/products`)
             .then(response => {
-            console.log(response)
             const products = response.data;
             setProductsData(products);
-            console.log(products)
             })
       }, []);
 
@@ -79,7 +77,7 @@ const filterProductHandler = (e) => {
                 <ShopProducts productsData={productsData} searchText={searchText} optionSelected={optionSelected} addToCartHandler={addToCartHandler} warning={warning}/>
             </main>
             <aside className="cart">
-                <ShopCart cartProductsList={cartProductsList} setCartProductsList={setCartProductsList} productsData={productsData}/>
+                <ShopCart cartProductsList={cartProductsList} setCartProductsList={setCartProductsList} />
             </aside>
             <footer className="shop-footer">
                 <ShopFooter />

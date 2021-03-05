@@ -39,17 +39,18 @@ const Career = () => {
 
     useEffect(() => {
   
-        gsap.fromTo(careerWrapper.current.children, {y: '+=150', autoAlpha: 0}, {y: 0, autoAlpha: 1, stagger: .5, duration: 2,
+        gsap.from(careerWrapper.current, {y: '+=150', autoAlpha: 0,
           scrollTrigger: {
             trigger: careerWrapper.current,
             start:'top 60%',
             end:'bottom bottom',
-            scrub: 0,
+            scrub: 1,
             //events: onEnter onLeave onEnterBack onLeaveBack
             toggleActions:'play restart complete reverse',
             //options: play plause resume reset restart complete reverse none
             // markers:true,
-          }})
+        }})
+
         gsap.from(jointBtnAnimation.current, {scale: 0, duration: 2, ease: 'power1.inOut',
             scrollTrigger: {
                 trigger: jointBtnAnimation.current,
@@ -60,13 +61,14 @@ const Career = () => {
                 toggleActions:'play restart complete reverse',
                 //options: play plause resume reset restart complete reverse none
                 // markers:true,
-              }})
+        }})
+
     }, [])
 
     return (
-            <div className="career" ref={careerWrapper}>
+            <div className="career">
                 <h1>Career</h1>
-                <div className="offers">
+                <div className="offers" ref={careerWrapper}>
                     <div><p>We are a constantly developing, stable and reliable company based on tradition and respect. Do you want to become part of our success? Check out our current job openings below and let us know about your experience and potential.</p></div>
                     <table>
                         <thead>

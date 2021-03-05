@@ -14,16 +14,16 @@ const About = () => {
 
     useEffect(() => {
   
-        gsap.fromTo(aboutWrapper.current.children, {y: '+=150', autoAlpha: 0}, {y: 0, autoAlpha: 1, stagger: .6, duration: 2,
+        gsap.fromTo(aboutWrapper.current.children, {y: '+=150', autoAlpha: 0}, {y: 0, autoAlpha: 1, stagger: .5, ease: 'power1.inOut',
           scrollTrigger: {
-            trigger:aboutWrapper.current,
-            start:'top 65%',
+            trigger: aboutWrapper.current,
+            start:'top 60%',
             end:'bottom bottom',
-            scrub: true,
+            scrub: 1,
             // pin: true,
             // pinSpacing: false,
             //events: onEnter onLeave onEnterBack onLeaveBack
-            toggleActions:'play restart reverse pause',
+            toggleActions:'play restart complete reverse',
             //options: play plause resume reset restart complete reverse none
             // markers:true,
           }
