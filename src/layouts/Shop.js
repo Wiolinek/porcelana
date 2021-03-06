@@ -9,7 +9,6 @@ import '../styles/sass/shop/shop.sass';
 
 import axios from "axios";
 
-// import productsData from '../data_products';
 
 const Shop = () => {
 
@@ -24,6 +23,8 @@ const Shop = () => {
             })
       }, []);
 
+    console.log(productsData);
+
 
     const [searchText, setSearchText] = useState("");
     const [optionSelected, setOptionSelected] = useState("All");
@@ -37,7 +38,7 @@ const Shop = () => {
         setOptionSelected("All");
     };
 
-const filterProductHandler = (e) => {
+    const filterProductHandler = (e) => {
         setOptionSelected(e.target.value);
     };
 

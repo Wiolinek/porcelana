@@ -1,11 +1,12 @@
 import React, { useEffect, useRef, useState} from 'react';
-import { Link } from 'react-scroll'
-
-import { jobOffersData } from '../../data_career.js';
+import { Link } from 'react-scroll';
+import dayjs from 'dayjs';
 
 import CareerModal from './CareerModal';
 
 import '../../styles/sass/main/career.sass';
+
+import axios from "axios";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -14,6 +15,17 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 const Career = () => {
+
+    const [jobOffersData, setJobOffersData] = useState([]);
+
+    useEffect(() => {
+
+        axios.get(`http://localhost:3030/offers`)
+            .then(response => {
+            const offers = response.data;
+            setJobOffersData(offers);
+            })
+      }, []);
     
     const [state, setState] = useState(false);
     const [offer, setOffer] = useState();
@@ -32,7 +44,7 @@ const Career = () => {
         <tr key={offer.id}>
             <td><button className="open-offer-modal-btn" onClick={() => openModalHandler(offer)}>{offer.name}</button></td>
             <td>{offer.location}</td>
-            <td>{offer.date}</td>
+            <td>{dayjs(offer.date).format('DD/MM/YYYY')}</td>
         </tr>
         )
     )
@@ -62,7 +74,6 @@ const Career = () => {
                 //options: play plause resume reset restart complete reverse none
                 // markers:true,
         }})
-
     }, [])
 
     return (
@@ -85,7 +96,7 @@ const Career = () => {
                 </div>
                 <div className="join" ref={jointBtnAnimation}><Link to="contact" smooth={true}>Join us!</Link></div>
                 { state ? <div className="back" onClick={closeModalHandler}></div> : null }
-                <CareerModal state={state} closeModalHandler={closeModalHandler} offer={offer}/>
+                <CareerModal state={state} closeModalHandler={closeModalHandler} jobOffersData={jobOffersData} offer={offer}/>
             </div>
     )
 }

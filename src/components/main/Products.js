@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Products = () => {
 
-    const productsWrapper = useRef(null);
+  const productsWrapper = useRef(null);
 
     useEffect(() => {
 
@@ -28,9 +28,8 @@ const Products = () => {
             // markers:true,
           }
         })
+    }, []);
 
-
-    }, [])
 
     return (
             <div>

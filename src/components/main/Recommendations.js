@@ -1,8 +1,10 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
-import { opinionsData } from '../../../src/data_recom.js';
+// import { opinionsData } from '../../../src/data_recom.js';
 
 import '../../styles/sass/main/recommendations.sass';
+
+import axios from "axios";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -12,7 +14,16 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Recommendations = () => {
 
+    const [opinionsData, setOpinionsData] = useState([]);
     const opinionsWrapper = useRef(null);
+    
+    useEffect(() => {
+        axios.get(`http://localhost:3030/recommendations`)
+            .then(response => {
+            const opinions = response.data;
+            setOpinionsData(opinions);
+            })
+      }, []);
 
     useEffect(() => {
   

@@ -15,11 +15,15 @@
     font-size: 19px
     z-index: 30
       /* transition: all 1.3s ease; */
-    & span:first-child
-        font-weight: 700
-        font-size: 19px
+      display: flex
+      flex-direction: column
     & div p
         padding-top: 1.3vh
+        & span:first-child
+            font-weight: 700
+            font-size: 19px
+        & span:last-child
+            white-space: pre-wrap
     & .close-btn
         @include button
         color: $white-color
