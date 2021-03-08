@@ -14,7 +14,7 @@ const About = () => {
 
     useEffect(() => {
   
-        gsap.fromTo(aboutWrapper.current.children, {y: '+=150', autoAlpha: 0}, {y: 0, autoAlpha: 1, stagger: .5, ease: 'power1.inOut',
+        gsap.fromTo(aboutWrapper.current.children, {y: '+=150', autoAlpha: 0}, {y: 0, autoAlpha: 1, stagger: .5,
           scrollTrigger: {
             trigger: aboutWrapper.current,
             start:'top 60%',

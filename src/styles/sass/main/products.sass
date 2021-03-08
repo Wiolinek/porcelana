@@ -63,17 +63,14 @@
             border-radius: 6px
         & .more-btn
             @include button
+            margin: 1em .8em 0 auto
             font-size: 20px
-            margin: 0 auto
-            position: absolute
-            right: 2vw
-            bottom: 2vw
             width: 80px
             height: 80px
             & a
                 text-decoration: none
                 color: $white-color
-        & .more-btn:hover a
-            color: black
-        & .more-btn:hover
-            @include hover-button
+            &:hover a
+                color: black
+            &:hover
+                @include hover-button

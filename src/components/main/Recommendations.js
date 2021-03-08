@@ -1,7 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-// import { opinionsData } from '../../../src/data_recom.js';
-
 import '../../styles/sass/main/recommendations.sass';
 
 import axios from "axios";
@@ -22,25 +20,24 @@ const Recommendations = () => {
             .then(response => {
             const opinions = response.data;
             setOpinionsData(opinions);
-            })
-      }, []);
+            });
+    }, []);
 
     useEffect(() => {
-  
         gsap.fromTo(opinionsWrapper.current.children, {y: '+=170', scale: 1.4, autoAlpha: 0}, {y: 0, scale: 1, autoAlpha: 1, stagger: .5,
-          scrollTrigger: {
-            trigger: opinionsWrapper.current,
-            start:'top 60%',
-            end:'bottom bottom',
-            scrub: 1,
-            // pin: true,
-            //events: onEnter onLeave onEnterBack onLeaveBack
-            toggleActions:'play restart complete reverse',
-            //options: play plause resume reset restart complete reverse none
-            // markers:true,
-          }
+            scrollTrigger: {
+                trigger: opinionsWrapper.current,
+                start:'top 60%',
+                end:'bottom bottom',
+                scrub: 1,
+                pin: ".pin",
+                  //events: onEnter onLeave onEnterBack onLeaveBack
+                toggleActions:'play restart complete reverse',
+                  //options: play plause resume reset restart complete reverse none
+                  // markers:true,
+            }
         })
-    }, [])
+    }, [opinionsData]);
 
     const opinions = opinionsData.map(opinion =>
         <div key={opinion.id}><p>{opinion.text}</p><p>{opinion.author}</p></div>

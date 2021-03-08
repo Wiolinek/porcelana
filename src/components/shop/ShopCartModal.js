@@ -75,7 +75,6 @@ const ShopCartModal = ( {cartModalState, closeCartModalHandler, cartProductsList
                     <input type="number" id="user_zipcode" name="user_email" required></input>
                     <label htmlFor="user_city">City:<br/></label>
                     <input type="text" id="user_city" name="user_email" required></input>
-
                 </form>
             </div>
             <button className="send-order">Send order</button>

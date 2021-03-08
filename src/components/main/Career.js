@@ -24,8 +24,22 @@ const Career = () => {
             .then(response => {
             const offers = response.data;
             setJobOffersData(offers);
-            })
-      }, []);
+            }
+        )
+  
+        gsap.from(jointBtnAnimation.current, {scale: 0, delay: 1, ease: 'none',
+            scrollTrigger: {
+                trigger: jointBtnAnimation.current,
+                start:'top 90%',
+                end:'bottom 60%',
+                scrub: 1,
+                //events: onEnter onLeave onEnterBack onLeaveBack
+                toggleActions:'play none none reverse',
+                //options: play plause resume reset restart complete reverse nonex`
+                // markers:true,
+            }
+        })
+    }, []);
     
     const [state, setState] = useState(false);
     const [offer, setOffer] = useState();
@@ -48,33 +62,6 @@ const Career = () => {
         </tr>
         )
     )
-
-    useEffect(() => {
-  
-        gsap.from(careerWrapper.current, {y: '+=150', autoAlpha: 0,
-          scrollTrigger: {
-            trigger: careerWrapper.current,
-            start:'top 60%',
-            end:'bottom bottom',
-            scrub: 1,
-            //events: onEnter onLeave onEnterBack onLeaveBack
-            toggleActions:'play restart complete reverse',
-            //options: play plause resume reset restart complete reverse none
-            // markers:true,
-        }})
-
-        gsap.from(jointBtnAnimation.current, {scale: 0, duration: 2, ease: 'power1.inOut',
-            scrollTrigger: {
-                trigger: jointBtnAnimation.current,
-                start:'100% bottom',
-                end:'top 90%',
-                scrub: 0,
-                //events: onEnter onLeave onEnterBack onLeaveBack
-                toggleActions:'play restart complete reverse',
-                //options: play plause resume reset restart complete reverse none
-                // markers:true,
-        }})
-    }, [])
 
     return (
             <div className="career">

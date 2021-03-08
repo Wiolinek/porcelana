@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
+import { useParams } from "react-router-dom";
+
 import ShopProducts from "../components/shop/ShopProducts";
 import ShopMenu from "../components/shop/ShopMenu";
 import ShopCart from "../components/shop/ShopCart";
@@ -9,25 +11,23 @@ import '../styles/sass/shop/shop.sass';
 
 import axios from "axios";
 
-
 const Shop = () => {
 
     const [productsData, setProductsData] = useState([]);
+    const { categoryLink } = useParams();
 
     useEffect(() => {
-
         axios.get(`http://localhost:3030/products`)
             .then(response => {
             const products = response.data;
             setProductsData(products);
             })
-      }, []);
-
-    console.log(productsData);
-
+    }, []);
 
     const [searchText, setSearchText] = useState("");
-    const [optionSelected, setOptionSelected] = useState("All");
+    const [optionSelected, setOptionSelected] = useState(categoryLink);
+    console.log(optionSelected);
+    console.log(categoryLink);
 
     const [cartProductsList, setCartProductsList] = useState([]);
 

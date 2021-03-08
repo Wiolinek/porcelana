@@ -3,8 +3,6 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Main from "./Main";
 import Shop from "./Shop";
 
-// import '../styles/sass/main.sass';
-
 
 const App = () => {
 
@@ -13,7 +11,7 @@ const App = () => {
           <Route path="/" component={Main} exact>
               <Main />
           </Route>
-          <Route path="/shop" component={Shop} target="_blank" exact>
+          <Route path="/shop/:categoryLink" component={Shop} target="_blank">
               <Shop />
           </Route>
       </Router>
