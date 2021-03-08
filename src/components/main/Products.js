@@ -36,28 +36,34 @@ const Products = () => {
                 <h1>Products</h1>
                 <div className="products" ref={productsWrapper}>
                     <div>
-                      <div className="product-photo mugs"><p>Mugs</p><div className="more-btn"><NavLink to="/shop" target="_blank">More</NavLink></div></div>
-                      <div className="product-info"><p>dcewvgavc Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nobis dolorum nulla ad mollitia temporibus repudiandae eaque ducimus laboriosam itaque impedit nam quas quisquam in maiores necessitatibus numquam eum corporis molestias, quasi veritatis. Corporis praesentium voluptatem accusantium enim laborum aperiam, debitis aut facere ut labore! Totam possimus nemo esse hic?</p></div>
+                      <div className="product-photo mugs"><p>Mugs</p></div>
+                      <div className="product-info"><p>dcewvgavc Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nobis dolorum nulla ad mollitia temporibus repudiandae eaque ducimus laboriosam itaque impedit nam quas quisquam in maiores necessitatibus numquam eum corporis molestias, quasi veritatis. Corporis praesentium voluptatem accusantium enim laborum aperiam, debitis aut facere ut labore! Totam possimus nemo esse hic?</p>
+                      <div className="more-btn"><NavLink to="/shop/mugs" target="_blank">More</NavLink></div></div>
                     </div>
                     <div>
-                      <div className="product-photo cups"><p>Cups</p><div className="more-btn"><NavLink to="/shop" target="_blank">More</NavLink></div></div>
-                      <div className="product-info"><p>dcewvgavc Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nobis dolorum nulla ad mollitia temporibus repudiandae eaque ducimus laboriosam itaque impedit nam quas quisquam in maiores necessitatibus numquam eum corporis molestias, quasi veritatis. Corporis praesentium voluptatem accusantium enim laborum aperiam, debitis aut facere ut labore! Totam possimus nemo esse hic?</p></div>
+                      <div className="product-photo cups"><p>Cups</p></div>
+                      <div className="product-info"><p>dcewvgavc Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nobis dolorum nulla ad mollitia temporibus repudiandae eaque ducimus laboriosam itaque impedit nam quas quisquam in maiores necessitatibus numquam eum corporis molestias, quasi veritatis. Corporis praesentium voluptatem accusantium enim laborum aperiam, debitis aut facere ut labore! Totam possimus nemo esse hic?</p>
+                      <div className="more-btn"><NavLink to="/shop/cups" target="_blank">More</NavLink></div></div>
                     </div>
                     <div>
-                      <div className="product-photo pots"><p>Coffee Pots</p><div className="more-btn"><NavLink to="/shop" target="_blank">More</NavLink></div></div>
-                      <div className="product-info"><p>dcewvgavc Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nobis dolorum nulla ad mollitia temporibus repudiandae eaque ducimus laboriosam itaque impedit nam quas quisquam in maiores necessitatibus numquam eum corporis molestias, quasi veritatis. Corporis praesentium voluptatem accusantium enim laborum aperiam, debitis aut facere ut labore! Totam possimus nemo esse hic?</p></div>
+                      <div className="product-photo pots"><p>Coffee Pots</p></div>
+                      <div className="product-info"><p>dcewvgavc Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nobis dolorum nulla ad mollitia temporibus repudiandae eaque ducimus laboriosam itaque impedit nam quas quisquam in maiores necessitatibus numquam eum corporis molestias, quasi veritatis. Corporis praesentium voluptatem accusantium enim laborum aperiam, debitis aut facere ut labore! Totam possimus nemo esse hic?</p>
+                      <div className="more-btn"><NavLink to="/shop/tea-pots" target="_blank">More</NavLink></div></div>
                     </div>
                     <div>
-                      <div className="product-photo plates"><p>Plates</p><div className="more-btn"><NavLink to="/shop" target="_blank">More</NavLink></div></div>
-                      <div className="product-info"><p>dcewvgavc Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nobis dolorum nulla ad mollitia temporibus repudiandae eaque ducimus laboriosam itaque impedit nam quas quisquam in maiores necessitatibus numquam eum corporis molestias, quasi veritatis. Corporis praesentium voluptatem accusantium enim laborum aperiam, debitis aut facere ut labore! Totam possimus nemo esse hic?</p></div>
+                      <div className="product-photo plates"><p>Plates</p></div>
+                      <div className="product-info"><p>dcewvgavc Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nobis dolorum nulla ad mollitia temporibus repudiandae eaque ducimus laboriosam itaque impedit nam quas quisquam in maiores necessitatibus numquam eum corporis molestias, quasi veritatis. Corporis praesentium voluptatem accusantium enim laborum aperiam, debitis aut facere ut labore! Totam possimus nemo esse hic?</p>
+                      <div className="more-btn"><NavLink to="/shop/plates" target="_blank">More</NavLink></div></div>
                     </div>
                     <div>
-                      <div className="product-photo bowls"><p>Bowls</p><div className="more-btn"><NavLink to="/shop" target="_blank">More</NavLink></div></div>
-                      <div className="product-info"><p>dcewvgavc Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nobis dolorum nulla ad mollitia temporibus repudiandae eaque ducimus laboriosam itaque impedit nam quas quisquam in maiores necessitatibus numquam eum corporis molestias, quasi veritatis. Corporis praesentium voluptatem accusantium enim laborum aperiam, debitis aut facere ut labore! Totam possimus nemo esse hic?</p></div>
+                      <div className="product-photo bowls"><p>Bowls</p></div>
+                      <div className="product-info"><p>dcewvgavc Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nobis dolorum nulla ad mollitia temporibus repudiandae eaque ducimus laboriosam itaque impedit nam quas quisquam in maiores necessitatibus numquam eum corporis molestias, quasi veritatis. Corporis praesentium voluptatem accusantium enim laborum aperiam, debitis aut facere ut labore! Totam possimus nemo esse hic?</p>
+                      <div className="more-btn"><NavLink to="/shop/bowls" target="_blank">More</NavLink></div></div>
                     </div>
                     <div>
-                      <div className="product-photo vases"><p>Vases</p><div className="more-btn"><NavLink to="/shop" target="_blank">More</NavLink></div></div>
-                      <div className="product-info"><p>dcewvgavc Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nobis dolorum nulla ad mollitia temporibus repudiandae eaque ducimus laboriosam itaque impedit nam quas quisquam in maiores necessitatibus numquam eum corporis molestias, quasi veritatis. Corporis praesentium voluptatem accusantium enim laborum aperiam, debitis aut facere ut labore! Totam possimus nemo esse hic?</p></div>
+                      <div className="product-photo vases"><p>Vases</p></div>
+                      <div className="product-info"><p>dcewvgavc Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nobis dolorum nulla ad mollitia temporibus repudiandae eaque ducimus laboriosam itaque impedit nam quas quisquam in maiores necessitatibus numquam eum corporis molestias, quasi veritatis. Corporis praesentium voluptatem accusantium enim laborum aperiam, debitis aut facere ut labore! Totam possimus nemo esse hic?</p>
+                      <div className="more-btn"><NavLink to="/shop/vases" target="_blank">More</NavLink></div></div>
                     </div>
                 </div>
             </div>
