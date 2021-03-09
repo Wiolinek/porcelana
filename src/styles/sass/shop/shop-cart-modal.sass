@@ -10,7 +10,7 @@
     background-color: $white-color
     height: 94vh
     width: 80vw
-    padding: 0 2vw
+    padding: 0 4vw
     overflow: auto
     font-size: 19px
     & .close-btn
@@ -26,43 +26,55 @@
         margin-bottom: 1.2em
         text-align: center
     & .order-list
-        background-color: pink
         display: flex
         flex-direction: column
         justify-content: center
         & li
             display: flex
-            & p:first-child
-                width: 55%
-                // text-align: left
-            & p
-                // padding: .4em
-                // width: 10%
-                // border: 2px solid black
-                // text-align: center
-            & div
+            & > p
+                width: 60%
+            & .buttons
                 display: flex
-                // width: 45%
-        & .change-quantity
-            @include button
-            font-size: 30px
-            margin: .3vh
-            width: 35px
-            height: 35px
-            &:hover
-                @include hover-button
-        & .delete
-            color: black
-            font-size: 27px
-            margin: .3vh
-            outline: none
-            background-color: transparent
-            border: none
-            &:hover
-                cursor: pointer
-    & form
+                align-items: center
+                justify-content: space-between
+                width: 40%
+                & .change-quantity-container
+                    display: flex
+                    align-items: center
+                    justify-content: space-between
+                    width: 30%
+                    & .change-quantity
+                        @include button
+                        font-size: 30px
+                        margin: .3vh
+                        width: 35px
+                        height: 35px
+                        &:hover
+                            @include hover-button
+                & .delete
+                    color: black
+                    font-size: 27px
+                    margin: .3vh
+                    outline: none
+                    background-color: transparent
+                    border: none
+                    &:hover
+                        cursor: pointer       
+    & .order-form form
         display: flex
         flex-direction: column
+        & input
+            align-self: flex-start
+            background-color: transparent
+            backdrop-filter: $blur-effect
+            border: $black-border-thin
+            border-radius: 6px
+            outline: none
+            width: 35%
+            height: 25px
+        & label
+            font-size: 1rem
+            margin-top: 1vh
     & .send-order
         @include button
         font-size: 22px

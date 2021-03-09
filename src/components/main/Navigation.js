@@ -39,7 +39,7 @@ const Navigation = () => {
                 <li><Link to="recommendations" smooth={true}>Recommendations</Link></li>
                 <li><Link to="career" smooth={true}>Career</Link></li>
                 <li><Link to="contact" smooth={true}>Contact</Link></li>
-                <li><NavLink to="/shop" target="_blank">E-Shop</NavLink></li>
+                <li><NavLink to="/shop/all" target="_blank">E-Shop</NavLink></li>
             </ul>
             <div className="logo" ref={logoAnimation}>
                 <Link to="main" className="logo-border">

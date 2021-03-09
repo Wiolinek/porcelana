@@ -25,7 +25,7 @@ const Shop = () => {
     }, []);
 
     const [searchText, setSearchText] = useState("");
-    const [optionSelected, setOptionSelected] = useState(categoryLink);
+    const [optionSelected, setOptionSelected] = useState('All');
     console.log(optionSelected);
     console.log(categoryLink);
 

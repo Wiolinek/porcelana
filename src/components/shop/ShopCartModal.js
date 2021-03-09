@@ -29,10 +29,12 @@ const ShopCartModal = ( {cartModalState, closeCartModalHandler, cartProductsList
     const order = cartProductsList.map(product => 
         <li key={product.id} product={product}>
             <p>{product.name}</p>
-            <div>
-                <button id={product.id} onClick={decreaseQuantity} className="change-quantity">-</button>
-                <p>{product.quantity}</p>
-                <button id={product.id} onClick={increaseQuantity} className="change-quantity">+</button>
+            <div className="buttons">
+                <div className="change-quantity-container">
+                    <button id={product.id} onClick={decreaseQuantity} className="change-quantity">-</button>
+                    <p>{product.quantity}</p>
+                    <button id={product.id} onClick={increaseQuantity} className="change-quantity">+</button>
+                </div>
                 <p>{product.price}</p>
                 <p>{(product.price * product.quantity).toFixed(2)}</p>
                 <button className="delete"><i id={product.id} onClick={deleteProduct} className="fas fa-trash-alt"></i></button>
@@ -49,19 +51,19 @@ const ShopCartModal = ( {cartModalState, closeCartModalHandler, cartProductsList
                 <h2>Your order</h2>
                 <ul className="order-list">{order}</ul>
                 <div>Total amount: {totalAmount.toFixed(2)}</div>
-                <p>Delivery option:</p>
+                <h2>Delivery option:</h2>
                 <form className="delivery-options">
                     <input type="radio" id="kurier" name="delivery_option" value="kurier"></input>
-                    <label htmlFor="kurier">Kurier</label>
+                    <label htmlFor="kurier">DPD Courier</label>
                     <input type="radio" id="poczta" name="delivery_option" value="poczta"></input>
-                    <label htmlFor="poczta">Poczta</label>
+                    <label htmlFor="poczta">DHL Courier</label>
                     <input type="radio" id="odbior_osobisty" name="delivery_option" value="odbior_osobisty"></input>
-                    <label htmlFor="odbior_osobisty">Odbiór osobisty</label>
+                    <label htmlFor="odbior_osobisty">Pickpoint</label>
                 </form>
                 <div>To pay: {totalAmount.toFixed(2)}</div>
             </div>
             <h2>Your address</h2>
-            <div className="order_form">
+            <div className="order-form">
                 <form>
                     <label htmlFor="user_name">Name:<br/></label>
                     <input type="text" id="user_name" name="user_name" required></input>
