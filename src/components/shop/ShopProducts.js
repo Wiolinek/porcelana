@@ -21,7 +21,16 @@ const ShopProducts = (props) => {
                 <div><p>{product.name}</p></div>
                 <p>{product.price} EUR</p>    
             </div>
-            <div className="product-photo"><img src={product.image} alt={product.alt_text}></img></div>
+            <div className="product-photo">
+                <img src={product.image} alt={product.alt_text}></img>
+                <div className="product-details">
+                    <p>Measures: {product.measures} cm</p>
+                    <p>Weight: {product.weight} gr</p>
+                    <p>Units per box: {product.units_per_box}</p>
+                </div>
+                {/* <i class="fas fa-info"></i> */}
+                <i class="fas fa-info-circle"></i>
+            </div>
             <div className="choose-quantity">
                 <p>Choose quantity:</p>
                 <label forhtml="quantity"><input type="number" className="pcs" placeholder="0" min="0" max="24" id={product.id} name={product.name} price={product.price}></input></label>
