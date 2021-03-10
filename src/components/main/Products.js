@@ -30,7 +30,8 @@ const Products = () => {
     <div>
         <div className={ `product-photo ${product.link}` }><p>{product.name}</p></div>
             <div className="product-info"><p>{product.category_description}</p>
-          <div className="more-btn"><NavLink to={ `/shop/${product.link}` } target="_blank">More</NavLink></div></div>
+            <div className="more-btn"><NavLink to={ `/shop/${product.link}` } target="_blank">More</NavLink></div>
+        </div>
     </div>
   ));
 

@@ -43,12 +43,12 @@ const Shop = () => {
     };
 
     const addToCartHandler = (e) => {
-        let id = e.target.id;
-        let name = productsData[e.target.id].name;
-        let price = productsData[e.target.id].price;
+        let id = e.currentTarget.id;
+        let name = productsData[id - 1].name; //items it productsData table are counted from 0
+        let price = productsData[id - 1].price;
         let quantity = e.currentTarget.previousSibling.previousSibling.firstChild.value;
-        
-        let isInCart = cartProductsList.find(item => item.id === e.target.id);
+
+        let isInCart = cartProductsList.find(item => item.id === id);
 
         if(quantity > 0) {
             setCartProductsList([...cartProductsList, {...isInCart, id, name, price, quantity}]);

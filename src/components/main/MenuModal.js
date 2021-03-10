@@ -24,7 +24,7 @@ const MenuModal = ( {navMenuState, closeMenuHandler}) => {
                         <li><Link to="recommendations" onClick={closeMenuHandler} smooth={true}>Recommendations</Link></li>
                         <li><Link to="career" onClick={closeMenuHandler} smooth={true}>Career</Link></li>
                         <li><Link to="contact" onClick={closeMenuHandler} smooth={true}>Contact</Link></li>
-                        <li><NavLink to="/shop" target="_blank" onClick={closeMenuHandler}>E-Shop</NavLink></li>
+                        <li><NavLink to="/shop/all" target="_blank" onClick={closeMenuHandler}>E-Shop</NavLink></li>
                     </ul>
                 </div>
             </nav> : null } 

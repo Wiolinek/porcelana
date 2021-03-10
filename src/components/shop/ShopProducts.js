@@ -25,8 +25,10 @@ const ShopProducts = (props) => {
                 <img src={product.image} alt={product.alt_text}></img>
                 <div className="product-details">
                     <p>Measures: {product.measures} cm</p>
-                    <p>Weight: {product.weight} gr</p>
+                    <p>Weight: {product.weight} g</p>
                     <p>Units per box: {product.units_per_box}</p>
+                    <p>Dishwasher-safe: {product.dishwasher_safe}</p>
+                    <p>Suitable for microwaves: {product.suitable_for_microwaves}</p>
                 </div>
                 {/* <i class="fas fa-info"></i> */}
                 <i class="fas fa-info-circle"></i>
