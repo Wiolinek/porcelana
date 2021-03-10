@@ -41,16 +41,16 @@ const Career = () => {
         })
     }, []);
     
-    const [state, setState] = useState(false);
+    const [careerModalState, setCareerModalState] = useState(false);
     const [offer, setOffer] = useState();
 
     const careerWrapper = useRef(null);
     const jointBtnAnimation = useRef(null);
 
-    const closeModalHandler = () => setState(false);
+    const closeModalHandler = () => setCareerModalState(false);
 
     const openModalHandler = (offer) => {
-        setState(true);
+        setCareerModalState(true);
         setOffer(offer.id)
     }
 
@@ -82,8 +82,8 @@ const Career = () => {
                     </table>
                 </div>
                 <div className="join" ref={jointBtnAnimation}><Link to="contact" smooth={true}>Join us!</Link></div>
-                { state ? <div className="back" onClick={closeModalHandler}></div> : null }
-                <CareerModal state={state} closeModalHandler={closeModalHandler} jobOffersData={jobOffersData} offer={offer}/>
+                { careerModalState ? <div className="career-modal-back" onClick={closeModalHandler}></div> : null }
+                <CareerModal careerModalState={careerModalState} closeModalHandler={closeModalHandler} jobOffersData={jobOffersData} offer={offer}/>
             </div>
     )
 }

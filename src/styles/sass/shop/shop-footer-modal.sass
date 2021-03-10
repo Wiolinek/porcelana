@@ -1,0 +1,29 @@
+@import '../variables.sass'
+@import '../mixins.sass'
+
+.shop-footer-modal-wrapper
+  margin: 0 auto
+  display: none
+  position: fixed
+  top: 3vh
+  left: 10vw
+  background-color: $white-color
+  height: 94vh
+  width: 80%
+  padding: 0 2vw
+  overflow: auto
+  font-size: 19px
+  z-index: 30
+        /* transition: all 1.3s ease; */
+  display: flex
+  flex-direction: column
+  & .close-btn
+    @include button
+    color: $white-color
+    font-size: 17px
+    margin: 3vh 3vh 1vh auto
+    width: 70px
+    height: 70px
+    &:hover
+      @include hover-button
+      background-color: $white-color

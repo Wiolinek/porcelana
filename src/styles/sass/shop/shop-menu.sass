@@ -2,12 +2,11 @@
 @import '../mixins.sass'
 
 .shop-header
-    min-height: 30vh
+    min-height: 28vh
     width: 100%
     background-color: $white-color
     background-image: url('../../../images/plate_5_back.png')
     filter: grayscale(100%)
-    // background-blend-mode: multiply
     background-repeat: no-repeat
     background-size: cover
     background-position: center center
@@ -57,7 +56,7 @@
             @include border-logo-style
             &:hover
                 cursor: pointer
-                background-color: transparent
+                background-color: $white-color
                 & p
                     color: black
             & a
@@ -65,6 +64,8 @@
             & .logo-name
                 @include logo-name-style
                 color: $white-color
+                &:hover
+                background-color: transparent
     & .shop-menu
         width: 100%
         background-color: black

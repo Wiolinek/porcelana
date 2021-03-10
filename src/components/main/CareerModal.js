@@ -4,7 +4,7 @@ import { Link } from 'react-scroll';
 import '../../styles/sass/main/career-modal.sass';
 // import {Link} from 'react-router-dom';
 
-const CareerModal = ({ state, offer, closeModalHandler, jobOffersData }) => {
+const CareerModal = ({ careerModalState, offer, closeModalHandler, jobOffersData }) => {
     
     //find which object in array was clicked and return it
     let index = jobOffersData.find(({ id }) => id === offer);
@@ -14,8 +14,8 @@ const CareerModal = ({ state, offer, closeModalHandler, jobOffersData }) => {
     let { name, location, department, employment_type, position_description, position_requirements, personal_requirements, what_we_offer } = index; //elements selected clicked object in jobOffersData array
 
         return (
-            <div className="modal-wrapper" style={{
-                display: state ? 'block' : 'none',
+            <div className="career-modal-wrapper" style={{
+                display: careerModalState ? 'block' : 'none',
                 // transform: state ? 'translateY(0vh)' : 'translateY(-100vh)',
             }}>
                 <button className="close-btn" onClick={closeModalHandler}>Close</button>
@@ -31,7 +31,7 @@ const CareerModal = ({ state, offer, closeModalHandler, jobOffersData }) => {
                 </div>
                 <div className="send-cv-btn"><Link to="contact" smooth={true} onClick={closeModalHandler}>Send CV</Link></div>
             </div>
-    )
+        )
 }
 
 export default CareerModal;

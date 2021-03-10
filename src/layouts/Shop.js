@@ -80,7 +80,7 @@ const Shop = () => {
             <aside className="cart">
                 <ShopCart cartProductsList={cartProductsList} setCartProductsList={setCartProductsList} />
             </aside>
-            <footer className="shop-footer">
+            <footer>
                 <ShopFooter />
             </footer>
         </section>

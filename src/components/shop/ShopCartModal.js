@@ -45,7 +45,7 @@ const ShopCartModal = ( {cartModalState, closeCartModalHandler, cartProductsList
         <div className="cart-modal" style={{
             display: cartModalState ? 'block' : 'none',
             // transform: state ? 'translateY(0vh)' : 'translateY(-100vh)',
-        }}>
+            }}>
             <button className="close-btn" onClick={closeCartModalHandler}>Close</button>
             <div>
                 <h2>Your order</h2>
@@ -53,12 +53,12 @@ const ShopCartModal = ( {cartModalState, closeCartModalHandler, cartProductsList
                 <div>Total amount: {totalAmount.toFixed(2)}</div>
                 <h2>Delivery option:</h2>
                 <form className="delivery-options">
-                    <input type="radio" id="kurier" name="delivery_option" value="kurier"></input>
-                    <label htmlFor="kurier">DPD Courier</label>
-                    <input type="radio" id="poczta" name="delivery_option" value="poczta"></input>
-                    <label htmlFor="poczta">DHL Courier</label>
-                    <input type="radio" id="odbior_osobisty" name="delivery_option" value="odbior_osobisty"></input>
-                    <label htmlFor="odbior_osobisty">Pickpoint</label>
+                    <input type="radio" id="dpd_courier" name="delivery_option" value="dpd_courier"></input>
+                    <label htmlFor="dpd_courier">DPD Courier</label>
+                    <input type="radio" id="dhl_courier" name="delivery_option" value="dhl_courier"></input>
+                    <label htmlFor="dhl_courier">DHL Courier</label>
+                    <input type="radio" id="pickpoint" name="delivery_option" value="pickpoint"></input>
+                    <label htmlFor="pickpoint">Pickpoint</label>
                 </form>
                 <div>To pay: {totalAmount.toFixed(2)}</div>
             </div>

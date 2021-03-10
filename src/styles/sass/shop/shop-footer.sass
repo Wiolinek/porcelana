@@ -1,19 +1,36 @@
 @import '../variables.sass'
 @import '../mixins.sass'
-    
+
 .shop-footer
-    min-height: 20vh
     background-color: black
     color: $white-color
-    font-size: .9rem
     min-height: 8vh
     display: flex
-    justify-content: center
+    justify-content: space-around
     letter-spacing: .03em
-    & div
+    & .btn-container
+        display: flex
+        flex-direction: column
+        width: 25%
+        justify-content: space-around
         align-items: center
-        width: 80%
-        & p
-            text-align: center
+        margin: 0.3em
+        & button
+            color: $white-color
+            font-family: 'Cinzel', serif
+            font-size: .9rem
+            background-color: transparent
             padding: .2em
-            margin: .4em
+            width: 75%
+            outline: none
+            border: none
+            &:hover
+                cursor: pointer
+    .shop-footer-back
+        // background-color: rgba(2, 2, 2, .7)
+        backdrop-filter: $blur-effect
+        height: 100%
+        width: 100%
+        position: fixed
+        left: 0
+        top: 0
