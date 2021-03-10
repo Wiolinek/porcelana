@@ -9,7 +9,7 @@ import axios from "axios";
 
 const ShopMenu = (props) => {
 
-    const [menuOptions, setShopMenuOptions] = useState([]);
+    const [shopMenuOptions, setShopMenuOptions] = useState([]);
     const { categoryLink } = useParams();
 
     useEffect(() => {
@@ -23,7 +23,7 @@ const ShopMenu = (props) => {
 
     const {filterProductHandler, searchProductHandler, searchText } = props;
 
-    const shopMenu = menuOptions.map(item =>
+    const shopMenu = shopMenuOptions.map(item =>
         <Link to={ `/shop/${item.link}` } className={categoryLink === item.link ? "active" : "not-active"}><button className="shop-menu-btn" key={item.id} onClick={filterProductHandler} value={item.name}>{item.name}</button></Link>)
 
     return (

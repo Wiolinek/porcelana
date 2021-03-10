@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import {animateScroll as scroll } from 'react-scroll'
 
 import Navigation from "../components/main/Navigation";
 import Home from "../components/main/Home";
@@ -10,6 +9,8 @@ import Career from "../components/main/Career";
 import Footer from "../components/main/Footer";
 
 import '../styles/sass/main/main.sass';
+
+import {animateScroll as scroll } from 'react-scroll';
 
 
 const Main = () => {

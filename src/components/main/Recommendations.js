@@ -23,6 +23,12 @@ const Recommendations = () => {
             });
     }, []);
 
+
+    const opinions = opinionsData.map(opinion =>
+        <div key={opinion.id}><p>{opinion.text}</p><p>{opinion.author}</p></div>
+    )
+    
+
     useEffect(() => {
         gsap.fromTo(opinionsWrapper.current.children, {y: '+=170', scale: 1.4, autoAlpha: 0}, {y: 0, scale: 1, autoAlpha: 1, stagger: .5,
             scrollTrigger: {
@@ -38,10 +44,6 @@ const Recommendations = () => {
             }
         })
     }, [opinionsData]);
-
-    const opinions = opinionsData.map(opinion =>
-        <div key={opinion.id}><p>{opinion.text}</p><p>{opinion.author}</p></div>
-    )
 
     return (
             <>
