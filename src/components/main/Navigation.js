@@ -4,6 +4,8 @@ import { NavLink } from "react-router-dom";
 
 import '../../styles/sass/main/navigation.sass';
 
+import {animateScroll as scroll } from 'react-scroll';
+
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -14,6 +16,10 @@ const Navigation = () => {
 
     const logoAnimation = useRef(null);
     const navigationBarAnimation = useRef(null);
+    
+    const scrollToTop = () => {
+        scroll.scrollToTop();
+    };
 
     useEffect(() => {
 
@@ -41,8 +47,8 @@ const Navigation = () => {
                 <li><Link to="contact" smooth={true}>Contact</Link></li>
                 <li><NavLink to="/shop/all" target="_blank">E-Shop</NavLink></li>
             </ul>
-            <div className="logo" ref={logoAnimation}>
-                <Link to="main" className="logo-border">
+            <div className="logo" ref={logoAnimation} >
+                <Link onClick={scrollToTop} className="logo-border">
                     <div smooth={true}>
                         <p className="logo-name">ICM Inc.</p> 
                     </div>
