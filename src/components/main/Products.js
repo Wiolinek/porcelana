@@ -1,7 +1,9 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { NavLink } from "react-router-dom";
 
 import '../../styles/sass/main/products.sass';
+
+import axios from "axios";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -10,63 +12,54 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 const Products = () => {
+  
+  const [productsOptions, setProductsOptions] = useState([]);
+  const productsOptionsWrapper = useRef(null);
 
-  const productsWrapper = useRef(null);
+  useEffect(() => {
 
-    useEffect(() => {
+      axios.get(`http://localhost:3030/categories`)
+          .then(response => {
+          const categories = response.data;
+          setProductsOptions(categories);
+          })
+  }, []);
 
-        gsap.fromTo(productsWrapper.current.children, {y: '+=150', scale: 1.5, autoAlpha: 0}, {y: 0, autoAlpha: 1, scale: 1, stagger: .5,
-          scrollTrigger: {
-            trigger: productsWrapper.current,
-            start:'top 100%',
-            end:'bottom bottom',
-            scrub: 1,
-            // pin: true,
-            //events: onEnter onLeave onEnterBack onLeaveBack
-            toggleActions:'play restart complete reverse',
-            //options: play plause resume reset restart complete reverse none
-            // markers:true,
-          }
-        })
-    }, []);
+
+  const productsOptionsToDisplay = productsOptions.map(product => product.name !== "All" && (
+    <div>
+        <div className={ `product-photo ${product.link}` }><p>{product.name}</p></div>
+            <div className="product-info"><p>{product.category_description}</p>
+          <div className="more-btn"><NavLink to={ `/shop/${product.link}` } target="_blank">More</NavLink></div></div>
+    </div>
+  ));
+
+
+  useEffect(() => {
+
+    gsap.fromTo(productsOptionsWrapper.current.children, {y: '+=150', scale: 1.5, autoAlpha: 0}, {y: 0, autoAlpha: 1, scale: 1, stagger: .5,
+      scrollTrigger: {
+        trigger: productsOptionsWrapper.current,
+        start:'top 100%',
+        end:'bottom bottom',
+        scrub: 1,
+          // pin: true,
+          //events: onEnter onLeave onEnterBack onLeaveBack
+        toggleActions:'play restart complete reverse',
+          //options: play plause resume reset restart complete reverse none
+          // markers:true,
+      }
+    })
+  }, [productsOptions]);
 
 
     return (
-            <div>
+            <>
                 <h1>Products</h1>
-                <div className="products" ref={productsWrapper}>
-                    <div>
-                      <div className="product-photo mugs"><p>Mugs</p></div>
-                      <div className="product-info"><p>dcewvgavc Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nobis dolorum nulla ad mollitia temporibus repudiandae eaque ducimus laboriosam itaque impedit nam quas quisquam in maiores necessitatibus numquam eum corporis molestias, quasi veritatis. Corporis praesentium voluptatem accusantium enim laborum aperiam, debitis aut facere ut labore! Totam possimus nemo esse hic?</p>
-                      <div className="more-btn"><NavLink to="/shop/mugs" target="_blank">More</NavLink></div></div>
-                    </div>
-                    <div>
-                      <div className="product-photo cups"><p>Cups</p></div>
-                      <div className="product-info"><p>dcewvgavc Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nobis dolorum nulla ad mollitia temporibus repudiandae eaque ducimus laboriosam itaque impedit nam quas quisquam in maiores necessitatibus numquam eum corporis molestias, quasi veritatis. Corporis praesentium voluptatem accusantium enim laborum aperiam, debitis aut facere ut labore! Totam possimus nemo esse hic?</p>
-                      <div className="more-btn"><NavLink to="/shop/cups" target="_blank">More</NavLink></div></div>
-                    </div>
-                    <div>
-                      <div className="product-photo pots"><p>Coffee Pots</p></div>
-                      <div className="product-info"><p>dcewvgavc Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nobis dolorum nulla ad mollitia temporibus repudiandae eaque ducimus laboriosam itaque impedit nam quas quisquam in maiores necessitatibus numquam eum corporis molestias, quasi veritatis. Corporis praesentium voluptatem accusantium enim laborum aperiam, debitis aut facere ut labore! Totam possimus nemo esse hic?</p>
-                      <div className="more-btn"><NavLink to="/shop/tea-pots" target="_blank">More</NavLink></div></div>
-                    </div>
-                    <div>
-                      <div className="product-photo plates"><p>Plates</p></div>
-                      <div className="product-info"><p>dcewvgavc Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nobis dolorum nulla ad mollitia temporibus repudiandae eaque ducimus laboriosam itaque impedit nam quas quisquam in maiores necessitatibus numquam eum corporis molestias, quasi veritatis. Corporis praesentium voluptatem accusantium enim laborum aperiam, debitis aut facere ut labore! Totam possimus nemo esse hic?</p>
-                      <div className="more-btn"><NavLink to="/shop/plates" target="_blank">More</NavLink></div></div>
-                    </div>
-                    <div>
-                      <div className="product-photo bowls"><p>Bowls</p></div>
-                      <div className="product-info"><p>dcewvgavc Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nobis dolorum nulla ad mollitia temporibus repudiandae eaque ducimus laboriosam itaque impedit nam quas quisquam in maiores necessitatibus numquam eum corporis molestias, quasi veritatis. Corporis praesentium voluptatem accusantium enim laborum aperiam, debitis aut facere ut labore! Totam possimus nemo esse hic?</p>
-                      <div className="more-btn"><NavLink to="/shop/bowls" target="_blank">More</NavLink></div></div>
-                    </div>
-                    <div>
-                      <div className="product-photo vases"><p>Vases</p></div>
-                      <div className="product-info"><p>dcewvgavc Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nobis dolorum nulla ad mollitia temporibus repudiandae eaque ducimus laboriosam itaque impedit nam quas quisquam in maiores necessitatibus numquam eum corporis molestias, quasi veritatis. Corporis praesentium voluptatem accusantium enim laborum aperiam, debitis aut facere ut labore! Totam possimus nemo esse hic?</p>
-                      <div className="more-btn"><NavLink to="/shop/vases" target="_blank">More</NavLink></div></div>
-                    </div>
+                <div className="products" ref={productsOptionsWrapper}>
+                  {productsOptionsToDisplay}
                 </div>
-            </div>
+            </>
     )
 }
 
