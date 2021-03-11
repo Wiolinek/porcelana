@@ -27,7 +27,7 @@ const Navigation = () => {
 
         tl
             .from(logoAnimation.current, {scale: 0, delay: 1.3})
-            .from(navigationBarAnimation.current.children, {y: "-100", autoAlpha: 0,
+            .to(navigationBarAnimation.current.children, {y: "0", autoAlpha: 1,
                 stagger: {
                     from: "start",
                     axis: "x",
