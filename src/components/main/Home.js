@@ -46,8 +46,10 @@ const Home = () => {
                 //   markers:true,
                 }
             })
-            .fromTo(homeWrapper.current.children, {autoAlpha: 0}, {autoAlpha: 1, duration: 3, delay: .7})
-            .from(asideWrapper.current.children, {rotation: 60, x: 100, stagger: .3, delay: .7})
+            .to(homeWrapper.current, {opacity: 1, duration: 3, delay: .7})
+            .to(homeWrapper.current.firstChild, {x: '0', duration: 2.5, delay: -3})
+            .to(homeWrapper.current.lastChild, {x: '0', duration: 2.5, delay: -3})
+            .from(asideWrapper.current.children, {rotation: 60, x: '100', stagger: .3, delay: .7})
             .from(arrowBtn.current, {autoAlpha: 0, y: '+100', duration: 2, delay: .2})
             .fromTo(arrowBtn.current, {y: '0'}, {y: '+20', ease: 'power1.inOut', repeat: Infinity, yoyo: true})
       
@@ -59,7 +61,8 @@ const Home = () => {
             <MenuModal navMenuState={navMenuState} closeMenuHandler={closeMenuHandler}/>
             <div className="main-page">
                 <div ref={homeWrapper}>
-                    <p>Our design <br/>Your <span>style</span></p>
+                    <p>Our design</p>
+                    <p>Your <span>style</span></p>
                 </div>
                 <Link to="about" smooth={true}><i className="fas fa-angle-double-down" ref={arrowBtn}></i></Link>
             </div>
