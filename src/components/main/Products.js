@@ -15,6 +15,7 @@ const Products = () => {
   
   const [productsOptions, setProductsOptions] = useState([]);
   const productsOptionsWrapper = useRef(null);
+  console.log(productsOptions)
 
   useEffect(() => {
 
@@ -27,7 +28,7 @@ const Products = () => {
 
 
   const productsOptionsToDisplay = productsOptions.map(product => product.name !== "All" && (
-    <div>
+    <div key={product.id}>
         <div className={ `product-photo ${product.link}` }><p>{product.name}</p></div>
             <div className="product-info"><p>{product.category_description}</p>
             <div className="more-btn"><NavLink to={ `/shop/${product.link}` } target="_blank">More</NavLink></div>

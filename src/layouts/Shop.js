@@ -6,6 +6,7 @@ import ShopProducts from "../components/shop/ShopProducts";
 import ShopMenu from "../components/shop/ShopMenu";
 import ShopCart from "../components/shop/ShopCart";
 import ShopFooter from "../components/shop/ShopFooter";
+import ShopOnLoader from "../components/shop/ShopOnLoader";
 
 import '../styles/sass/shop/shop.sass';
 
@@ -24,10 +25,10 @@ const Shop = () => {
             })
     }, []);
 
+    console.log(productsData);
+
     const [searchText, setSearchText] = useState("");
-    const [optionSelected, setOptionSelected] = useState('All');
-    console.log(optionSelected);
-    console.log(categoryLink);
+    const [optionSelected, setOptionSelected] = useState(categoryLink); //ustawić default na 1
 
     const [cartProductsList, setCartProductsList] = useState([]);
 
@@ -35,11 +36,11 @@ const Shop = () => {
  
     const searchProductHandler = (e) => {
         setSearchText(e.target.value);
-        setOptionSelected("All");
+        setOptionSelected(1); //zmienić na 1
     };
 
     const filterProductHandler = (e) => {
-        setOptionSelected(e.target.value);
+        setOptionSelected(e.target.value); //daje id klikniętej kategorii
     };
 
     const addToCartHandler = (e) => {
@@ -69,13 +70,14 @@ const Shop = () => {
         }
     }
 
+
     return (
         <section className="shop">
             <header className="shop-header">
                 <ShopMenu searchProductHandler={searchProductHandler} filterProductHandler={filterProductHandler} optionSelected={optionSelected}/>
             </header>
             <main className="shop-products">
-                <ShopProducts productsData={productsData} searchText={searchText} optionSelected={optionSelected} addToCartHandler={addToCartHandler} warning={warning}/>
+                {productsData ? <ShopProducts productsData={productsData} searchText={searchText} optionSelected={optionSelected} addToCartHandler={addToCartHandler} warning={warning}/> : <ShopOnLoader />}
             </main>
             <aside className="cart">
                 <ShopCart cartProductsList={cartProductsList} setCartProductsList={setCartProductsList} />

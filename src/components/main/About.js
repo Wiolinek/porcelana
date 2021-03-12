@@ -45,11 +45,11 @@ const About = () => {
          </section>
          <section className="numbers">
          {/* <i class="fas fa-coffee"></i> */}
-           <div><i class="fas fa-poll"></i><p>80 000 000</p><p>Manufactured Pieces</p></div>
-           <div><i class="fas fa-truck"></i><p>325</p><p>Distributors</p></div>
-           <div><i class="fas fa-users"></i><p>127</p><p>Employees</p></div>
-           <div><i class="fas fa-globe"></i><p>25</p><p>Export countries</p></div>
-           <div><i class="fas fa-shield-alt"></i><p>21</p><p>Years of experience</p></div>
+           <div><i className="fas fa-poll"></i><p>80 000 000</p><p>Manufactured Pieces</p></div>
+           <div><i className="fas fa-truck"></i><p>325</p><p>Distributors</p></div>
+           <div><i className="fas fa-users"></i><p>127</p><p>Employees</p></div>
+           <div><i className="fas fa-globe"></i><p>25</p><p>Export countries</p></div>
+           <div><i className="fas fa-shield-alt"></i><p>21</p><p>Years of experience</p></div>
          </section>
       </>
     )
