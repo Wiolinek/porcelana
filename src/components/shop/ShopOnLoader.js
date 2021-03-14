@@ -7,9 +7,10 @@ const ShopOnLoader = () => {
 
 
     return (
-        <>
-            <h1>LOADING</h1>
-        </>
+        <div className="loading">
+            <i class="fas fa-spinner"></i>
+            <p>LOADING</p>
+        </div>
     )
 
 }
