@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react';
 
 import { useParams } from "react-router-dom";
 
-import ShopProducts from "../components/shop/ShopProducts";
+import ShopProductsList from "../components/shop/ShopProductsList";
 import ShopMenu from "../components/shop/ShopMenu";
 import ShopCart from "../components/shop/ShopCart";
 import ShopFooter from "../components/shop/ShopFooter";
-import ShopOnLoader from "../components/shop/ShopOnLoader";
+
 
 import '../styles/sass/shop/shop.sass';
 
@@ -15,32 +15,48 @@ import axios from "axios";
 const Shop = () => {
 
     const [productsData, setProductsData] = useState([]);
+    const [shopMenuOptions, setShopMenuOptions] = useState([]);
     const { categoryLink } = useParams();
+    const [searchText, setSearchText] = useState("");
+    const [optionSelected, setOptionSelected] = useState(1);
+    const [cartProductsList, setCartProductsList] = useState([]);
+    const [warning, setWarning] = useState(false);
 
     useEffect(() => {
-        axios.get(`http://localhost:3030/products`)
+        setTimeout(() => {
+            axios.get(`http://localhost:3030/products`)
             .then(response => {
-            const products = response.data;
+            let products = response.data;
+            products.map(product => (product.categories = product.categories.split(',').map(item => parseInt(item))));
             setProductsData(products);
+            })
+        }, 3000)
+        
+        axios.get(`http://localhost:3030/categories`)
+            .then(response => {
+            const categories = response.data;
+            setShopMenuOptions(categories);
+                  
             })
     }, []);
 
-    console.log(productsData);
+    useEffect(() => {
 
-    const [searchText, setSearchText] = useState("");
-    const [optionSelected, setOptionSelected] = useState(categoryLink); //ustawić default na 1
+        let categoryId = shopMenuOptions.filter(option => option.link === categoryLink)
 
-    const [cartProductsList, setCartProductsList] = useState([]);
+        if(categoryId[0]) {
+        setOptionSelected(categoryId[0].id);
+        }
 
-    const [warning, setWarning] = useState(false);
- 
+    }, [shopMenuOptions, categoryLink]);
+
     const searchProductHandler = (e) => {
         setSearchText(e.target.value);
-        setOptionSelected(1); //zmienić na 1
+        setOptionSelected(1);
     };
 
     const filterProductHandler = (e) => {
-        setOptionSelected(e.target.value); //daje id klikniętej kategorii
+        setOptionSelected(e.target.value);
     };
 
     const addToCartHandler = (e) => {
@@ -74,10 +90,10 @@ const Shop = () => {
     return (
         <section className="shop">
             <header className="shop-header">
-                <ShopMenu searchProductHandler={searchProductHandler} filterProductHandler={filterProductHandler} optionSelected={optionSelected}/>
+                <ShopMenu shopMenuOptions={shopMenuOptions} searchProductHandler={searchProductHandler} filterProductHandler={filterProductHandler} optionSelected={optionSelected}/>
             </header>
             <main className="shop-products">
-                {productsData ? <ShopProducts productsData={productsData} searchText={searchText} optionSelected={optionSelected} addToCartHandler={addToCartHandler} warning={warning}/> : <ShopOnLoader />}
+                <ShopProductsList productsData={productsData} searchText={searchText} optionSelected={optionSelected} addToCartHandler={addToCartHandler} warning={warning}/>
             </main>
             <aside className="cart">
                 <ShopCart cartProductsList={cartProductsList} setCartProductsList={setCartProductsList} />
