@@ -6,8 +6,9 @@
     color: $white-color
     min-height: 8vh
     display: flex
-    justify-content: space-around
+    justify-content: space-between
     letter-spacing: .03em
+    align-items: space-between
     & .btn-container
         display: flex
         flex-direction: column
@@ -24,6 +25,12 @@
             width: 75%
             outline: none
             border: none
+            &:hover
+                cursor: pointer
+        & a
+            color: $white-color
+            font-size: .9rem
+            text-decoration: none
             &:hover
                 cursor: pointer
     .shop-footer-back

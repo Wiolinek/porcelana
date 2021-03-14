@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import { NavLink } from "react-router-dom";
+
 import ShopFooterModal from './ShopFooterModal';
 
 import '../../styles/sass/shop/shop-footer.sass';
@@ -7,7 +9,7 @@ import '../../styles/sass/shop/shop-footer.sass';
 
 const ShopFooter = () => {
 
-    const [shopFooterModalState, setShopFooterModalState ] = useState(false)
+    const [shopFooterModalState, setShopFooterModalState] = useState(false);
 
     const openShopFooterModalHandler = () => {
         setShopFooterModalState(true);
@@ -20,11 +22,11 @@ const ShopFooter = () => {
     return (
         <div className="shop-footer">
             <div className="btn-container">
-                <button shopFooterModalState={shopFooterModalState} onClick={openShopFooterModalHandler}>About Us</button>
-                <button shopFooterModalState={shopFooterModalState} onClick={openShopFooterModalHandler}>Contact Us</button>
+                <NavLink to="/" exact target="_blank">About Us</NavLink>
+                <NavLink to="/" exact target="_blank">Contact Us</NavLink>
             </div>
             <div className="btn-container">
-                <button shopFooterModalState={shopFooterModalState} onClick={openShopFooterModalHandler}>About our products</button>
+                <NavLink to="/" exact target="_blank">About our products</NavLink>
                 <button shopFooterModalState={shopFooterModalState} onClick={openShopFooterModalHandler}>Terms Of Use</button>
             </div>
             <div className="btn-container">
