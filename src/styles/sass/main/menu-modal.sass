@@ -7,9 +7,11 @@
     height: 100%
     width: 100%
     position: fixed
-    left: 0
+    right: 0
     top: 0
     backdrop-filter: $blur-effect
+    transition: clip-path 1.5s ease-in-out
+    // -webkit-clip-path: circle(100px at 50% 50%)
     & .menu-logo-container
         display: flex
         align-items: center
@@ -55,5 +57,6 @@
                 &:first-child
                     align-self: flex-end
                     font-size: 38px
+                    margin: 0
                     &:hover
                         color: red
