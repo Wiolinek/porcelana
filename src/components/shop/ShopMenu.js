@@ -1,30 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
-import { NavLink, Link, useParams } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import '../../styles/sass/shop/shop-menu.sass';
-
-import axios from "axios";
 
 
 const ShopMenu = (props) => {
 
-    const [shopMenuOptions, setShopMenuOptions] = useState([]);
-    const { categoryLink } = useParams();
+    const {shopMenuOptions, filterProductHandler, searchProductHandler, searchText, optionSelected } = props;
 
-    useEffect(() => {
-
-        axios.get(`http://localhost:3030/categories`)
-            .then(response => {
-            const categories = response.data;
-            setShopMenuOptions(categories);
-            })
-    }, []);
-
-    const {filterProductHandler, searchProductHandler, searchText } = props;
-
-    const shopMenu = shopMenuOptions.map(item =>
-        <Link to={ `/shop/${item.link}` } className={categoryLink === item.link ? "active" : "not-active"}><button className="shop-menu-btn" key={item.id} onClick={filterProductHandler} value={item.name}>{item.name}</button></Link>)
+    const shopMenu = shopMenuOptions.map(option =>
+        <NavLink key={option.id} to={ `/shop/${option.link}` } className={optionSelected * 1 === option.id ? "active" : "not-active"}><button className="shop-menu-btn" onClick={filterProductHandler} value={option.id}>{option.name}</button></NavLink>)
 
     return (
         <>
