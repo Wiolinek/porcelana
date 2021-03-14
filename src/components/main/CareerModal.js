@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { Link } from 'react-scroll';
 
 import '../../styles/sass/main/career-modal.sass';
@@ -16,6 +17,7 @@ const CareerModal = ({ careerModalState, offer, closeModalHandler, jobOffersData
         return (
             <div className="career-modal-wrapper" style={{
                 display: careerModalState ? 'block' : 'none',
+                // transform: careerModalState ? 'translateY(0px)' : 'translateY(-100px)'
                 // transform: state ? 'translateY(0vh)' : 'translateY(-100vh)',
             }}>
                 <button className="close-btn" onClick={closeModalHandler}>Close</button>

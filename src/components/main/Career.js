@@ -50,6 +50,7 @@ const Career = () => {
     const closeModalHandler = () => setCareerModalState(false);
 
     const openModalHandler = (offer) => {
+        // document.body.style.overflow = "hidden";
         setCareerModalState(true);
         setOffer(offer.id)
     }
