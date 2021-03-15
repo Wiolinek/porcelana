@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import '../../styles/sass/shop/shop-cart-modal.sass';
 
@@ -8,12 +8,12 @@ const ShopCartModal = ( {cartModalState, closeCartModalHandler, cartProductsList
     const pickpoint = 0.00;
     const dhl_courier = 7.99;
     const dpd_courier = 4.99;
+    const [deliveryOptionSelected, setDeliveryOptionSelected] = useState(0.00);
 
     const increaseQuantity = (e) => { //check which product has been clicked and change quantity + 1 in order and in cart
         
         if (e.currentTarget.previousSibling.dataset.quantity < 24) { //data-quantity from p element
-            setCartProductsList(cartProductsList.map(item => item.id === e.target.id ? {...item, quantity: item.quantity * 1 + 1} : item));
-           
+            setCartProductsList(cartProductsList.map(item => item.id === e.target.id ? {...item, quantity: item.quantity * 1 + 1} : item)); 
         } else {
             setCartProductsList(cartProductsList.map(item => item.id === e.target.id && item));
         }
@@ -27,9 +27,11 @@ const ShopCartModal = ( {cartModalState, closeCartModalHandler, cartProductsList
         setCartProductsList(cartProductsList.filter(item => item.id !== e.target.id && cartProductsList));
     }
 
-    const addDeliveryCostHandler = (e) => {
-        setAmountToPay(totalAmount + e.currentTarget.dataset.price * 1);
+    const chooseDeliveryOptionHandler = (e) => {
+        setDeliveryOptionSelected(e.currentTarget.dataset.price * 1); //take price from clicked delivery option
     }
+
+    setAmountToPay(totalAmount + deliveryOptionSelected);
 
     const orderList = cartProductsList.map(product => 
         <li key={product.id} product={product}>
@@ -45,7 +47,8 @@ const ShopCartModal = ( {cartModalState, closeCartModalHandler, cartProductsList
                 <button className="delete"><i id={product.id} onClick={deleteProduct} className="fas fa-trash-alt"></i></button>
             </div>
         </li>);
-   
+
+
     return (
         <section className="cart-modal" style={{
             display: cartModalState ? 'block' : 'none',
@@ -55,16 +58,16 @@ const ShopCartModal = ( {cartModalState, closeCartModalHandler, cartProductsList
             <article className="order">
                 <h2>Your order</h2>
                 <ul className="order-list">{orderList}</ul>
-                <p>Total amount: {totalAmount.toFixed(2)}</p>
+                <p>Total amount: {totalAmount.toFixed(2)} EUR</p>
             </article>
             <article className="delivery">
                 <h2>Delivery options</h2>
                 <form className="delivery-options">
-                    <label><input type="radio" name="delivery_option" value="dpd_courier" data-price={pickpoint} defaultChecked onClick={addDeliveryCostHandler}/>Pickpoint: {pickpoint} EUR</label>
-                    <label><input type="radio" name="delivery_option" value="dhl_courier" data-price={dhl_courier} onClick={addDeliveryCostHandler}/>DHL Courier: {dhl_courier} EUR</label>
-                    <label><input type="radio" name="delivery_option" value="pickpoint"  data-price={dpd_courier} onClick={addDeliveryCostHandler}/>DPD Courier: {dpd_courier} EUR</label>
+                    <label><input type="radio" name="delivery_option" value="dpd_courier" data-price={pickpoint} defaultChecked onClick={chooseDeliveryOptionHandler}/>Pickpoint: {pickpoint} EUR</label>
+                    <label><input type="radio" name="delivery_option" value="dhl_courier" data-price={dhl_courier} onClick={chooseDeliveryOptionHandler}/>DHL Courier: {dhl_courier} EUR</label>
+                    <label><input type="radio" name="delivery_option" value="pickpoint"  data-price={dpd_courier} onClick={chooseDeliveryOptionHandler}/>DPD Courier: {dpd_courier} EUR</label>
                 </form>
-                <p>To pay: {amountToPay.toFixed(2)}</p>
+                <p>To pay: {amountToPay.toFixed(2)} EUR</p>
             </article>
             <article className="address">
                 <h2>Your address</h2>
