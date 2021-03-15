@@ -5,9 +5,10 @@ import ShopCartModal from './ShopCartModal';
 import '../../styles/sass/shop/shop-cart.sass';
 
 
-const ShopCart = ({ cartProductsList, setCartProductsList}) => {
+const ShopCart = ({ cartProductsList, setCartProductsList }) => {
 
     const [totalAmount, setTotalAmount] = useState(0);
+    const [amountToPay, setAmountToPay] = useState(0);
     const [cartModalState, setCartModalState] = useState(false);
 
     const listToDisplay = cartProductsList.map(product => 
@@ -40,7 +41,7 @@ const ShopCart = ({ cartProductsList, setCartProductsList}) => {
             </div>
             <button className="go-to-cart" onClick={openCartModalHandler}>Go to Cart</button>
             { cartModalState ? <div className="shop-cart-back" onClick={closeCartModalHandler}></div> : null }
-            <ShopCartModal cartProductsList={cartProductsList} setCartProductsList={setCartProductsList} cartModalState={cartModalState} closeCartModalHandler={closeCartModalHandler} totalAmount={totalAmount}/>
+            <ShopCartModal cartProductsList={cartProductsList} setCartProductsList={setCartProductsList} cartModalState={cartModalState} closeCartModalHandler={closeCartModalHandler} totalAmount={totalAmount} amountToPay={amountToPay} setAmountToPay={setAmountToPay}/>
         </>
     )
 }
