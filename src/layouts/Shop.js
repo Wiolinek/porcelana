@@ -7,7 +7,6 @@ import ShopMenu from "../components/shop/ShopMenu";
 import ShopCart from "../components/shop/ShopCart";
 import ShopFooter from "../components/shop/ShopFooter";
 
-
 import '../styles/sass/shop/shop.sass';
 
 import axios from "axios";
@@ -30,13 +29,12 @@ const Shop = () => {
             products.map(product => (product.categories = product.categories.split(',').map(item => parseInt(item))));
             setProductsData(products);
             })
-        }, 3000)
+        }, 700)
         
         axios.get(`http://localhost:3030/categories`)
             .then(response => {
             const categories = response.data;
-            setShopMenuOptions(categories);
-                  
+            setShopMenuOptions(categories);     
             })
     }, []);
 
@@ -57,6 +55,7 @@ const Shop = () => {
 
     const filterProductHandler = (e) => {
         setOptionSelected(e.target.value);
+        setSearchText(""); //POPRAWIĆ ZEROWANIE INPUTA SEARCH
     };
 
     const addToCartHandler = (e) => {

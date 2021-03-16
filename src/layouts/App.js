@@ -8,7 +8,8 @@ const App = () => {
 
     return (
       <Router>
-          <Route path="/" component={Main} exact>
+          {/* <Route path="/" component={Main} exact> */}
+          <Route path="/main/:sectionLink" component={Main}>
               <Main />
           </Route>
           <Route path="/shop/:categoryLink" component={Shop} target="_blank">
