@@ -1,7 +1,8 @@
 import React from 'react';
 
-import ShopOnLoader from "./ShopOnLoader";
 import ShopProduct from "./ShopProduct";
+import ShopOnLoader from "./ShopOnLoader";
+import ShopNoSearchResults from "./ShopNoSearchResults";
 
 import '../../styles/sass/shop/shop-products-list.sass';
 
@@ -24,11 +25,11 @@ const ShopProductsList = (props) => {
 
     return (
         <>
-            {productsList.length > 0 ?
-            (<ul className="products-list">
+            {productsList.length === 0 ? (searchText.length === 0 ? <ShopOnLoader /> : <ShopNoSearchResults />) : 
+            <ul className="products-list">
                 {productsList}
-            </ul>)
-            : <ShopOnLoader />}
+            </ul>
+            }
         </>
     )
 

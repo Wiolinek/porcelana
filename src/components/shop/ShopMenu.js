@@ -22,7 +22,7 @@ const ShopMenu = (props) => {
             </div>
             <div className="search-and-logo">
                 <div className="logo-border">
-                    <NavLink to="/" exact target="_blank">
+                    <NavLink to="/main/home" exact target="_blank">
                         <p className="logo-name">ICM Inc.</p>
                     </NavLink>
                 </div>

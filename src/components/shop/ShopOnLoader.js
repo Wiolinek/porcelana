@@ -8,8 +8,8 @@ const ShopOnLoader = () => {
 
     return (
         <div className="loading">
-            <i class="fas fa-spinner"></i>
-            <p>LOADING</p>
+            <i className="fas fa-spinner"></i>
+            <p>Loading</p>
         </div>
     )
 

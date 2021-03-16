@@ -15,7 +15,6 @@ const Products = () => {
   
   const [productsOptions, setProductsOptions] = useState([]);
   const productsOptionsWrapper = useRef(null);
-  console.log(productsOptions)
 
   useEffect(() => {
 
