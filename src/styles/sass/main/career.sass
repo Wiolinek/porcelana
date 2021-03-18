@@ -12,7 +12,7 @@
     line-height: 1.7
     word-spacing: 1.5px
     margin: 0 auto
-    & div p:first-child
+    & .offers p:first-child
         margin-top: 3vh
     & table, th, td
         width: 90%
@@ -29,24 +29,60 @@
         font-family: 'Cinzel', serif
         font-size: 21px
         outline: none
-    & .open-offer-modal-btn:hover
         cursor: pointer
     & .date, & .location
         width: 25%
     & .join
         @include button
-        margin: 50px 90px auto auto
-        font-size: 22px
+        margin: 5vh 10vw 10vh auto
+        font-size: 23px
         width: 115px
         height: 115px
-        right: 12vw
-        bottom: 10vw
-        padding: 5px
+        // padding: 5px
         border-radius: 50%
+        position: relative
+        animation: join-back-animation 4s infinite
+        @keyframes join-back-animation
+            0%
+                background-color: red
+            50%
+                background-color: black
+                // font-weight: bold
+            100%
+                background-color: red
         & a
             text-decoration: none
             color: $white-color
+            // animation: join-animation 5s infinite
+            // @keyframes join-animation
+            //         0%
+            //             color: $white-color
+            //         50%
+            //             color: rgba(255, 0, 0, 1)
+            //             // font-weight: bold
+            //         100%
+            //             color: $white-color
+            // &::before
+            //     content: ""
+            //     position: absolute
+            //     left: calc(50% - 63px)
+            //     top: calc(50% - 63px)
+            //     border-radius: 50%
+            //     // background-image: radial-gradient(white, red)
+            //     // border: 7px solid red
+            //     width: 110px
+            //     height: 110px
+            //     // z-index: -1
+            //     animation: border-animation 5s infinite
+            //     @keyframes border-animation
+            //         0%
+            //             border: 7px solid rgba(255, 0, 0, 0)
+            //         50%
+            //             border: 7px solid rgba(255, 0, 0, 1)
+            //         100%
+            //             border: 7px solid rgba(255, 0, 0, 0)
         &:hover a
-            color: black
+            // color: black
         &:hover
-            @include hover-button
+            // @include hover-button
+            cursor: pointer

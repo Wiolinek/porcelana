@@ -27,18 +27,18 @@ const Career = () => {
             }
         )
   
-        gsap.from(jointBtnAnimation.current, {scale: 0, delay: 1, ease: 'none',
-            scrollTrigger: {
-                trigger: jointBtnAnimation.current,
-                start:'top 90%',
-                end:'bottom 60%',
-                scrub: 1,
-                //events: onEnter onLeave onEnterBack onLeaveBack
-                toggleActions:'play none none reverse',
-                //options: play plause resume reset restart complete reverse nonex`
-                // markers:true,
-            }
-        })
+        // gsap.from(jointBtnAnimation.current, {scale: 0, delay: 1, ease: 'none',
+        //     scrollTrigger: {
+        //         trigger: jointBtnAnimation.current,
+        //         start:'top 90%',
+        //         end:'bottom 60%',
+        //         scrub: 1,
+        //         //events: onEnter onLeave onEnterBack onLeaveBack
+        //         toggleActions:'play none none reverse',
+        //         //options: play plause resume reset restart complete reverse nonex`
+        //         // markers:true,
+        //     }
+        // })
     }, []);
     
     const [careerModalState, setCareerModalState] = useState(false);
@@ -68,7 +68,7 @@ const Career = () => {
             <div className="career">
                 <h1>Career</h1>
                 <div className="offers" ref={careerWrapper}>
-                    <div><p>We are a constantly developing, stable and reliable company based on tradition and respect. Do you want to become part of our success? Check out our current job openings below and let us know about your experience and potential.</p></div>
+                    <p>We are a constantly developing, stable and reliable company based on tradition and respect. Do you want to become part of our success? Check out our current job openings below and let us know about your experience and potential.</p>
                     <table>
                         <thead>
                             <tr>
