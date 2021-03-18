@@ -7,6 +7,9 @@ const ShopProduct = (props) => {
 
     const { addToCartHandler, product, warning } = props;
 
+    console.log(product.id);
+    console.log(warning);
+
     return (
         <>
             <li className="product" key={product.id} product={product}>
@@ -30,7 +33,7 @@ const ShopProduct = (props) => {
                 <div className="choose-quantity">
                     <p>Choose quantity:</p>
                     <label forhtml="quantity"><input type="number" className="pcs" placeholder="0" min="0" max="24" id={product.id} name={product.name} price={product.price}></input></label>
-                    <div className="warning">{warning ? <p>You cannot order more than 24 pcs</p> : <p></p>}</div>
+                    <div className="warning">{warning === product.id ? <p>You cannot order more than 24 pcs</p> : <p></p>}</div>
                     <input type="button" className="add-to-cart" value="Add to cart" id={product.id} name={product.name} price={product.price} onClick={addToCartHandler}></input>
                 </div>
             </li>
