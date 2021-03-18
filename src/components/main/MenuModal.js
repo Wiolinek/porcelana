@@ -47,8 +47,9 @@ const MenuModal = () => {
                     </div>
                 </div>
                 <div className="navigation-menu-container">
+                    <i className="fas fa-times" onClick={closeMenuHandler}></i>
                     <ul className="navigation-menu">
-                        <li><i className="fas fa-times" onClick={closeMenuHandler}></i></li>
+                        
                         {/* <li><Link to="home" onClick={closeMenuHandler} smooth={true}>Home</Link></li>
                         <li><Link to="about"onClick={closeMenuHandler} smooth={true}>About Us</Link></li>
                         <li><Link to="products" onClick={closeMenuHandler} smooth={true}>Products</Link></li>

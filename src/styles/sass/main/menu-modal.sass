@@ -1,6 +1,22 @@
 @import '../variables.sass'
 @import '../mixins.sass'
 
+
+.show-menu
+    font-family: 'Cinzel', serif
+    align-self: flex-start
+    outline: none
+    border: none
+    padding: 10px
+    cursor: pointer
+    z-index: 1
+    background-color: transparent
+    &:hover .fa-bars
+        color: red
+    .fa-bars
+        color: black
+        font-size: 38px
+        transition: all .6s
 .nav-menu
     display: flex
     z-index: 100
@@ -10,17 +26,16 @@
     right: 0
     top: 0
     backdrop-filter: $blur-effect
-    transition: clip-path 1.5s ease-in-out
+    transition: clip-path 1.4s ease-in-out
     // -webkit-clip-path: circle(100px at 50% 50%)
     & .menu-logo-container
         display: flex
         align-items: center
         justify-content: center
-        height: 100%
-        width: 60%
+        height: 100vh
+        width: 60vw
         & .logo-border
             @include border-logo-style
-            position: static
             height: 18vw
             width: 18vw
             top: 0
@@ -29,34 +44,47 @@
                 @include logo-name-style
                 font-size: 60px
     & .navigation-menu-container
-        height: 100%
-        width: 40%
+        display: flex
+        flex-direction: column
+        height: 100vh
+        width: 40vw
         background-color: black
-        margin: 0 auto
+        & .fa-times
+            color: $white-color
+            transition: all .6s
+            font-size: 38px
+            padding: .1em
+            margin: 4vh 4vw 5vh auto
+            cursor: pointer
+            &:hover
+                color: red
         & .navigation-menu
             display: flex
             flex-direction: column
             justify-content: space-around
             align-items: center
             list-style: none
-            padding: 4em 3em 15em
-            height: 100%
+            // padding: 4em 3em 15em
+            height: 75%
             & li
                 color: $white-color
                 font-size: 25px
-                border-bottom: 2px solid transparent
                 transition: all .6s
-                &:hover
-                    cursor: pointer
-                &:not(:first-child):hover
-                    border-bottom: 2px solid $white-color
+                position: relative
+                cursor: pointer
+                &::before
+                    content: ""
+                    position: absolute
+                    bottom: 0
+                    width: 0
+                    transition: all .5s
+                    border-bottom: 3px solid $white-color
+                &:hover::before
+                    width: 100%
                 & a
                     padding: 0 20px
                     color: $white-color
                     text-decoration: none
-                &:first-child
-                    align-self: flex-end
-                    font-size: 38px
-                    margin: 0
-                    &:hover
-                        color: red
+                // &:first-child
+                //     
+                //     
