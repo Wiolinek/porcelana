@@ -11,11 +11,10 @@ const ShopCartModal = ( {cartModalState, closeCartModalHandler, cartProductsList
     const [deliveryOptionSelected, setDeliveryOptionSelected] = useState(0.00);
 
     const increaseQuantity = (e) => { //check which product has been clicked and change quantity + 1 in order and in cart
-        
         if (e.currentTarget.previousSibling.dataset.quantity < 24) { //data-quantity from p element
             setCartProductsList(cartProductsList.map(item => item.id === e.target.id ? {...item, quantity: item.quantity * 1 + 1} : item)); 
         } else {
-            setCartProductsList(cartProductsList.map(item => item.id === e.target.id && item));
+            setCartProductsList(cartProductsList.map(item => item.id === e.target.id ? {...item, quantity: item.quantity * 1} : item));
         }
     }
 
