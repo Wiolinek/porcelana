@@ -1,10 +1,8 @@
-import React, { useEffect, useRef } from 'react';
-import { Link } from 'react-scroll'
-import { NavLink } from "react-router-dom";
+import React, { useEffect, useRef, useState } from 'react';
+
+import MenuModal from './MenuModal';
 
 import '../../styles/sass/main/navigation.sass';
-
-import {animateScroll as scroll } from 'react-scroll';
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -14,20 +12,23 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Navigation = () => {
 
-    const logoAnimation = useRef(null);
-    const navigationBarAnimation = useRef(null);
-    
-    const scrollToTop = () => {
-        scroll.scrollToTop();
-    };
+    const [navMenuState, setNavMenuState] = useState(false);
+    const navigationIconAnimation = useRef(null);
+
+    const showMenuHandler = () => {
+        setNavMenuState(true)
+    }
+
+    const closeMenuHandler = () => {
+        setNavMenuState(false)
+    }
 
     useEffect(() => {
 
         const tl = gsap.timeline()
 
         tl
-            .from(logoAnimation.current, {scale: 0, delay: 1.3})
-            .to(navigationBarAnimation.current, {y: "0", autoAlpha: 1, duration: 2,
+            .to(navigationIconAnimation.current, {y: "0", autoAlpha: 1, duration: 2,
                 stagger: {
                     from: "start",
                     axis: "x",
@@ -38,23 +39,10 @@ const Navigation = () => {
 
 
     return (
-        <nav>
-            <ul className="navigation-bar" ref={navigationBarAnimation}>
-                <li><Link to="about" smooth={true}>About Us</Link></li>
-                <li><Link to="products" smooth={true}>Products</Link></li>
-                <li><Link to="recommendations" smooth={true}>Recommendations</Link></li>
-                <li><Link to="career" smooth={true}>Career</Link></li>
-                <li><Link to="contact" smooth={true}>Contact</Link></li>
-                <li><NavLink to="/shop/all" target="_blank">E-Shop</NavLink></li>
-            </ul>
-            <div className="logo" ref={logoAnimation} >
-                <Link onClick={scrollToTop} className="logo-border">
-                    <div smooth={true}>
-                        <p className="logo-name">ICM Inc.</p> 
-                    </div>
-                </Link>
-            </div>
-        </nav>
+        <>
+            <button ref={navigationIconAnimation} className="show-menu"><i className="fas fa-bars" navMenuState={navMenuState} onClick={showMenuHandler}></i></button>
+            <MenuModal navMenuState={navMenuState} closeMenuHandler={closeMenuHandler}/>
+        </>
     )
 }   
 

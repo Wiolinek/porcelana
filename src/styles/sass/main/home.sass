@@ -2,6 +2,21 @@
 @import '../mixins.sass'
 
 .home
+    & .logo
+        position: fixed
+        top: 7vh
+        left: 2.3vw
+        z-index: 20
+        mix-blend-mode: difference
+        & .logo-border
+            mix-blend-mode: difference
+            @include border-logo-style
+            &:hover
+                cursor: pointer
+                background-color: $white-color
+                color: black
+            & .logo-name
+                @include logo-name-style
     & .main-page
         width: 100%
         display: flex
@@ -37,39 +52,15 @@
             text-align: center
             &:hover
                 @include hover-font-awesome
-    aside
+    & .side-bar
         position: fixed
         bottom: 0
         display: flex
         flex-direction: column
         justify-content: flex-end
-        min-height: 93vh
-        // z-index: 20
+        min-height: 90vh
         // mix-blend-mode: difference
         color: black
-        & .show-menu
-            // display: flex
-            // align-items: flex-end
-            // // // margin: 0 auto
-            // // // flex-direction: column
-            // // align-items: center
-            // // justify-content: center
-            // background-color: blue
-            // mix-blend-mode: difference
-            // border: none
-            // outline: none
-            // height: 80px
-            // width: 80px
-            // border-radius: 50%
-            // cursor: pointer
-            // z-index: 101
-            // clip-path: circle(60px at 60px 60px)
-            & .fas
-                @include font-awesome
-                font-size: 35px
-                transition: all .6
-                &:hover
-                    @include hover-font-awesome
         & ul
             list-style: none
             // mix-blend-mode: difference
@@ -86,3 +77,9 @@
                     @include font-awesome
                     &:hover
                         @include hover-font-awesome
+                & .fa-shopping-cart
+                    transition: all .6s
+                    color: red
+                    &:hover
+                        color: black
+                    

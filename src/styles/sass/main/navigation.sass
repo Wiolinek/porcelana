@@ -1,48 +1,20 @@
 @import '../variables.sass'
 @import '../mixins.sass'
 
-nav
-    .navigation-bar
-        list-style: none
-        display: flex
-        justify-content: flex-end
-        padding-top: 2vh
-        transform: translateY(-150px)
-        & li
-            margin: 0 15px
-            font-size: 25px
-            text-align: center
-            text-decoration: none
-            border-bottom: 2px solid transparent
-            transition: all .6s
-            cursor: pointer
-            position: relative
-            &::before
-                content: ""
-                position: absolute
-                bottom: 0
-                width: 0
-                transition: all .5s
-                border-bottom: 3px solid black
-            &:hover::before
-                width: 100%
-            & a
-                padding: 0 20px
-                color: black
-                text-decoration: none   
-    .logo
-        position: fixed
-        margin: 0 2.3%
-        display: flex
-        align-self: center
-        z-index: 20
-        mix-blend-mode: difference
-        & .logo-border
-            mix-blend-mode: difference
-            @include border-logo-style
-            &:hover
-                cursor: pointer
-                background-color: $white-color
-                color: black
-            & .logo-name
-                @include logo-name-style
+.show-menu
+    height: 60px
+    width: 60px
+    outline: none
+    border: none
+    z-index: 1
+    text-decoration: none
+    margin: 3.6vh 1.45em 1.45em 1.45em
+    position: fixed
+    top: 0
+    right: 0
+    background-color: transparent
+    &:hover .fa-bars
+        @include hover-font-awesome
+    & .fa-bars
+        @include font-awesome
+        margin: 0

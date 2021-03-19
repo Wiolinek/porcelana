@@ -1,22 +1,6 @@
 @import '../variables.sass'
 @import '../mixins.sass'
 
-
-.show-menu
-    font-family: 'Cinzel', serif
-    align-self: flex-start
-    outline: none
-    border: none
-    padding: 10px
-    cursor: pointer
-    z-index: 1
-    background-color: transparent
-    &:hover .fa-bars
-        color: red
-    .fa-bars
-        color: black
-        font-size: 38px
-        transition: all .6s
 .nav-menu
     display: flex
     z-index: 100
@@ -54,24 +38,22 @@
             transition: all .6s
             font-size: 38px
             padding: .1em
-            margin: 4vh 4vw 5vh auto
-            cursor: pointer
+            margin: 4vh .9em 1.4em 1.4em
+            text-align: end
             &:hover
-                color: red
+               @include hover-font-awesome
         & .navigation-menu
             display: flex
             flex-direction: column
             justify-content: space-around
             align-items: center
             list-style: none
-            // padding: 4em 3em 15em
             height: 75%
             & li
                 color: $white-color
                 font-size: 25px
                 transition: all .6s
                 position: relative
-                cursor: pointer
                 &::before
                     content: ""
                     position: absolute
@@ -81,10 +63,8 @@
                     border-bottom: 3px solid $white-color
                 &:hover::before
                     width: 100%
+                    cursor: pointer
                 & a
                     padding: 0 20px
                     color: $white-color
                     text-decoration: none
-                // &:first-child
-                //     
-                //     

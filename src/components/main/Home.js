@@ -1,10 +1,11 @@
 import React, { useEffect, useRef } from 'react';
-import { Link } from 'react-scroll'
+import { Link } from 'react-scroll';
 
-import MenuModal from './MenuModal';
+import { NavLink } from "react-router-dom";
 
 import '../../styles/sass/main/home.sass';
-// import styled from 'styled-components';
+
+import {animateScroll as scroll } from 'react-scroll';
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -13,31 +14,21 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
 
+    const logoAnimation = useRef(null);
     const asideWrapper = useRef(null);
-    // const showMenuIcon = useRef(null);
     const homeWrapper = useRef(null);
     const arrowBtn = useRef(null);
 
+    const scrollToTop = () => {
+        scroll.scrollToTop();
+    };
 
     useEffect(() => {
 
         const tl = gsap.timeline()
 
         tl
-            // .from(showMenuIcon.current.children, {rotation: 60, x: 100,
-            //     scrollTrigger: {
-            //     trigger:showMenuIcon.current,
-            //     start:'90% 10%',
-            //     //   end:'50% 90%',
-            //     scrub: true,
-            //     // pin: true,
-            //     // pinSpacing: false,
-            //     //events: onEnter onLeave onEnterBack onLeaveBack
-            //     toggleActions:'play complete complete complete',
-            //     //options: play plause resume reset restart complete reverse none
-            //     //   markers:true,
-            //     }
-            // })
+            .from(logoAnimation.current, {scale: 0, delay: 1.3})
             .to(homeWrapper.current, {opacity: 1, duration: 3, delay: .7})
             .to(homeWrapper.current.firstChild, {x: '0', duration: 2.5, delay: -3})
             .to(homeWrapper.current.lastChild, {x: '0', duration: 2.5, delay: -3})
@@ -50,7 +41,13 @@ const Home = () => {
 
     return (
         <>
-            <MenuModal/>
+            <div className="logo" ref={logoAnimation} >
+                <Link onClick={scrollToTop} className="logo-border">
+                    <div smooth={true}>
+                        <p className="logo-name">ICM Inc.</p> 
+                    </div>
+                </Link>
+            </div>
             <div className="main-page">
                 <div ref={homeWrapper}>
                     <p>Our design</p>
@@ -58,9 +55,9 @@ const Home = () => {
                 </div>
                 <Link to="about" smooth={true}><i className="fas fa-angle-double-down" ref={arrowBtn}></i></Link>
             </div>
-            <aside>
-                {/* <button className="show-menu" navMenuState={navMenuState} onClick={showMenuHandler} ref={showMenuIcon}><i className="fas fa-bars"></i></button> */}
+            <aside className="side-bar">
                 <ul ref={asideWrapper}>
+                    <li><NavLink to="/shop/all" target="_blank"><i className="fas fa-shopping-cart"></i></NavLink></li>
                     <li><a href="https://www.facebook.com" rel="noreferrer" target="_blank"><i className="fab fa-facebook"></i></a></li>
                     <li><a href="https://www.instagram.com" rel="noreferrer" target="_blank"><i className="fab fa-instagram"></i></a></li>
                     <li><a href="https://twitter.com" rel="noreferrer" target="_blank"><i className="fab fa-twitter-square"></i></a></li>
