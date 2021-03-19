@@ -48,7 +48,7 @@ const Main = () => {
               <Career />
             </article>
           </main>
-          <footer id="footer">
+          <footer id="contact">
             <Footer />
           </footer>
         </div>

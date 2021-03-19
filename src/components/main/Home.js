@@ -27,11 +27,11 @@ const Home = () => {
 
         const tl = gsap.timeline()
 
-        tl
-            .from(logoAnimation.current, {scale: 0, delay: 1.3})
+        tl 
             .to(homeWrapper.current, {opacity: 1, duration: 3, delay: .7})
-            .to(homeWrapper.current.firstChild, {x: '0', duration: 2.5, delay: -3})
-            .to(homeWrapper.current.lastChild, {x: '0', duration: 2.5, delay: -3})
+            .to(homeWrapper.current.firstChild, {x: '0', duration: 2.3, delay: -3})
+            .to(homeWrapper.current.lastChild, {x: '0', duration: 2.3, delay: -3})
+            .from(logoAnimation.current, {scale: 0})
             .from(asideWrapper.current.children, {rotation: 60, x: '100', stagger: .3})
             .from(arrowBtn.current, {autoAlpha: 0, y: '+100', duration: 2})
             .fromTo(arrowBtn.current, {y: '0'}, {y: '+20', ease: 'power1.inOut', repeat: Infinity, yoyo: true})
@@ -59,9 +59,9 @@ const Home = () => {
                 <ul ref={asideWrapper}>
                     <li><NavLink to="/shop/all" target="_blank"><i className="fas fa-shopping-cart"></i></NavLink></li>
                     <li><a href="https://www.facebook.com" rel="noreferrer" target="_blank"><i className="fab fa-facebook"></i></a></li>
+                    <li><a href="https://www.messenger.com" rel="noreferrer" target="_blank"><i className="fab fa-facebook-messenger"></i></a></li>
                     <li><a href="https://www.instagram.com" rel="noreferrer" target="_blank"><i className="fab fa-instagram"></i></a></li>
                     <li><a href="https://twitter.com" rel="noreferrer" target="_blank"><i className="fab fa-twitter-square"></i></a></li>
-                    <li><a href="https://www.messenger.com" rel="noreferrer" target="_blank"><i className="fab fa-facebook-messenger"></i></a></li>
                     <li><Link to="contact" smooth={true}><i className="fas fa-envelope"></i></Link></li>
                 </ul>
             </aside>
