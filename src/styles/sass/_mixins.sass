@@ -3,7 +3,7 @@
     justify-content: center
     align-items: center
     font-family: 'Cinzel', serif
-    background-color: black
+    background-color: $dark-color
     border: $white-border-thin
     color: $white-color
     border-radius: 50%
@@ -14,28 +14,28 @@
     background-color: $white-color
     border: $black-border-thin
     cursor: pointer
-    color: black
+    color: $dark-color
 
 @mixin font-awesome
     display: flex
     align-items: center
     justify-content: center
     font-size: 35px
-    color: black
+    color: $dark-color
     height: 60px
     width: 60px
-    margin: .55em
+    margin: 1.9vh
     transition: all .6s
 
 @mixin hover-font-awesome
-    color: red
-    cursor: pointer    
+    color: $details-color
+    cursor: pointer
 
 @mixin border-logo-style
     display: flex
     align-items: center
     justify-content: center
-    background-color: black
+    background-color: $dark-color
     color: $white-color
     border: $white-border-thin
     height: 155px

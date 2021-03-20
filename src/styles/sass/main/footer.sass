@@ -2,7 +2,7 @@
 @import '../mixins.sass'
 
 .newsletter
-    background-color: black
+    background-color: $dark-color
     color: $white-color
     font-size: 23px
     min-height: 27vh
@@ -33,7 +33,7 @@
         height: 25px
         margin: 0 3vw 0 1vw
         border: $white-border-thin
-        background-color: black
+        background-color: $dark-color
     & [type='submit']
         @include button
         height: 43px
@@ -87,14 +87,14 @@
                 margin-top: 1vh
             & [type='submit']
                 @include button
-                color: black
+                color: $dark-color
                 border: $black-border-thin
                 margin-top: 4vh
                 height: 43px
                 width: 120px
                 font-size: 23px
             & [type='submit']:hover
-                background-color: black
+                background-color: $dark-color
                 border: $black-border-thin
                 color: $white-color
                 cursor: pointer
