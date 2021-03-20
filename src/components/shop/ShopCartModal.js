@@ -1,15 +1,25 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
-import React, {useState} from 'react';
+import React, { useEffect, useState } from 'react';
 
 import '../../styles/sass/shop/shop-cart-modal.sass';
+
+import axios from "axios";
 
 
 const ShopCartModal = ( {cartModalState, closeCartModalHandler, cartProductsList, setCartProductsList, totalAmount, amountToPay, setAmountToPay} ) => {
 
-    const pickpoint = 0.00;
-    const dhl_courier = 7.99;
-    const dpd_courier = 4.99;
+    const [deliveryOptions, setDeliveryOptions] = useState([]);
     const [deliveryOptionSelected, setDeliveryOptionSelected] = useState(0.00);
+
+    useEffect(() => {
+            axios.get(`http://localhost:3030/delivery_options`)
+            .then(response => {
+            let delivery_options = response.data;
+            setDeliveryOptions(delivery_options);
+        })
+    }, []);
+
+
 
     const increaseQuantity = (e) => { //check which product has been clicked and change quantity + 1 in order and in cart
         if (e.currentTarget.previousSibling.dataset.quantity < 24) { //data-quantity from p element
@@ -30,8 +40,8 @@ const ShopCartModal = ( {cartModalState, closeCartModalHandler, cartProductsList
     const chooseDeliveryOptionHandler = (e) => {
         setDeliveryOptionSelected(e.currentTarget.dataset.price * 1); //take price from clicked delivery option
     }
-
     setAmountToPay(totalAmount + deliveryOptionSelected);
+
 
     const orderList = cartProductsList.map(product => 
         <li key={product.id} product={product}>
@@ -48,11 +58,18 @@ const ShopCartModal = ( {cartModalState, closeCartModalHandler, cartProductsList
             </div>
         </li>);
 
+    let deliveryOptionsList = deliveryOptions.map(option => (
+        <li>
+            <label key={option.id}><input type="radio" name="delivery_option" value={option.option} data-price={option.price} defaultChecked onClick={chooseDeliveryOptionHandler}/>{option.name}: {option.price} EUR</label>
+            <p>Delivery up to: {option.time} days</p>
+        </li>
+    ))
+
 
     return (
         <section className="cart-modal" style={{
             display: cartModalState ? 'block' : 'none',
-            // transform: state ? 'translateY(0vh)' : 'translateY(-100vh)',
+            // transform: cartModalState ? 'translateY(0vh)' : 'translateY(-100vh)',
             }}>
             <button className="close-btn" onClick={closeCartModalHandler}>Close</button>
             <article className="order">
@@ -67,16 +84,19 @@ const ShopCartModal = ( {cartModalState, closeCartModalHandler, cartProductsList
                     </div>
                 </div>
                 {orderList.length > 0 ? <ul className="order-list">{orderList}</ul> : <p className="empty-cart">There's nothing here yet..</p>}
-                <p>Total: {totalAmount.toFixed(2)} EUR</p>
+                <p className="total-price">Total: {totalAmount.toFixed(2)} EUR</p>
             </article>
             <article className="delivery">
                 <h2>Delivery options</h2>
                 <form className="delivery-options">
-                    <label><input type="radio" name="delivery_option" value="dpd_courier" data-price={pickpoint} defaultChecked onClick={chooseDeliveryOptionHandler}/>Pickpoint: {pickpoint} EUR</label>
-                    <label><input type="radio" name="delivery_option" value="dhl_courier" data-price={dhl_courier} onClick={chooseDeliveryOptionHandler}/>DHL Courier: {dhl_courier} EUR</label>
-                    <label><input type="radio" name="delivery_option" value="pickpoint"  data-price={dpd_courier} onClick={chooseDeliveryOptionHandler}/>DPD Courier: {dpd_courier} EUR</label>
+                    <ul>
+                        {deliveryOptionsList}
+                    </ul>
                 </form>
-                <p>To pay: {amountToPay.toFixed(2)} EUR</p>
+                <div>
+                    <p>Estimated delivery date:</p>
+                    <p className="total-price">To pay: {amountToPay.toFixed(2)} EUR</p>
+                </div>
             </article>
             <article className="address">
                 <h2>Your address</h2>

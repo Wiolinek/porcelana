@@ -12,6 +12,7 @@ var recommendationsRouter = require('./routes/recommendations');
 var categoriesRouter = require('./routes/categories');
 var shopFooterRouter = require('./routes/shop_footer');
 var mainMenuRouter = require('./routes/main_menu');
+var deliveryOptionsRouter = require('./routes/delivery_options');
 
 var app = express();
 
@@ -34,6 +35,7 @@ app.use('/recommendations', recommendationsRouter);
 app.use('/categories', categoriesRouter);
 app.use('/shop_footer', shopFooterRouter);
 app.use('/main_menu', mainMenuRouter);
+app.use('/delivery_options', deliveryOptionsRouter);
 
 
 // catch 404 and forward to error handler
