@@ -20,6 +20,7 @@ const Shop = () => {
     const [optionSelected, setOptionSelected] = useState(1);
     const [cartProductsList, setCartProductsList] = useState([]);
     const [warningState, setWarningState] = useState(false);
+   
 
     useEffect(() => {
         setTimeout(() => {
@@ -55,29 +56,25 @@ const Shop = () => {
 
     const filterProductHandler = (e) => {
         setOptionSelected(e.target.value);
-        setSearchText(""); //POPRAWIĆ ZEROWANIE INPUTA SEARCH
+        setSearchText("");
     };
 
-    const addToCartHandler = (e) => {
-        let id = e.currentTarget.id;
-        let name = productsData[id - 1].name; //items it productsData table are counted from 0
-        let price = productsData[id - 1].price;
-        let quantity = e.currentTarget.previousSibling.previousSibling.firstChild.value;
+    const addToCartHandler = (id, name, price, quantity, max, clickedProduct) => {
 
         let isInCart = cartProductsList.find(item => item.id === id);
 
         if(quantity > 0) {
             setCartProductsList([...cartProductsList, {...isInCart, id, name, price, quantity}]);
-            e.currentTarget.previousSibling.previousSibling.firstChild.value = 0;
+            clickedProduct.current.value= 0;
             
             if(isInCart) { // if product is already in cart add quantity from cart and quantity from waiting room
 
                 let isInCartQuantity = isInCart.quantity * 1 + quantity * 1; // sum of inCart quantity and waitingRoom quantity changed into type = number
             // find item which has to be updated and update quantity, if item has different id - do not do anything with that
 
-                if(isInCartQuantity > e.currentTarget.previousSibling.previousSibling.firstChild.max * 1) {
+                if(isInCartQuantity > max * 1) {
                     setCartProductsList(cartProductsList);
-                    setWarningState(e.currentTarget.previousSibling.previousSibling.firstChild.id * 1);
+                    setWarningState(id * 1);
                 } else {
                     setCartProductsList(cartProductsList.map(item => item.id === isInCart.id ? {...isInCart, quantity: isInCartQuantity} : item));
                     setWarningState(false);

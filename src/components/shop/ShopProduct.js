@@ -1,14 +1,34 @@
-import React from 'react';
+import React, { useRef } from 'react';
 
 import '../../styles/sass/shop/shop-product.sass';
+
+import { gsap } from "gsap";
 
 
 const ShopProduct = (props) => {
 
     const { addToCartHandler, product, warning } = props;
+    let clickedProduct = useRef();
+    let warningVisibility = useRef();
 
-    console.log(product.id);
-    console.log(warning);
+    let warningDisplayHandler = () => {
+        warningVisibility.current.style.setProperty("opacity", 1);
+        setTimeout(() => {
+            // warningVisibility.current.style.setProperty("opacity", 0);
+            gsap.to(warningVisibility.current, {opacity: 0, duration: 3})
+        }, 3000)
+        
+    }
+
+    const addHandler = (e) => {
+        let id = e.currentTarget.id;
+        let name = product.name; //items it productsData table are counted from 0
+        let price = product.price;
+        let quantity = clickedProduct.current.value;
+        let max = clickedProduct.current.max;
+        addToCartHandler(id, name, price, quantity, max, clickedProduct)
+    }
+
 
     return (
         <>
@@ -27,14 +47,15 @@ const ShopProduct = (props) => {
                         <p>Dishwasher-safe: {product.dishwasher_safe}</p>
                         <p>Suitable for microwaves: {product.suitable_for_microwaves}</p>
                     </div>
-                    {/* <i class="fas fa-info"></i> */}
                     <i className="fas fa-info-circle"></i>
                 </div>
                 <div className="choose-quantity">
                     <p>Choose quantity:</p>
-                    <label forhtml="quantity"><input type="number" className="pcs" placeholder="0" min="0" max="24" id={product.id} name={product.name} price={product.price}></input></label>
-                    <div className="warning">{warning === product.id ? <p>You cannot order more than 24 pcs</p> : <p></p>}</div>
-                    <input type="button" className="add-to-cart" value="Add to cart" id={product.id} name={product.name} price={product.price} onClick={addToCartHandler}></input>
+                    <label forhtml="quantity">
+                        <input type="number" className="pcs" placeholder="0" min="0" max="24" id={product.id} name={product.name} price={product.price} ref={clickedProduct}></input></label>
+                    <p className="warning" ref={warningVisibility}>You cannot order more than 24 pcs</p>
+                    {warning === product.id ? warningDisplayHandler() : null}
+                    <input type="button" className="add-to-cart" value="Add to cart" id={product.id} name={product.name} price={product.price} onClick={addHandler}></input>
                 </div>
             </li>
         </>

@@ -14,7 +14,7 @@
             &:hover
                 cursor: pointer
                 background-color: $white-color
-                color: black
+                color: $dark-color
             & .logo-name
                 @include logo-name-style
     & .main-page
@@ -62,7 +62,7 @@
         justify-content: flex-end
         min-height: 90vh
         // mix-blend-mode: difference
-        color: black
+        color: $dark-color
         & ul
             list-style: none
             // mix-blend-mode: difference
@@ -79,9 +79,12 @@
                     @include font-awesome
                     &:hover
                         @include hover-font-awesome
-                & .fa-shopping-cart
-                    transition: all .6s
-                    color: red
-                    &:hover
-                        color: black
-                    
+            & .fa-shopping-cart
+                transition: all .6s
+                padding: .35em
+                // border: 3px solid $details-color
+                border-radius: 50%
+                // background-color: $details-color
+                margin-bottom: 25vh
+                // &:hover
+                    // color: $white-color
