@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 
 import Navigation from "../components/main/Navigation";
 import Home from "../components/main/Home";
@@ -17,7 +17,7 @@ import {animateScroll as scroll } from 'react-scroll';
 
 const Main = () => {
 
-  const { sectionLink } = useParams();
+  // const { sectionLink } = useParams();
 
   useEffect(() => {
       scroll.scrollToTop();

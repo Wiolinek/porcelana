@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
 import React, {useState} from 'react';
 
 import '../../styles/sass/shop/shop-cart-modal.sass';
@@ -56,8 +57,17 @@ const ShopCartModal = ( {cartModalState, closeCartModalHandler, cartProductsList
             <button className="close-btn" onClick={closeCartModalHandler}>Close</button>
             <article className="order">
                 <h2>Your order</h2>
-                <ul className="order-list">{orderList}</ul>
-                <p>Total amount: {totalAmount.toFixed(2)} EUR</p>
+                <div className="order-menu">
+                    <p>Product</p>
+                    <div className="buttons">
+                        <p>Quantity</p>
+                        <p>Price</p>
+                        <p>Subtotal</p>
+                        <p className="delete"></p>
+                    </div>
+                </div>
+                {orderList.length > 0 ? <ul className="order-list">{orderList}</ul> : <p className="empty-cart">There's nothing here yet..</p>}
+                <p>Total: {totalAmount.toFixed(2)} EUR</p>
             </article>
             <article className="delivery">
                 <h2>Delivery options</h2>
