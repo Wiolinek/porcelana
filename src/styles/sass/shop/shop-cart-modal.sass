@@ -14,7 +14,7 @@
     overflow: auto
     font-size: 19px
     & article
-        margin: 1em
+        margin: 1em 1em 3.3em 1em
     & h2
         border-bottom: 1px solid $dark-color
         margin-bottom: 1.2em
@@ -30,7 +30,7 @@
     & .total-price
         font-size: 1.2em
         padding: .3em
-        margin-top: 1.7em
+        margin-top: 2em
         align-self: flex-end
         background-color: $dark-color
         color: $white-color
@@ -118,14 +118,19 @@
                         margin-right: 1em
                     & p
                         font-size: .8em
-                        margin: .5em 0 0 1.7em
+                        margin: .5em 0 0 1.8em
         & div
             display: flex
-            margin-top: 1.7em
-            align-items: center
+            align-items: flex-end
             justify-content: space-between
-            & p:first-child
+            & .estimated-delivery-date
                 padding: .3em
+                & span:first-child
+                    // font-weight: 900
+                & span:last-child
+                    padding-left: .3em
+                    font-weight: 900
+                    font-size: 1.1em
     & .address
         & .address-form form
             display: flex

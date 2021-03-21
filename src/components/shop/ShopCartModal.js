@@ -1,6 +1,8 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 import React, { useEffect, useState } from 'react';
 
+import dayjs from 'dayjs';
+
 import '../../styles/sass/shop/shop-cart-modal.sass';
 
 import axios from "axios";
@@ -9,7 +11,9 @@ import axios from "axios";
 const ShopCartModal = ( {cartModalState, closeCartModalHandler, cartProductsList, setCartProductsList, totalAmount, amountToPay, setAmountToPay} ) => {
 
     const [deliveryOptions, setDeliveryOptions] = useState([]);
-    const [deliveryOptionSelected, setDeliveryOptionSelected] = useState(0.00);
+    const [deliveryOptionSelectedPrice, setDeliveryOptionSelectedPrice] = useState(0.00);
+    const [estimatedDeliveryDate, setEstimatedDeliveryDate] = useState(dayjs().add(4, 'day').format('dddd, MMMM D'));
+
 
     useEffect(() => {
             axios.get(`http://localhost:3030/delivery_options`)
@@ -18,8 +22,6 @@ const ShopCartModal = ( {cartModalState, closeCartModalHandler, cartProductsList
             setDeliveryOptions(delivery_options);
         })
     }, []);
-
-
 
     const increaseQuantity = (e) => { //check which product has been clicked and change quantity + 1 in order and in cart
         if (e.currentTarget.previousSibling.dataset.quantity < 24) { //data-quantity from p element
@@ -38,10 +40,14 @@ const ShopCartModal = ( {cartModalState, closeCartModalHandler, cartProductsList
     }
 
     const chooseDeliveryOptionHandler = (e) => {
-        setDeliveryOptionSelected(e.currentTarget.dataset.price * 1); //take price from clicked delivery option
-    }
-    setAmountToPay(totalAmount + deliveryOptionSelected);
 
+        setDeliveryOptionSelectedPrice(e.currentTarget.dataset.price * 1); //take price from clicked delivery option
+        let newDate = addDaysNotWeekends(e.currentTarget.dataset.time * 1);
+
+        setEstimatedDeliveryDate(newDate.format('dddd, MMMM D'));
+    }
+
+    setAmountToPay(totalAmount + deliveryOptionSelectedPrice);
 
     const orderList = cartProductsList.map(product => 
         <li key={product.id} product={product}>
@@ -60,12 +66,32 @@ const ShopCartModal = ( {cartModalState, closeCartModalHandler, cartProductsList
 
     let deliveryOptionsList = deliveryOptions.map(option => (
         <li>
-            <label key={option.id}><input type="radio" name="delivery_option" value={option.option} data-price={option.price} defaultChecked onClick={chooseDeliveryOptionHandler}/>{option.name}: {option.price} EUR</label>
+            <label key={option.id}><input type="radio" name="delivery_option" value={option.option} data-price={option.price} data-time={option.time} defaultChecked onClick={chooseDeliveryOptionHandler}/>{option.name}: {option.price} EUR</label>
             <p>Delivery up to: {option.time} days</p>
         </li>
     ))
 
+    let addDaysNotWeekends = (daysPlus) => {
 
+        if(!daysPlus) {
+            daysPlus = 7;
+        }
+
+        let currentDate = dayjs();
+
+        for(let i = 1; i < daysPlus; i++) {
+
+            if(parseInt(currentDate.format('d')) === 0 || parseInt(currentDate.format('d')) === 6) {
+                daysPlus++;
+            }
+            currentDate = currentDate.add(1, 'day');
+        }
+
+        return currentDate;
+
+    };
+
+    
     return (
         <section className="cart-modal" style={{
             display: cartModalState ? 'block' : 'none',
@@ -94,7 +120,7 @@ const ShopCartModal = ( {cartModalState, closeCartModalHandler, cartProductsList
                     </ul>
                 </form>
                 <div>
-                    <p>Estimated delivery date:</p>
+                    <p className="estimated-delivery-date"><span>Estimated delivery date: </span><span>{estimatedDeliveryDate}</span></p>
                     <p className="total-price">To pay: {amountToPay.toFixed(2)} EUR</p>
                 </div>
             </article>
