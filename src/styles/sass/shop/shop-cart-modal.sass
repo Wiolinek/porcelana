@@ -2,19 +2,7 @@
 @import '../mixins.sass'
 
 .cart-modal
-    margin: 0 auto
-    position: fixed
-    top: 3vh
-    left: 10vw
-    background-color: $white-color
-    height: 94vh
-    width: 80%
-    padding: 0 4vw
-    overflow: auto
-    font-size: 19px
-    opacity: 1
-    transform: translateY(-100vh)
-    transition: all .8s ease-out
+    @include modal-style
     & article
         margin: 1em 1em 3.3em 1em
     & h2
@@ -159,4 +147,3 @@
             height: 115px
             &:hover
                 @include hover-button
-

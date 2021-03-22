@@ -2,25 +2,13 @@
 @import '../mixins.sass'
 
 .shop-footer-modal-wrapper
-    margin: 0 auto
-    position: fixed
-    top: 3vh
-    left: 10vw
-    background-color: $white-color
-    color: $dark-color
-    height: 94vh
-    width: 80%
-    padding: 0 4vw
-    overflow: auto
-    font-size: 19px
-    z-index: 30
-    opacity: 1
+    @include modal-style
     display: flex
     flex-direction: column
     line-height: 1.7
     word-spacing: 1.5px
-    transform: translateY(-100vh)
-    transition: all .8s ease-out
+    z-index: 30
+    color: $dark-color
     & h2
         border-bottom: 1px solid black
         margin-bottom: .5em
