@@ -94,8 +94,8 @@ const ShopCartModal = ( {cartModalState, closeCartModalHandler, cartProductsList
     
     return (
         <section className="cart-modal" style={{
-            display: cartModalState ? 'block' : 'none',
-            // transform: cartModalState ? 'translateY(0vh)' : 'translateY(-100vh)',
+            transform: cartModalState ? 'translateY(0vh)' : 'translateY(-100vh)',
+            opacity: cartModalState ? '1' : '.5',
             }}>
             <button className="close-btn" onClick={closeCartModalHandler}>Close</button>
             <article className="order">

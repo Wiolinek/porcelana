@@ -17,7 +17,7 @@ const CareerModal = ({ careerModalState, offer, closeModalHandler, jobOffersData
         return (
             <div className="career-modal-wrapper" style={{
                 transform: careerModalState ? 'translateY(0vh)' : 'translateY(-100vh)',
-                opacity: careerModalState ? '1' : '0',
+                opacity: careerModalState ? '1' : '.5',
                 }}>
                 <button className="close-btn" onClick={closeModalHandler}>Close</button>
                 <div>

@@ -3,16 +3,18 @@
 
 .cart-modal
     margin: 0 auto
-    display: none
     position: fixed
     top: 3vh
     left: 10vw
     background-color: $white-color
     height: 94vh
-    width: 80vw
+    width: 80%
     padding: 0 4vw
     overflow: auto
     font-size: 19px
+    opacity: 1
+    transform: translateY(-100vh)
+    transition: all .8s ease-out
     & article
         margin: 1em 1em 3.3em 1em
     & h2
