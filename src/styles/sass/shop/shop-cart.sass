@@ -28,14 +28,18 @@
         flex-direction: column
         align-items: center
         justify-content: space-around
-        border: $black-border-thin
+        border-top: 1px solid $dark-color
+        border-bottom: 1px solid $dark-color
         height: 65%
         width: 80%
         scroll: auto
+        letter-spacing: .01em
         & .in_cart_products
             overflow: auto
-            height: 87%
-            width: 97%
+            height: 85%
+            width: 100%
+            & > p
+                text-align: center
             & ul p
                 padding-top: 10px
             & li
@@ -45,6 +49,13 @@
                 & p
                     font-size: 14px
                     padding: 5px
+                    width: 20%
+                    text-align: end
+                & p:nth-child(2)
+                    width: 15%
+                & p:first-child
+                    width: 65%
+                    text-align: start     
         & p
             font-size: 19px
     & .go-to-cart

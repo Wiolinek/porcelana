@@ -12,7 +12,7 @@ const ShopCart = ({ cartProductsList, setCartProductsList }) => {
     const [cartModalState, setCartModalState] = useState(false);
 
     const listToDisplay = cartProductsList.map(product => 
-        <li key={product.id}><p>{product.name}</p><p>{product.quantity} x</p><p>{product.price}</p><p>{(product.price * product.quantity).toFixed(2)}</p></li>);
+        <li key={product.id}><p>{product.name}</p><p>x {product.quantity}</p><p>{(product.price * product.quantity).toFixed(2)}</p></li>);
     // totalAmount ma przechowywać wartości dla poszczególnych pozycji w koszyku oraz te wartości sumować za pomocą funkcji reduce
 
     useEffect(() => { // when cartProductList changes - update totalAmount in cart
