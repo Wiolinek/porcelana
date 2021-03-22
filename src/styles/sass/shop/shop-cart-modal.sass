@@ -116,8 +116,10 @@
                 & li
                     display: flex
                     flex-direction: column
-                    & input
-                        margin-right: 1em
+                    & label
+                        cursor: pointer
+                        & input
+                            margin-right: 1em
                     & p
                         font-size: .8em
                         margin: .5em 0 0 1.8em
@@ -127,8 +129,6 @@
             justify-content: space-between
             & .estimated-delivery-date
                 padding: .3em
-                & span:first-child
-                    // font-weight: 900
                 & span:last-child
                     padding-left: .3em
                     font-weight: 900

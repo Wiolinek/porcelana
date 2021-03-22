@@ -79,7 +79,7 @@ const ShopCartModal = ( {cartModalState, closeCartModalHandler, cartProductsList
 
         let currentDate = dayjs();
 
-        for(let i = 1; i < daysPlus; i++) {
+        for(let i = 0; i < daysPlus; i++) {
 
             if(parseInt(currentDate.format('d')) === 0 || parseInt(currentDate.format('d')) === 6) {
                 daysPlus++;
