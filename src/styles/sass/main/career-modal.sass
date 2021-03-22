@@ -3,21 +3,19 @@
 
 .career-modal-wrapper
     margin: 0 auto
-    display: none
     position: fixed
     top: 3vh
     left: 10vw
     background-color: $white-color
     height: 94vh
-    width: 80vw
+    width: 80%
     padding: 0 2vw
     overflow: auto
     font-size: 19px
     z-index: 30
-    // transform: translateY(-100px)
-    transition: all 2s ease-in-out
-    //   display: flex
-    // flex-direction: column
+    opacity: 0
+    transform: translateY(-100vh)
+    transition: all 1s ease-out
     & div p
         padding-top: 1.3vh
         & span:first-child
@@ -44,12 +42,3 @@
         height: 115px
         &:hover
             @include hover-button
-.career-modal-back
-    // background-color: rgba(2, 2, 2, .7)
-    backdrop-filter: $blur-effect
-    height: 100%
-    width: 100%
-    position: fixed
-    left: 0
-    top: 0
-    z-index: 30

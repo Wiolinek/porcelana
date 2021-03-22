@@ -38,7 +38,6 @@
         font-size: 23px
         width: 115px
         height: 115px
-        // padding: 5px
         border-radius: 50%
         position: relative
         animation: join-back-animation 4s infinite
@@ -47,42 +46,19 @@
                 background-color: $details-color
             50%
                 background-color: $dark-color
-                // font-weight: bold
             100%
                 background-color: $details-color
         & a
             text-decoration: none
             color: $white-color
-            // animation: join-animation 5s infinite
-            // @keyframes join-animation
-            //         0%
-            //             color: $white-color
-            //         50%
-            //             color: rgba(255, 0, 0, 1)
-            //             // font-weight: bold
-            //         100%
-            //             color: $white-color
-            // &::before
-            //     content: ""
-            //     position: absolute
-            //     left: calc(50% - 63px)
-            //     top: calc(50% - 63px)
-            //     border-radius: 50%
-            //     // background-image: radial-gradient(white, $details-color)
-            //     // border: 7px solid $details-color
-            //     width: 110px
-            //     height: 110px
-            //     // z-index: -1
-            //     animation: border-animation 5s infinite
-            //     @keyframes border-animation
-            //         0%
-            //             border: 7px solid rgba(255, 0, 0, 0)
-            //         50%
-            //             border: 7px solid rgba(255, 0, 0, 1)
-            //         100%
-            //             border: 7px solid rgba(255, 0, 0, 0)
-        &:hover a
-            // color: $dark-color
         &:hover
-            // @include hover-button
             cursor: pointer
+    & .career-modal-back
+        // background-color: rgba(2, 2, 2, .7)
+        backdrop-filter: $blur-effect
+        height: 100%
+        width: 100%
+        position: fixed
+        left: 0
+        top: 0
+        z-index: 30
