@@ -1,35 +1,27 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 import '../../styles/sass/shop/shop-footer-modal.sass';
 
-import axios from "axios";
+
+const ShopFooterModal = ( {shopFooterModalState, closeShopFooterModalHandler, shopFooterState, shopFooterDetailClicked} ) => {
 
 
-const ShopFooterModal = ( {shopFooterModalState, closeShopFooterModalHandler} ) => {
+    let detailToDisplay = shopFooterState.map(option => option.id === shopFooterDetailClicked ? 
+        <div>
+            <h2>{option.name}</h2>
+            <p>{option.text}</p>
+        </div> : null
+    )
 
-    const [shopFooterState, setShopFooterState] = useState(false);
-
-    useEffect(() => {
-
-        axios.get(`http://localhost:3030/shop_footer`)
-            .then(response => {
-            const shop_footer = response.data;
-            setShopFooterState(shop_footer);
-            })
-    }, []);
-
-    console.log(shopFooterState)
-   
+    
     return (
         <div className="shop-footer-modal-wrapper" style={{
-            display: shopFooterModalState ? 'block' : 'none',
-            // transform: state ? 'translateY(0vh)' : 'translateY(-100vh)',
+            transform: shopFooterModalState ? 'translateY(0vh)' : 'translateY(-100vh)',
+            opacity: shopFooterModalState ? '1' : '.5',
             }}>
             <button className="close-btn" onClick={closeShopFooterModalHandler}>Close</button>
-            <div>
-                <h2>{shopFooterState.returns_exchanges}</h2>  
-            </div>
-        </div>
+            {detailToDisplay}
+        </div> 
     )
 }
 
