@@ -1,9 +1,11 @@
 @import '../variables.sass'
 @import '../mixins.sass'
 
-.products-list
-    display: flex
-    flex-wrap: wrap
+.products-section
     width: 64%
     margin: 4vh 0 7vh 5vw
-    list-style: none
+    & .products-list
+        display: flex
+        justify-content: center
+        flex-wrap: wrap
+        list-style: none

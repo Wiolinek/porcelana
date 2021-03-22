@@ -23,11 +23,13 @@ const ShopProductsList = (props) => {
 
     return (
         <>
-            {productsList.length === 0 ? (searchText.length === 0 ? <ShopOnLoader /> : <ShopNoSearchResults />) : 
-            <ul className="products-list">
-                {productsList}
-            </ul>
-            }
+            <section className="products-section">
+                {productsList.length === 0 ? (searchText.length === 0 ? <ShopOnLoader /> : <ShopNoSearchResults />) : 
+                <ul className="products-list">
+                    {productsList}
+                </ul>
+                }
+            </section>
         </>
     )
 
