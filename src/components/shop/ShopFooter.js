@@ -39,11 +39,11 @@ const ShopFooter = () => {
             {shopFooterState && 
                 <div className="shop-footer">
                     <div className="btn-container">
-                        <NavLink to="/" exact target="_blank">About Us</NavLink>
-                        <NavLink to="/" exact target="_blank">Contact Us</NavLink>
+                        <NavLink to="/main/about" exact target="_blank">About Us</NavLink>
+                        <NavLink to="/main/contact" exact target="_blank">Contact Us</NavLink>
                     </div>
                     <div className="btn-container">
-                        <NavLink to="/" exact target="_blank">About our products</NavLink>
+                        <NavLink to="/main/products" exact target="_blank">About our products</NavLink>
                         <button shopFooterState={shopFooterState} shopFooterModalState={shopFooterModalState} value={shopFooterState[1].id} onClick={openShopFooterModalHandler}>{shopFooterState[1].name}</button>
                     </div>
                     <div className="btn-container">

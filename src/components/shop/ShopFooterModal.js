@@ -19,7 +19,9 @@ const ShopFooterModal = ( {shopFooterModalState, closeShopFooterModalHandler, sh
             transform: shopFooterModalState ? 'translateY(0vh)' : 'translateY(-100vh)',
             opacity: shopFooterModalState ? '1' : '.5',
             }}>
-            <button className="close-btn" onClick={closeShopFooterModalHandler}>Close</button>
+            <div>
+                <button className="close-btn" onClick={closeShopFooterModalHandler}>Close</button>
+            </div>
             {detailToDisplay}
         </div> 
     )
