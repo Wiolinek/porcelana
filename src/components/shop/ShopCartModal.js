@@ -12,7 +12,8 @@ const ShopCartModal = ( {cartModalState, closeCartModalHandler, cartProductsList
 
     const [deliveryOptions, setDeliveryOptions] = useState([]);
     const [deliveryOptionSelectedPrice, setDeliveryOptionSelectedPrice] = useState(0.00);
-    const [estimatedDeliveryDate, setEstimatedDeliveryDate] = useState(dayjs().add(4, 'day').format('dddd, MMMM D'));
+    const [estimatedDeliveryDate, setEstimatedDeliveryDate] = useState();
+    const defaultDeliveryOptionChecked = 4;
 
 
     useEffect(() => {
@@ -20,6 +21,7 @@ const ShopCartModal = ( {cartModalState, closeCartModalHandler, cartProductsList
             .then(response => {
             let delivery_options = response.data;
             setDeliveryOptions(delivery_options);
+            calculateDeliveryDate(defaultDeliveryOptionChecked);
         })
     }, []);
 
@@ -39,12 +41,14 @@ const ShopCartModal = ( {cartModalState, closeCartModalHandler, cartProductsList
         setCartProductsList(cartProductsList.filter(item => item.id !== e.target.id && cartProductsList));
     }
 
-    const chooseDeliveryOptionHandler = (e) => {
-
-        setDeliveryOptionSelectedPrice(e.currentTarget.dataset.price * 1); //take price from clicked delivery option
-        let newDate = addDaysNotWeekends(e.currentTarget.dataset.time * 1);
-
+    const calculateDeliveryDate = (time) => {
+        let newDate = addDaysNotWeekends(time);
         setEstimatedDeliveryDate(newDate.format('dddd, MMMM D'));
+    }
+
+    const chooseDeliveryOptionHandler = (e) => {
+        setDeliveryOptionSelectedPrice(e.currentTarget.dataset.price * 1); //take price from clicked delivery option
+        calculateDeliveryDate(e.currentTarget.dataset.time * 1);
     }
 
     setAmountToPay(totalAmount + deliveryOptionSelectedPrice);
@@ -74,22 +78,32 @@ const ShopCartModal = ( {cartModalState, closeCartModalHandler, cartProductsList
     let addDaysNotWeekends = (daysPlus) => {
 
         if(!daysPlus) {
-            daysPlus = 7;
+            daysPlus = 4;
         }
 
         let currentDate = dayjs();
+        let deliveryDate = currentDate;
 
         for(let i = 0; i < daysPlus; i++) {
 
-            if(parseInt(currentDate.format('d')) === 0 || parseInt(currentDate.format('d')) === 6) {
+            if(parseInt(deliveryDate.format('d')) === 6 || parseInt(deliveryDate.format('d')) === 7) {
                 daysPlus++;
+            } else {
+                deliveryDate = deliveryDate.add(1, 'day');
             }
-            currentDate = currentDate.add(1, 'day');
         }
 
-        return currentDate;
+        if(parseInt(deliveryDate.format('d')) === 6) {
+            deliveryDate = deliveryDate.add(2, 'day');
+        } else if(parseInt(deliveryDate.format('d')) === 7) {
+            deliveryDate = deliveryDate.add(1, 'day');
+        }
 
+        return deliveryDate;
+        
     };
+
+    addDaysNotWeekends(4);
 
     
     return (
