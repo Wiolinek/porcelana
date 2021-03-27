@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
-// import { useParams } from "react-router-dom";
+import {Element} from 'react-scroll'
 
 import Navigation from "../components/main/Navigation";
 import Home from "../components/main/Home";
@@ -12,45 +12,51 @@ import Footer from "../components/main/Footer";
 
 import '../styles/sass/main/main.sass';
 
-import {animateScroll as scroll } from 'react-scroll';
-
 
 const Main = () => {
 
-  // const { sectionLink } = useParams();
 
-  useEffect(() => {
-      scroll.scrollToTop();
-  });
 
     return (
       <>
         <div className="main">
-          <header className="header" id="home">
-            <nav>
-              <Navigation />
-            </nav>
-            <section className="home">
-              <Home />
-            </section>
-          </header>
+          <Element name="home">
+            <header className="header" id="home">
+              <nav>
+                <Navigation />
+              </nav>
+              <section className="home">
+                <Home />
+              </section>
+            </header>
+          </Element>
           <main>
-            <article className="about" id="about">
-              <About />
-            </article>
-            <article className="offer" id="products">
-              <Products />
-            </article>
-            <article className="recommendations" id="recommendations">
-              <Recommendations />
-            </article>
-            <article id="career">
-              <Career />
-            </article>
+            <Element name="about">
+              <article className="about" id="about" name="about">
+                <About />
+              </article>
+            </Element>
+            <Element name="products">
+              <article className="offer" id="products" name="products">
+                <Products />
+              </article>
+            </Element>
+            <Element name="recommendations">
+              <article className="recommendations" id="recommendations" name="recommendations">
+                <Recommendations />
+              </article>
+            </Element>
+            <Element name="career">
+              <article id="career" name="career">
+                <Career />
+              </article>
+            </Element>
           </main>
-          <footer id="contact">
-            <Footer />
-          </footer>
+            <Element name="contact">
+              <footer id="contact" name="contact">
+                <Footer />
+              </footer>
+            </Element>
         </div>
       </>
     );

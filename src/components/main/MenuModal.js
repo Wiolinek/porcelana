@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-// import { Link } from 'react-scroll';
+import { scroller } from 'react-scroll'
 import { Link, NavLink } from "react-router-dom";
 
 import '../../styles/sass/main/menu-modal.sass';
@@ -19,10 +19,18 @@ const MenuModal = ( {closeMenuHandler, navMenuState} ) => {
             })
     }, []);
 
-    const mainMenu = mainMenuOptionsState.map(option =>
-        <li><Link key={option.id} to={ `/main/${option.link}` } onClick={closeMenuHandler} smooth={true}>{option.name}</Link></li>);
 
-    
+    const scrollToSection = (link) => scroller.scrollTo(link, {
+        delay: 1000,
+        smooth: 'linear',
+        hashSpy: 'true',
+        // containerId: link,
+      });
+
+    const mainMenu = mainMenuOptionsState.map(option =>
+        <li onClick={closeMenuHandler}><Link key={option.id} to={ `/main/#${option.link}` } onClick={() => scrollToSection(option.link)} hashSpy={true} containerId={option.link}>{option.name}</Link></li>);
+
+
     return (
         <>
             <nav className="nav-menu" style={{

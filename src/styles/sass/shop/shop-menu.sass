@@ -5,7 +5,7 @@
     min-height: 28vh
     width: 100%
     background-color: $white-color
-    background-image: url('../../../images/plate_5_back.png')
+    background-image: url('../../../images/back_shop.webp')
     filter: grayscale(100%)
     background-repeat: no-repeat
     background-size: cover
@@ -66,27 +66,27 @@
                 color: $white-color
                 &:hover
                     background-color: transparent
+            
     & .shop-menu
         width: 100%
         background-color: $dark-color
         padding: .3em 0
-        & ul
+        display: flex
+        justify-content: space-around
+        align-items: center
+        align-self: flex-start
+        list-style: none
+        & .active
+            border-bottom: 1px solid $white-color
+            text-decoration: none
+        & .not-active
+            border-bottom: 1px solid $dark-color
+            text-decoration: none
+        & .shop-menu-btn
+            @include button
             display: flex
             justify-content: space-around
-            align-items: center
-            align-self: flex-start
-            list-style: none
-            & .active
-                border-bottom: 1px solid $white-color
-                text-decoration: none
-            & .not-active
-                border-bottom: 1px solid $dark-color
-                text-decoration: none
-            & .shop-menu-btn
-                @include button
-                display: flex
-                justify-content: space-around
-                border-style: none
-                font-size: 20px
-                &:hover
-                    cursor: pointer
+            border-style: none
+            font-size: 20px
+            &:hover
+                cursor: pointer
