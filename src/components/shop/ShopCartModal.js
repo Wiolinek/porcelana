@@ -15,15 +15,18 @@ const ShopCartModal = ( {cartModalState, closeCartModalHandler, cartProductsList
     const [estimatedDeliveryDate, setEstimatedDeliveryDate] = useState();
     const defaultDeliveryOptionChecked = 4;
 
-
     useEffect(() => {
             axios.get(`http://localhost:3030/delivery_options`)
             .then(response => {
             let delivery_options = response.data;
             setDeliveryOptions(delivery_options);
-            calculateDeliveryDate(defaultDeliveryOptionChecked);
         })
     }, []);
+
+    useEffect(() => {
+        calculateDeliveryDate(defaultDeliveryOptionChecked);
+    }, []);
+
 
     const increaseQuantity = (e) => { //check which product has been clicked and change quantity + 1 in order and in cart
         if (e.currentTarget.previousSibling.dataset.quantity < 24) { //data-quantity from p element
@@ -68,14 +71,14 @@ const ShopCartModal = ( {cartModalState, closeCartModalHandler, cartProductsList
             </div>
         </li>);
 
-    let deliveryOptionsList = deliveryOptions.map(option => (
+    const deliveryOptionsList = deliveryOptions.map(option => (
         <li>
             <label key={option.id}><input type="radio" name="delivery_option" value={option.option} data-price={option.price} data-time={option.time} defaultChecked onClick={chooseDeliveryOptionHandler}/>{option.name}: {option.price} EUR</label>
             <p>Delivery up to: {option.time} days</p>
         </li>
     ))
 
-    let addDaysNotWeekends = (daysPlus) => {
+    const addDaysNotWeekends = (daysPlus) => {
 
         if(!daysPlus) {
             daysPlus = 4;
@@ -88,6 +91,7 @@ const ShopCartModal = ( {cartModalState, closeCartModalHandler, cartProductsList
 
             if(parseInt(deliveryDate.format('d')) === 6 || parseInt(deliveryDate.format('d')) === 7) {
                 daysPlus++;
+                deliveryDate = deliveryDate.add(1, 'day');
             } else {
                 deliveryDate = deliveryDate.add(1, 'day');
             }
@@ -100,10 +104,7 @@ const ShopCartModal = ( {cartModalState, closeCartModalHandler, cartProductsList
         }
 
         return deliveryDate;
-        
     };
-
-    addDaysNotWeekends(4);
 
     
     return (
