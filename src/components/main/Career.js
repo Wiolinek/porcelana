@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState} from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-scroll';
 import dayjs from 'dayjs';
 
@@ -10,13 +10,17 @@ import axios from "axios";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 gsap.registerPlugin(ScrollTrigger);
 
 
 const Career = () => {
 
     const [jobOffersData, setJobOffersData] = useState([]);
+    const [careerModalState, setCareerModalState] = useState(false);
+    const [offer, setOffer] = useState();
+
+    const careerWrapper = useRef(null);
+    const jointBtnAnimation = useRef(null);
 
     useEffect(() => {
 
@@ -26,31 +30,16 @@ const Career = () => {
             setJobOffersData(offers);
             }
         )
-  
-        // gsap.from(jointBtnAnimation.current, {scale: 0, delay: 1, ease: 'none',
-        //     scrollTrigger: {
-        //         trigger: jointBtnAnimation.current,
-        //         start:'top 90%',
-        //         end:'bottom 60%',
-        //         scrub: 1,
-        //         //events: onEnter onLeave onEnterBack onLeaveBack
-        //         toggleActions:'play none none reverse',
-        //         //options: play plause resume reset restart complete reverse nonex`
-        //         // markers:true,
-        //     }
-        // })
     }, []);
     
-    const [careerModalState, setCareerModalState] = useState(false);
-    const [offer, setOffer] = useState();
-
-    const careerWrapper = useRef(null);
-    const jointBtnAnimation = useRef(null);
-
-    const closeModalHandler = () => setCareerModalState(false);
+    const closeModalHandler = () =>  {
+        setCareerModalState(false);
+        document.body.style.overflow = "visible";
+    }
+    
 
     const openModalHandler = (offer) => {
-        // document.body.style.overflow = "hidden";
+        document.body.style.overflow = "hidden";
         setCareerModalState(true);
         setOffer(offer.id)
     }
@@ -63,6 +52,7 @@ const Career = () => {
         </tr>
         )
     )
+
 
     return (
             <div className="career">
@@ -83,8 +73,8 @@ const Career = () => {
                     </table>
                 </div>
                 <div className="join" ref={jointBtnAnimation}><Link to="contact" smooth={true}>Join us!</Link></div>
-                { careerModalState ? <div className="career-modal-back" onClick={closeModalHandler}></div> : null }
-                <CareerModal careerModalState={careerModalState} closeModalHandler={closeModalHandler} jobOffersData={jobOffersData} offer={offer}/>
+                    { careerModalState ? <div className="career-modal-back" onClick={closeModalHandler}></div> : null }
+                    <CareerModal careerModalState={careerModalState} closeModalHandler={closeModalHandler} jobOffersData={jobOffersData} offer={offer}/>
             </div>
     )
 }
