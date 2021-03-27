@@ -33,9 +33,7 @@ const ShopMenu = (props) => {
                 </div>
             </div>
             <div className="shop-menu">
-                <ul>
                 {shopMenu}
-                </ul>
             </div>
         </>
     )

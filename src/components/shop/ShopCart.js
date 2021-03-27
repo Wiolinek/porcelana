@@ -4,6 +4,8 @@ import ShopCartModal from './ShopCartModal';
 
 import '../../styles/sass/shop/shop-cart.sass';
 
+// const ShopCartModal = lazy(() => import('./ShopCartModal'));
+
 
 const ShopCart = ({ cartProductsList, setCartProductsList }) => {
 
@@ -13,7 +15,6 @@ const ShopCart = ({ cartProductsList, setCartProductsList }) => {
 
     const listToDisplay = cartProductsList.map(product => 
         <li key={product.id}><p>{product.name}</p><p>x {product.quantity}</p><p>{(product.price * product.quantity).toFixed(2)}</p></li>);
-    // totalAmount ma przechowywać wartości dla poszczególnych pozycji w koszyku oraz te wartości sumować za pomocą funkcji reduce
 
     useEffect(() => { // when cartProductList changes - update totalAmount in cart
         let totalAmount = cartProductsList.map(product => ((product.price * product.quantity).toFixed(2) * 1)); // for each product in cart multiply price and quantity
@@ -22,10 +23,12 @@ const ShopCart = ({ cartProductsList, setCartProductsList }) => {
 
     const openCartModalHandler = () => {
         setCartModalState(true);
+        document.body.style.overflow = "hidden";
     }
 
     const closeCartModalHandler = () => {
         setCartModalState(false);
+        document.body.style.overflow = "visible";
     }
 
     return (
@@ -40,8 +43,10 @@ const ShopCart = ({ cartProductsList, setCartProductsList }) => {
                 <p>Total amount: {totalAmount.toFixed(2)} EUR</p>
             </div>
             <button className="go-to-cart" onClick={openCartModalHandler}>Go to Cart</button>
-            { cartModalState ? <div className="shop-cart-back" onClick={closeCartModalHandler}></div> : null }
-            <ShopCartModal cartProductsList={cartProductsList} setCartProductsList={setCartProductsList} cartModalState={cartModalState} closeCartModalHandler={closeCartModalHandler} totalAmount={totalAmount} amountToPay={amountToPay} setAmountToPay={setAmountToPay}/>
+            {/* <Suspense fallback={<div>Loading</div>}> */}
+                { cartModalState ? <div className="shop-cart-back" onClick={closeCartModalHandler}></div> : null }
+                <ShopCartModal cartProductsList={cartProductsList} setCartProductsList={setCartProductsList} cartModalState={cartModalState} closeCartModalHandler={closeCartModalHandler} totalAmount={totalAmount} amountToPay={amountToPay} setAmountToPay={setAmountToPay}/>
+            {/* </Suspense> */}
         </>
     )
 }

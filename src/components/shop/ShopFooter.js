@@ -27,10 +27,12 @@ const ShopFooter = () => {
     const openShopFooterModalHandler = (e) => {
         setShopFooterModalState(true);
         setShopFooterDetailClicked(parseInt(e.currentTarget.value));
+        document.body.style.overflow = "hidden";
     }
 
     const closeShopFooterModalHandler = () => {
         setShopFooterModalState(false);
+        document.body.style.overflow = "visible";
     }
     
 
