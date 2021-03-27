@@ -30,7 +30,7 @@ const Recommendations = () => {
     
 
     useEffect(() => {
-        gsap.fromTo(opinionsWrapper.current.children, {y: '+=170', scale: 1.4, autoAlpha: 0}, {y: 0, scale: 1, autoAlpha: 1, stagger: .5,
+        gsap.fromTo(opinionsWrapper.current.children, {y: '+=170', scale: 1.4, autoAlpha: 0}, {y: 0, scale: 1, autoAlpha: 1, stagger: .5, duration: 1,
             scrollTrigger: {
                 trigger: opinionsWrapper.current,
                 start:'top 60%',
