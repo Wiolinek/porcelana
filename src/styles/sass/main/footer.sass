@@ -4,32 +4,35 @@
 .newsletter
     background-color: $dark-color
     color: $white-color
-    font-size: 23px
     min-height: 27vh
     display: flex
     flex-direction: column
     justify-content: center
     align-items: center
-    & div
+    & .newsletter-icon
         display: flex
         align-items: center
-        font-size: 35px
         padding: 2vh
         & .fa-newspaper
-            font-size: 34px
-            margin-right: 1.5vw
+            font-size: 2.1rem
+            margin-right: .8em
+        & p
+            font-size: 2.1rem
+    & p
+        font-size: 1.4rem
     & form
-        width: 70%
+        width: 100%
         display: flex
         align-items: center
         justify-content: center
         margin-top: 3vh
+        & label
+            font-size: 1.4rem
     & input
         color: $white-color
         border-radius: 6px
         outline: none
     & [type='email']
-        width: 25%
         height: 25px
         margin: 0 3vw 0 1vw
         border: $white-border-thin
@@ -38,7 +41,7 @@
         @include button
         height: 43px
         width: 120px
-        font-size: 23px
+        font-size: 1.4rem
         border-radius: 6px
     & [type='submit']:hover
         @include hover-button
@@ -47,8 +50,13 @@
     display: flex
     flex-direction: column
     align-items: center
+    padding: 3rem 0
     & .contact_form
-        display: flex
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr))
+        grid-template-rows: repeat(auto-fill, minmax(350px, 2fr))
+        grid-gap: 2em
+        justify-content: center
         align-items: center
         width: 80%
         & .address
@@ -56,7 +64,6 @@
             justify-content: flex-start
             align-items: center
             flex-direction: column
-            font-size: 28px
             text-align: center
             flex-basis: 50%
             height: 100%
@@ -64,6 +71,7 @@
             margin-top: 3vh
             & p
                 width: 80%
+                font-size: 2rem
                 margin-top: 2vh
         & .form
             flex-basis: 50%
@@ -92,7 +100,7 @@
                 margin-top: 4vh
                 height: 43px
                 width: 120px
-                font-size: 23px
+                font-size: 1.4rem
             & [type='submit']:hover
                 background-color: $dark-color
                 border: $black-border-thin

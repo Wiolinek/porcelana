@@ -24,7 +24,6 @@ const MenuModal = ( {closeMenuHandler, navMenuState} ) => {
         delay: 1000,
         smooth: 'linear',
         hashSpy: 'true',
-        // containerId: link,
       });
 
     const mainMenu = mainMenuOptionsState.map(option =>

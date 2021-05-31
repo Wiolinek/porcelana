@@ -1,8 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-scroll';
 
-import { NavLink } from "react-router-dom";
-
 import '../../styles/sass/main/home.sass';
 
 import {animateScroll as scroll } from 'react-scroll';
@@ -41,28 +39,29 @@ const Home = () => {
 
     return (
         <>
-            <div className="logo" ref={logoAnimation} >
-                <Link className="logo-border" onClick={scrollToTop} >
-                    <div smooth={true}>
-                        <p className="logo-name">ICM Inc.</p> 
-                    </div>
-                </Link>
-            </div>
-            <div className="main-page">
-                <div ref={homeWrapper} className="tagline">
-                    <p>Our design</p>
-                    <p>Your <span>style</span></p>
+            <section>
+                <div className="logo" ref={logoAnimation} >
+                    <Link className="logo-border" onClick={scrollToTop} >
+                        <div smooth={true}>
+                            <p className="logo-name">ICM Inc.</p> 
+                        </div>
+                    </Link>
                 </div>
-                <Link to="about" smooth={true}><i className="fas fa-angle-double-down" ref={arrowBtn}></i></Link>
-            </div>
+                <div className="main-page">
+                    <div ref={homeWrapper} className="tagline">
+                        <p>Our design</p>
+                        <p>Your <span>style</span></p>
+                    </div>
+                    <Link to="about" smooth={true}><i className="fas fa-angle-double-down" ref={arrowBtn}></i></Link>
+                </div>
+            </section>
             <aside className="side-bar">
                 <ul ref={asideWrapper}>
-                    <li><NavLink to="/shop/all" target="_blank"><i className="fas fa-shopping-cart"></i><i className="hover fas fa-shopping-cart"></i></NavLink></li>
-                    <li><a href="https://www.facebook.com" rel="noreferrer" target="_blank"><i className="fab fa-facebook"></i><i className="hover fab fa-facebook"></i></a></li>
-                    <li><a href="https://www.messenger.com" rel="noreferrer" target="_blank"><i className="fab fa-facebook-messenger"></i><i className="hover fab fa-facebook-messenger"></i></a></li>
-                    <li><a href="https://www.instagram.com" rel="noreferrer" target="_blank"><i className="fab fa-instagram"></i><i className="hover fab fa-instagram"></i></a></li>
-                    <li><a href="https://twitter.com" rel="noreferrer" target="_blank"><i className="fab fa-twitter-square"></i><i className="hover fab fa-twitter-square"></i></a></li>
-                    <li><Link to="contact" smooth={true}><i className="fas fa-envelope"></i><i className="hover fas fa-envelope"></i></Link></li>
+                    <li><a href="https://www.facebook.com" rel="noreferrer" target="_blank"><i className="fab fa-facebook"></i></a></li>
+                    <li><a href="https://www.messenger.com" rel="noreferrer" target="_blank"><i className="fab fa-facebook-messenger"></i></a></li>
+                    <li><a href="https://www.instagram.com" rel="noreferrer" target="_blank"><i className="fab fa-instagram"></i></a></li>
+                    <li><a href="https://twitter.com" rel="noreferrer" target="_blank"><i className="fab fa-twitter-square"></i></a></li>
+                    <li><Link to="contact" smooth={true}><i className="fas fa-envelope"></i></Link></li>
                 </ul>
             </aside>
         </>

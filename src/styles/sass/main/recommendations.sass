@@ -1,19 +1,16 @@
 @import '../variables.sass'
-    
+
 .recommendations
     min-height: 150vh
     background-color: $dark-color
     color: $white-color
     & h1
-        width: 75%
         margin: 0 auto
         border-top: 1px solid $dark-color
     & .opinions
         display: flex
         flex-direction: column
-        font-size: 1.2em
         height: 100%
-        width: 75%
         margin: 0 auto
         & div
             display: flex
@@ -25,6 +22,7 @@
             border-radius: 6px
             backdrop-filter: $blur-effect
             & p
+                font-size: 1.3rem
                 font-family: 'JetBrains Mono', monospace
         & div:nth-child(odd)
             margin-left: 20%

@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 import MenuModal from './MenuModal';
+import { NavLink } from "react-router-dom";
 
 import '../../styles/sass/main/navigation.sass';
 
@@ -40,7 +41,11 @@ const Navigation = () => {
 
     return (
         <>
-            <button ref={navigationIconAnimation} className="show-menu"><i className="fas fa-bars" navMenuState={navMenuState} onClick={showMenuHandler}></i></button>
+            
+            <div ref={navigationIconAnimation} className="show-menu">
+                <NavLink to="/shop/all" target="_blank"><i className="fas fa-shopping-cart"></i></NavLink>
+                <i className="fas fa-bars" navMenuState={navMenuState} onClick={showMenuHandler}></i>
+            </div>
             <MenuModal navMenuState={navMenuState} closeMenuHandler={closeMenuHandler}/>
         </>
     )

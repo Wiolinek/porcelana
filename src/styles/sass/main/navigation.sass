@@ -2,18 +2,18 @@
 @import '../mixins.sass'
 
 .show-menu
-    height: 60px
-    width: 60px
-    z-index: 1
+    display: flex
     text-decoration: none
-    margin: 3.6vh 1.45em 1.45em 1.45em
+    margin: 1.9vh 0
     position: fixed
     top: 0
     right: 0
     mix-blend-mode: difference
-    &:hover .fa-bars
+    z-index: 1
+    & a
+        text-decoration: none
+    &:hover .fa-bars, &:hover .fa-shopping-cart
         @include hover-font-awesome
-    & .fa-bars
+    & .fa-bars, .fa-shopping-cart
         @include font-awesome
-        margin: 0
         color: $white-color

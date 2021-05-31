@@ -17,18 +17,4 @@ router.get('/', function(req, res, next) {
 // podwójny cudzysłów dajemy jeśli używamy w poleceniu cudzysłów pojedynczy
 
 
-// router.get('', function(req, res, next) {
-
-//   mysql.query('SELECT * FROM product_x_category', function(error, result, fields) {
-//     res.json(result);
-//   });
-// });
-
-// router.get('/category/:categoryId', function(req, res, next) {
-//   mysql.query('SELECT * FROM product LEFT JOIN category ON product.id = category.product_id', function(error, result, fields) {
-//     res.json(result);
-//   });
-// });
-
-
 module.exports = router;

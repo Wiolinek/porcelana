@@ -55,7 +55,7 @@ const Career = () => {
 
 
     return (
-            <div className="career">
+            <article className="career">
                 <h1>Career</h1>
                 <div className="offers" ref={careerWrapper}>
                     <p>We are a constantly developing, stable and reliable company based on tradition and respect. Do you want to become part of our success? Check out our current job openings below and let us know about your experience and potential.</p>
@@ -75,7 +75,7 @@ const Career = () => {
                 <div className="join" ref={jointBtnAnimation}><Link to="contact" smooth={true}>Join us!</Link></div>
                     { careerModalState ? <div className="career-modal-back" onClick={closeModalHandler}></div> : null }
                     <CareerModal careerModalState={careerModalState} closeModalHandler={closeModalHandler} jobOffersData={jobOffersData} offer={offer}/>
-            </div>
+            </article>
     )
 }
 

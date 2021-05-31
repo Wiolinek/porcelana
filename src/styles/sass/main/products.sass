@@ -3,38 +3,26 @@
 
 .offer
     min-height: 110vh
-    width: 100%
     & .products
-        margin: 0 auto 5vh
-        width: 75%
-        display: flex
-        flex-direction: column
-        justify-content: center
-        align-items: center
         > div
-            display: flex
-            justify-content: space-around
-            align-content: center
-            width: 100%
-            margin: 1.5vh 0
-            padding: 2vh 0
-            align-items: flex-start
+            display: grid
+            grid-row-gap: 2em
+            justify-content: center
+            margin: 3vh 0
         & .product-photo
-            font-size: 40px
             text-shadow: 3px 3px 6px $dark-color
             color: $white-color
-            padding: 2%
-            width: 20%
-            min-height: 35vh
+            padding: 2rem
             background-color: grey
             background-repeat: no-repeat
             background-position: center center
             background-size: cover
             object-fit: cover
             box-shadow: 2px 6px 12px 2px rgba(0, 0, 0, 0.5)
-            position: relative
             border-radius: 6px
             transition: all .6s
+            & p
+                font-size: 2.5rem
         & .mugs
             background-image: url('../../../images/mug_1_small.jpg')
         & .cups
@@ -48,25 +36,91 @@
         & .vases
             background-image: url('../../../images/vase_4_small.jpg')
         & .product-info
+            display: flex
+            flex-direction: column
+            justify-content: space-between
             background-color: $dark-color
             color: $white-color
             box-shadow: 2px 6px 12px 2px rgba(0, 0, 0, 0.5)
-            padding: 2em
-            width: 65%
-            font-size: 1.3em
-            line-height: 1.7
-            word-spacing: 2.5px
             border-radius: 6px
+            padding: 2.5em
+            & p
+                font-size: 1.3rem
+                line-height: 1.8em
+                word-spacing: 2.5px
         & .more-btn
             @include button
-            margin: 1em .8em 0 auto
-            font-size: 20px
-            width: 80px
-            height: 80px
+            margin: 1.2em .8em 0 auto
             & a
+                font-size: 1.2rem
                 text-decoration: none
                 color: $white-color
             &:hover a
                 color: $dark-color
             &:hover
                 @include hover-button
+@media (max-width: 2000px)
+    .products
+        > div
+            display: grid
+            grid-template-columns: repeat(auto-fit, minmax(400px, 2fr))
+            grid-template-rows: repeat(auto-fill, minmax(420px, 2fr))
+        & .product-photo
+            width: 350px
+        & .more-btn
+            width: 80px
+            height: 80px
+
+// @media (max-width: 1600px)
+
+// @media (max-width: 1450px)
+
+// @media (max-width: 1360px)
+
+@media (max-width: 1260px)
+    .products .more-btn
+        width: 75px
+        height: 75px
+
+@media (max-width: 1160px)
+    .products .more-btn
+        width: 70px
+        height: 70px
+
+@media (max-width: 800px)
+    .products .more-btn
+        width: 65px
+        height: 65px
+
+@media (max-width: 550px)
+    .products
+        > div
+            grid-template-columns: 320px
+            grid-template-rows: 400px 460px
+        & .product-photo
+            width: 320px
+        & .more-btn
+            width: 60px
+            height: 60px
+
+@media (max-width: 470px)
+    .products
+        > div
+            grid-template-columns: 270px
+            grid-template-rows: 350px 440px
+        & .product-photo
+            width: 270px
+        & .more-btn
+            width: 55px
+            height: 55px
+
+@media (max-width: 360px)
+    .products
+        > div
+            grid-template-columns: 220px
+            grid-template-rows: 280px 430px
+        & .product-photo
+            width: 220px
+        & .more-btn
+            width: 50px
+            height: 50px

@@ -2,70 +2,76 @@
 @import '../mixins.sass'
 
 .home
+    display: flex
+    justify-content: center
+    align-items: center
     & .logo
         position: fixed
         top: 6vh
         left: 2.37vw
         z-index: 20
         mix-blend-mode: difference
+        cursor: pointer
         & .logo-border
             mix-blend-mode: difference
+            height: 155px
+            width: 155px
             @include border-logo-style
             &:hover
-                cursor: pointer
                 background-color: $white-color
                 color: $dark-color
             & .logo-name
+                font-size: 2rem
                 @include logo-name-style
     & .main-page
         width: 100%
         display: flex
         justify-content: center
         align-items: center
-        & div
+        & .tagline
             text-align: center
             display: flex
             flex-direction: column
-            width: 55vw
-            font-size: 8.15rem
             font-family: 'Raleway Dots', cursive
             text-transform: uppercase
-            letter-spacing: .3vw
-            line-height: 190px
+            letter-spacing: .07em
             opacity: 0
             transform: translateX(-3vw)
             & p:first-child
+                line-height: 2em
+                // font-size: 8.15rem
                 transform: translateX(-1.3vw)
             & p:last-child
+                line-height: 2em
+                // font-size: 8.15rem
                 transform: translateX(+1.2vw)
                 & span
                     font-family: 'Unica One', cursive
-                    font-size: 155px
+                    // font-size: 9.7rem
                     text-transform: lowercase
-                    letter-spacing: .9vw
+                    letter-spacing: .08em
         & .fas
             position: absolute
             bottom: 3vh
             right: calc(50vw - 35px)
-            height: 100px
-            width: 70px
+            height: 6.25rem
+            width: 4.35rem
             border: none
-            font-size: 50px
+            font-size: 3rem
             text-align: center
             &:hover
                 @include hover-font-awesome
     & .side-bar
         position: fixed
         bottom: 0
+        right: 0
         display: flex
         flex-direction: column
         justify-content: flex-end
         min-height: 90vh
-        // mix-blend-mode: difference
-        color: $dark-color
+        mix-blend-mode: difference
         & ul
             list-style: none
-            // mix-blend-mode: difference
             display: flex
             align-items: center
             justify-content: center
@@ -73,18 +79,114 @@
             margin-bottom: 4vh
             & li
                 align-items: flex-end
-                & a
-                    // mix-blend-mode: difference
+                & a, i
+                    // border-radius: 50%
                     text-decoration: none
                     @include font-awesome
-                    &:hover
+                    &:hover i
                         @include hover-font-awesome
-            & .fa-shopping-cart
-                transition: all .6s
-                padding: .35em
-                // border: 3px solid $details-color
-                border-radius: 50%
-                // background-color: $details-color
-                margin-bottom: 25vh
-                // &:hover
-                    // color: $white-color
+                    & i
+                        color: $white-color
+
+@media (max-width: 2000px)
+    .tagline p,
+        font-size: 7.5rem
+    .tagline span
+        font-size: 8.4rem
+
+@media (max-width: 1600px)
+    .tagline p
+        font-size: 7rem
+    .tagline span
+        font-size: 8.4rem
+
+@media (max-width: 1450px)
+    .tagline p
+        font-size: 6.5rem
+    .tagline span
+        font-size: 8.1rem
+
+@media (max-width: 1360px)
+    .home .logo
+        top: 5vh
+    .tagline p
+        font-size: 6rem
+    .tagline span
+        font-size: 7.4rem
+
+@media (max-width: 1260px)
+    .home .logo
+        top: 4vh
+        .logo-border
+            height: 150px
+            width: 150px
+    .tagline p
+        font-size: 5.8rem
+    .tagline span
+        font-size: 7rem
+
+@media (max-width: 1160px)
+    .home .logo
+        top: 3.5vh
+        .logo-border
+            height: 140px
+            width: 140px
+    .tagline p
+        font-size: 5.5rem
+    .tagline span
+        font-size: 6.6rem
+
+@media (max-width: 800px)
+    .home .logo
+        top: 3vh
+        .logo-border
+            height: 130px
+            width: 130px
+    .tagline p
+        font-size: 5.2rem
+    .tagline span
+        font-size: 6.3rem
+
+@media (max-width: 660px)
+    .home .logo
+        top: 2.6vh
+        .logo-border
+            height: 120px
+            width: 120px
+    .tagline p
+        font-size: 5rem
+    .tagline span
+        font-size: 5.9rem
+
+@media (max-width: 550px)
+    .home .logo
+        top: 2.3vh
+        .logo-border
+            height: 110px
+            width: 110px
+    .tagline p
+        font-size: 5rem
+    .tagline span
+        font-size: 5.8rem
+
+@media (max-width: 470px)
+    .home .logo
+        top: 2vh
+        .logo-border
+            height: 100px
+            width: 100px
+    .tagline p
+        font-size: 4.7rem
+    .tagline span
+        font-size: 5.6rem
+
+@media (max-width: 360px)
+    .home .logo
+        top: 1.5vh
+        .logo-border
+            height: 90px
+            width: 90px
+    .tagline p
+        font-size: 4rem
+    .tagline span
+        font-size: 5.2rem

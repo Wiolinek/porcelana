@@ -11,20 +11,61 @@
         font-family: 'Cinzel', serif
         background-color: $white-color
         & .header
-            display: flex
-            flex-direction: column
             background: url('../../../images/back_11.jpg') no-repeat center center
             background-size: cover
             & .home
                 min-height: 100vh
-                display: flex
-                flex-direction: row-reverse
+        & section
+            margin: 0 auto
+            font-size: 1.3rem
+            line-height: 1.7
+            word-spacing: 2.5px
+        & article
+            margin: 0 auto
+            padding: 3em .5em
+            width: 75%
         & footer
-            background-image: url('../../../images/back_11.jpg')
-            background-size: 100%
+            background: url('../../../images/back_11.jpg') no-repeat center top
+            background-size: cover
         & h1
-            padding-top: 10vh
-            padding-bottom: 5vh
-            font-size: 33px
+            font-size: 2.1rem
             font-weight: 700
+            // padding-top: 2.5em
+            padding-bottom: 1.5em
             text-align: center
+@media (max-width: 2000px)
+    *
+        font-size: 16px
+
+// @media (max-width: 1600px)
+//     .teachers-card__courses-list
+
+// @media (max-width: 1450px)
+//     .teachers-card__courses-list
+
+// @media (max-width: 1360px)
+//     .teachers-card__courses-list
+
+@media (max-width: 1260px)
+    *
+        font-size: 15px
+
+@media (max-width: 1160px)
+    *
+        font-size: 14px
+
+@media (max-width: 800px)
+    *
+        font-size: 13px
+
+@media (max-width: 550px)
+    *
+        font-size: 12px
+
+@media (max-width: 470px)
+    *
+        font-size: 11px
+
+@media (max-width: 360px)
+    *
+        font-size: 10px

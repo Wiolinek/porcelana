@@ -46,12 +46,12 @@ const Recommendations = () => {
     }, [opinionsData]);
 
     return (
-            <>
+            <article>
                 <h1>Recommendations</h1>
                 <div className="opinions" ref={opinionsWrapper}>
                     {opinions}
                 </div>
-            </>
+            </article>
     )
 }
 

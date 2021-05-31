@@ -2,17 +2,17 @@
 @import '../mixins.sass'
 
 .career
+    min-height: 110vh
     display: flex
     flex-direction: column
     align-content: end
     justify-content: end
-    width: 77%
-    min-height: 110vh
-    font-size: 21px
-    line-height: 1.7
-    word-spacing: 1.5px
     margin: 0 auto
-    & .offers p:first-child
+    & .offers p
+        font-size: 1.3rem
+        line-height: 1.7em
+        word-spacing: 1.5px
+        &:first-child
         margin-top: 3vh
     & table, th, td
         width: 90%
@@ -21,13 +21,14 @@
         border: 1px solid $dark-color
         border-collapse: collapse
         & th, td
+            font-size: 1.2rem
             padding: 7px
             text-align: center
     & .open-offer-modal-btn
         background-color: transparent
         border: none
         font-family: 'Cinzel', serif
-        font-size: 21px
+        font-size: 1.2rem
         outline: none
         cursor: pointer
     & .date, & .location
@@ -35,7 +36,6 @@
     & .join
         @include button
         margin: 5vh 10vw 10vh auto
-        font-size: 23px
         width: 115px
         height: 115px
         border-radius: 50%
@@ -49,6 +49,7 @@
             100%
                 background-color: $details-color
         & a
+            font-size: 1.3rem
             text-decoration: none
             color: $white-color
         &:hover

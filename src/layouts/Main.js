@@ -16,7 +16,6 @@ import '../styles/sass/main/main.sass';
 const Main = () => {
 
 
-
     return (
       <>
         <div className="main">
@@ -32,24 +31,24 @@ const Main = () => {
           </Element>
           <main>
             <Element name="about">
-              <article className="about" id="about" name="about">
+              <section className="about" id="about" name="about">
                 <About />
-              </article>
+              </section>
             </Element>
             <Element name="products">
-              <article className="offer" id="products" name="products">
+              <section className="offer" id="products" name="products">
                 <Products />
-              </article>
+              </section>
             </Element>
             <Element name="recommendations">
-              <article className="recommendations" id="recommendations" name="recommendations">
+              <section className="recommendations" id="recommendations" name="recommendations">
                 <Recommendations />
-              </article>
+              </section>
             </Element>
             <Element name="career">
-              <article id="career" name="career">
+              <section id="career" name="career">
                 <Career />
-              </article>
+              </section>
             </Element>
           </main>
             <Element name="contact">
