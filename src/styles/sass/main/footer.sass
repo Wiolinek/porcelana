@@ -53,7 +53,6 @@
     padding: 3rem 0
     & .contact_form
         display: grid
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr))
         grid-template-rows: repeat(auto-fill, minmax(350px, 2fr))
         grid-gap: 2em
         justify-content: center
@@ -71,7 +70,6 @@
             margin-top: 3vh
             & p
                 width: 80%
-                font-size: 2rem
                 margin-top: 2vh
         & .form
             flex-basis: 50%
@@ -89,7 +87,6 @@
                 width: 80%
                 height: 13vh
             & input
-                width: 50%
                 height: 25px
             & label
                 margin-top: 1vh
@@ -112,3 +109,32 @@
 .contribution
     font-family: 'Times New Roman', Times, serif
     height: 3vh
+
+@media (max-width: 2000px)
+    .contact_form
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr))
+        & .form input
+            width: 50%
+        & .address p
+            font-size: 2rem
+
+@media (max-width: 550px)
+    .contact_form
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr))
+
+@media (max-width: 470px)
+    .newsletter
+        & form
+            flex-direction: column
+        & input
+            margin: 1em 0
+    .contact_form
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr))
+        & .form input
+            width: 80%
+        & .address p
+            font-size: 1.6rem
+
+@media (max-width: 360px)
+    .contact_form
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))

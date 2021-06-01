@@ -2,10 +2,52 @@
 @import '../mixins.sass'
 
 .products-section
-    width: 64%
-    margin: 4vh 0 7vh 5vw
+    width: 90%
+    margin: 4vh 0 7vh 3vw
     & .products-list
-        display: flex
-        justify-content: flex-start
-        flex-wrap: wrap
+        grid-column: 1 / 2
+        display: grid
+        grid-template-columns: repeat(auto-fill, minmax(220px, 290px))
+        justify-content: center
         list-style: none
+@media (max-width: 2000px)
+    .products-list
+        grid-auto-rows: 640px
+
+@media (max-width: 1600px)
+    .products-list
+
+@media (max-width: 1450px)
+    .products-list   
+
+@media (max-width: 1360px)
+    .products-list
+        grid-auto-rows: 620px
+
+@media (max-width: 1260px)
+    .products-list
+        grid-auto-rows: 590px
+
+@media (max-width: 1160px)
+    .products-list
+        grid-auto-rows: 560px
+
+@media (max-width: 800px)
+    .products-list
+        grid-auto-rows: 530px
+
+@media (max-width: 660px)
+    .products-list
+        grid-auto-rows: 500px
+
+@media (max-width: 550px)
+    .products-list
+        grid-auto-rows: 470px
+
+@media (max-width: 470px)
+    .products-list
+        grid-auto-rows: 450px
+
+@media (max-width: 360px)
+    .products-list
+        grid-auto-rows: 430px

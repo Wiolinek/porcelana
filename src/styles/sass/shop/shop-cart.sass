@@ -1,20 +1,19 @@
 @import '../variables.sass'
 @import '../mixins.sass'
-    
+
 .cart
+    grid-column: 2 / 3
     bottom: 9vh
-    width: 25%
     height: 54.5vh
+    width: 360px
     position: fixed
-    right: 1vw
+    right: 4vw
     display: flex
     flex-direction: column
     align-items: center
     justify-content: space-between
     border-radius: 6px
     background-color: $white-color
-    margin-right: 3vw
-    margin-top: 3vh
     > p
         padding-top: 10px
         font-weight: 700
@@ -55,7 +54,7 @@
                     width: 15%
                 & p:first-child
                     width: 65%
-                    text-align: start     
+                    text-align: start
         & p
             font-size: 19px
     & .go-to-cart
