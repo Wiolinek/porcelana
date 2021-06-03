@@ -9,15 +9,13 @@
     position: fixed
     right: 0
     top: 0
-    backdrop-filter: $blur-effect
     transition: clip-path 1.4s ease-in-out
-    // -webkit-clip-path: circle(100px at 50% 50%)
     & .menu-logo-container
-        display: flex
         align-items: center
         justify-content: center
         height: 100vh
         width: 60vw
+        background-color: $white-color
         & .logo-border
             @include border-logo-style
             height: 18vw
@@ -26,23 +24,21 @@
             left: 0
             & .logo-name
                 @include logo-name-style
-                font-size: 60px
     & .navigation-menu-container
         display: flex
         flex-direction: column
         height: 100vh
-        width: 40vw
         background-color: $dark-color
         & .fa-times
             color: $white-color
-            transition: all .6s
-            font-size: 38px
-            padding: .1em
-            margin: 4vh .9em 1.4em 1.4em
+            min-height: 5vh
+            font-size: 2.4rem
+            margin: 4vh .9em 0 0
             text-align: end
+            transition: all .6s
             cursor: pointer
             &:hover
-                @include hover-font-awesome
+                font-size: 2.6rem
         & .navigation-menu
             display: flex
             flex-direction: column
@@ -51,9 +47,7 @@
             list-style: none
             height: 75%
             & li
-                color: $white-color
-                font-size: 25px
-                transition: all .6s
+                transition: all .3s
                 position: relative
                 &::before
                     content: ""
@@ -62,10 +56,40 @@
                     width: 0
                     transition: all .5s
                     border-bottom: 3px solid $white-color
+                    cursor: pointer
                 &:hover::before
                     width: 100%
-                    cursor: pointer
                 & a
-                    padding: 0 20px
+                    font-size: 1.6rem
+                    padding: 0 1.25em
                     color: $white-color
                     text-decoration: none
+@media (max-width: 2000px)
+    .menu-logo-container
+        display: flex
+    .logo-name
+        font-size: 3.8em
+    .navigation-menu-container
+        width: 40vw
+    
+@media (max-width: 1600px)
+    .logo-name
+        font-size: 3.5em
+
+@media (max-width: 1450px)
+    .logo-name
+        font-size: 2.9em
+
+@media (max-width: 1360px)
+    .logo-name
+        font-size: 2.7em
+
+@media (max-width: 1260px)
+    .logo-name
+        font-size: 2.4em
+
+@media (max-width: 1160px)
+    .menu-logo-container
+        display: none
+    .navigation-menu-container
+        width: 100vw

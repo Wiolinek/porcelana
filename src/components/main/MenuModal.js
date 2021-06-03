@@ -19,7 +19,6 @@ const MenuModal = ( {closeMenuHandler, navMenuState} ) => {
             })
     }, []);
 
-
     const scrollToSection = (link) => scroller.scrollTo(link, {
         delay: 1000,
         smooth: 'linear',

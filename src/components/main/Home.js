@@ -57,11 +57,31 @@ const Home = () => {
             </section>
             <aside className="side-bar">
                 <ul ref={asideWrapper}>
-                    <li><a href="https://www.facebook.com" rel="noreferrer" target="_blank"><i className="fab fa-facebook"></i></a></li>
-                    <li><a href="https://www.messenger.com" rel="noreferrer" target="_blank"><i className="fab fa-facebook-messenger"></i></a></li>
-                    <li><a href="https://www.instagram.com" rel="noreferrer" target="_blank"><i className="fab fa-instagram"></i></a></li>
-                    <li><a href="https://twitter.com" rel="noreferrer" target="_blank"><i className="fab fa-twitter-square"></i></a></li>
-                    <li><Link to="contact" smooth={true}><i className="fas fa-envelope"></i></Link></li>
+                    <li>
+                        <a href="https://www.facebook.com" rel="noreferrer" target="_blank">
+                            <i className="fab fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.messenger.com" rel="noreferrer" target="_blank">
+                            <i className="fab fa-facebook-messenger"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com" rel="noreferrer" target="_blank">
+                            <i className="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com" rel="noreferrer" target="_blank">
+                            <i className="fab fa-twitter-square"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <Link to="contact" smooth={true}>
+                            <i className="fas fa-envelope"></i>
+                        </Link>
+                    </li>
                 </ul>
             </aside>
         </>
