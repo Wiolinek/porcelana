@@ -8,7 +8,7 @@ import About from "../components/main/About";
 import Products from "../components/main/Products";
 import Recommendations from "../components/main/Recommendations";
 import Career from "../components/main/Career";
-import Footer from "../components/main/Footer";
+import Contact from "../components/main/Contact";
 
 import '../styles/sass/main/main.sass';
 
@@ -52,9 +52,9 @@ const Main = () => {
             </Element>
           </main>
             <Element name="contact">
-              <footer id="contact" name="contact">
-                <Footer />
-              </footer>
+              <section className="contact" id="contact" name="contact">
+                <Contact />
+              </section>
             </Element>
         </div>
       </>
