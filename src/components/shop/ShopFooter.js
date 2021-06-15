@@ -40,18 +40,12 @@ const ShopFooter = () => {
         <>
             {shopFooterState && 
                 <div className="shop-footer">
-                    <div className="btn-container">
-                        <NavLink to="/main/#about" exact target="_blank">About Us</NavLink>
-                        <NavLink to="/main/#contact" exact target="_blank">Contact Us</NavLink>
-                    </div>
-                    <div className="btn-container">
-                        <NavLink to="/main/#products" exact target="_blank">About our products</NavLink>
-                        <button shopFooterState={shopFooterState} shopFooterModalState={shopFooterModalState} value={shopFooterState[1].id} onClick={openShopFooterModalHandler}>{shopFooterState[1].name}</button>
-                    </div>
-                    <div className="btn-container">
-                        <button shopFooterState={shopFooterState} shopFooterModalState={shopFooterModalState} value={shopFooterState[2].id} onClick={openShopFooterModalHandler}>{shopFooterState[2].name}</button>
-                        <button shopFooterState={shopFooterState} shopFooterModalState={shopFooterModalState} value={shopFooterState[0].id} onClick={openShopFooterModalHandler}>{shopFooterState[0].name}</button>
-                    </div>
+                    <NavLink to="/main/#about" exact target="_blank">About Us</NavLink>
+                    <NavLink to="/main/#contact" exact target="_blank">Contact Us</NavLink>
+                    <NavLink to="/main/#products" exact target="_blank">About our products</NavLink>
+                    <button shopFooterState={shopFooterState} shopFooterModalState={shopFooterModalState} value={shopFooterState[1].id} onClick={openShopFooterModalHandler}>{shopFooterState[1].name}</button>
+                    <button shopFooterState={shopFooterState} shopFooterModalState={shopFooterModalState} value={shopFooterState[2].id} onClick={openShopFooterModalHandler}>{shopFooterState[2].name}</button>
+                    <button shopFooterState={shopFooterState} shopFooterModalState={shopFooterModalState} value={shopFooterState[0].id} onClick={openShopFooterModalHandler}>{shopFooterState[0].name}</button>
                     { shopFooterModalState ? <div className="shop-footer-back" onClick={closeShopFooterModalHandler}></div> : null }
                     <ShopFooterModal shopFooterDetailClicked={shopFooterDetailClicked} shopFooterModalState={shopFooterModalState} closeShopFooterModalHandler={closeShopFooterModalHandler} shopFooterState={shopFooterState}/>
                 </div>
