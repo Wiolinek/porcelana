@@ -15,7 +15,7 @@ const ShopFooterModal = ( {shopFooterModalState, closeShopFooterModalHandler, sh
 
     
     return (
-        <div className="shop-footer-modal-wrapper" style={{
+        <div className="shop-footer-modal" style={{
             transform: shopFooterModalState ? 'translateY(0vh)' : 'translateY(-100vh)',
             opacity: shopFooterModalState ? '1' : '.5',
             }}>

@@ -89,13 +89,13 @@ const Shop = () => {
             <header className="shop-header">
                 <ShopMenu shopMenuOptions={shopMenuOptions} searchProductHandler={searchProductHandler} filterProductHandler={filterProductHandler} optionSelected={optionSelected}/>
             </header>
-            <main className="shop-products">
+            <main>
                 <ShopProductsList productsData={productsData} searchText={searchText} optionSelected={optionSelected} addToCartHandler={addToCartHandler} warning={warningState}/>
             </main>
             <aside className="cart">
                 <ShopCart cartProductsList={cartProductsList} setCartProductsList={setCartProductsList} />
             </aside>
-            <footer>
+            <footer className="shop-footer-wrapper">
                 <ShopFooter />
             </footer>
         </section>

@@ -16,7 +16,7 @@ const CareerModal = ({ careerModalState, offer, closeModalHandler, jobOffersData
     let { name, location, department, employment_type, position_description, position_requirements, personal_requirements, what_we_offer } = index; //elements selected clicked object in jobOffersData array
 
         return (
-            <div className="career-modal-wrapper" style={{
+            <div className="career-modal" style={{
                 transform: careerModalState ? 'translateY(0vh)' : 'translateY(-100vh)',
                 opacity: careerModalState ? '1' : '.5',
                 }}>
