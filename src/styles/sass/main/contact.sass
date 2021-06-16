@@ -39,8 +39,8 @@
         background-color: $dark-color
     & [type='submit']
         @include button
-        height: 43px
-        width: 120px
+        height: 2.7rem
+        width: 7.5rem
         font-size: 1.4rem
         border-radius: 6px
     & [type='submit']:hover
@@ -94,8 +94,8 @@
                 color: $dark-color
                 border: $black-border-thin
                 margin-top: 4vh
-                height: 43px
-                width: 120px
+                height: 2.7rem
+                width: 7.5rem
                 font-size: 1.4rem
             & [type='submit']:hover
                 background-color: $dark-color
@@ -127,6 +127,8 @@
             flex-direction: column
         & input
             margin: 1em 0
+        & [type='email']
+            margin: 0
     .contact_form
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr))
         grid-template-rows: repeat(auto-fill, minmax(300px, 2fr))

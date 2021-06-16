@@ -1,14 +1,16 @@
 @import '../variables.sass'
 @import '../mixins.sass'
 
-.career-modal-wrapper
+.career-modal
     @include modal-style
+    width: 80%
+    left: 10vw
     z-index: 30
     & div p
         padding-top: 1.3vh
         & span:first-child
             font-weight: 700
-            font-size: 19px
+            font-size: 1.2rem
         & span:last-child
             white-space: pre-wrap
     & h2
@@ -17,38 +19,30 @@
     & .close-btn
         @include button
         color: $white-color
-        font-size: 17px
+        font-size: 1.06rem
         margin: 3vh 3vh 1vh auto
-        width: 70px
-        height: 70px
+        width: 4.38rem
+        height: 4.38rem
         &:hover
             @include hover-button
             background-color: $white-color
     & .send-cv-btn
         @include button
         color: $white-color
-        font-size: 22px
         margin: 3vh 3vh 3vh auto
-        width: 115px
-        height: 115px
+        width: 7.2rem
+        height: 7.2rem
+        a
+            font-size: 1.3rem
         &:hover
             @include hover-button
-// @media (max-width: 2000px)
 
-// @media (max-width: 1600px)
+@media (max-width: 550px)
+    .career-modal
+        width: 90%
+        left: 5vw
 
-// @media (max-width: 1450px)
-
-// @media (max-width: 1360px)
-
-// @media (max-width: 1260px)
-
-// @media (max-width: 1160px)
-
-// @media (max-width: 800px)
-
-// @media (max-width: 550px)
-
-// @media (max-width: 470px)
-
-// @media (max-width: 360px)
+@media (max-width: 360px)
+    .career-modal
+        width: 96%
+        left: 2vw

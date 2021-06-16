@@ -6,19 +6,20 @@
     .shop-footer
         background-color: $dark-color
         color: $white-color
-        min-height: 7.4vh
+        min-height: 7.6vh
         display: grid
         grid-template-rows: repeat(2, 3.7vh)
         grid-auto-rows: 3.7vh
         text-align: center
         letter-spacing: .03em
-        & button
+        & .shop-footer-btn
             display: flex
             justify-content: center
             align-items: center
             color: $white-color
             font-family: 'Cinzel', serif
             font-size: .9rem
+            padding: .5em 0
             background-color: transparent
             outline: none
             border: none
@@ -29,6 +30,7 @@
             align-items: center
             color: $white-color
             font-size: .9rem
+            padding: .5em 0
             text-align: center
             text-decoration: none
             cursor: pointer
@@ -43,13 +45,12 @@
 
 @media (min-width: 551px)
     .shop-footer
-        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr))
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
 
 @media (max-width: 550px)
     .shop-footer
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr))
 
 @media (max-width: 360px)
     .shop-footer
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
-        
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr))

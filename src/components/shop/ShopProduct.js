@@ -14,9 +14,9 @@ const ShopProduct = (props) => {
     let warningDisplayHandler = () => {
         warningVisibility.current.style.setProperty("opacity", 1);
         setTimeout(() => {
-            // warningVisibility.current.style.setProperty("opacity", 0);
+            warningVisibility.current.style.setProperty("opacity", 0);
             gsap.to(warningVisibility.current, {opacity: 0, duration: 3})
-        }, 3000)
+        }, 1500)
         
     }
 
@@ -52,7 +52,8 @@ const ShopProduct = (props) => {
                 <div className="choose-quantity">
                     <p>Choose quantity:</p>
                     <label forhtml="quantity">
-                        <input type="number" className="pcs" placeholder="0" min="0" max="24" id={product.id} name={product.name} price={product.price} ref={clickedProduct}></input></label>
+                        <input type="number" className="pcs" placeholder="0" min="0" max="24" id={product.id} name={product.name} price={product.price} ref={clickedProduct}></input>
+                    </label>
                     <p className="warning" ref={warningVisibility}>You cannot order more than 24 pcs</p>
                     {warning === product.id ? warningDisplayHandler() : null}
                     <input type="button" className="add-to-cart" value="Add to cart" id={product.id} name={product.name} price={product.price} onClick={addHandler}></input>

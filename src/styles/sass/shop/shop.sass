@@ -6,24 +6,20 @@
         overflow: hidden
         font-family: 'Cinzel', serif
         min-height: 100vh
-        // display: flex
-        // flex-direction: column
-        // align-items: space-between
-        // justify-content: space-between
         display: grid
-        grid-template-columns: auto 430px
+        & h2
+            font-size: 1.5rem
+            text-align: start
+
 @media (max-width: 2000px)
     *
         font-size: 16px
+        & .shop
+            grid-template-columns: auto 430px
 
-// @media (max-width: 1600px)
-//     .teachers-card__courses-list
-
-// @media (max-width: 1450px)
-//     .teachers-card__courses-list
-
-// @media (max-width: 1360px)
-//     .teachers-card__courses-list
+@media (min-width: 1261px)
+    *
+        font-size: 16px
 
 @media (max-width: 1260px)
     *
@@ -36,6 +32,10 @@
 @media (max-width: 800px)
     *
         font-size: 13px
+
+@media (max-width: 660px)
+    .shop
+        grid-template-columns: auto 85px
 
 @media (max-width: 550px)
     *

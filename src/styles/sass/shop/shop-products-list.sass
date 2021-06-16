@@ -7,47 +7,54 @@
     & .products-list
         grid-column: 1 / 2
         display: grid
-        grid-template-columns: repeat(auto-fill, minmax(220px, 290px))
         justify-content: center
         list-style: none
+
+@media (min-width: 2001px)
+    .products-list
+        grid-template-columns: repeat(auto-fill, minmax(230px, 290px))
+        grid-auto-rows: 590px
+
 @media (max-width: 2000px)
     .products-list
-        grid-auto-rows: 640px
-
-@media (max-width: 1600px)
-    .products-list
+        grid-template-columns: repeat(auto-fill, minmax(230px, 290px))
+        grid-auto-rows: 590px
 
 @media (max-width: 1450px)
-    .products-list   
+    .products-list
+        grid-auto-rows: 560px  
 
 @media (max-width: 1360px)
     .products-list
-        grid-auto-rows: 620px
+        grid-auto-rows: 550px
 
 @media (max-width: 1260px)
     .products-list
-        grid-auto-rows: 590px
+        grid-auto-rows: 500px
 
 @media (max-width: 1160px)
     .products-list
-        grid-auto-rows: 560px
+        grid-auto-rows: 500px
 
 @media (max-width: 800px)
     .products-list
-        grid-auto-rows: 530px
+        grid-template-columns: repeat(auto-fit, minmax(230px, 250px))
+        grid-auto-rows: 470px
 
 @media (max-width: 660px)
     .products-list
-        grid-auto-rows: 500px
+        grid-template-columns: repeat(auto-fit, minmax(220px, 250px))
+        grid-auto-rows: 450px
 
 @media (max-width: 550px)
     .products-list
-        grid-auto-rows: 470px
+        grid-auto-rows: 410px
 
 @media (max-width: 470px)
     .products-list
-        grid-auto-rows: 450px
+        grid-template-columns: repeat(auto-fit, minmax(200px, 220px))
+        grid-auto-rows: 380px
 
 @media (max-width: 360px)
     .products-list
-        grid-auto-rows: 430px
+        grid-auto-rows: 360px

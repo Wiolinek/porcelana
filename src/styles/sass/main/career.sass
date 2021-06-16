@@ -5,8 +5,8 @@
     min-height: 110vh
     display: flex
     flex-direction: column
-    align-content: end
-    justify-content: end
+    align-content: flex-end
+    justify-content: flex-end
     margin: 0 auto
     & .offers p
         font-size: 1.3rem
@@ -36,8 +36,8 @@
     & .join
         @include button
         margin: 5vh 10vw 10vh auto
-        width: 115px
-        height: 115px
+        width: 7.2rem
+        height: 7.2rem
         border-radius: 50%
         position: relative
         animation: join-back-animation 4s infinite
@@ -62,3 +62,29 @@
         left: 0
         top: 0
         z-index: 30
+
+@media (max-width: 2000px)
+    *
+        font-size: 16px
+
+@media (max-width: 1260px)
+    *
+        font-size: 15px
+
+@media (max-width: 1160px)
+    *
+        font-size: 14px
+
+@media (max-width: 830px)
+    .career table
+        width: 100%
+
+@media (max-width: 700px)
+    .date, .job-offer-date
+        display: none
+    .career table th, .career table td, .career th th, .career th td, .career td th, .career td td, .career .open-offer-modal-btn
+        font-size: 1rem
+
+@media (max-width: 420px)
+    .location, .job-offer-location
+        display: none

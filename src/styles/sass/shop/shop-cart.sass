@@ -2,31 +2,42 @@
 @import '../mixins.sass'
 
 .cart
-    grid-column: 2 / 3
-    bottom: 9vh
+    bottom: 12vh
     height: 54.5vh
-    width: 360px
     position: fixed
     right: 4vw
-    display: flex
-    flex-direction: column
-    align-items: center
-    justify-content: space-between
     border-radius: 6px
-    background-color: $white-color
-    > p
-        padding-top: 10px
-        font-weight: 700
-        font-size: 20px
-        color: $details-color
-    & .fa-shopping-cart
-        font-size: 57px
-        margin-bottom: .2em
-    & .in_cart
-        display: flex
+    .small-cart
         flex-direction: column
         align-items: center
-        justify-content: space-around
+        button
+            margin: 1.1rem auto
+            background-color: transparent
+            border: none
+            outline: none
+            cursor: pointer
+        p
+            font-size: 1.2rem
+    .large-cart
+        height: 54.5vh
+        width: 360px
+        flex-direction: column
+        align-items: center
+        justify-content: space-between
+        border-radius: 6px
+        background-color: $white-color
+        & p
+            margin-top: .5em
+    > p
+        font-weight: 700
+        font-size: 1.2rem
+        color: $details-color
+    & .fa-shopping-cart
+        font-size: 3.5rem
+        margin-bottom: .2em
+    & .in_cart
+        flex-direction: column
+        align-items: center
         border-top: 1px solid $dark-color
         border-bottom: 1px solid $dark-color
         height: 65%
@@ -39,14 +50,15 @@
             width: 100%
             & > p
                 text-align: center
-            & ul p
-                padding-top: 10px
+                padding-top: .6rem
+            & ul
+                padding-top: .6rem
             & li
                 display: flex
                 justify-content: space-between
                 list-style: none
                 & p
-                    font-size: 14px
+                    font-size: .85rem
                     padding: 5px
                     width: 20%
                     text-align: end
@@ -56,14 +68,15 @@
                     width: 65%
                     text-align: start
         & p
-            font-size: 19px
+            font-size: 1.1rem
+            text-align: center
     & .go-to-cart
         @include button
         border: $black-border-thin
         width: 60%
         height: 44px
-        font-size: 18px
-        margin: 2vh auto
+        font-size: 1.1rem
+        margin: 1.1rem auto
         border-radius: 6px
         &:hover
             @include hover-button
@@ -76,3 +89,27 @@
         position: fixed
         left: 0
         top: 0
+
+@media (max-width: 2000px)
+    .large-cart
+        display: flex
+    .small-cart
+        display: none
+
+@media (max-width: 660px)
+    .cart
+        bottom: 9vh
+        height: 125px
+    .large-cart
+        display: none
+    .small-cart
+        display: flex
+
+@media (max-height: 700px)
+    .cart
+        bottom: 9vh
+        height: 125px
+    .large-cart
+        display: none
+    .small-cart
+        display: flex

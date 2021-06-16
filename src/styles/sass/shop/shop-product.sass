@@ -20,7 +20,6 @@
             font-weight: bold
     & .product-photo
         min-height: 52%
-        // min-height: 20vh
         position: relative
         background-color: $white-color
         cursor: pointer
@@ -34,7 +33,6 @@
             background-color: transparent
             transition: all .6s
         &:hover::before
-            // backdrop-filter: $blur-effect
             background-color: rgba(15, 15, 15, .8)
         & img
             width: 100%
@@ -81,8 +79,8 @@
         padding: .4em 0 .8em 0
         & p
             margin: .5em 0 .7em 0
-        & .pcs
-            width: 90%
+        & input
+            width: 60px
             font-family: 'Cinzel', serif
             font-size: 1em
             border: $black-border-thin
@@ -100,7 +98,7 @@
             border: $black-border-thin
             width: 73%
             padding: 0.22em
-            font-size: 18px
+            font-size: 1.1rem
             border-radius: 6px
             &:hover
                 @include hover-button

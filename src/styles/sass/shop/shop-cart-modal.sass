@@ -3,22 +3,25 @@
 
 .cart-modal
     @include modal-style
+    width: 80%
+    left: 10vw
     & article
         margin: 1em 1em 3.3em 1em
     & h2
+        font-size: 1.2rem
         border-bottom: 1px solid $dark-color
         margin-bottom: 1.2em
         text-align: center
     & .close-btn
         @include button
-        font-size: 17px
+        font-size: 1.06rem
         margin: 3vh 3vh 1vh auto
-        width: 70px
-        height: 70px
+        width: 4.38rem
+        height: 4.38rem
         &:hover
             @include hover-button
     & .total-price
-        font-size: 1.2em
+        font-size: 1.2rem
         padding: .3em
         margin-top: 2em
         align-self: flex-end
@@ -41,7 +44,6 @@
                 display: flex
                 align-items: center
                 justify-content: space-between
-                width: 40%
                 & p
                     width: 30%
                     text-align: center
@@ -50,20 +52,15 @@
         & .empty-cart
             align-self: flex-start
         & .order-list
-            display: flex
-            flex-direction: column
-            justify-content: center
             & li
                 display: flex
                 padding: .3em 0 0 .15em
                 & > p
                     width: 60%
-                    // padding: .15em
                 & .buttons
                     display: flex
                     align-items: center
                     justify-content: space-between
-                    width: 40%
                     & p
                         width: 30%
                         text-align: center
@@ -76,20 +73,21 @@
                             text-align: center
                         & .change-quantity
                             @include button
-                            font-size: 30px
+                            font-size: 1.88rem
                             margin: .3vh 0
-                            width: 35px
-                            height: 35px
+                            width: 2.19rem
+                            height: 2.19rem
                             &:hover
                                 @include hover-button
                     & .delete
                         color: $dark-color
-                        font-size: 27px
                         margin: .3vh 0
                         outline: none
                         background-color: transparent
                         border: none
                         width: 7%
+                        & i
+                            font-size: 1.7rem
                         &:hover
                             cursor: pointer
     & .delivery
@@ -99,8 +97,7 @@
         & .delivery-options
             width: 100%
             & ul
-                display: flex
-                justify-content: space-between
+                display: grid
                 list-style: none
                 & li
                     display: flex
@@ -110,7 +107,6 @@
                         & input
                             margin-right: 1em
                     & p
-                        font-size: .8em
                         margin: .5em 0 0 1.8em
         & div
             display: flex
@@ -119,9 +115,9 @@
             & .estimated-delivery-date
                 padding: .3em
                 & span:last-child
+                    font-size: 1.1rem
                     padding-left: .3em
                     font-weight: 900
-                    font-size: 1.1em
     & .address
         & .address-form form
             display: flex
@@ -134,16 +130,72 @@
                 border: $black-border-thin
                 border-radius: 6px
                 outline: none
-                width: 35%
-                height: 25px
+                height: 1.6rem
             & label
                 font-size: 1rem
                 margin-top: 1vh
         & .send-order
             @include button
-            font-size: 22px
+            font-size: 1.3rem
             margin: 3vh 3vh 3vh auto
-            width: 115px
-            height: 115px
+            width: 7.2rem
+            height: 7.2rem
             &:hover
                 @include hover-button
+
+@media (max-width: 2000px)
+    .delivery
+        .delivery-options ul
+            grid-template-columns: repeat(3, 1fr)
+        div
+            flex-direction: row
+    .order
+        .order-menu .buttons p
+            display: flex
+        .order-list
+            & li
+                flex-direction: row
+                .buttons
+                    width: 40%
+    .address .address-form form input
+        width: 40%
+
+@media (max-width: 1024px)
+    .delivery
+        .delivery-options ul
+            grid-template-columns: repeat(1, 1fr)
+            grid-row-gap: 1.5em
+        div
+            margin-top: 2em
+            flex-direction: column
+    .order
+        .order-menu .buttons p
+            display: none
+        .order-list
+            & li
+                flex-direction: column
+                margin-bottom: 1.2em
+                .buttons
+                    width: 80%
+    .address .address-form form input
+        width: 50%
+
+@media (max-width: 800px)
+    .address .address-form form input
+        width: 60%
+
+@media (max-width: 550px)
+    .cart-modal
+        width: 90%
+        left: 5vw
+
+@media (max-width: 470px)
+    .address .address-form form input
+        width: 70%
+
+@media (max-width: 360px)
+    .cart-modal
+        width: 96%
+        left: 2vw
+        .address .address-form form input
+            width: 80%

@@ -4,8 +4,6 @@ import ShopCartModal from './ShopCartModal';
 
 import '../../styles/sass/shop/shop-cart.sass';
 
-// const ShopCartModal = lazy(() => import('./ShopCartModal'));
-
 
 const ShopCart = ({ cartProductsList, setCartProductsList }) => {
 
@@ -33,20 +31,24 @@ const ShopCart = ({ cartProductsList, setCartProductsList }) => {
 
     return (
         <>
-            <p>{cartProductsList.length && cartProductsList.length}</p>
-            <i className="fas fa-shopping-cart"></i>
-            <div className="in_cart">
-                <div className="in_cart_products">
-                    {!listToDisplay.length && <p>There's nothing here yet..</p>}
-                    <ul>{listToDisplay}</ul>
-                </div>
-                <p>Total amount: {totalAmount.toFixed(2)} EUR</p>
+            <div className="small-cart">
+                <p>{cartProductsList.length && cartProductsList.length}</p>
+                <button onClick={openCartModalHandler}><i className="fas fa-shopping-cart"></i></button>
             </div>
-            <button className="go-to-cart" onClick={openCartModalHandler}>Go to Cart</button>
-            {/* <Suspense fallback={<div>Loading</div>}> */}
+            <div className="large-cart">
+                <p>{cartProductsList.length && cartProductsList.length}</p>
+                <i className="fas fa-shopping-cart"></i>
+                <div className="in_cart">
+                    <div className="in_cart_products">
+                        {!listToDisplay.length && <p>There's nothing here yet..</p>}
+                        <ul>{listToDisplay}</ul>
+                    </div>
+                    <p>Total amount: {totalAmount.toFixed(2)} EUR</p>
+                </div>
+                <button className="go-to-cart" onClick={openCartModalHandler}>Go to Cart</button>
+            </div>
                 { cartModalState ? <div className="shop-cart-back" onClick={closeCartModalHandler}></div> : null }
                 <ShopCartModal cartProductsList={cartProductsList} setCartProductsList={setCartProductsList} cartModalState={cartModalState} closeCartModalHandler={closeCartModalHandler} totalAmount={totalAmount} amountToPay={amountToPay} setAmountToPay={setAmountToPay}/>
-            {/* </Suspense> */}
         </>
     )
 }

@@ -1,8 +1,10 @@
 @import '../variables.sass'
 @import '../mixins.sass'
 
-.shop-footer-modal-wrapper
+.shop-footer-modal
     @include modal-style
+    width: 80%
+    left: 10vw
     display: flex
     flex-direction: column
     line-height: 1.7
@@ -13,10 +15,10 @@
     & .close-btn
         @include button
         color: $white-color
-        font-size: 17px
+        font-size: 1.06rem
         margin: 3vh 3vh 1vh auto
-        width: 70px
-        height: 70px
+        width: 4.38rem
+        height: 4.38rem
         &:hover
             @include hover-button
             background-color: $white-color
@@ -26,6 +28,16 @@
             border-bottom: 1px solid black
             margin-bottom: .95em
         & p
+            text-align: start
             white-space: pre-wrap
             height: auto    
-        
+
+@media (max-width: 550px)
+    .shop-footer-modal
+        width: 90%
+        left: 5vw
+
+@media (max-width: 360px)
+    .shop-footer-modal
+        width: 96%
+        left: 2vw
