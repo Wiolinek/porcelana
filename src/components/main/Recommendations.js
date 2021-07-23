@@ -37,10 +37,7 @@ const Recommendations = () => {
                 end:'bottom bottom',
                 scrub: 1,
                 pin: ".pin",
-                  //events: onEnter onLeave onEnterBack onLeaveBack
                 toggleActions:'play restart complete reverse',
-                  //options: play plause resume reset restart complete reverse none
-                  // markers:true,
             }
         })
     }, [opinionsData]);

@@ -9,7 +9,6 @@
             font-size: 1em
             font-weight: 700
     & .numbers
-        width: 100%
         display: grid
         grid-template-columns: repeat(auto-fit, 270px)
         grid-column-gap: 2em
@@ -18,10 +17,11 @@
         text-align: center
         background-color: $dark-color
         letter-spacing: .07em
+        width: 100%
         & div
-            color: $white-color
             display: flex
             flex-direction: column
+            color: $white-color
             & i
                 font-size: 3.2em
             & p

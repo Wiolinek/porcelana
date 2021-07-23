@@ -2,13 +2,13 @@
 @import '../mixins.sass'
 
 .newsletter
-    background-color: $dark-color
-    color: $white-color
-    min-height: 27vh
     display: flex
     flex-direction: column
     justify-content: center
     align-items: center
+    color: $white-color
+    background-color: $dark-color
+    min-height: 27vh
     & .newsletter-icon
         display: flex
         align-items: center
@@ -21,11 +21,11 @@
     & p
         font-size: 1.4rem
     & form
-        width: 100%
         display: flex
         align-items: center
         justify-content: center
         margin: 3vh 0
+        width: 100%
         & label
             font-size: 1.4rem
     & input
@@ -33,16 +33,16 @@
         border-radius: 6px
         outline: none
     & [type='email']
-        height: 1.6rem
         margin: 0 3vw 0 1vw
         border: $white-border-thin
         background-color: $dark-color
+        height: 1.6rem
     & [type='submit']
         @include button
-        height: 2.7rem
-        width: 7.5rem
         font-size: 1.4rem
         border-radius: 6px
+        height: 2.7rem
+        width: 7.5rem
     & [type='submit']:hover
         @include hover-button
         border: $white-border-thin
@@ -64,9 +64,9 @@
             flex-direction: column
             text-align: center
             flex-basis: 50%
-            height: 100%
             align-self: flex-start
             margin-top: 3vh
+            height: 100%
             & p
                 width: 80%
                 margin-top: 2vh
@@ -91,16 +91,16 @@
                 margin-top: 1vh
             & [type='submit']
                 @include button
+                font-size: 1.4rem
                 color: $dark-color
                 border: $black-border-thin
                 margin-top: 4vh
                 height: 2.7rem
                 width: 7.5rem
-                font-size: 1.4rem
             & [type='submit']:hover
+                color: $white-color
                 background-color: $dark-color
                 border: $black-border-thin
-                color: $white-color
                 cursor: pointer
             & input:nth-last-child(2)
                 border: none

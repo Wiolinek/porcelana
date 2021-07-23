@@ -5,7 +5,6 @@ import '../../styles/sass/shop/shop-footer-modal.sass';
 
 const ShopFooterModal = ( {shopFooterModalState, closeShopFooterModalHandler, shopFooterState, shopFooterDetailClicked} ) => {
 
-
     let detailToDisplay = shopFooterState.map(option => option.id === shopFooterDetailClicked ? 
         <div>
             <h2>{option.name}</h2>

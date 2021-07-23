@@ -10,6 +10,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
+
 const Home = () => {
 
     const logoAnimation = useRef(null);
@@ -34,7 +35,7 @@ const Home = () => {
             .from(arrowBtn.current, {autoAlpha: 0, y: '+100', duration: 2})
             .fromTo(arrowBtn.current, {y: '0'}, {y: '+20', ease: 'power1.inOut', repeat: Infinity, yoyo: true})
       
-    }, [])
+    }, []);
 
 
     return (

@@ -12,16 +12,16 @@
     cursor: pointer
 
 @mixin hover-button
+color: $dark-color
     background-color: $white-color
-    border: $black-border-thin
-    color: $dark-color
+    border: $black-border-thin  
 
 @mixin border-logo-style
     display: flex
     align-items: center
     justify-content: center
-    background-color: $dark-color
     color: $white-color
+    background-color: $dark-color
     border: $white-border-thin
     border-radius: 50%
     transition: all .6s
@@ -32,14 +32,14 @@
     transform: translate(0, -4px)
 
 @mixin modal-style
-    margin: 0 auto
     position: fixed
     top: 3vh
+    font-size: 1.2rem
+    padding: 0 4vw
+    margin: 0 auto
     background-color: $white-color
     height: 94vh
-    padding: 0 4vw
     overflow: auto
-    font-size: 1.2rem
     opacity: 1
     transform: translateY(-100vh)
     transition: all .8s ease-out

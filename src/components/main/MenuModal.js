@@ -6,6 +6,7 @@ import '../../styles/sass/main/menu-modal.sass';
 
 import axios from "axios";
 
+
 const MenuModal = ( {closeMenuHandler, navMenuState} ) => {
 
     const [mainMenuOptionsState, setMainMenuOptionsState] = useState([]);

@@ -3,13 +3,13 @@
 
 .nav-menu
     display: flex
-    z-index: 100
-    height: 100%
-    width: 100%
     position: fixed
     right: 0
     top: 0
+    height: 100%
+    width: 100%
     transition: clip-path 1.4s ease-in-out
+    z-index: 100
     & .menu-logo-container
         align-items: center
         justify-content: center
@@ -30,10 +30,10 @@
         height: 100vh
         background-color: $dark-color
         & .fa-times
-            color: $white-color
-            min-height: 5vh
             font-size: 2.4rem
+            color: $white-color
             margin: 3vh .9em 0 0
+            min-height: 5vh
             text-align: end
             transition: all .6s
             cursor: pointer
@@ -45,8 +45,8 @@
             list-style: none
             height: 75%
             & li
-                transition: all .3s
                 position: relative
+                transition: all .3s
                 &::before
                     content: ""
                     position: absolute
@@ -59,9 +59,9 @@
                     width: 100%
                 & a
                     font-size: 1.6rem
-                    padding: 0 1.25em
                     color: $white-color
                     text-decoration: none
+                    padding: 0 1.25em
 
 @media (max-width: 2000px)
     .menu-logo-container

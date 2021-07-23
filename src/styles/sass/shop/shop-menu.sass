@@ -2,52 +2,52 @@
 @import '../mixins.sass'
 
 .shop-header
-    min-height: 28vh
-    width: 100%
-    background-color: $white-color
-    background-image: url('../../../images/back_shop.webp')
-    filter: grayscale(100%)
-    background-repeat: no-repeat
-    background-size: cover
-    background-position: center center
     grid-column: 1 / 3
     display: flex
     flex-direction: column
     justify-content: space-between
     align-items: center
+    min-height: 28vh
+    width: 100%
+    background-color: $white-color
+    background-image: url('../../../images/back_shop.webp')
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center center
+    filter: grayscale(100%)
     & .advantages
         justify-content: space-around
         align-items: center
-        width: 100%
         padding: .3em 0
         background-color: $dark-color
+        width: 100%
         & div
             display: flex
             justify-content: space-around
             align-items: center
             color: $white-color
             & i
-                padding-right: .6em
                 color: $white-color
+                padding-right: .6em
     & .search-and-logo
-        width: 95%
         display: flex
         justify-content: space-between
         align-items: center
         margin: 0 5vw
+        width: 95%
         & .search
             justify-content: flex-start
             align-items: center
             color: $white-color
             margin-left: 2rem
             & input
+                color: $white-color
                 background-color: transparent
                 backdrop-filter: $blur-effect
                 border: $white-border-thin
-                color: $white-color
-                height: 30px
                 margin: 0 .8em
                 border-radius: 6px
+                height: 30px
                 outline: none
             & .fa-search
                 font-size: 2rem
@@ -64,14 +64,14 @@
                 @include logo-name-style
                 color: $white-color
                 &:hover
-                    background-color: transparent00     
+                    background-color: transparent00
     & .shop-menu
-        width: 100%
-        background-color: $dark-color
-        padding: .3em 0
         justify-content: space-around
         align-items: center
         align-self: flex-start
+        background-color: $dark-color
+        padding: .3em 0
+        width: 100%
         list-style: none
         & .active
             border-bottom: 1px solid $white-color
@@ -96,8 +96,8 @@
             p
                 font-size: 1.2rem
     .search
-        width: 50%
         display: flex
+        width: 50%
         input
             width: 380px
     .shop-menu
@@ -112,8 +112,8 @@
             p
                 font-size: 1.2rem
     .search
-        width: 60%
         display: flex
+        width: 60%
         input
             width: 230px
     .shop-menu
@@ -130,7 +130,7 @@
             i
                 font-size: 1rem
             p
-                font-size: 1rem    
+                font-size: 1rem
 
 @media (max-width: 660px)
     .advantages
@@ -144,7 +144,7 @@
         input
             width: 280px
         .fa-search
-            display: none   
+            display: none
 
 @media (max-width: 550px)
     .advantages
@@ -217,7 +217,7 @@
             height: 110px
             width: 110px
             .logo-name
-                font-size: 1.8rem    
+                font-size: 1.8rem
 
 @media (max-width: 660px) and (orientation: portrait)
     .advantages
@@ -231,7 +231,7 @@
             height: 100px
             width: 100px
             .logo-name
-                font-size: 1.7rem      
+                font-size: 1.7rem
 
 @media (max-width: 550px) and (orientation: portrait)
     .shop-header

@@ -3,13 +3,12 @@ import React from 'react';
 import { Link } from 'react-scroll';
 
 import '../../styles/sass/main/career-modal.sass';
-// import {Link} from 'react-router-dom';
+
 
 const CareerModal = ({ careerModalState, offer, closeModalHandler, jobOffersData }) => {
     
     //find which object in array was clicked and return it
     let index = jobOffersData.find(({ id }) => id === offer);
-    console.log('renderuję się - career modal')
 
     if(index === undefined) return null
 

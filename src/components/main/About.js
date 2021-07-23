@@ -20,12 +20,7 @@ const About = () => {
             start:'top 60%',
             end:'bottom bottom',
             scrub: 1,
-            // pin: true,
-            // pinSpacing: false,
-            //events: onEnter onLeave onEnterBack onLeaveBack
             toggleActions:'play restart complete reverse',
-            //options: play plause resume reset restart complete reverse none
-            // markers:true,
           }
         })
     }, [])
@@ -44,7 +39,6 @@ const About = () => {
             </div>
          </article>
          <article className="numbers">
-         {/* <i class="fas fa-coffee"></i> */}
            <div><i className="fas fa-poll"></i><p>80 000 000</p><p>Manufactured Pieces</p></div>
            <div><i className="fas fa-truck"></i><p>325</p><p>Distributors</p></div>
            <div><i className="fas fa-users"></i><p>127</p><p>Employees</p></div>

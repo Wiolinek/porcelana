@@ -4,21 +4,21 @@
 .shop-footer-wrapper
     grid-column: 1 / 3
     .shop-footer
-        background-color: $dark-color
-        color: $white-color
-        min-height: 7.6vh
         display: grid
         grid-template-rows: repeat(2, 3.7vh)
         grid-auto-rows: 3.7vh
         text-align: center
         letter-spacing: .03em
+        color: $white-color
+        background-color: $dark-color
+        min-height: 7.6vh
         & .shop-footer-btn
             display: flex
             justify-content: center
             align-items: center
-            color: $white-color
             font-family: 'Cinzel', serif
             font-size: .9rem
+            color: $white-color
             padding: .5em 0
             background-color: transparent
             outline: none
@@ -28,20 +28,20 @@
             display: flex
             justify-content: center
             align-items: center
-            color: $white-color
             font-size: .9rem
+            color: $white-color
             padding: .5em 0
             text-align: center
             text-decoration: none
             cursor: pointer
         & .shop-footer-back
+            position: fixed
+            left: 0
+            top: 0
             background-color: rgba(2, 2, 2, .8)
             backdrop-filter: $blur-effect
             height: 100%
             width: 100%
-            position: fixed
-            left: 0
-            top: 0
 
 @media (min-width: 551px)
     .shop-footer

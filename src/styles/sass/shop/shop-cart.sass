@@ -2,9 +2,9 @@
 @import '../mixins.sass'
 
 .cart
+    position: fixed
     bottom: 12vh
     height: 54.5vh
-    position: fixed
     right: 4vw
     border-radius: 6px
     .small-cart
@@ -19,13 +19,13 @@
         p
             font-size: 1.2rem
     .large-cart
-        height: 54.5vh
-        width: 360px
         flex-direction: column
         align-items: center
         justify-content: space-between
-        border-radius: 6px
+        height: 54.5vh
+        width: 360px
         background-color: $white-color
+        border-radius: 6px
         & p
             margin-top: .5em
     > p
@@ -58,9 +58,9 @@
                 justify-content: space-between
                 list-style: none
                 & p
+                    width: 20%
                     font-size: .85rem
                     padding: 5px
-                    width: 20%
                     text-align: end
                 & p:nth-child(2)
                     width: 15%
@@ -72,23 +72,23 @@
             text-align: center
     & .go-to-cart
         @include button
-        border: $black-border-thin
-        width: 60%
-        height: 44px
         font-size: 1.1rem
         margin: 1.1rem auto
+        border: $black-border-thin
         border-radius: 6px
+        width: 60%
+        height: 44px
         &:hover
             @include hover-button
     & .shop-cart-back
+        position: fixed
+        left: 0
+        top: 0
         background-color: rgba(2, 2, 2, .8)
         backdrop-filter: $blur-effect
         backdrop-filter: $blur-effect
         height: 100%
         width: 100%
-        position: fixed
-        left: 0
-        top: 0
 
 @media (max-width: 2000px)
     .large-cart

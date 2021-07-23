@@ -16,10 +16,10 @@ const ShopCartModal = ( {cartModalState, closeCartModalHandler, cartProductsList
     const defaultDeliveryOptionChecked = 4;
 
     useEffect(() => {
-            axios.get(`http://localhost:3030/delivery_options`)
-            .then(response => {
-            let delivery_options = response.data;
-            setDeliveryOptions(delivery_options);
+        axios.get(`http://localhost:3030/delivery_options`)
+        .then(response => {
+        let delivery_options = response.data;
+        setDeliveryOptions(delivery_options);
         })
     }, []);
 
