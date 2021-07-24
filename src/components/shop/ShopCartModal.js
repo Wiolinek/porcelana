@@ -72,8 +72,8 @@ const ShopCartModal = ( {cartModalState, closeCartModalHandler, cartProductsList
         </li>);
 
     const deliveryOptionsList = deliveryOptions.map(option => (
-        <li>
-            <label key={option.id}><input type="radio" name="delivery_option" value={option.option} data-price={option.price} data-time={option.time} defaultChecked onClick={chooseDeliveryOptionHandler}/>{option.name}: {option.price} EUR</label>
+        <li key={option.id}>
+            <label><input type="radio" name="delivery_option" value={option.option} data-price={option.price} data-time={option.time} defaultChecked onClick={chooseDeliveryOptionHandler}/>{option.name}: {option.price} EUR</label>
             <p>Delivery up to: {option.time} days</p>
         </li>
     ))

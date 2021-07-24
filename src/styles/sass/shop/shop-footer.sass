@@ -42,10 +42,16 @@
             backdrop-filter: $blur-effect
             height: 100%
             width: 100%
+.copyrights
+    font-family: 'Times New Roman', Times, serif
+    font-size: 1rem
+    padding: .8rem .8rem 0 .8rem
+    color: $white-color
+    background-color: $dark-color
 
 @media (min-width: 551px)
     .shop-footer
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
+        grid-template-columns: repeat(3, minmax(200px, 1fr))
 
 @media (max-width: 550px)
     .shop-footer

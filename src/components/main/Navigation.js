@@ -44,7 +44,7 @@ const Navigation = () => {
         <>
             <div ref={navigationIconAnimation} className="show-menu">
                 <NavLink to="/shop/all" target="_blank"><i className="fas fa-shopping-cart"></i></NavLink>
-                <i className="fas fa-bars" navMenuState={navMenuState} onClick={showMenuHandler}></i>
+                <i className="fas fa-bars" onClick={showMenuHandler}></i>
             </div>
             <MenuModal navMenuState={navMenuState} closeMenuHandler={closeMenuHandler}/>
         </>

@@ -42,8 +42,8 @@ const Home = () => {
         <>
             <section>
                 <div className="logo" ref={logoAnimation} >
-                    <Link className="logo-border" onClick={scrollToTop} >
-                        <div smooth={true}>
+                    <Link className="logo-border" smooth to="home">
+                        <div>
                             <p className="logo-name">ICM Inc.</p> 
                         </div>
                     </Link>
@@ -53,7 +53,7 @@ const Home = () => {
                         <p>Our design</p>
                         <p>Your <span>style</span></p>
                     </div>
-                    <Link to="about" smooth={true}><i className="fas fa-angle-double-down" ref={arrowBtn}></i></Link>
+                    <Link to="about" smooth><i className="fas fa-angle-double-down" ref={arrowBtn}></i></Link>
                 </div>
             </section>
             <aside className="side-bar">
@@ -79,7 +79,7 @@ const Home = () => {
                         </a>
                     </li>
                     <li>
-                        <Link to="contact" smooth={true}>
+                        <Link to="contact" smooth>
                             <i className="fas fa-envelope"></i>
                         </Link>
                     </li>

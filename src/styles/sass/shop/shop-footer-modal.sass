@@ -9,8 +9,6 @@
     word-spacing: 1.5px
     color: $dark-color
     padding-bottom: 5vh
-    width: 80%
-    left: 10vw
     z-index: 30
     & .close-btn
         @include button
@@ -31,6 +29,11 @@
             text-align: start
             white-space: pre-wrap
             height: auto
+
+@media (min-width: 551px)
+    .shop-footer-modal
+        width: 80%
+        left: 10vw
 
 @media (max-width: 550px)
     .shop-footer-modal
