@@ -58,7 +58,7 @@ const Products = () => {
       start:'top 70%',
       end:'bottom bottom',
       scrub: 1,
-      onEnter: batch => gsap.to(batch, {x: 0, autoAlpha: 1, stagger: .5, duration: 1,  ease: 'bounce'}),
+      onEnter: batch => gsap.to(batch, {x: 0, autoAlpha: 1, stagger: .5, duration: 1,  ease: 'ease'}),
       onLeaveBack: batch => gsap.to(batch, {x: '+80', autoAlpha: 0, stagger: .5, duration: 1,  ease: 'linear'}),
     })
   });

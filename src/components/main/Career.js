@@ -72,7 +72,7 @@ const Career = () => {
                     </tbody>
                 </table>
             </div>
-            <div className="join" ref={jointBtnAnimation}><Link to="contact" smooth={true}>Join us!</Link></div>
+            <div className="join" ref={jointBtnAnimation}><Link to="contact" smooth>Join us!</Link></div>
                 { careerModalState ? <div className="career-modal-back" onClick={closeModalHandler}></div> : null }
                 <CareerModal careerModalState={careerModalState} closeModalHandler={closeModalHandler} jobOffersData={jobOffersData} offer={offer}/>
         </article>

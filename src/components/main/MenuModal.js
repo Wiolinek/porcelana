@@ -27,7 +27,9 @@ const MenuModal = ( {closeMenuHandler, navMenuState} ) => {
       });
 
     const mainMenu = mainMenuOptionsState.map(option =>
-        <li onClick={closeMenuHandler}><Link key={option.id} to={ `/main/#${option.link}` } onClick={() => scrollToSection(option.link)} hashSpy={true} containerId={option.link}>{option.name}</Link></li>);
+        <li onClick={closeMenuHandler}><Link key={`menu.${option.id}`} to={ `/main/#${option.link}` } onClick={() => scrollToSection(option.link)}>{option.name}</Link></li>);
+
+        console.log(mainMenu)
 
 
     return (
