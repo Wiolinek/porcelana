@@ -80,8 +80,6 @@ Project is: _complete_
 
 
 ## Room for Improvement
-- registration and login option
-- sending orders to database
 - add notiffication about max order quantity for each item in cart
 - block manual input for quantities on product card
 
