@@ -17,11 +17,11 @@ const Products = () => {
 
   useEffect(() => {
 
-      axios.get(`http://localhost:3030/categories`)
-          .then(response => {
-          const categories = response.data;
-          setProductsOptions(categories);
-          })
+    axios.get(`http://localhost:3030/categories`)
+      .then(response => {
+      const categories = response.data;
+      setProductsOptions(categories);
+    })
   }, []);
 
 

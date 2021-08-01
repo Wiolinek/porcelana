@@ -29,6 +29,10 @@ const ShopProduct = (props) => {
         addToCartHandler(id, name, price, quantity, max, clickedProduct)
     }
 
+    const blockInputHandler = (e) => {
+        e.preventDefault();
+    }
+
 
     return (
         <>
@@ -52,7 +56,7 @@ const ShopProduct = (props) => {
                 <div className="choose-quantity">
                     <p>Choose quantity:</p>
                     <label forhtml="quantity">
-                        <input type="number" className="pcs" placeholder="0" min="0" max="24" id={product.id} name={product.name} price={product.price} ref={clickedProduct}></input>
+                        <input type="number" className="pcs" placeholder="0" min="0" max="24" id={product.id} name={product.name} price={product.price} ref={clickedProduct} onKeyDown={blockInputHandler}></input>
                     </label>
                     <p className="warning" ref={warningVisibility}>You cannot order more than 24 pcs</p>
                     {warning === product.id ? warningDisplayHandler() : null}
