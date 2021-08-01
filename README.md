@@ -29,7 +29,8 @@ Project was created to learn all technologies used here know and practice.
 
 
 ## Screenshots
-![Example screenshot](./img/screenshot.png)
+![](public/main.png)
+![](public/shop.png)
 
 
 ## Setup
