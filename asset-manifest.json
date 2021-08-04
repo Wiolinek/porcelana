@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/porcelana/static/css/main.d3618733.chunk.css",
+    "main.js": "/porcelana/static/js/main.9627dba3.chunk.js",
+    "main.js.map": "/porcelana/static/js/main.9627dba3.chunk.js.map",
+    "runtime-main.js": "/porcelana/static/js/runtime-main.ca8ad148.js",
+    "runtime-main.js.map": "/porcelana/static/js/runtime-main.ca8ad148.js.map",
+    "static/js/2.4c79dd94.chunk.js": "/porcelana/static/js/2.4c79dd94.chunk.js",
+    "static/js/2.4c79dd94.chunk.js.map": "/porcelana/static/js/2.4c79dd94.chunk.js.map",
+    "index.html": "/porcelana/index.html",
+    "static/css/main.d3618733.chunk.css.map": "/porcelana/static/css/main.d3618733.chunk.css.map",
+    "static/js/2.4c79dd94.chunk.js.LICENSE.txt": "/porcelana/static/js/2.4c79dd94.chunk.js.LICENSE.txt",
+    "static/media/main.sass": "/porcelana/static/media/back_11.92f3af4c.jpg",
+    "static/media/shop-menu.sass": "/porcelana/static/media/back_shop.03ecb867.webp",
+    "static/media/products.sass": "/porcelana/static/media/vase_4_small.7b8aacf7.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ca8ad148.js",
+    "static/js/2.4c79dd94.chunk.js",
+    "static/css/main.d3618733.chunk.css",
+    "static/js/main.9627dba3.chunk.js"
+  ]
+}
