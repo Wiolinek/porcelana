@@ -13,6 +13,7 @@ Project was created to learn all technologies used here know and practice.
 - [Setup](#setup)
 - [Project Status](#project-status)
 - [Room for Improvement](#room-for-improvement)
+- [License](#license)
 - [Contact](#contact)
 
 ## Technologies Used
