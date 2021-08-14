@@ -92,4 +92,4 @@ You are allowed to use it for both personal and commercial use, but not to claim
 
 ## Contact
 
-Created by [@Wiolinek](www.u-v.codes) - feel free to contact me!
+Created by [@Wiolinek](u-v.codes) - feel free to contact me!
