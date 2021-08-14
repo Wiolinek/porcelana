@@ -16,7 +16,7 @@ const Recommendations = () => {
     const opinionsWrapper = useRef(null);
     
     useEffect(() => {
-        axios.get(`http://localhost:3030/recommendations`)
+        axios.get(`https://porcelain.ultra-violet.codes/recommendations`)
             .then(response => {
             const opinions = response.data;
             setOpinionsData(opinions);

@@ -47,8 +47,8 @@ const ShopCart = ({ cartProductsList, setCartProductsList }) => {
                 </div>
                 <button className="go-to-cart" onClick={openCartModalHandler}>Go to Cart</button>
             </div>
-                { cartModalState ? <div className="shop-cart-back" onClick={closeCartModalHandler}></div> : null }
-                <ShopCartModal cartProductsList={cartProductsList} setCartProductsList={setCartProductsList} cartModalState={cartModalState} closeCartModalHandler={closeCartModalHandler} totalAmount={totalAmount} amountToPay={amountToPay} setAmountToPay={setAmountToPay}/>
+            { cartModalState ? <div className="shop-cart-back" onClick={closeCartModalHandler}></div> : null }
+            <ShopCartModal cartProductsList={cartProductsList} setCartProductsList={setCartProductsList} cartModalState={cartModalState} closeCartModalHandler={closeCartModalHandler} totalAmount={totalAmount} amountToPay={amountToPay} setAmountToPay={setAmountToPay}/>
         </>
     )
 }

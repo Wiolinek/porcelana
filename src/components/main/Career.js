@@ -24,7 +24,7 @@ const Career = () => {
 
     useEffect(() => {
 
-        axios.get(`http://localhost:3030/offers`)
+        axios.get(`https://porcelain.ultra-violet.codes/offers`)
             .then(response => {
             const offers = response.data;
             setJobOffersData(offers);

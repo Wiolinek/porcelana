@@ -24,7 +24,7 @@ const Shop = () => {
 
     useEffect(() => {
         setTimeout(() => {
-            axios.get(`http://localhost:3030/products`)
+            axios.get(`https://porcelain.ultra-violet.codes/products`)
             .then(response => {
             let products = response.data;
             products.map(product => (product.categories = product.categories.split(',').map(item => parseInt(item))));
@@ -32,7 +32,7 @@ const Shop = () => {
             })
         }, 700)
         
-        axios.get(`http://localhost:3030/categories`)
+        axios.get(`https://porcelain.ultra-violet.codes/categories`)
             .then(response => {
             const categories = response.data;
             setShopMenuOptions(categories);     

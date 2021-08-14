@@ -16,7 +16,7 @@ const ShopCartModal = ( {cartModalState, closeCartModalHandler, cartProductsList
     const defaultDeliveryOptionChecked = 4;
 
     useEffect(() => {
-        axios.get(`http://localhost:3030/delivery_options`)
+        axios.get(`https://porcelain.ultra-violet.codes/delivery_options`)
         .then(response => {
         let delivery_options = response.data;
         setDeliveryOptions(delivery_options);
@@ -33,6 +33,7 @@ const ShopCartModal = ( {cartModalState, closeCartModalHandler, cartProductsList
             setCartProductsList(cartProductsList.map(item => item.id === e.target.id ? {...item, quantity: item.quantity * 1 + 1} : item)); 
         } else {
             setCartProductsList(cartProductsList.map(item => item.id === e.target.id ? {...item, quantity: item.quantity * 1} : item));
+            alert("You cannot order more than 24 pcs")
         }
     }
 
@@ -106,6 +107,10 @@ const ShopCartModal = ( {cartModalState, closeCartModalHandler, cartProductsList
         return deliveryDate;
     };
 
+    const sendOrder = () => {
+        setCartProductsList([]);
+    }
+
     
     return (
         <section className="cart-modal" style={{
@@ -157,7 +162,7 @@ const ShopCartModal = ( {cartModalState, closeCartModalHandler, cartProductsList
                         <input type="text" id="user_city" name="user_email" required></input>
                     </form>
                 </div>
-                <button className="send-order">Send order</button>
+                <button className="send-order" onClick={sendOrder}>Send order</button>
             </article>  
         </section>
     )

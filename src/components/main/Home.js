@@ -3,7 +3,7 @@ import { Link } from 'react-scroll';
 
 import '../../styles/sass/main/home.sass';
 
-import {animateScroll as scroll } from 'react-scroll';
+import { scroller } from 'react-scroll'
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -17,10 +17,6 @@ const Home = () => {
     const asideWrapper = useRef(null);
     const homeWrapper = useRef(null);
     const arrowBtn = useRef(null);
-
-    const scrollToTop = () => {
-        scroll.scrollToTop();
-    };
 
     useEffect(() => {
 
@@ -37,12 +33,18 @@ const Home = () => {
       
     }, []);
 
+    const scrollToSection = (link) => scroller.scrollTo(link, {
+        delay: 1000,
+        smooth: 'linear',
+        hashSpy: 'true',
+      });
+
 
     return (
         <>
             <section>
                 <div className="logo" ref={logoAnimation} >
-                    <Link className="logo-border" smooth to="home">
+                    <Link className="logo-border" smooth to="/#home" onClick={() => scrollToSection("home")}>
                         <div>
                             <p className="logo-name">ICM Inc.</p> 
                         </div>

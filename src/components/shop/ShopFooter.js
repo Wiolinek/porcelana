@@ -17,7 +17,7 @@ const ShopFooter = () => {
 
     useEffect(() => {
 
-        axios.get(`http://localhost:3030/shop_footer`)
+        axios.get(`https://porcelain.ultra-violet.codes/shop_footer`)
             .then(response => {
             const shop_footer = response.data;
             setShopFooterState(shop_footer);

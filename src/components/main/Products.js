@@ -17,7 +17,7 @@ const Products = () => {
 
   useEffect(() => {
 
-    axios.get(`http://localhost:3030/categories`)
+    axios.get(`https://porcelain.ultra-violet.codes/categories`)
       .then(response => {
       const categories = response.data;
       setProductsOptions(categories);

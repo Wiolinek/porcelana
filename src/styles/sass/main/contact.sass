@@ -51,6 +51,7 @@
     flex-direction: column
     align-items: center
     padding: 3rem 0
+    min-height: 70vh
     & .contact_form
         display: grid
         grid-gap: 2em
@@ -105,13 +106,15 @@
             & input:nth-last-child(2)
                 border: none
                 background-color: transparent
-.contribution
+.main-footer
     display: flex
     justify-content: space-between
+    align-items: center
     font-family: 'Times New Roman', Times, serif
     color: $white-color
     padding: 0 .8rem
     background-color: $dark-color
+    min-height: 3vh
     p
         color: $white-color
         a
@@ -125,13 +128,15 @@
         & .address p
             font-size: 2rem
 
-@media (max-width: 550px)
-    .contact_form
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr))
-    .contribution
+@media (max-width: 800px)
+    .main-footer
         flex-direction: column
         align-items: center
         text-align: center
+
+@media (max-width: 550px)
+    .contact_form
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr))
 
 @media (max-width: 470px)
     .newsletter

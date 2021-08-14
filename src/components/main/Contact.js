@@ -45,7 +45,7 @@ const Contact = () => {
                     </div>
                 </div>
             </div>
-            <footer className="contribution">
+            <footer className="main-footer">
                 <p>Copyright &copy; 2021 Wiola Polok www.u-v.codes. All Rights Reserved</p>
                 <p>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
             </footer>   

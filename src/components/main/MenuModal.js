@@ -13,7 +13,7 @@ const MenuModal = ( {closeMenuHandler, navMenuState} ) => {
 
     useEffect(() => {
         
-        axios.get(`http://localhost:3030/main_menu`)
+        axios.get(`https://porcelain.ultra-violet.codes/main_menu`)
             .then(response => {
             const menu = response.data;
             setMainMenuOptionsState(menu);
