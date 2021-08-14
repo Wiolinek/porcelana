@@ -4,19 +4,19 @@
 
 Project was created to learn all technologies used here know and practice.
 
-> Live demo [_here_](https://www.example.com).
-
+> Live demo [_here_](https://porcelain.ultra-violet.codes/).
 
 ## Table of Contents
-* [Technologies Used](#technologies-used)
-* [Screenshots](#screenshots)
-* [Setup](#setup)
-* [Project Status](#project-status)
-* [Room for Improvement](#room-for-improvement)	
-* [Contact](#contact)
 
+- [Technologies Used](#technologies-used)
+- [Screenshots](#screenshots)
+- [Setup](#setup)
+- [Project Status](#project-status)
+- [Room for Improvement](#room-for-improvement)
+- [Contact](#contact)
 
 ## Technologies Used
+
 - React
 - React Router
 - React Scroll
@@ -27,13 +27,13 @@ Project was created to learn all technologies used here know and practice.
 - Express.js
 - MySQL
 
-
 ## Screenshots
+
 ![](public/main.png)
 ![](public/shop.png)
 
-
 ## Setup
+
 ### Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -75,15 +75,21 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-
 ## Project Status
+
 Project is: _complete_
 
-
 ## Room for Improvement
+
 - add notiffication about max order quantity for each item in cart
 - block manual input for quantities on product card
 
+## License
+
+This website was built by Wiola Polok www.u-v.codes.
+Copyright @ 2021 Wiola Polok www.u-v.codes. All Rights Reserved.
+You are allowed to use it for both personal and commercial use, but not to claim it as your own design.
 
 ## Contact
+
 Created by [@Wiolinek](https://www.u-v.codes) - feel free to contact me!
